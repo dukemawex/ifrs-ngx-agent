@@ -34,40 +34,40 @@ function extractFromText(content: string): Partial<ExtractedFinancials> {
   const result: Partial<ExtractedFinancials> = {};
 
   result.total_assets = extractFieldFromContent(content, [
-    /total\s*assets[:\s]+([(\d,.)\-]+)/i,
+    /total\s*assets[:\s]+([-\d,.()]+)/i,
   ]);
   result.total_liabilities = extractFieldFromContent(content, [
-    /total\s*liabilities[:\s]+([(\d,.)\-]+)/i,
+    /total\s*liabilities[:\s]+([-\d,.()]+)/i,
   ]);
   result.equity = extractFieldFromContent(content, [
-    /(?:total\s*)?(?:shareholders[''']?\s*)?equity[:\s]+([(\d,.)\-]+)/i,
+    /(?:total\s*)?(?:shareholders[''']?\s*)?equity[:\s]+([-\d,.()]+)/i,
   ]);
   result.revenue = extractFieldFromContent(content, [
-    /(?:total\s*)?revenue[:\s]+([(\d,.)\-]+)/i,
-    /turnover[:\s]+([(\d,.)\-]+)/i,
+    /(?:total\s*)?revenue[:\s]+([-\d,.()]+)/i,
+    /turnover[:\s]+([-\d,.()]+)/i,
   ]);
   result.net_income = extractFieldFromContent(content, [
-    /net\s*(?:income|profit)[:\s]+([(\d,.)\-]+)/i,
-    /profit\s*(?:for\s*the\s*year|after\s*tax)[:\s]+([(\d,.)\-]+)/i,
+    /net\s*(?:income|profit)[:\s]+([-\d,.()]+)/i,
+    /profit\s*(?:for\s*the\s*year|after\s*tax)[:\s]+([-\d,.()]+)/i,
   ]);
   result.EBIT = extractFieldFromContent(content, [
-    /(?:EBIT|operating\s*(?:profit|income))[:\s]+([(\d,.)\-]+)/i,
-    /profit\s*before\s*(?:interest\s*and\s*)?tax[:\s]+([(\d,.)\-]+)/i,
+    /(?:EBIT|operating\s*(?:profit|income))[:\s]+([-\d,.()]+)/i,
+    /profit\s*before\s*(?:interest\s*and\s*)?tax[:\s]+([-\d,.()]+)/i,
   ]);
   result.interest_expense = extractFieldFromContent(content, [
-    /(?:interest|finance)\s*(?:expense|cost)[:\s]+([(\d,.)\-]+)/i,
+    /(?:interest|finance)\s*(?:expense|cost)[:\s]+([-\d,.()]+)/i,
   ]);
   result.current_assets = extractFieldFromContent(content, [
-    /current\s*assets[:\s]+([(\d,.)\-]+)/i,
+    /current\s*assets[:\s]+([-\d,.()]+)/i,
   ]);
   result.current_liabilities = extractFieldFromContent(content, [
-    /current\s*liabilities[:\s]+([(\d,.)\-]+)/i,
+    /current\s*liabilities[:\s]+([-\d,.()]+)/i,
   ]);
   result.total_debt = extractFieldFromContent(content, [
-    /total\s*(?:debt|borrowings)[:\s]+([(\d,.)\-]+)/i,
+    /total\s*(?:debt|borrowings)[:\s]+([-\d,.()]+)/i,
   ]);
   result.retained_earnings = extractFieldFromContent(content, [
-    /retained\s*earnings[:\s]+([(\d,.)\-]+)/i,
+    /retained\s*earnings[:\s]+([-\d,.()]+)/i,
   ]);
 
   return result;

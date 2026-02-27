@@ -1,5 +1,5 @@
 import { mkdir, writeFile } from "node:fs/promises";
-import type { AuditTrailEvent, PanelMetricRow, PanelRawRow } from "./types.js";
+import type { AuditTrailEvent, FinancialSummary, PanelMetricRow, PanelRawRow } from "./types.js";
 
 function escapeCsv(value: unknown): string {
   if (value === null || value === undefined) return "";
@@ -21,6 +21,7 @@ export async function exportOutputs(
   rawRows: PanelRawRow[],
   metricRows: PanelMetricRow[],
   auditTrail: AuditTrailEvent[],
+  summaries?: FinancialSummary[],
 ): Promise<void> {
   await mkdir("data/processed", { recursive: true });
 
@@ -31,4 +32,12 @@ export async function exportOutputs(
     auditTrail.map((x) => JSON.stringify(x)).join("\n") + (auditTrail.length ? "\n" : ""),
     "utf8",
   );
+
+  if (summaries && summaries.length > 0) {
+    await writeFile(
+      "data/processed/financial_summaries.json",
+      JSON.stringify(summaries, null, 2) + "\n",
+      "utf8",
+    );
+  }
 }

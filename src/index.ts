@@ -6,7 +6,9 @@ import { extractFinancials } from "./extract.js";
 import { computeMetrics } from "./compute.js";
 import { exportOutputs } from "./export.js";
 import { summarizeMissingness, validateRow } from "./validate.js";
-import type { AuditTrailEvent, PanelMetricRow, PanelRawRow } from "./types.js";
+import { validateApiKey } from "./tavily.js";
+import { buildFinancialSummary, determineIFRSAdoptionYear } from "./summary.js";
+import type { AuditTrailEvent, FinancialSummary, PanelMetricRow, PanelRawRow } from "./types.js";
 
 const API_KEY = process.env.TAVILY_API_KEY;
 const RETRIES = 3;
@@ -49,15 +51,26 @@ function audit(
 }
 
 async function main(): Promise<void> {
-  if (!API_KEY) {
-    throw new Error("Missing TAVILY_API_KEY environment variable.");
-  }
+  validateApiKey(API_KEY);
 
   const rawRows: PanelRawRow[] = [];
   const metricRows: PanelMetricRow[] = [];
   const auditTrail: AuditTrailEvent[] = [];
+  const summaries: FinancialSummary[] = [];
 
   for (const company of TARGETS) {
+    console.log(`\n==== Processing ${company.name} ====`);
+
+    // Determine IFRS adoption year for this company.
+    const ifrs = await determineIFRSAdoptionYear(company, API_KEY);
+    console.log(`[ifrs] ${company.name} adoption year: ${ifrs.adoption_year} (${ifrs.notes})`);
+    audit(auditTrail, company.id, 0, "ifrs_adoption", true, {
+      adoption_year: ifrs.adoption_year,
+      source_url: ifrs.source_url,
+    });
+
+    const companyMetricRows: PanelMetricRow[] = [];
+
     for (const year of YEARS) {
       console.log(`\n=== ${company.name} (${year}) ===`);
       let sourceUrl: string | null = null;
@@ -91,7 +104,7 @@ async function main(): Promise<void> {
           company_id: company.id,
           company_name: company.name,
           year,
-          ifrs_dummy: 0,
+          ifrs_dummy: year >= ifrs.adoption_year ? 1 : 0,
           source_url: sourceUrl,
           source_type: sourceType,
           ...extracted,
@@ -99,8 +112,9 @@ async function main(): Promise<void> {
 
         const metricRow = validateRow(computeMetrics(rawRow));
 
-        rawRows.push({ ...rawRow, ifrs_dummy: metricRow.ifrs_dummy });
+        rawRows.push(rawRow);
         metricRows.push(metricRow);
+        companyMetricRows.push(metricRow);
 
         audit(auditTrail, company.id, year, "extract_compute_validate", true, {
           source_url: sourceUrl,
@@ -117,6 +131,10 @@ async function main(): Promise<void> {
 
       await sleep(POLITE_DELAY_MS);
     }
+
+    // Build per-company financial summary.
+    const summary = buildFinancialSummary(company, ifrs, companyMetricRows);
+    summaries.push(summary);
   }
 
   const missingness = summarizeMissingness(metricRows);
@@ -129,8 +147,9 @@ async function main(): Promise<void> {
     details: missingness,
   });
 
-  await exportOutputs(rawRows, metricRows, auditTrail);
+  await exportOutputs(rawRows, metricRows, auditTrail, summaries);
   console.log(`Exported ${rawRows.length} raw rows and ${metricRows.length} metric rows.`);
+  console.log(`Generated ${summaries.length} company financial summaries.`);
 }
 
 main().catch((error) => {

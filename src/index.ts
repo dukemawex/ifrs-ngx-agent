@@ -8,7 +8,7 @@ import { exportOutputs } from "./export.js";
 import { summarizeMissingness, validateRow } from "./validate.js";
 import type { AuditTrailEvent, PanelMetricRow, PanelRawRow } from "./types.js";
 
-const API_KEY = process.env.TINYFISH_API_KEY;
+const API_KEY = process.env.TAVILY_API_KEY;
 const RETRIES = 3;
 const BASE_BACKOFF_MS = 2000;
 const POLITE_DELAY_MS = 1200;
@@ -50,7 +50,7 @@ function audit(
 
 async function main(): Promise<void> {
   if (!API_KEY) {
-    throw new Error("Missing TINYFISH_API_KEY environment variable.");
+    throw new Error("Missing TAVILY_API_KEY environment variable.");
   }
 
   const rawRows: PanelRawRow[] = [];

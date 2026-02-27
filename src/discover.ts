@@ -1,5 +1,5 @@
 import { readFile } from "node:fs/promises";
-import { runTinyFishAutomation } from "./tinyfish.js";
+import { runTavilyAutomation } from "./tavily.js";
 import type { DiscoveryCandidate } from "./types.js";
 
 const SOURCE_PRIORITY: Record<string, number> = {
@@ -54,6 +54,6 @@ export async function discoverReportUrls(
     .replace("{{aliases}}", aliases.join(", "))
     .replace(/{{year}}/g, String(year));
 
-  const result = await runTinyFishAutomation({ goal, browser_profile: "stealth" }, apiKey);
+  const result = await runTavilyAutomation({ goal, browser_profile: "stealth" }, apiKey);
   return rankCandidates(toArray(result.resultJson));
 }

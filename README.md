@@ -18,7 +18,7 @@ Node.js + TypeScript automation project for building a firm-year (2010-2023) pan
    - NGX document library
    - AfricanFinancials
    - Credible archive/mirror fallbacks
-3. Uses TinyFish Web Agent API to extract line items.
+3. Uses Tavily Web Agent API to extract line items.
 4. Computes IFRS and financial ratios.
 5. Validates quality and missingness.
 6. Exports:
@@ -37,7 +37,7 @@ Node.js + TypeScript automation project for building a firm-year (2010-2023) pan
    ```
 3. Edit `.env`:
    ```env
-   TINYFISH_API_KEY=your_key
+   TAVILY_API_KEY=your_key
    ```
 
 ## Run locally
@@ -51,8 +51,8 @@ Workflow file: `.github/workflows/build_dataset.yml`
 ### Add repository secret
 1. Go to **Settings -> Secrets and variables -> Actions**.
 2. Create secret:
-   - Name: `TINYFISH_API_KEY`
-   - Value: your TinyFish API key
+   - Name: `TAVILY_API_KEY`
+   - Value: your Tavily API key
 3. Run workflow manually from **Actions -> Build IFRS NGX Dataset -> Run workflow**.
 
 ## Output interpretation

@@ -1,12 +1,12 @@
-const TINYFISH_SSE_URL = "https://agent.tinyfish.ai/v1/automation/run-sse";
+const TAVILY_SSE_URL = "https://agent.tavily.com/v1/automation/run-sse";
 
-export type TinyFishRunInput = {
+export type TavilyRunInput = {
   goal: string;
   browser_profile?: "stealth" | string;
   metadata?: Record<string, unknown>;
 };
 
-export type TinyFishRunResult = {
+export type TavilyRunResult = {
   rawEvents: unknown[];
   resultJson: unknown;
 };
@@ -21,11 +21,11 @@ function extractJsonPayload(dataLine: string): unknown {
   }
 }
 
-export async function runTinyFishAutomation(
-  input: TinyFishRunInput,
+export async function runTavilyAutomation(
+  input: TavilyRunInput,
   apiKey: string,
-): Promise<TinyFishRunResult> {
-  const response = await fetch(TINYFISH_SSE_URL, {
+): Promise<TavilyRunResult> {
+  const response = await fetch(TAVILY_SSE_URL, {
     method: "POST",
     headers: {
       "X-API-Key": apiKey,
@@ -38,7 +38,7 @@ export async function runTinyFishAutomation(
   });
 
   if (!response.ok || !response.body) {
-    throw new Error(`TinyFish SSE request failed: ${response.status} ${response.statusText}`);
+    throw new Error(`Tavily SSE request failed: ${response.status} ${response.statusText}`);
   }
 
   const reader = response.body.getReader();

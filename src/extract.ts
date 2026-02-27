@@ -1,5 +1,5 @@
 import { readFile } from "node:fs/promises";
-import { runTinyFishAutomation } from "./tinyfish.js";
+import { runTavilyAutomation } from "./tavily.js";
 import type { ExtractedFinancials } from "./types.js";
 
 function normalizeExtracted(input: unknown): ExtractedFinancials {
@@ -44,6 +44,6 @@ export async function extractFinancials(
     .replace("{{year}}", String(year))
     .replace("{{url}}", url);
 
-  const result = await runTinyFishAutomation({ goal, browser_profile: "stealth" }, apiKey);
+  const result = await runTavilyAutomation({ goal, browser_profile: "stealth" }, apiKey);
   return normalizeExtracted(result.resultJson);
 }

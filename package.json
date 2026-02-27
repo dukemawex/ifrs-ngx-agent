@@ -1,7 +1,7 @@
 {
   "name": "ifrs-ngx-agent",
   "version": "1.0.0",
-  "description": "Builds a 2010-2023 firm-year panel for selected Nigerian listed companies using TinyFish web automation and extraction.",
+  "description": "Builds a 2010-2023 firm-year panel for selected Nigerian listed companies using Tavily web automation and extraction.",
   "private": true,
   "type": "module",
   "scripts": {

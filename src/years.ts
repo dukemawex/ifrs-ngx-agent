@@ -1,5 +1,5 @@
-export const START_YEAR = 2010;
-export const END_YEAR = 2023;
+export const START_YEAR = 2007;
+export const END_YEAR = 2024;
 export const IFRS_BREAK = 2012;
 
 export const YEARS: number[] = Array.from(

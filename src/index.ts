@@ -78,10 +78,12 @@ async function main(): Promise<void> {
 
       try {
         const candidates = await withRetry("discoverReportUrls", () =>
-          discoverReportUrls(company.name, company.aliases, year, API_KEY),
+          discoverReportUrls(company, TARGETS, year, API_KEY),
         );
         audit(auditTrail, company.id, year, "discover", true, {
+          query: `${company.name} annual report ${year}`,
           candidate_count: candidates.length,
+          urls_considered: candidates.map((c) => c.url),
           top_candidate: candidates[0] ?? null,
         });
 
@@ -96,8 +98,11 @@ async function main(): Promise<void> {
 
         await sleep(POLITE_DELAY_MS);
 
-        const extracted = await withRetry("extractFinancials", () =>
-          extractFinancials(company.name, year, sourceUrl as string, API_KEY),
+        const result = await withRetry("extractFinancials", () =>
+          extractFinancials(
+            company.name, company.aliases, company.ticker,
+            year, sourceUrl as string, API_KEY,
+          ),
         );
 
         const rawRow: PanelRawRow = {
@@ -107,7 +112,7 @@ async function main(): Promise<void> {
           ifrs_dummy: year >= ifrs.adoption_year ? 1 : 0,
           source_url: sourceUrl,
           source_type: sourceType,
-          ...extracted,
+          ...result.financials,
         };
 
         const metricRow = validateRow(computeMetrics(rawRow));
@@ -117,8 +122,14 @@ async function main(): Promise<void> {
         companyMetricRows.push(metricRow);
 
         audit(auditTrail, company.id, year, "extract_compute_validate", true, {
-          source_url: sourceUrl,
+          chosen_url: result.chosenUrl,
+          urls_considered: result.urlsConsidered,
           source_type: sourceType,
+          validation_results: result.validationResults,
+          detected_unit: result.financials.detected_unit,
+          scaling_factor: result.financials.scaling_factor,
+          parse_confidence: result.parseConfidence,
+          plausibility_flags: result.plausibilityFlags,
           validation_flags: metricRow.validation_flags,
         });
       } catch (error) {

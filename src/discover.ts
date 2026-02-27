@@ -1,5 +1,6 @@
 import { tavilySearch } from "./tavily.js";
 import type { DiscoveryCandidate, SourceType } from "./types.js";
+import type { TargetCompany } from "./targets.js";
 
 const SOURCE_PRIORITY: Record<string, number> = {
   official_ir: 5,
@@ -8,6 +9,13 @@ const SOURCE_PRIORITY: Record<string, number> = {
   archive: 2,
   mirror: 1,
 };
+
+const PREFERRED_DOMAINS = [
+  "doclib.ngxgroup.com",
+  "ngxgroup.com",
+  "ngx.com.ng",
+  "africanfinancials.com",
+];
 
 function hostMatches(hostname: string, domain: string): boolean {
   return hostname === domain || hostname.endsWith("." + domain);
@@ -54,26 +62,68 @@ export function rankCandidates(candidates: DiscoveryCandidate[]): DiscoveryCandi
   });
 }
 
+/**
+ * Build exclude_domains to prevent cross-company contamination.
+ * Excludes domains containing other companies' names.
+ */
+function buildExcludeDomains(company: TargetCompany, allCompanies: TargetCompany[]): string[] {
+  const excluded: string[] = [];
+  for (const other of allCompanies) {
+    if (other.id === company.id) continue;
+    // Exclude domains that might host other companies' data
+    const lowerName = other.name.toLowerCase().replace(/\s+plc$/i, "").trim();
+    const slug = lowerName.replace(/\s+/g, "");
+    if (slug.length > 3) {
+      excluded.push(`${slug}.com`, `${slug}.com.ng`);
+    }
+  }
+  return excluded;
+}
+
 export async function discoverReportUrls(
-  company: string,
-  aliases: string[],
+  company: TargetCompany,
+  allCompanies: TargetCompany[],
   year: number,
   apiKey: string,
 ): Promise<DiscoveryCandidate[]> {
-  const names = [company, ...aliases].slice(0, 3);
+  const names = [company.name, ...company.aliases].slice(0, 3);
   const query = `${names.join(" OR ")} annual report ${year} financial statements Nigeria NGX filetype:pdf`;
+
+  const excludeDomains = buildExcludeDomains(company, allCompanies);
 
   const response = await tavilySearch(query, apiKey, {
     search_depth: "advanced",
-    max_results: 10,
+    max_results: 8,
+    include_domains: PREFERRED_DOMAINS,
+    exclude_domains: excludeDomains,
   });
 
-  const candidates: DiscoveryCandidate[] = response.results.map((r) => ({
+  let candidates: DiscoveryCandidate[] = response.results.map((r) => ({
     url: r.url,
     source_type: classifySource(r.url),
     confidence: r.score,
     notes: r.title,
   }));
+
+  // If preferred domains yielded few results, do a broader search without include_domains
+  if (candidates.length < 3) {
+    const broader = await tavilySearch(query, apiKey, {
+      search_depth: "advanced",
+      max_results: 5,
+      exclude_domains: excludeDomains,
+    });
+    const existing = new Set(candidates.map((c) => c.url));
+    for (const r of broader.results) {
+      if (!existing.has(r.url)) {
+        candidates.push({
+          url: r.url,
+          source_type: classifySource(r.url),
+          confidence: r.score,
+          notes: r.title,
+        });
+      }
+    }
+  }
 
   return rankCandidates(candidates);
 }

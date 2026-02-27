@@ -18,6 +18,7 @@ export type ExtractedFinancials = {
   equity: number | null;
   revenue: number | null;
   EBIT: number | null;
+  profit_before_tax: number | null;
   EBIT_computed: boolean;
   interest_expense: number | null;
   net_income: number | null;
@@ -25,6 +26,8 @@ export type ExtractedFinancials = {
   current_liabilities: number | null;
   total_debt: number | null;
   retained_earnings: number | null;
+  scaling_factor: number;
+  detected_unit: string;
   evidence_hints: Record<string, string>;
   extraction_notes: string;
 };

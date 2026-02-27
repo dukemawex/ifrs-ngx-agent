@@ -11,7 +11,10 @@ export function computeMetrics(row: PanelRawRow): PanelMetricRow {
   const roa = safeDiv(row.net_income, row.total_assets);
   const current_ratio = safeDiv(row.current_assets, row.current_liabilities);
   const leverage_ratio = safeDiv(row.total_liabilities, row.total_assets);
-  const interest_coverage = safeDiv(row.EBIT, row.interest_expense);
+
+  // Use EBIT if available, fallback to profit_before_tax for interest coverage
+  const ebitProxy = row.EBIT ?? row.profit_before_tax;
+  const interest_coverage = safeDiv(ebitProxy, row.interest_expense);
 
   const x1 = safeDiv(
     row.current_assets !== null && row.current_liabilities !== null
@@ -20,7 +23,7 @@ export function computeMetrics(row: PanelRawRow): PanelMetricRow {
     row.total_assets,
   );
   const x2 = safeDiv(row.retained_earnings, row.total_assets);
-  const x3 = safeDiv(row.EBIT, row.total_assets);
+  const x3 = safeDiv(ebitProxy, row.total_assets);
   const x4 = safeDiv(row.equity, row.total_liabilities);
 
   const altman_z_modified =

@@ -1,0 +1,30 @@
+name: Build IFRS NGX Dataset
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-dataset:
+    runs-on: ubuntu-latest
+    env:
+      TINYFISH_API_KEY: ${{ secrets.TINYFISH_API_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build dataset
+        run: npm run build-dataset
+
+      - name: Upload processed artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ifrs-ngx-agent-processed-data
+          path: data/processed/

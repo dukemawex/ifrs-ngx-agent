@@ -1,0 +1,18 @@
+{
+  "name": "ifrs-ngx-agent",
+  "version": "1.0.0",
+  "description": "Builds a 2010-2023 firm-year panel for selected Nigerian listed companies using TinyFish web automation and extraction.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build-dataset": "npm run build && node dist/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}

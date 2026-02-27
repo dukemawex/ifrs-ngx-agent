@@ -42,6 +42,10 @@ export type TavilyExtractResponse = {
   failed_results?: { url: string; error: string }[];
 };
 
+export type TavilyExtractOptions = {
+  extract_depth?: "basic" | "advanced";
+};
+
 // ---------- concurrency limiter ----------
 
 let activeRequests = 0;
@@ -175,9 +179,12 @@ export async function tavilySearch(
 export async function tavilyExtract(
   urls: string[],
   apiKey: string,
+  options: TavilyExtractOptions = {},
 ): Promise<TavilyExtractResponse> {
   console.log(`[tavily:extract] ${urls.length} URL(s)`);
-  const res = await tavilyFetch<TavilyExtractResponse>(TAVILY_EXTRACT_URL, { urls }, apiKey);
+  const body: Record<string, unknown> = { urls };
+  if (options.extract_depth) body.extract_depth = options.extract_depth;
+  const res = await tavilyFetch<TavilyExtractResponse>(TAVILY_EXTRACT_URL, body, apiKey);
   console.log(
     `[tavily:extract] ${res.results.length} succeeded, ${res.failed_results?.length ?? 0} failed`,
   );

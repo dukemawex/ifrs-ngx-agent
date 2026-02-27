@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "build-dataset": "npm run build && node dist/index.js"
+    "build-dataset": "npm run build && node dist/index.js",
+    "build:data": "npm run build && node dist/index.js",
+    "test": "node --test dist/test/*.test.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5"

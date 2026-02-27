@@ -6,6 +6,7 @@ const REQUIRED_NUMERIC_FIELDS: Array<keyof PanelMetricRow> = [
   "equity",
   "revenue",
   "EBIT",
+  "profit_before_tax",
   "interest_expense",
   "net_income",
   "current_assets",
@@ -13,8 +14,16 @@ const REQUIRED_NUMERIC_FIELDS: Array<keyof PanelMetricRow> = [
   "total_debt",
 ];
 
+const RATIO_DEPENDENCIES: Record<string, Array<keyof PanelMetricRow>> = {
+  roa: ["net_income", "total_assets"],
+  current_ratio: ["current_assets", "current_liabilities"],
+  leverage_ratio: ["total_liabilities", "total_assets"],
+  interest_coverage: ["EBIT", "interest_expense"],
+  altman_z_modified: ["current_assets", "current_liabilities", "retained_earnings", "EBIT", "total_assets", "equity", "total_liabilities"],
+};
+
 export function validateRow(row: PanelMetricRow): PanelMetricRow {
-  const flags: string[] = [];
+  const flags: string[] = [...(row.validation_flags ?? [])];
 
   for (const field of REQUIRED_NUMERIC_FIELDS) {
     const value = row[field];
@@ -35,9 +44,22 @@ export function validateRow(row: PanelMetricRow): PanelMetricRow {
     flags.push("balance_sheet_mismatch_gt_5pct");
   }
 
+  // Null out ratios whose dependencies are missing.
+  const updated = { ...row };
+  for (const [ratio, deps] of Object.entries(RATIO_DEPENDENCIES)) {
+    const missing = deps.some((d) => {
+      const v = row[d];
+      return v === null || v === undefined;
+    });
+    if (missing) {
+      (updated as Record<string, unknown>)[ratio] = null;
+      flags.push(`${ratio}_excluded_missing_deps`);
+    }
+  }
+
   return {
-    ...row,
-    validation_flags: flags,
+    ...updated,
+    validation_flags: [...new Set(flags)],
   };
 }
 

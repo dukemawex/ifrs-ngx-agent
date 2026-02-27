@@ -62,7 +62,7 @@ export async function determineIFRSAdoptionYear(
 function toYearlyMetrics(row: PanelMetricRow): YearlyMetrics {
   return {
     revenue: row.revenue,
-    profit_before_tax: row.EBIT,
+    profit_before_tax: row.profit_before_tax ?? row.EBIT,
     net_income: row.net_income,
     total_assets: row.total_assets,
     total_liabilities: row.total_liabilities,

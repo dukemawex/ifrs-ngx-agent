@@ -55,3 +55,46 @@ export type AuditTrailEvent = {
   ok: boolean;
   details: Record<string, unknown>;
 };
+
+// ---------- Financial summary data contract ----------
+
+export type CompanyInfo = {
+  name: string;
+  ticker: string;
+  exchange: string;
+};
+
+export type IFRSAdoption = {
+  adoption_year: number;
+  source_url: string;
+  notes: string;
+};
+
+export type YearlyMetrics = {
+  revenue: number | null;
+  profit_before_tax: number | null;
+  net_income: number | null;
+  total_assets: number | null;
+  total_liabilities: number | null;
+  equity: number | null;
+  eps: number | null;
+  dividends: number | null;
+};
+
+export type PeriodData = {
+  years: number[];
+  metrics: Record<number, YearlyMetrics>;
+  sources: string[];
+};
+
+export type FinancialSummary = {
+  company: CompanyInfo;
+  ifrs: IFRSAdoption;
+  periods: {
+    pre_ifrs: PeriodData;
+    post_ifrs: PeriodData;
+  };
+  currency: string;
+  notes: string;
+  generated_at: string;
+};

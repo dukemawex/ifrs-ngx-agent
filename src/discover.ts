@@ -10,10 +10,21 @@ const SOURCE_PRIORITY: Record<string, number> = {
 };
 
 function classifySource(url: string): SourceType {
+  let hostname = "";
+  try {
+    hostname = new URL(url).hostname.toLowerCase();
+  } catch {
+    // If URL parsing fails, fall through to mirror.
+  }
+
+  if (hostname.endsWith("africanfinancials.com") || hostname === "africanfinancials.com")
+    return "africanfinancials";
+  if (hostname.endsWith("ngxgroup.com") || hostname.endsWith("ngx.com.ng"))
+    return "ngx_doclib";
+  if (hostname.endsWith("archive.org"))
+    return "archive";
+
   const lower = url.toLowerCase();
-  if (lower.includes("africanfinancials")) return "africanfinancials";
-  if (lower.includes("ngxgroup.com") || lower.includes("ngx.com.ng")) return "ngx_doclib";
-  if (lower.includes("archive.org")) return "archive";
   if (
     lower.includes("investor") ||
     lower.includes("annual-report") ||

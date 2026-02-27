@@ -9,6 +9,10 @@ const SOURCE_PRIORITY: Record<string, number> = {
   mirror: 1,
 };
 
+function hostMatches(hostname: string, domain: string): boolean {
+  return hostname === domain || hostname.endsWith("." + domain);
+}
+
 function classifySource(url: string): SourceType {
   let hostname = "";
   try {
@@ -17,11 +21,11 @@ function classifySource(url: string): SourceType {
     // If URL parsing fails, fall through to mirror.
   }
 
-  if (hostname.endsWith("africanfinancials.com") || hostname === "africanfinancials.com")
+  if (hostMatches(hostname, "africanfinancials.com"))
     return "africanfinancials";
-  if (hostname.endsWith("ngxgroup.com") || hostname.endsWith("ngx.com.ng"))
+  if (hostMatches(hostname, "ngxgroup.com") || hostMatches(hostname, "ngx.com.ng"))
     return "ngx_doclib";
-  if (hostname.endsWith("archive.org"))
+  if (hostMatches(hostname, "archive.org"))
     return "archive";
 
   const lower = url.toLowerCase();

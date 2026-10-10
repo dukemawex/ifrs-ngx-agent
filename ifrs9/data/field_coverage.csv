@@ -11,11 +11,11 @@ net_loans,19,47,37,65,18
 total_impairment,43,47,59,65,16
 loan_impairment,10,47,17,65,7
 npl_amount,13,47,18,65,5
-car,38,47,52,65,14
-regulatory_capital,19,47,33,65,14
-rwa,19,47,33,65,14
+car,38,47,53,65,15
+regulatory_capital,19,47,34,65,15
+rwa,19,47,34,65,15
 car_minimum,13,47,19,65,6
 liquidity,11,47,11,65,0
-gcu,2,47,17,65,15
+gcu,2,47,19,65,17
 stage3_gross,5,47,5,65,0
 stage3_allowance,10,47,16,65,6

@@ -290,6 +290,7 @@ Sterling,2019,loan_allowance,12966.0,2,True,sum of Corporate_loan_allowance + Re
 Sterling,2019,total_impairment,5842.0,1,True,direct,EV0162
 Sterling,2019,car,14.7,1,True,direct,EV0157
 Sterling,2019,car_minimum,10.0,1,True,direct,EV0156
+Sterling,2019,gcu,0.0,1,True,direct,GC-Sterling2019
 UBA,2013,pat,46483.0,1,True,direct,EV0031
 UBA,2013,assets,2217417.0,1,True,direct,EV0034
 UBA,2013,liabilities,1957879.0,1,True,direct,EV0036
@@ -890,6 +891,7 @@ Zenith,2020,gross_loans,2772663.0,1,True,direct,ZEN20-GL
 Zenith,2020,loan_allowance,132866.0,1,True,direct,ZEN20-ALW
 Zenith,2020,net_loans,2639797.0,1,True,direct,ZEN20-NL
 Zenith,2020,total_impairment,37237.0,1,True,direct,ZEN20-TI
+Zenith,2020,gcu,0.0,1,True,direct,GC-Zenith2020
 Zenith,2020,pbt,210007.0,1,True,direct,ZEN20-PBT
 Zenith,2021,pat,233133.0,1,True,direct,NI0110
 Zenith,2021,assets,7872292.0,1,True,direct,NI0117

@@ -9,7 +9,7 @@ Zenith,2016,*row*,,added,new_bank_year,ZEN16-PAT;ZEN16-PBT;ZEN16-TI;ZEN16-A;ZEN1
 Zenith,2017,*row*,,added,new_bank_year,ZEN17-PAT;ZEN17-PBT;ZEN17-TI;ZEN17-A;ZEN17-L;ZEN17-E;ZEN17-OA;ZEN17-OCF;ZEN17-GL;ZEN17-NPL;ZEN17-CA;ZEN17-SA;ZEN17-ALW;ZEN17-NL;ZEN17-RC;ZEN17-RWA;ZEN17-CAR,core set admitted and reconciled
 Zenith,2018,*row*,,added,new_bank_year,ZEN18-PAT;ZEN18-PBT;ZEN18-TI;ZEN18-A;ZEN18-L;ZEN18-E;ZEN18-OA;ZEN18-OCF;ZEN18-GL;ZEN18-NPL;ZEN18-ALW;ZEN18-NL;ZEN18-RC;ZEN18-RCT;ZEN18-RWA;ZEN18-CAR;ZEN18-CART,core set admitted and reconciled
 Zenith,2019,*row*,,added,new_bank_year,ZEN19-PAT;ZEN19-PBT;ZEN19-TI;ZEN19-A;ZEN19-L;ZEN19-E;ZEN19-OA;ZEN19-OCF;ZEN19-GL;ZEN19-NPL;ZEN19-ALW;ZEN19-NL;ZEN19-RC;ZEN19-RCT;ZEN19-RWA;ZEN19-CAR;ZEN19-CART;GC-Zenith2019,core set admitted and reconciled
-Zenith,2020,*row*,,added,new_bank_year,ZEN20-PAT;ZEN20-PBT;ZEN20-TI;ZEN20-A;ZEN20-L;ZEN20-E;ZEN20-OA;ZEN20-OCF;ZEN20-GL;ZEN20-ALW;ZEN20-NL,core set admitted and reconciled
+Zenith,2020,*row*,,added,new_bank_year,ZEN20-PAT;ZEN20-PBT;ZEN20-TI;ZEN20-A;ZEN20-L;ZEN20-E;ZEN20-OA;ZEN20-OCF;ZEN20-GL;ZEN20-ALW;ZEN20-NL;GC-Zenith2020,core set admitted and reconciled
 GTBank,2019,*row*,,added,new_bank_year,GTB19-A;GTB19-L;GTB19-E;GTB19-OA;GTB19-PAT;GTB19-PBT;GTB19-LI;GTB19-OI;GTB19-TI;GTB19-OCF;GTB19-GLI;GTB19-ALI;GTB19-GLN;GTB19-ALN;GTB19-GL;GTB19-ALW;GTB19-NL;GTB19-S3I;GTB19-S3N;GTB19-S3A;GC-GTBank2019;GTB19-CRC;GTB19-CRWA;GTB19-CCAR;GTB19-CRCT;GTB19-CCART,core set admitted and reconciled
 GTBank,2018,*row*,,added,new_bank_year,GTB18-A;GTB18-L;GTB18-E;GTB18-OA;GTB18-PAT;GTB18-PBT;GTB18-LI;GTB18-OI;GTB18-TI;GTB18-OCF;GTB18-GLI;GTB18-ALI;GTB18-GLN;GTB18-ALN;GTB18-GL;GTB18-ALW;GTB18-NL;GTB18-S3I;GTB18-S3N;GTB18-S3A;GC-GTBank2018,core set admitted and reconciled
 GTBank,2017,*row*,,added,new_bank_year,GTB17-A;GTB17-L;GTB17-E;GTB17-OA;GTB17-PAT;GTB17-PBT;GTB17-LI;GTB17-OI;GTB17-TI;GTB17-OCF;GTB17-GLI;GTB17-ALI;GTB17-GLN;GTB17-ALN;GTB17-GL;GTB17-ALW;GTB17-NL,core set admitted and reconciled
@@ -25,3 +25,4 @@ Wema,2020,gcu,,0.0,fill_blank,GC-Wema2020,admitted reviewed evidence
 Wema,2022,gcu,,0.0,fill_blank,GC-Wema2022,admitted reviewed evidence
 Fidelity,2019,gcu,,0.0,fill_blank,GC-Fidelity2019,admitted reviewed evidence
 Sterling,2014,gcu,,0.0,fill_blank,GC-Sterling2014,admitted reviewed evidence
+Sterling,2019,gcu,,0.0,fill_blank,GC-Sterling2019,admitted reviewed evidence

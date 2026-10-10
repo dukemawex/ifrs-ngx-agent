@@ -4,12 +4,12 @@ eqta,Equity / assets (%),equity_assets_pct = 100 * equity / closing assets,65,0,
 ocf_ratio,OCF / average assets (%),OCF_avgassets_pct = 100 * OCF / average_assets,44,21,65,67.7,19,25,10
 allr,Loan allowance / gross loans (%),allowance_grossloans_pct = 100 * customer-loan allowance / gross customer loans,56,9,65,86.2,25,31,10
 leverage,Liabilities / assets (%),leverage_pct = 100 * liabilities / assets,65,0,65,100.0,32,33,12
-car,Reported CAR (%),,52,13,65,80.0,24,28,9
-car_computed,Capital / RWA (%),CAR_calc_pct = 100 * regulatory capital / RWA,33,32,65,50.8,10,23,7
+car,Reported CAR (%),,53,12,65,81.5,24,29,10
+car_computed,Capital / RWA (%),CAR_calc_pct = 100 * regulatory capital / RWA,34,31,65,52.3,10,24,8
 npl_reported,Reported NPL ratio (%),,14,51,65,21.5,13,1,6
 npl_calc,NPL amount / gross loans (%),NPL_ratio_pct = 100 * regulatory NPL amount / matched gross loans,14,51,65,21.5,7,7,3
 broad_coverage,Broad NPL coverage (%),broad_NPL_coverage_pct = 100 * total customer-loan allowance / NPL amount (not NPL-specific),14,51,65,21.5,7,7,3
 stage3_coverage,Stage 3 coverage (%),Stage3_coverage_pct = 100 * Stage 3 allowance / Stage 3 gross,4,61,65,6.2,0,4,1
 impairment_assets,Total impairment / average assets (%),100 * total income-statement impairment / average_assets (broad measure),45,20,65,69.2,19,26,12
 liquidity_used,Admitted domestic liquidity ratio (%),,10,55,65,15.4,5,5,3
-gcu,Going-concern uncertainty code,,17,48,65,26.2,3,14,8
+gcu,Going-concern uncertainty code,,19,46,65,29.2,3,16,8

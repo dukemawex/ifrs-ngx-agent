@@ -187,6 +187,11 @@ GTBank,2019,net_loans,1300820.647,1,True,direct,GTB19-NL
 GTBank,2019,total_impairment,1859.247,1,True,direct,GTB19-TI
 GTBank,2019,loan_impairment,2221.501,1,True,direct,GTB19-LI
 GTBank,2019,other_impairment,-362.254,1,True,direct,GTB19-OI
+GTBank,2019,car,20.66,1,True,direct,GTB19-CCAR
+GTBank,2019,car_transitional,24.74,1,True,direct,GTB19-CCART
+GTBank,2019,regulatory_capital,418652.17,1,True,direct,GTB19-CRC
+GTBank,2019,rwa,2026402.562,1,True,direct,GTB19-CRWA
+GTBank,2019,capital_transitional,517502.852,1,True,direct,GTB19-CRCT
 GTBank,2019,gcu,0.0,1,True,direct,GC-GTBank2019
 GTBank,2019,stage3_allowance,45503.961,1,True,direct,GTB19-S3A
 GTBank,2019,pbt,200177.89,1,True,direct,GTB19-PBT

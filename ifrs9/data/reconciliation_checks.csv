@@ -28,6 +28,7 @@ GTBank,2018,assets = liabilities + equity,0.0,0.001500001,0.001,True,
 GTBank,2018,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,
 GTBank,2019,assets = liabilities + equity,-0.0,0.001500001,0.001,True,
 GTBank,2019,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,
+GTBank,2019,reported CAR vs capital/RWA,0.0001,0.015,,True,rounding from recorded decimals; basis=; transitional=24.74
 Stanbic,2020,assets = liabilities + equity,0.0,1.500000001,1,True,
 Stanbic,2020,gross loans - allowance = net loans,0.0,1.500000001,1,True,
 Stanbic,2020,reported CAR vs capital/RWA,-0.015,0.060000000000000005,,True,rounding from recorded decimals; basis=; transitional=19.6

@@ -1,5 +1,4 @@
 gap_type,bank,year,field,priority,status_before,status_after,retrieval_attempts,next_action
-bank_year,Wema,2013,*core row*,1,No core data,not_admitted,search-f159a68476:blocked,Recover source-backed main statements; check prior archives too
 bank_year,Access,2017,*core row*,3,Candidate only,not_admitted,search-d15bd8342e:blocked,Verify source and reporting version
 bank_year,Access,2018,*core row*,3,Candidate only,not_admitted,search-8857da32c4:blocked,Verify source and reporting version
 bank_year,Access,2019,*core row*,3,Candidate only,not_admitted,search-ba4ad592aa:blocked,Verify source and reporting version

@@ -113,6 +113,7 @@ Union,2022,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
 Union,2022,reported CAR vs capital/RWA,0.0007,0.005046,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 4.57e-05; printed literal '14.42' from U0131; basis=Reported Basel ratio; transitional=
 Unity,2018,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
 Unity,2019,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
+Wema,2013,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 Wema,2014,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 Wema,2015,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 Wema,2016,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,

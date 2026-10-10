@@ -1,18 +1,18 @@
 {
-  "generated_utc": "2026-10-10T21:24:36+00:00",
-  "git_commit": "1167d5f0229665ebf992a583d3e05b08ac6c33f8",
+  "generated_utc": "2026-10-10T21:27:57+00:00",
+  "git_commit": "5a209c1ca855eec828f8e23791f6ebedf9b722de",
   "git_branch": "claude/zen-hamilton-v2s80b",
   "panel": {
-    "rows": 72,
+    "rows": 73,
     "banks": 12,
-    "pre_adoption": 36,
+    "pre_adoption": 37,
     "post_adoption": 36,
     "baseline_rows": 47,
     "baseline_rows_retained": 47,
-    "new_rows": 25
+    "new_rows": 26
   },
   "changes": {
-    "new_bank_year": 25,
+    "new_bank_year": 26,
     "fill_blank": 9
   },
   "fills_by_field": {
@@ -20,8 +20,8 @@
   },
   "field_basis": {
     "baseline_inherited": 615,
-    "recomputed_ratio": 750,
-    "reported_text_layer": 303,
+    "recomputed_ratio": 759,
+    "reported_text_layer": 312,
     "manual_transcription": 51,
     "reported_text_layer+restated_comparative": 37,
     "derived_from_verified+restated_comparative": 4,
@@ -29,26 +29,26 @@
     "manual_transcription+restated_comparative": 4
   },
   "admissions": {
-    "rows": 433,
-    "accepted": 433,
+    "rows": 442,
+    "accepted": 442,
     "rejected": 0
   },
   "reconciliation": {
-    "run": 153,
-    "pass": 151,
+    "run": 154,
+    "pass": 152,
     "documented_source_exception": 2
   },
   "evidence_lineage": {
-    "checked": 1027,
-    "matched": 1027,
+    "checked": 1036,
+    "matched": 1036,
     "qualified": 6
   },
   "going_concern": {
     "reviews_recorded": 25,
     "reviews_coded_1": 1,
-    "not_reviewed_listed": 10,
+    "not_reviewed_listed": 11,
     "panel_coded": 26,
-    "panel_unknown": 46,
+    "panel_unknown": 47,
     "panel_coded_1": 1,
     "baseline_codes_retained": 2,
     "baseline_codes_confirmed_by_review": 1,
@@ -79,29 +79,29 @@
     ]
   },
   "remaining": {
-    "bank_years": 58,
+    "bank_years": 57,
     "field_requests": 345
   },
   "endpoints": {
     "roa": {
-      "available": 55,
-      "eligible": 55,
+      "available": 56,
+      "eligible": 56,
       "excluded_by_flag": 0,
-      "pre": 26,
+      "pre": 27,
       "post": 29
     },
     "eqta": {
-      "available": 72,
-      "eligible": 72,
+      "available": 73,
+      "eligible": 73,
       "excluded_by_flag": 0,
-      "pre": 36,
+      "pre": 37,
       "post": 36
     },
     "ocf_ratio": {
-      "available": 49,
-      "eligible": 49,
+      "available": 50,
+      "eligible": 50,
       "excluded_by_flag": 0,
-      "pre": 23,
+      "pre": 24,
       "post": 26
     },
     "allr": {
@@ -112,10 +112,10 @@
       "post": 32
     },
     "leverage": {
-      "available": 72,
-      "eligible": 72,
+      "available": 73,
+      "eligible": 73,
       "excluded_by_flag": 0,
-      "pre": 36,
+      "pre": 37,
       "post": 36
     },
     "car": {
@@ -154,10 +154,10 @@
       "post": 4
     },
     "impairment_assets": {
-      "available": 52,
-      "eligible": 52,
+      "available": 53,
+      "eligible": 53,
       "excluded_by_flag": 0,
-      "pre": 23,
+      "pre": 24,
       "post": 29
     },
     "liquidity_used": {
@@ -197,14 +197,14 @@
     "cap_changed": false
   },
   "tests": {
-    "run_utc": "2026-10-10T21:24:31+00:00",
+    "run_utc": "2026-10-10T21:27:53+00:00",
     "exit_status": 0,
     "suites": {
       "synthetic/mock unit tests": {
         "passed": 62
       },
       "real-data regression tests": {
-        "passed": 25
+        "passed": 27
       }
     }
   }

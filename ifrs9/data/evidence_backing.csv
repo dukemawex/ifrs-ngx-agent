@@ -781,6 +781,15 @@ Unity,2019,car,-201.59,1,True,evidence recorded as CAR_full_IFRS9_pct,"Full IFRS
 Unity,2019,car_transitional,-200.88,1,True,direct,,EV0249
 Unity,2019,car_minimum,10.0,1,True,direct,,EV0248
 Unity,2019,gcu,1.0,2,True,direct,,EV0251;GC-Unity2019
+Wema,2013,pat,1596.531,1,True,direct,,WEMA13-PAT
+Wema,2013,assets,330872.475,1,True,direct,,WEMA13-A
+Wema,2013,liabilities,289477.324,1,True,direct,,WEMA13-L
+Wema,2013,equity,41395.151,1,True,direct,,WEMA13-E
+Wema,2013,ocf,14012.504,1,True,direct,,WEMA13-OCF
+Wema,2013,opening_assets,245704.597,1,True,direct,,WEMA13-OA
+Wema,2013,net_loans,98631.825,1,True,direct,,WEMA13-NL
+Wema,2013,total_impairment,-1329.627,1,True,direct,,WEMA13-TI
+Wema,2013,pbt,1947.308,1,True,direct,,WEMA13-PBT
 Wema,2014,pat,2372.445,1,True,direct,,DS0017
 Wema,2014,assets,382562.312,1,True,direct,,DS0019
 Wema,2014,liabilities,338793.663,1,True,direct,,DS0020

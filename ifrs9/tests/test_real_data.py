@@ -290,3 +290,15 @@ def test_stanbic_2018_writeback_stored_as_negative_charge(admissions, panel):
 def test_npl_only_from_explicit_labels(admissions):
     # 'Individually impaired' (IAS 39) amounts were not admitted as NPL for the 2014-2020 Fidelity additions.
     assert not [a for a in admissions if a["evidence_id"] in ("FID14-NPL", "FID15-NPL", "FID16-NPL", "FID17-NPL", "FID20-NPL")]
+
+
+def test_wema_2013_from_exchange_filing_audit_unverified_gcu_unknown(panel):
+    assert num(panel[("Wema", 2013)]["assets"]) == 330872.475
+    assert panel[("Wema", 2013)]["gcu"].strip() == ""
+    doc = next(d for d in rows(REVIEW / "document_status.csv") if d["job_id"] == "xs-24238b1f7e")
+    assert doc["audit_report_in_file"] == "No" and doc["audit_report_reviewed_for_gcu"] == "unverified"
+
+
+def test_zenith_2013_group_only_filing_not_admitted(panel, admissions):
+    assert ("Zenith", 2013) not in panel
+    assert not [a for a in admissions if a["source_id"] == "xs-86dd272867"]

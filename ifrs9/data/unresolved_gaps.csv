@@ -20,8 +20,6 @@ bank_year,Stanbic,2014,*core row*,4,No core data,not_admitted,search-5511c58bce:
 bank_year,Stanbic,2015,*core row*,4,Candidate only,not_admitted,search-7eb1ffec03:blocked,Verify source and reporting version
 bank_year,Stanbic,2016,*core row*,4,Candidate only,not_admitted,search-17e366c309:blocked,Verify source and reporting version
 bank_year,Stanbic,2017,*core row*,4,Candidate only,not_admitted,search-def2492d52:blocked,Verify source and reporting version
-bank_year,Stanbic,2018,*core row*,4,Candidate only,not_admitted,pdf-659dfb2f30:downloaded,Verify source and reporting version
-bank_year,Stanbic,2019,*core row*,4,Candidate only,not_admitted,pdf-fb3ab3b63d:downloaded,Verify source and reporting version
 bank_year,Access,2015,*core row*,5,Candidate only,not_admitted,search-be11416116:blocked,Verify source and reporting version
 bank_year,Access,2016,*core row*,5,Candidate only,not_admitted,search-c397d298cd:blocked,Verify source and reporting version
 bank_year,Access,2020,*core row*,5,Candidate only,not_admitted,search-9aaaea360b:blocked,Verify source and reporting version
@@ -45,11 +43,6 @@ bank_year,Ecobank Nigeria,2019,*core row*,6,Candidate only,not_admitted,search-a
 bank_year,Ecobank Nigeria,2020,*core row*,6,Candidate only,not_admitted,search-de53d28336:blocked,Verify source and reporting version
 bank_year,Ecobank Nigeria,2021,*core row*,6,Candidate only,not_admitted,search-77369748a4:blocked,Verify source and reporting version
 bank_year,Ecobank Nigeria,2022,*core row*,6,Candidate only,not_admitted,search-b5fcdd4a48:blocked,Verify source and reporting version
-bank_year,Fidelity,2014,*core row*,6,No core data,not_admitted,search-5e73b704e5:blocked,Recover source-backed main statements; check prior archives too
-bank_year,Fidelity,2015,*core row*,6,Candidate only,not_admitted,search-2ecf0d365f:blocked,Verify source and reporting version
-bank_year,Fidelity,2016,*core row*,6,Candidate only,not_admitted,search-d85a2ff34f:blocked,Verify source and reporting version
-bank_year,Fidelity,2017,*core row*,6,Candidate only,not_admitted,search-b96090e413:blocked,Verify source and reporting version
-bank_year,Fidelity,2020,*core row*,6,Candidate only,not_admitted,search-434ce51396:blocked,Verify source and reporting version
 bank_year,Sterling,2015,*core row*,6,Candidate only,not_admitted,search-85d4d11ed5:blocked,Verify source and reporting version
 bank_year,Sterling,2016,*core row*,6,Candidate only,not_admitted,search-32306379d1:blocked,Verify source and reporting version
 bank_year,Sterling,2017,*core row*,6,Candidate only,not_admitted,search-186da57375:blocked,Verify source and reporting version

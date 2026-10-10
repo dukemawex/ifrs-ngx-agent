@@ -1,13 +1,19 @@
 bank,year,opening_assets,prior_year_closing_assets,difference,compatible,opening_version,prior_closing_version
 Access,2014,1704094.012,1704094.012,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Ecobank Nigeria,2017,1808503.0,1808503.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Fidelity,2014,1081217.0,1081217.0,0.0,True,"2014 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Fidelity,2015,1187025.0,1187025.0,0.0,True,"2015 annual report, as originally reported","2014 annual report, as originally reported"
+Fidelity,2016,1231722.0,1231722.0,0.0,True,"2016 annual report, as originally reported","2015 annual report, as originally reported"
+Fidelity,2017,1298141.0,1298141.0,0.0,True,"2017 annual report, as originally reported","2016 annual report, as originally reported"
 Fidelity,2019,1719883.0,1719883.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Fidelity,2020,2114037.0,2114037.0,0.0,True,"2020 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Fidelity,2022,3280454.0,3280454.0,0.0,True,"2022 annual report, as originally reported",2022 annual report; 2021 restated comparative
 First Bank,2014,3246579.0,3246579.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 First Bank,2017,3557782.0,3557782.0,0.0,True,"FY2017 financial statements, as originally reported","FY2017 financial statements; 2016 comparative, not labelled restated"
 GTBank,2014,1904366.0,1904366.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 GTBank,2018,2824928.985,2824928.985,0.0,True,"2018 annual report, as originally reported",2018 annual report; 2017 restated comparative
 GTBank,2019,2712521.494,2712521.494,0.0,True,"2019 annual report, as originally reported","2018 annual report, as originally reported"
+Stanbic,2019,1599245.0,1599245.0,0.0,True,"2019 audited financial statements, as originally reported (issuer-hosted scanned extract)","2018 audited financial statements, as originally reported (issuer-hosted scanned extract)"
 Stanbic,2021,2370347.0,2370347.0,0.0,True,"2021 audited financial statements, as originally reported","2021 audited financial statements; 2020 comparative, not labelled restated"
 Stanbic,2022,2614087.0,2614087.0,0.0,True,"2022 audited financial statements, as originally reported","2021 audited financial statements, as originally reported"
 Sterling,2014,707797.181,707797.181,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.

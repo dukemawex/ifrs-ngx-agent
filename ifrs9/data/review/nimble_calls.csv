@@ -23,3 +23,5 @@ call_no,utc,channel,tool,purpose,query_or_url,attempts,outcome,result_summary,re
 16.6,2026-10-10T17:19Z,mcp_plugin,nimble_agents_run_status,poll Web Search Agent run,,1,completed,status: running,task_run_ce8fc5b57cbc4f638c7116f27ceae584,not available
 16.7,2026-10-10T17:25Z,mcp_plugin,nimble_agents_run_status,poll Web Search Agent run,,1,completed,status: running,task_run_ce8fc5b57cbc4f638c7116f27ceae584,not available
 16.8,2026-10-10T17:35Z,mcp_plugin,nimble_agents_run_status,poll Web Search Agent run,,1,completed,status: running,task_run_ce8fc5b57cbc4f638c7116f27ceae584,not available
+16.9,2026-10-10T21:13Z,mcp_plugin,nimble_agents_run_status,poll Web Search Agent run,,1,completed,status: completed (finished 17:35:00Z),task_run_ce8fc5b57cbc4f638c7116f27ceae584,not available
+16.10,2026-10-10T21:14Z,mcp_plugin,nimble_agents_run_result,fetch Web Search Agent result,,1,completed,"6 rows: 5 Fidelity PDF leads (2014-2017, 2020), Zenith 2013 not found; saved to nimble_agent_run.json",task_run_ce8fc5b57cbc4f638c7116f27ceae584,not available

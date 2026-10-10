@@ -1,16 +1,16 @@
 measure,value
-Selected bank-years,65
-  baseline retained / additional,47 / 18
-  pre-adoption / post-adoption,32 / 33
+Selected bank-years,72
+  baseline retained / additional,47 / 25
+  pre-adoption / post-adoption,36 / 36
 Banks represented,12
 Blank baseline cells filled (logged),9
 Corrections to non-blank baseline values,0
-Admissions accepted / rejected,327 / 0
-Reconciliation pass / fail / documented exception,135 / 0 / 1
-Evidence lineage matched / checked,921 / 921
-Going-concern reviews recorded (coded 1),18 (1)
-Panel GCU coded / unknown,19 / 46
-Remaining bank-year positions,65
+Admissions accepted / rejected,433 / 0
+Reconciliation pass / fail / documented exception,151 / 0 / 2
+Evidence lineage matched / checked,1027 / 1027
+Going-concern reviews recorded (coded 1),25 (1)
+Panel GCU coded / unknown,26 / 46
+Remaining bank-year positions,58
 Remaining field requests in selected rows,345
-PDFs archived and hashed (not in zip),40
+PDFs archived and hashed (not in zip),45
 Nimble REST attempts / plugin invocations,0 / 23

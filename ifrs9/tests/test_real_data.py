@@ -272,3 +272,21 @@ def test_no_secret_in_tracked_outputs():
         for p in d.rglob("*"):
             if p.suffix in (".csv", ".json", ".md", ".txt"):
                 assert not pat.search(p.read_text(encoding="utf-8", errors="ignore")), p
+
+
+def test_fidelity_2016_car_documented_exception_not_resolved(panel, checks):
+    c = checks[("Fidelity", 2016, "reported CAR vs capital/RWA")]
+    assert c["status"] == "documented_source_exception" and c["passed"] == "False"
+    assert num(panel[("Fidelity", 2016)]["car"]) == 17.22
+    assert abs(100 * 196913 / 1138258 - 17.30) < 0.005
+
+
+def test_stanbic_2018_writeback_stored_as_negative_charge(admissions, panel):
+    r = next(a for a in admissions if a["evidence_id"] == "STAN18-TI")
+    assert r["raw_value"] == "2,988" and num(r["normalised_value_ngnm_or_pct"]) == -2988
+    assert r["sign_transform"] == "expense_presented_negative" and "write-back" in r["sign_reason"]
+
+
+def test_npl_only_from_explicit_labels(admissions):
+    # 'Individually impaired' (IAS 39) amounts were not admitted as NPL for the 2014-2020 Fidelity additions.
+    assert not [a for a in admissions if a["evidence_id"] in ("FID14-NPL", "FID15-NPL", "FID16-NPL", "FID17-NPL", "FID20-NPL")]

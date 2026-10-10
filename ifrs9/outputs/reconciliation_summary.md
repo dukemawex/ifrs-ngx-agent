@@ -1,12 +1,12 @@
 # Reconciliation summary
 
-Generated 2026-10-10T21:14:53+00:00 from the saved outputs (commit `dd2649a7d576`).
+Generated 2026-10-10T21:24:36+00:00 from the saved outputs (commit `1167d5f02296`).
 Every number below is computed by `ifrs9_recovery.summary.release_stats()`; see `outputs/release_stats.json`.
 
 ## Panel
 
-- Selected bank-years: **65** across 12 banks (32 pre-adoption, 33 post-adoption).
-- Baseline rows: 47 (all 47 retained); additional rows admitted: 18.
+- Selected bank-years: **72** across 12 banks (36 pre-adoption, 36 post-adoption).
+- Baseline rows: 47 (all 47 retained); additional rows admitted: 25.
 - These are selected rows, not complete observations for every endpoint (see endpoint table).
 
 ## What changed relative to the frozen baseline
@@ -15,58 +15,58 @@ Every number below is computed by `ifrs9_recovery.summary.release_stats()`; see 
 - Non-blank baseline measurements changed: 0 (corrections are the only route).
 - Authorised fills of blank baseline cells: 9 (gcu 9).
 - Recomputed derived values that differ from stored: 0.
-- Additional bank-years: 18.
-- Field basis of all non-blank cells: baseline_inherited 615, derived_from_verified 13, derived_from_verified+restated_comparative 4, manual_transcription 30, manual_transcription+restated_comparative 4, recomputed_ratio 674, reported_text_layer 218, reported_text_layer+restated_comparative 37.
+- Additional bank-years: 25.
+- Field basis of all non-blank cells: baseline_inherited 615, derived_from_verified 13, derived_from_verified+restated_comparative 4, manual_transcription 51, manual_transcription+restated_comparative 4, recomputed_ratio 750, reported_text_layer 303, reported_text_layer+restated_comparative 37.
 
 ## Admission and reconciliation
 
-- Admissions: 327 accepted, 0 rejected (file hash recomputed, page and rendered image re-verified, structured scope, explicit sign transform, derived values recomputed).
-- Reconciliation checks run: 136; pass 135; fail 0; documented source exception 1.
-- Evidence lineage: 921 of 921 non-blank inputs matched to an evidence record; 6 carry an explicit qualification.
-- Average-asset denominators: 46 checked against prior-year closing assets; 1 differ (listed in `data/denominator_compatibility.csv`). Each ratio uses the opening balance from the same report as its closing balance; differing pairs are not smoothed.
+- Admissions: 433 accepted, 0 rejected (file hash recomputed, page and rendered image re-verified, structured scope, explicit sign transform, derived values recomputed).
+- Reconciliation checks run: 153; pass 151; fail 0; documented source exception 2.
+- Evidence lineage: 1027 of 1027 non-blank inputs matched to an evidence record; 6 carry an explicit qualification.
+- Average-asset denominators: 52 checked against prior-year closing assets; 1 differ (listed in `data/denominator_compatibility.csv`). Each ratio uses the opening balance from the same report as its closing balance; differing pairs are not smoothed.
   - Union 2015 (opening 922755.0 from 2016 annual report; 2015 restated comparative; prior closing 920936.0 from Prior source-selection policy retained; original evidence preserved in accompanying pack.)
 
 ## Endpoint coverage (selected rows)
 
 | Outcome | Available | Eligible | Excluded by flag | Pre | Post |
 |---|---|---|---|---|---|
-| roa | 48 | 48 | 0 | 22 | 26 |
-| eqta | 65 | 65 | 0 | 32 | 33 |
-| ocf_ratio | 44 | 44 | 0 | 19 | 25 |
-| allr | 56 | 56 | 0 | 25 | 31 |
-| leverage | 65 | 65 | 0 | 32 | 33 |
-| car | 53 | 52 | 1 | 24 | 28 |
-| car_computed | 34 | 33 | 1 | 10 | 23 |
+| roa | 55 | 55 | 0 | 26 | 29 |
+| eqta | 72 | 72 | 0 | 36 | 36 |
+| ocf_ratio | 49 | 49 | 0 | 23 | 26 |
+| allr | 61 | 61 | 0 | 29 | 32 |
+| leverage | 72 | 72 | 0 | 36 | 36 |
+| car | 58 | 56 | 2 | 27 | 29 |
+| car_computed | 39 | 38 | 1 | 14 | 24 |
 | npl_calc | 14 | 14 | 0 | 7 | 7 |
 | broad_coverage | 14 | 14 | 0 | 7 | 7 |
 | stage3_coverage | 4 | 4 | 0 | 0 | 4 |
-| impairment_assets | 45 | 45 | 0 | 19 | 26 |
+| impairment_assets | 52 | 52 | 0 | 23 | 29 |
 | liquidity_used | 10 | 10 | 0 | 5 | 5 |
-| gcu | 19 | 19 | 0 | 3 | 16 |
+| gcu | 26 | 26 | 0 | 7 | 19 |
 
 ## Going concern
 
-- Full original-year auditor reports reviewed and recorded: 18 (1 coded 1).
+- Full original-year auditor reports reviewed and recorded: 25 (1 coded 1).
 - Bank-years explicitly listed as not reviewed: 10.
-- Panel rows coded: 19 (1 coded 1); unknown: 46. Unknown is not zero.
-- Of the coded rows: 2 baseline codes retained (1 confirmed by this review), 9 filled in baseline rows, 8 on additional rows.
+- Panel rows coded: 26 (1 coded 1); unknown: 46. Unknown is not zero.
+- Of the coded rows: 2 baseline codes retained (1 confirmed by this review), 9 filled in baseline rows, 15 on additional rows.
 - A zero means no material-uncertainty section or going-concern emphasis was found after the recorded review; it does not certify survival.
 - With 1 positive event(s), a multivariable going-concern model is not supported; report event counts before choosing an estimator.
 
 ## Version decisions and conflicts
 
-- Version classifications: fallback: comparative 1, fallback: labelled restatement 3, labelled reclassification 1, labelled restatement 2, possible scope incompatibility with 2022 1, source internal inconsistency 3, unexplained difference 1 (`data/review/version_decisions.csv`).
-- Conflicts recorded: candidate_vs_selected 131, restated_comparative 4, source_internal_inconsistency 2, source_unit_label_error 1, source_vs_selected 1.
+- Version classifications: fallback: comparative 1, fallback: labelled restatement 3, labelled reclassification 1, labelled restatement 2, possible scope incompatibility with 2022 1, source internal inconsistency 4, unexplained difference 1 (`data/review/version_decisions.csv`).
+- Conflicts recorded: candidate_vs_selected 141, restated_comparative 4, source_internal_inconsistency 3, source_unit_label_error 1, source_vs_selected 1.
 
 ## Remaining
 
-- Bank-year positions not admitted: 65; field requests in selected rows outstanding: 345.
+- Bank-year positions not admitted: 58; field requests in selected rows outstanding: 345.
 
 ## Tests
 
 - synthetic/mock unit tests: 62 passed, 0 failed, 0 skipped.
-- real-data regression tests: 22 passed, 0 failed, 0 skipped.
-- Test run: 2026-10-10T21:13:54+00:00.
+- real-data regression tests: 25 passed, 0 failed, 0 skipped.
+- Test run: 2026-10-10T21:24:31+00:00.
 
 ## Nimble usage
 
@@ -75,9 +75,9 @@ Every number below is computed by `ifrs9_recovery.summary.release_stats()`; see 
 
 ## Workbook and handoff
 
-- Formula audit after LibreOffice recalculation: {'cells_checked': 1105, 'numeric_differences': 0, 'mismatches': 0, 'excel_errors': 0}.
-- Handoff zip: 175 files; rendered evidence page images included: 87; admission image paths without an included image: 0.
-- Source PDFs are NOT included (40 files); each is listed with URL and SHA-256 in `reports/index.csv`. Manual and image-only transcriptions cannot be reproduced from a hash alone: re-inspect the cited page.
+- Formula audit after LibreOffice recalculation: {'cells_checked': 1224, 'numeric_differences': 0, 'mismatches': 0, 'excel_errors': 0}.
+- Handoff zip: 212 files; rendered evidence page images included: 123; admission image paths without an included image: 0.
+- Source PDFs are NOT included (45 files); each is listed with URL and SHA-256 in `reports/index.csv`. Manual and image-only transcriptions cannot be reproduced from a hash alone: re-inspect the cited page.
 
 ## Not done
 

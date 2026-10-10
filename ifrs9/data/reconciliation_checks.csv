@@ -4,8 +4,23 @@ Access,2014,assets = liabilities + equity,0.001,0.001500001,0.001,True,pass,,
 Ecobank Nigeria,2016,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Ecobank Nigeria,2017,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Fidelity,2013,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Fidelity,2014,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Fidelity,2014,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Fidelity,2014,reported CAR vs capital/RWA,0.0007,0.005076,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 7.56e-05; printed literal '24.21' from FID14-CAR; basis=; transitional=
+Fidelity,2015,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Fidelity,2015,gross loans - allowance = net loans,-1.0,1.500000001,1,True,pass,,
+Fidelity,2015,reported CAR vs capital/RWA,0.0688,0.500059,,True,pass,,display precision 0 dp (+/-0.5) + input rounding 5.88e-05; printed literal '19' from FID15-CAR; basis=; transitional=
+Fidelity,2016,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Fidelity,2016,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Fidelity,2016,reported CAR vs capital/RWA,-0.0795,0.005052,,False,documented_source_exception,"2016 report PDF p80 (printed 79), note 4: printed CAR 17.22% vs Total Tier 1 & Tier 2 capital 196,913 / total RWA 1,138,258 = 17.30%; Tier 1 (147,096) + Tier 2 (49,817) and RWA components (914,809 + 6",display precision 2 dp (+/-0.005) + input rounding 5.15e-05; printed literal '17.22' from FID16-CAR; basis=; transitional=
+Fidelity,2017,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Fidelity,2017,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Fidelity,2017,reported CAR vs capital/RWA,0.0,0.005052,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 5.19e-05; printed literal '16.03' from FID17-CAR; basis=; transitional=
 Fidelity,2018,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Fidelity,2019,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Fidelity,2020,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Fidelity,2020,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Fidelity,2020,reported CAR vs capital/RWA,-0.003,0.005044,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 4.41e-05; printed literal '18.18' from FID20-CAR; basis=; transitional=
 Fidelity,2021,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Fidelity,2021,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
 Fidelity,2021,reported CAR vs capital/RWA,0.0029,0.005039,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 3.90e-05; printed literal '19.15' from FID21-CAR; basis=; transitional=
@@ -29,6 +44,8 @@ GTBank,2018,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,
 GTBank,2019,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 GTBank,2019,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
 GTBank,2019,reported CAR vs capital/RWA,0.0001,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 2.98e-08; printed literal '20.66' from GTB19-CCAR; basis=; transitional=24.74
+Stanbic,2018,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Stanbic,2019,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Stanbic,2020,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Stanbic,2020,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
 Stanbic,2020,reported CAR vs capital/RWA,-0.015,0.050052,,True,pass,,display precision 1 dp (+/-0.05) + input rounding 5.24e-05; printed literal '19.4' from STAN20-CAR; basis=; transitional=19.6

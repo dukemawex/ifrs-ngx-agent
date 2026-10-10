@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-10",
+  "pages": [
+    "https://docs.nimbleway.com/home",
+    "https://docs.nimbleway.com/nimble-sdk/web-tools/search",
+    "https://docs.nimbleway.com/nimble-sdk/web-tools/extract/quickstart",
+    "https://docs.nimbleway.com/nimble-sdk/sdks/python"
+  ],
+  "result": "Not readable from this session: direct fetch failed (DNS/egress). Web search snippets of docs.nimbleway.com show POST https://sdk.nimbleway.com/v2/search with max_results and search_depth; one page lists search_depth lite|fast|deep with lite default, another shows 'standard'; one cURL example uses /v1/search.",
+  "implementation_choice": "Use the handoff contract (v2 search/extract, Bearer key). search_depth configurable via NIMBLE_SEARCH_DEPTH (default 'standard' per handoff); confirm against the live docs before the first paid run.",
+  "api_host_probe": "sdk.nimbleway.com reachable later in the session; unauthenticated POST /v2/search returned 401 (no key sent)."
+}

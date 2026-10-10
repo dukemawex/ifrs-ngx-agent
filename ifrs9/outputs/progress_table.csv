@@ -1,0 +1,22 @@
+measure,value
+Baseline selected bank-years,47
+New bank-years admitted,0
+Panel bank-years after run,47
+  pre-adoption (2013-2017),25
+  post-adoption (2018-2022),22
+Banks represented,11
+Blank fields filled from reviewed evidence,0
+Evidence-backed corrections to selected values,0
+Derived values changed by recomputation,0
+Exclusions enforced (documented exceptions),0
+Checked exceptions retained / violated,8 / 0
+Inherited Union exceptions carried (U01-U15),15
+Reconciliation checks passed / run,84 / 85
+Selected values matching an inherited evidence record,611 / 615
+Nimble requests attempted (budget cap),0 (100)
+Discovery jobs by status,blocked=76
+Report downloads by status,egress_denied=31
+PDFs archived and hashed,0
+Remaining bank-year positions,83
+Remaining field requests in selected rows,354
+Conflicts recorded,62

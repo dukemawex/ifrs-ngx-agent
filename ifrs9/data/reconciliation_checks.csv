@@ -1,0 +1,86 @@
+bank,year,check,residual,tolerance,rounding_unit_ngnm,passed,note
+Access,2013,assets = liabilities + equity,0.0,0.001500001,0.001,True,
+Access,2014,assets = liabilities + equity,0.001,0.001500001,0.001,True,
+Ecobank Nigeria,2016,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Ecobank Nigeria,2017,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Fidelity,2013,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Fidelity,2018,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Fidelity,2019,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+First Bank,2013,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+First Bank,2014,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+GTBank,2013,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+GTBank,2014,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Sterling,2013,assets = liabilities + equity,-0.0,0.001500001,0.001,True,
+Sterling,2014,assets = liabilities + equity,0.0,0.001500001,0.001,True,
+Sterling,2018,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Sterling,2019,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+UBA,2013,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+UBA,2014,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+UBA,2015,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+UBA,2015,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+UBA,2015,reported CAR vs capital/RWA,0.0483,0.51,,True,whole-percent published ratio (documented); basis=Bank Basel II regulatory table; published whole-percent ratio; calculated precision separate.; transitional=
+UBA,2016,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+UBA,2016,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+UBA,2016,reported CAR vs capital/RWA,0.2971,0.51,,True,whole-percent published ratio (documented); basis=Bank Basel II regulatory table; published whole-percent ratio; calculated precision separate.; transitional=
+UBA,2017,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+UBA,2017,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+UBA,2017,reported CAR vs capital/RWA,-0.1589,0.51,,True,whole-percent published ratio (documented); basis=Bank regulatory table; rounded published ratio; vintage retained; transitional=
+UBA,2018,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+UBA,2018,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+UBA,2018,reported CAR vs capital/RWA,0.338,0.060000000000000005,,False,rounding from recorded decimals; basis=2018 full impact / reported-vintage Basel basis; see notes; transitional=22.08
+UBA,2019,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+UBA,2019,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+UBA,2019,reported CAR vs capital/RWA,0.4929,0.51,,True,whole-percent published ratio (documented); basis=Bank regulatory table; rounded published ratio; vintage retained; transitional=
+UBA,2020,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+UBA,2020,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+UBA,2020,reported CAR vs capital/RWA,0.3048,0.51,,True,whole-percent published ratio (documented); basis=Bank regulatory table; rounded published ratio; vintage retained; transitional=
+UBA,2021,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+UBA,2021,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+UBA,2021,reported CAR vs capital/RWA,-0.0218,0.060000000000000005,,True,rounding from recorded decimals; basis=Bank regulatory table; rounded published ratio; vintage retained; transitional=
+UBA,2022,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+UBA,2022,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+UBA,2022,reported CAR vs capital/RWA,0.0469,0.060000000000000005,,True,rounding from recorded decimals; basis=Bank regulatory table; rounded published ratio; vintage retained; transitional=
+Union,2013,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Union,2014,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Union,2017,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Union,2017,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+Union,2017,reported CAR vs capital/RWA,-0.0019,0.060000000000000005,,True,rounding from recorded decimals; basis=Reported Basel ratio; transitional=
+Union,2018,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Union,2018,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+Union,2018,reported CAR vs capital/RWA,0.036,0.060000000000000005,,True,rounding from recorded decimals; basis=Full IFRS 9 impact; transition-adjusted ratio separate; transitional=16.4
+Union,2019,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Union,2019,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+Union,2019,reported CAR vs capital/RWA,0.0039,0.015,,True,rounding from recorded decimals; basis=Full IFRS 9 impact; transition-adjusted ratio separate; transitional=19.73
+Union,2020,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Union,2020,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+Union,2020,reported CAR vs capital/RWA,0.0007,0.015,,True,rounding from recorded decimals; basis=Full IFRS 9 impact; transition-adjusted ratio separate; transitional=17.46
+Union,2021,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Union,2021,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+Union,2021,reported CAR vs capital/RWA,0.0014,0.015,,True,rounding from recorded decimals; basis=Reported Basel ratio; transitional=
+Union,2022,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Union,2022,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+Union,2022,reported CAR vs capital/RWA,0.0007,0.015,,True,rounding from recorded decimals; basis=Reported Basel ratio; transitional=
+Unity,2018,assets = liabilities + equity,0.0,0.001500001,0.001,True,
+Unity,2019,assets = liabilities + equity,0.0,0.001500001,0.001,True,
+Wema,2014,assets = liabilities + equity,-0.0,0.001500001,0.001,True,
+Wema,2015,assets = liabilities + equity,-0.0,0.001500001,0.001,True,
+Wema,2016,assets = liabilities + equity,0.0,0.001500001,0.001,True,
+Wema,2017,assets = liabilities + equity,0.0,0.001500001,0.001,True,
+Wema,2018,assets = liabilities + equity,0.0,0.001500001,0.001,True,
+Wema,2019,assets = liabilities + equity,0.0,0.001500001,0.001,True,
+Wema,2019,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,
+Wema,2019,reported CAR vs capital/RWA,0.0016,0.060000000000000005,,True,rounding from recorded decimals; basis=; transitional=
+Wema,2020,assets = liabilities + equity,-0.0,0.001500001,0.001,True,
+Wema,2020,gross loans - allowance = net loans,0.001,0.001500001,0.001,True,
+Wema,2020,reported CAR vs capital/RWA,-0.0047,0.015,,True,rounding from recorded decimals; basis=; transitional=
+Wema,2022,assets = liabilities + equity,-0.0,0.001500001,0.001,True,
+Wema,2022,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,
+Wema,2022,reported CAR vs capital/RWA,0.0026,0.015,,True,rounding from recorded decimals; basis=; transitional=
+Zenith,2014,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Zenith,2015,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Zenith,2021,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Zenith,2021,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+Zenith,2021,reported CAR vs capital/RWA,0.4072,0.51,,True,whole-percent published ratio (documented); basis=Bank Basel II table; published whole percent; computed precision separate; transitional=
+Zenith,2022,assets = liabilities + equity,0.0,0.15000000100000002,0.1,True,
+Zenith,2022,gross loans - allowance = net loans,0.0,0.15000000100000002,0.1,True,
+Zenith,2022,reported CAR vs capital/RWA,0.0036,0.51,,True,whole-percent published ratio (documented); basis=Bank Basel II table; published whole percent; computed precision separate; transitional=

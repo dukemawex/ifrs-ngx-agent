@@ -1,0 +1,142 @@
+{
+  "generated_utc": "2026-10-10T16:35:41+00:00",
+  "input_hashes": [
+    {
+      "relative_path": "inputs/IFRS9_Data_Update_Pack_20261010.zip",
+      "expected_sha256": "19ec27a6b0aab7899f8a538acecd755301c0257c050c1bb6079c6b94a3aabbda",
+      "actual_sha256": "19ec27a6b0aab7899f8a538acecd755301c0257c050c1bb6079c6b94a3aabbda",
+      "bytes": 61044,
+      "unchanged": true
+    },
+    {
+      "relative_path": "inputs/IFRS9_Master_Data_Updated_20261010.xlsx",
+      "expected_sha256": "38e6ea7ded4e61d3b12203c38f15a257baf1b8d641bab8ab9a9a50512303d0cf",
+      "actual_sha256": "38e6ea7ded4e61d3b12203c38f15a257baf1b8d641bab8ab9a9a50512303d0cf",
+      "bytes": 143304,
+      "unchanged": true
+    },
+    {
+      "relative_path": "inputs/IFRS9_Selected_Data_Updated_20261010.csv",
+      "expected_sha256": "502c1a245076fb15deeebccc5b8352bc98a02cd140045915780c014410cc306d",
+      "actual_sha256": "502c1a245076fb15deeebccc5b8352bc98a02cd140045915780c014410cc306d",
+      "bytes": 32702,
+      "unchanged": true
+    },
+    {
+      "relative_path": "inputs/extract_nigerian_bank_ifrs_9_financial_data_6085ddb6.csv",
+      "expected_sha256": "7859117c8313cca9491dc5f1af0f2c0dee7b4d047ed8801917e6716dfe8a0e75",
+      "actual_sha256": "7859117c8313cca9491dc5f1af0f2c0dee7b4d047ed8801917e6716dfe8a0e75",
+      "bytes": 20825,
+      "unchanged": true
+    },
+    {
+      "relative_path": "inputs/nigerian_banks_ifrs9_thesis_data.docx",
+      "expected_sha256": "50023ab5bd3d7229cf2056b152dee53169d0d4a1af9756041cbdeba3593e1e77",
+      "actual_sha256": "50023ab5bd3d7229cf2056b152dee53169d0d4a1af9756041cbdeba3593e1e77",
+      "bytes": 58515,
+      "unchanged": true
+    }
+  ],
+  "update_pack_members": [
+    "README.txt",
+    "recompute.py",
+    "selected_data.csv",
+    "New_Primary_Evidence.csv",
+    "audit_summary.json",
+    "current_uploads/csv_parsed.json",
+    "current_uploads/word_tables_parsed.json",
+    "current_uploads/aggregate_summary_audit.json",
+    "prior_evidence/Union_Verified_Evidence.csv",
+    "prior_evidence/new_evidence.csv",
+    "prior_evidence/prior_selected_evidence.csv",
+    "prior_evidence/Sources.csv",
+    "prior_evidence/exceptions.json"
+  ],
+  "selected": {
+    "rows": 47,
+    "unique_bank_years": 47,
+    "banks": 11,
+    "pre_adoption_2013_2017": 25,
+    "post_adoption_2018_2022": 22,
+    "rows_per_bank": {
+      "Access": 2,
+      "Ecobank Nigeria": 2,
+      "Fidelity": 3,
+      "First Bank": 2,
+      "GTBank": 2,
+      "Sterling": 4,
+      "UBA": 10,
+      "Union": 8,
+      "Unity": 2,
+      "Wema": 8,
+      "Zenith": 4
+    }
+  },
+  "frame_positions": 130,
+  "frame_status_counts": {
+    "Selected - inherited": 45,
+    "Candidate only": 72,
+    "No core data": 11,
+    "Selected - newly checked": 2
+  },
+  "bank_year_gap_tasks": 83,
+  "bank_year_gap_status": {
+    "Candidate only": 72,
+    "No core data": 11
+  },
+  "field_gap_requests": 354,
+  "field_gap_by_field": {
+    "gcu": 45,
+    "loan_impairment": 37,
+    "liquidity": 37,
+    "car_minimum": 34,
+    "npl_amount": 34,
+    "net_loans": 28,
+    "regulatory_capital": 28,
+    "rwa": 28,
+    "stage3_gross": 17,
+    "opening_assets": 14,
+    "stage3_allowance": 12,
+    "loan_allowance": 10,
+    "gross_loans": 9,
+    "car": 9,
+    "ocf": 8,
+    "total_impairment": 4
+  },
+  "seed_sources": 32,
+  "seed_unique_urls": 32,
+  "consistency_checks": [
+    {
+      "check": "baseline rows = 47",
+      "passed": true
+    },
+    {
+      "check": "unique bank-years = rows",
+      "passed": true
+    },
+    {
+      "check": "pre = 25",
+      "passed": true
+    },
+    {
+      "check": "post = 22",
+      "passed": true
+    },
+    {
+      "check": "frame = 130",
+      "passed": true
+    },
+    {
+      "check": "gaps = 83",
+      "passed": true
+    },
+    {
+      "check": "selected + gaps = 130",
+      "passed": true
+    },
+    {
+      "check": "field requests = 354",
+      "passed": true
+    }
+  ]
+}

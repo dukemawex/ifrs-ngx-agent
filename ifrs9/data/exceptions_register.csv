@@ -1,0 +1,24 @@
+id,bank,year,field,expected,actual,status,rule
+X-UBA-2015-ALW,UBA,2015,loan_allowance,13043.0,13043.0,retained,"UBA 2015 customer-loan allowance 13,043, not the candidate alternative"
+X-UBA-2016-ALW,UBA,2016,loan_allowance,29741.0,29741.0,retained,"UBA 2016 customer-loan allowance 29,741, not the candidate alternative"
+X-UBA-2022-LIQ,UBA,2022,liquidity_admissible,0.0,0.0,retained,UBA 2022 liquidity excluded until year-end/max inconsistency is reconciled
+X-UNION-2017-PAT,Union,2017,pat,11239.0,11239.0,retained,Union 2017 PAT uses the AMCON-restated comparative; not an ECL impact
+X-UNION-2018-ALW,Union,2018,loan_allowance,45359.0,45359.0,retained,Union 2018 original presentation retained; 190m reinstatement discrepancy unresolved
+X-UNION-2022-S3,Union,2022,stage3_coverage,,,retained (documented; value not altered),Union 2022 Stage 3 allowance subtotals conflict; matched Stage 3 coverage excluded
+X-STERLING-2018-19,Sterling,2018,scope,,,retained (documented; value not altered),Sterling 2018/2019 Bank and Group figures differ; Bank perimeter required
+X-WEMA-2015-PAT,Wema,2015,pat,,2273.205,retained (documented; value not altered),Wema 2015 PAT differs between original and later comparative presentation
+U01,Union,April 2015 duplicate NGX PDF,Quarterly report misidentified,,,inherited exception (UNION15Q1),"Three months ended March 2015, not annual 2015. -> Exclude as annual-flow source."
+U02,Union,All candidate data in shared artifact,Claude artifact unavailable,,,inherited exception (CLAUDE),Contents could not be read; none have been imported. -> Comparison requires a readable export.
+U03,Union,2017 PAT and equity,Pre-adoption AMCON restatement,,,inherited exception (UNION18),PAT 12839 to 11239; equity 321388 to 319119. -> Use coherent restated 2017 statements; do not attribute correction to IFRS 9.
+U04,Union,2018 gross loans and allowance,2018 loan reinstatement,,,inherited exception (UNION18; UNION19),Original 473396/45359; reinstatement note 496630/68593; detailed comparative 496820/68783; net 428037 in all cases. -> Original-vintage case graph plus explicit sensitivity; exclude pooled allowance inference until 190m discrepancy reconciled.
+U05,Union,2021 loans,Gross/net loan confusion,,,inherited exception (UNION22),"868840 is net; gross 899106 less allowance 30266. -> Use gross loan denominator, not statement carrying value."
+U06,Union,2022 customer loans,Closing allowance mismatch,,,inherited exception (UNION22),"Source-supported closing total 32015, not supplied 46628. -> Use main loan-note total; do not invent the scope of the original number."
+U07,Union,"2019, 2021 and 2022",Impairment sign and scope,,,inherited exception (UNION20; UNION22),2019 total reversal -504; 2021 -34 credit +320 other =286; 2022 3209 credit +1266 other =4475. -> Use signed income-statement components; keep stock and expense distinct.
+U08,Union,2018–2020,Capital transition,,,inherited exception (UNION18; UNION20),Full-impact and transition-adjusted CAR differ. -> Preserve both; graphs do not silently switch measurement basis.
+U09,Union,2021–2022,Historical capital minimum,,,inherited exception (UNION22),2022 report states 10% minimum; original table applies blanket 15%. -> Use verified year-specific requirement only; 2021 threshold remains unknown here.
+U10,Union,"2018, 2019, 2021–2022",Stage 3 versus NPL,,,inherited exception (UNION18; UNION19; UNION22),Stage 3 includes watchlist exposures; 2018 123328 versus NPL 38496. -> Separate indicators and denominators; total allowance/NPL labelled broad coverage.
+U11,Union,2022 Stage 3,2022 stage-specific allowance inconsistency,,,inherited exception (UNION22),22610 main note; 22496 roll-forward; 16470 regulatory overview. -> Exclude 2022 matched Stage 3 coverage; retain main total32015 which reconciles net loans.
+U12,Union,2019–2022,Liquidity reporting scope,,,inherited exception (UNION20; UNION22),Available ratios explicitly refer to Group. -> Do not fill standalone liquidity fields.
+U13,Union,2019–2022,Loan-only expense non-comparability,,,inherited exception (UNION20; UNION22),Modification losses and presentation differences across CF and allowance movement. -> Retain total impairment analysis as a separate broad measure; no pure loan-ECL volatility claim.
+U14,Union,2013–2016,Prior audited versions,,,inherited exception (Prior DS_UNION14; supplied report links),Prior Union2013/14 original amounts retained; later summaries restate balances; 2015/16 not reconciled in this update. -> No claim of complete comparable Union 2013–2022 series.
+U15,Union,2017–2022,Auditor classification,,,inherited exception (UNION18; UNION19; UNION20; UNION22),Income/loan source checks do not establish an absence of going concern uncertainty. -> New Union auditor codes left unknown; existing selected GCU observations unchanged.

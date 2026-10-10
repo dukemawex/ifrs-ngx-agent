@@ -1,0 +1,14 @@
+﻿bank,selected_bank_years,years_not_selected,candidate_only_count,no_core_data_count,note
+Access,2,2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022,8,0,Selected does not mean all variables are complete.
+Zenith,4,2013; 2016; 2017; 2018; 2019; 2020,5,1,Selected does not mean all variables are complete.
+First Bank,2,2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022,8,0,Selected does not mean all variables are complete.
+UBA,10,,0,0,Selected does not mean all variables are complete.
+GTBank,2,2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022,8,0,Selected does not mean all variables are complete.
+Fidelity,3,2014; 2015; 2016; 2017; 2020; 2021; 2022,6,1,Selected does not mean all variables are complete.
+Stanbic,0,2013; 2014; 2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022,8,2,Selected does not mean all variables are complete.
+Sterling,4,2015; 2016; 2017; 2020; 2021; 2022,6,0,Selected does not mean all variables are complete.
+Wema,8,2013; 2021,1,1,Selected does not mean all variables are complete.
+FCMB,0,2013; 2014; 2015; 2016; 2017; 2018; 2019; 2020; 2021; 2022,8,2,Selected does not mean all variables are complete.
+Ecobank Nigeria,2,2013; 2014; 2015; 2018; 2019; 2020; 2021; 2022,6,2,Selected does not mean all variables are complete.
+Unity,2,2013; 2014; 2015; 2016; 2017; 2020; 2021; 2022,6,2,Selected does not mean all variables are complete.
+Union,8,2015; 2016,2,0,Selected does not mean all variables are complete.

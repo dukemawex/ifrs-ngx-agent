@@ -165,3 +165,7 @@ Workflow file: `.github/workflows/build_dataset.yml`
 - `prompts/extract_financials.md`
 
 These serve as documentation for the search/extraction strategy.
+
+## IFRS 9 bank-panel recovery (`ifrs9/`)
+
+A separate Python pipeline for the Nigerian IFRS 9 banking study (13 banks, 2013–2022). See `ifrs9/README_PIPELINE.md` for setup and usage. Results are in `ifrs9/outputs/reconciliation_summary.md`.

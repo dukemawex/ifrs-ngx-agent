@@ -1,0 +1,131 @@
+﻿Bank,Year,Analytical tier,Regime,Evidence status,CSV row present,Word row present,Selected,PAT (NGNm),Assets (NGNm),Equity (NGNm),ROA average (%),Loan allowance / loans (%),CAR reported (%),Selected source IDs,Source / status note
+Access,2013,Tier 1,IAS 39,Selected - inherited,0,0,1,26211.844,1704094.012,245181.998,,,,ACCESS2014A,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Access,2014,Tier 1,IAS 39,Selected - inherited,0,0,1,39941.126,1981955.73,274155.785,2.1671506786736137,,,ACCESS2014A,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Access,2015,Tier 1,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Access,2016,Tier 1,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Access,2017,Tier 1,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Access,2018,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Access,2019,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Access,2020,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Access,2021,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Access,2022,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Zenith,2013,Tier 1,IAS 39,No core data,0,0,0,,,,,,,,No populated PAT/assets pair in the current uploads or selected layer.
+Zenith,2014,Tier 1,IAS 39,Selected - inherited,0,0,1,92479,3423819,512707,,1.5776843398121927,19,DS_ZEN15,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Zenith,2015,Tier 1,IAS 39,Selected - inherited,1,1,1,98784,3750327,546946,2.7538887555396836,1.8948073175765183,20,DS_ZEN15,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Zenith,2016,Tier 1,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Zenith,2017,Tier 1,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Zenith,2018,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Zenith,2019,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Zenith,2020,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Zenith,2021,Tier 1,IFRS 9,Selected - inherited,1,1,1,233133,7872292,1049775,,4.27801590686519,20,ZEN22,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Zenith,2022,Tier 1,IFRS 9,Selected - inherited,1,1,1,234593,10570678,1195147,2.543982883450984,2.686487070846266,19,ZEN22,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+First Bank,2013,Tier 1,IAS 39,Selected - inherited,0,0,1,59365,3246579,350709,,2.7353875962853267,13.54,DS_FBN14,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+First Bank,2014,Tier 1,IAS 39,Selected - inherited,0,0,1,79351,3490871,423047,2.355520263601214,2.077935404427798,15.78,DS_FBN14,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+First Bank,2015,Tier 1,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+First Bank,2016,Tier 1,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+First Bank,2017,Tier 1,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+First Bank,2018,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+First Bank,2019,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+First Bank,2020,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+First Bank,2021,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+First Bank,2022,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+UBA,2013,Tier 1,IAS 39,Selected - inherited,0,0,1,46483,2217417,259538,,1.0328353983004226,20,UBA2014,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+UBA,2014,Tier 1,IAS 39,Selected - inherited,0,0,1,40083,2338858,281933,1.7594635969075616,1.175499296733694,17,UBA2014,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+UBA,2015,Tier 1,IAS 39,Selected - newly checked,1,1,1,47642,2216337,338231,2.091765555590924,1.56065843680488,20,UBA16_UPDATE; UBA2014,2016 report 2015 comparative Bank columns; opening assets retained from the prior selected 2014 statement.
+UBA,2016,Tier 1,IAS 39,Selected - newly checked,1,1,1,47541,2539585,390900,1.999233797358325,2.6552188383852813,20,UBA16_UPDATE,2016 report current-year Bank columns.
+UBA,2017,Tier 1,IAS 39,Selected - inherited,1,1,1,41396,2931826,400860,1.5131745723360939,2.5914418984644967,20,UBA18,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+UBA,2018,Tier 1,IFRS 9,Selected - inherited,1,1,1,41047,3591305,364598,1.2585060762998628,4.733571302993771,20,UBA18,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+UBA,2019,Tier 1,IFRS 9,Selected - inherited,1,1,1,62750,4136493,446522,1.62400725277757,3.4659981841041043,22,UBA20,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+UBA,2020,Tier 1,IFRS 9,Selected - inherited,1,1,1,56911,5207833,477940,1.218086783359228,3.3240917445481206,20,UBA20,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+UBA,2021,Tier 1,IFRS 9,Selected - inherited,1,1,1,58669,5574976,501601,1.088195107601368,3.412819986171235,21.8,UBA22,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+UBA,2022,Tier 1,IFRS 9,Selected - inherited,1,1,1,133696,7361044,585193,2.0670345283943594,2.3764253747162356,21.9,UBA22,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+GTBank,2013,Tier 1,IAS 39,Selected - inherited,0,0,1,85546,1904366,329647,,,,GT2014A,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+GTBank,2014,Tier 1,IAS 39,Selected - inherited,0,0,1,93432,2126608,369530,4.635703430486031,,,GT2014A,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+GTBank,2015,Tier 1,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+GTBank,2016,Tier 1,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+GTBank,2017,Tier 1,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+GTBank,2018,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+GTBank,2019,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+GTBank,2020,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+GTBank,2021,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+GTBank,2022,Tier 1,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Fidelity,2013,Tier 2,IAS 39,Selected - inherited,0,0,1,7721,1081217,163455,0.7738112836538004,3.744050026092909,26,FID2013,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Fidelity,2014,Tier 2,IAS 39,No core data,0,0,0,,,,,,,,No populated PAT/assets pair in the current uploads or selected layer.
+Fidelity,2015,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Fidelity,2016,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Fidelity,2017,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Fidelity,2018,Tier 2,IFRS 9,Selected - inherited,1,1,1,22926,1719883,194416,,,,FID2019,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Fidelity,2019,Tier 2,IFRS 9,Selected - inherited,1,1,1,28425,2114037,234030,1.4828165428595277,,,FID2019,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Fidelity,2020,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Fidelity,2021,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Fidelity,2022,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Stanbic,2013,Tier 2,IAS 39,No core data,0,0,0,,,,,,,,No populated PAT/assets pair in the current uploads or selected layer.
+Stanbic,2014,Tier 2,IAS 39,No core data,0,0,0,,,,,,,,No populated PAT/assets pair in the current uploads or selected layer.
+Stanbic,2015,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Stanbic,2016,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Stanbic,2017,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Stanbic,2018,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Stanbic,2019,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Stanbic,2020,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Stanbic,2021,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Stanbic,2022,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Sterling,2013,Tier 2,IAS 39,Selected - inherited,0,0,1,8274.864,707797.181,63457.896,,2.1058396913593183,14,STER2014,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Sterling,2014,Tier 2,IAS 39,Selected - inherited,0,0,1,9004.973,824539.426,84715.285,1.1753257030946858,2.540694951544191,14,STER2014,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Sterling,2015,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Sterling,2016,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Sterling,2017,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Sterling,2018,Tier 2,IFRS 9,Selected - inherited,1,1,1,9468,1085876,98009,,3.0687802609110975,12.86,STER2019,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Sterling,2019,Tier 2,IFRS 9,Selected - inherited,1,1,1,10163,1165509,119328,0.9028220406549746,2.052563091857185,14.7,STER2019,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Sterling,2020,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Sterling,2021,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Sterling,2022,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Wema,2013,Tier 2,IAS 39,No core data,0,0,0,,,,,,,,No populated PAT/assets pair in the current uploads or selected layer.
+Wema,2014,Tier 2,IAS 39,Selected - inherited,0,0,1,2372.445,382562.312,43768.649,,1.9686954696869696,18.22,DS_WEMA15,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Wema,2015,Tier 2,IAS 39,Selected - inherited,1,1,1,2273.205,396743.314,46064.11,0.5833924263238927,1.2904447894922089,15.09,DS_WEMA15; WEMA2016,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Wema,2016,Tier 2,IAS 39,Selected - inherited,1,1,1,2591.8,421221.036,48501.954,0.6337195502469025,,,WEMA2016,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Wema,2017,Tier 2,IAS 39,Selected - inherited,1,1,1,2301.158,384779.809,49692.14,0.5710063492551302,1.924789801393683,14.32,WEMA2018,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Wema,2018,Tier 2,IFRS 9,Selected - inherited,1,1,1,3359.259,477915.742,50998.879,0.7787820387171558,3.591244092813833,18.01,WEMA2018,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Wema,2019,Tier 2,IFRS 9,Selected - inherited,1,1,1,5210.748,704955.604,55356.851,0.8810337688237481,4.024455100125294,13.6,WEMA20,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Wema,2020,Tier 2,IFRS 9,Selected - inherited,1,1,1,4592.217,968582.084,59352.833,0.5488035355197808,3.989865519768579,15.01,WEMA20,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Wema,2021,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Wema,2022,Tier 2,IFRS 9,Selected - inherited,1,1,1,11214.027,1433703.656,82622.676,,3.32633443478277,12.74,WEMA23,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+FCMB,2013,Tier 2,IAS 39,No core data,0,0,0,,,,,,,,No populated PAT/assets pair in the current uploads or selected layer.
+FCMB,2014,Tier 2,IAS 39,No core data,0,0,0,,,,,,,,No populated PAT/assets pair in the current uploads or selected layer.
+FCMB,2015,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+FCMB,2016,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+FCMB,2017,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+FCMB,2018,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+FCMB,2019,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+FCMB,2020,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+FCMB,2021,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+FCMB,2022,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Ecobank Nigeria,2013,Tier 2,IAS 39,No core data,0,0,0,,,,,,,,No populated PAT/assets pair in the current uploads or selected layer.
+Ecobank Nigeria,2014,Tier 2,IAS 39,No core data,0,0,0,,,,,,,,No populated PAT/assets pair in the current uploads or selected layer.
+Ecobank Nigeria,2015,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Ecobank Nigeria,2016,Tier 2,IAS 39,Selected - inherited,1,1,1,5780,1808503,220775,,,,DS_ECO17,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Ecobank Nigeria,2017,Tier 2,IAS 39,Selected - inherited,1,1,1,20204,1829761,267329,1.1106395797556197,,,DS_ECO17,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Ecobank Nigeria,2018,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Ecobank Nigeria,2019,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Ecobank Nigeria,2020,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Ecobank Nigeria,2021,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Ecobank Nigeria,2022,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Unity,2013,Tier 2,IAS 39,No core data,0,0,0,,,,,,,,No populated PAT/assets pair in the current uploads or selected layer.
+Unity,2014,Tier 2,IAS 39,No core data,0,0,0,,,,,,,,No populated PAT/assets pair in the current uploads or selected layer.
+Unity,2015,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Unity,2016,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Unity,2017,Tier 2,IAS 39,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Unity,2018,Tier 2,IFRS 9,Selected - inherited,1,1,1,-7695.32,210800.841,-284374.654,,1.659629381544044,-214.8,UNITY2019,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Unity,2019,Tier 2,IFRS 9,Selected - inherited,1,1,1,3383.189,293052.07,-278855.888,1.3429272417163824,2.7088062044892185,-201.59,UNITY2019,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Unity,2020,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Unity,2021,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Unity,2022,Tier 2,IFRS 9,Candidate only,1,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Union,2013,Tier 2,IAS 39,Selected - inherited,0,0,1,5121,882097,187784,,8.929438280166435,24.8,DS_UNION14,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Union,2014,Tier 2,IAS 39,Selected - inherited,0,0,1,20486,920936,205974,2.2723932396134736,7.1760993160357085,16.39,DS_UNION14,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Union,2015,Tier 2,IAS 39,Candidate only,0,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Union,2016,Tier 2,IAS 39,Candidate only,0,1,0,,,,,,,,Available candidate amounts require audited-source checking.
+Union,2017,Tier 2,IAS 39,Selected - inherited,0,1,1,11239,1334921,319119,0.9143330388333244,8.133025702933583,17.8,UNION18,2018 report: restated 2017 main statements
+Union,2018,Tier 2,IFRS 9,Selected - inherited,0,1,1,18438,1324297,200087,1.3867234653195037,9.581618771599253,11.5,UNION18,Original 2018 presentation; loan reinstatement alternatives held separately
+Union,2019,Tier 2,IFRS 9,Selected - inherited,0,1,1,24375,1711739,231192,1.6057121852310052,7.50632456349593,15.91,UNION18; UNION19; UNION20,2020 audited-report comparative
+Union,2020,Tier 2,IFRS 9,Selected - inherited,0,1,1,24653,2073758,247521,1.3024973999451064,5.9601309602666985,15.76,UNION20,2020 audited-report current-year
+Union,2021,Tier 2,IFRS 9,Selected - inherited,0,1,1,19180,2567441,251487,0.8265105633264163,3.3662326800177063,14.61,UNION20; UNION22,2022 audited-report comparative
+Union,2022,Tier 2,IFRS 9,Selected - inherited,0,1,1,29009,2793674,289850,1.0822002512537037,3.1986116536767297,14.42,UNION22,2022 audited-report current-year

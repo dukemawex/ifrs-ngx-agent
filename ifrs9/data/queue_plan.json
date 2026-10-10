@@ -1,0 +1,72 @@
+{
+  "jobs": 107,
+  "by_kind": {
+    "report": 31,
+    "extract": 1,
+    "search": 75
+  },
+  "estimated_nimble_requests_first_attempt": 76,
+  "bank_years_with_seed_leads": [
+    "Fidelity 2021",
+    "Fidelity 2022",
+    "Stanbic 2018",
+    "Stanbic 2019",
+    "Stanbic 2020",
+    "Stanbic 2021",
+    "Stanbic 2022",
+    "Wema 2021"
+  ],
+  "priority_batches": [
+    {
+      "priority": 1,
+      "label": "Close near-complete series",
+      "targets": [
+        "Wema 2021",
+        "Union 2015",
+        "Union 2016",
+        "Wema 2013"
+      ]
+    },
+    {
+      "priority": 2,
+      "label": "Use newly located operating-bank statements",
+      "targets": [
+        "Stanbic 2020",
+        "Stanbic 2021",
+        "Stanbic 2022"
+      ]
+    },
+    {
+      "priority": 3,
+      "label": "Strengthen transition comparisons",
+      "targets": [
+        "Access 2017-2019",
+        "First Bank 2017-2019",
+        "GTBank 2017-2019",
+        "Zenith 2017-2019"
+      ]
+    },
+    {
+      "priority": 4,
+      "label": "Recover banks with no selected years",
+      "targets": [
+        "FCMB 2013-2022",
+        "Remaining Stanbic years"
+      ]
+    },
+    {
+      "priority": 5,
+      "label": "Complete other Tier 1 years",
+      "targets": [
+        "See bank_year_gaps.csv"
+      ]
+    },
+    {
+      "priority": 6,
+      "label": "Complete remaining Tier 2 years and all field gaps",
+      "targets": [
+        "See both task CSVs"
+      ]
+    }
+  ]
+}

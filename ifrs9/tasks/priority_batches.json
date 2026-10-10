@@ -1,0 +1,58 @@
+{
+  "baseline": "47 selected / 130 candidate positions, 10 October 2026",
+  "batches": [
+    {
+      "priority": 1,
+      "label": "Close near-complete series",
+      "targets": [
+        "Wema 2021",
+        "Union 2015",
+        "Union 2016",
+        "Wema 2013"
+      ]
+    },
+    {
+      "priority": 2,
+      "label": "Use newly located operating-bank statements",
+      "targets": [
+        "Stanbic 2020",
+        "Stanbic 2021",
+        "Stanbic 2022"
+      ]
+    },
+    {
+      "priority": 3,
+      "label": "Strengthen transition comparisons",
+      "targets": [
+        "Access 2017-2019",
+        "First Bank 2017-2019",
+        "GTBank 2017-2019",
+        "Zenith 2017-2019"
+      ]
+    },
+    {
+      "priority": 4,
+      "label": "Recover banks with no selected years",
+      "targets": [
+        "FCMB 2013-2022",
+        "Remaining Stanbic years"
+      ]
+    },
+    {
+      "priority": 5,
+      "label": "Complete other Tier 1 years",
+      "targets": [
+        "See bank_year_gaps.csv"
+      ]
+    },
+    {
+      "priority": 6,
+      "label": "Complete remaining Tier 2 years and all field gaps",
+      "targets": [
+        "See both task CSVs"
+      ]
+    }
+  ],
+  "skip_rule": "Skip already verified exact report/field/version, not entire bank-year.",
+  "paid_requests": "No paid requests were made preparing this handoff."
+}

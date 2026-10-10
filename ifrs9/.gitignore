@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+cache/
+logs/
+work/
+reports/*
+!reports/index.csv
+outputs/_recalc/
+# The repository root ignores data/; this pipeline's data/ outputs are deliverables.
+!data/
+!data/**

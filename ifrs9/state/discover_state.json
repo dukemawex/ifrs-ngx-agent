@@ -1,0 +1,397 @@
+{
+  "jobs": {
+    "search-a83b5d1023": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-1cc5d69fb7": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-f159a68476": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "extract-9e8d66b8f1": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-d15bd8342e": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-8857da32c4": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-ba4ad592aa": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-a2d1818ece": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-7a2b66a2cc": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-ca5fd0a69b": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-c1423cbb1b": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-c9a280d3b3": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-be48192d07": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-a9b6f3d8be": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-2153eff9fa": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-aa76a435aa": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-fd07b26477": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-13ed75455f": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-1161ae5179": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-a960ffaf72": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-68695c53b4": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-2507642abf": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-53c2ba9465": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-ad31ab8c4d": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-da1763c438": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-938e3ef962": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-4d244b28eb": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-5511c58bce": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-7eb1ffec03": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-17e366c309": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-def2492d52": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-be11416116": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-c397d298cd": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-9aaaea360b": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-19621b121f": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-a227cc0523": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-4855a6726e": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-b2b842d600": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-a4ce79005e": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-aecfca25e7": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-6c0fda62eb": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-690851df63": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-5fd2d9200d": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-391f2e777a": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-f95bf31cce": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-2763fcd30c": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-03d711f3b0": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-3d4e84f1c2": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-9b38dba284": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-ea606f94a7": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-215c266061": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-7fa4c61406": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-c7fb5f811e": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-a102ea66e2": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-de53d28336": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-77369748a4": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-b5fcdd4a48": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-5e73b704e5": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-2ecf0d365f": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-d85a2ff34f": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-b96090e413": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-434ce51396": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-85d4d11ed5": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-32306379d1": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-186da57375": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-bc3f64969b": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-af73e8ba05": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-6d5cbdf720": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-f38d366a13": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-075baa5ce4": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-271313562e": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-fdb16ac18f": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-3c2f803f99": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-97f6f80ed2": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-c34d97c75a": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    },
+    "search-51507d79ab": {
+      "status": "blocked",
+      "reason": "auth_missing: NIMBLE_API_KEY not set in environment or local .env",
+      "at": "2026-10-10T16:35:17+00:00"
+    }
+  },
+  "last_run": {
+    "started_utc": "2026-10-10T16:35:16+00:00",
+    "pending_jobs": 76,
+    "estimated_requests_this_batch": 76,
+    "cap": 100,
+    "preflight": {
+      "host": "sdk.nimbleway.com",
+      "reachable": true,
+      "status": 404
+    },
+    "finished_utc": "2026-10-10T16:35:17+00:00",
+    "blocker": "auth_missing: NIMBLE_API_KEY not set in environment or local .env"
+  }
+}

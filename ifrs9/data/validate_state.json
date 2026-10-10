@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-10T17:16:40+00:00",
+  "admissions_reviewed": 325,
+  "admissions_accepted": 325,
+  "new_bank_years": [
+    "Wema 2021",
+    "Union 2016",
+    "Union 2015",
+    "Stanbic 2022",
+    "Stanbic 2021",
+    "Stanbic 2020",
+    "Zenith 2016",
+    "Zenith 2017",
+    "Zenith 2018",
+    "Zenith 2019",
+    "Zenith 2020",
+    "GTBank 2019",
+    "GTBank 2018",
+    "GTBank 2017",
+    "First Bank 2017",
+    "First Bank 2016",
+    "Fidelity 2022",
+    "Fidelity 2021"
+  ],
+  "partial_new": 0,
+  "recompute_differences": 0,
+  "changes": 26,
+  "exceptions_violated": []
+}

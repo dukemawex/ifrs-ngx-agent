@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-10T11:15:56.818372+00:00",
+  "baseline_rows": 47,
+  "candidate_positions": 130,
+  "unselected_positions": 83,
+  "field_requests_selected_rows": 354,
+  "selected_bank_count": 11,
+  "original_inputs": [
+    {
+      "relative_path": "inputs/IFRS9_Data_Update_Pack_20261010.zip",
+      "bytes": 61044,
+      "sha256": "19ec27a6b0aab7899f8a538acecd755301c0257c050c1bb6079c6b94a3aabbda"
+    },
+    {
+      "relative_path": "inputs/IFRS9_Master_Data_Updated_20261010.xlsx",
+      "bytes": 143304,
+      "sha256": "38e6ea7ded4e61d3b12203c38f15a257baf1b8d641bab8ab9a9a50512303d0cf"
+    },
+    {
+      "relative_path": "inputs/IFRS9_Selected_Data_Updated_20261010.csv",
+      "bytes": 32702,
+      "sha256": "502c1a245076fb15deeebccc5b8352bc98a02cd140045915780c014410cc306d"
+    },
+    {
+      "relative_path": "inputs/extract_nigerian_bank_ifrs_9_financial_data_6085ddb6.csv",
+      "bytes": 20825,
+      "sha256": "7859117c8313cca9491dc5f1af0f2c0dee7b4d047ed8801917e6716dfe8a0e75"
+    },
+    {
+      "relative_path": "inputs/nigerian_banks_ifrs9_thesis_data.docx",
+      "bytes": 58515,
+      "sha256": "50023ab5bd3d7229cf2056b152dee53169d0d4a1af9756041cbdeba3593e1e77"
+    }
+  ],
+  "qualification": "Hashes verify file identity, not source authenticity. No original financial inputs changed.",
+  "nimble_calls_made": 0
+}

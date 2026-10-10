@@ -49,6 +49,37 @@ Fidelity,2019,liabilities,1880007.0,1,True,direct,EV0108
 Fidelity,2019,equity,234030.0,1,True,direct,EV0107
 Fidelity,2019,opening_assets,1719883.0,1,True,prior-year closing assets,EV0098
 Fidelity,2019,total_impairment,-5292.0,1,True,direct,EV0103
+Fidelity,2019,gcu,0.0,1,True,direct,GC-Fidelity2019
+Fidelity,2021,pat,23104.0,1,True,direct,FID21-PAT
+Fidelity,2021,assets,3280454.0,1,True,direct,FID21-A
+Fidelity,2021,liabilities,2995160.0,1,True,direct,FID21-L
+Fidelity,2021,equity,285294.0,1,True,direct,FID21-E
+Fidelity,2021,ocf,-107190.0,1,True,direct,FID21-OCF
+Fidelity,2021,gross_loans,1732543.0,1,True,direct,FID21-GL
+Fidelity,2021,loan_allowance,74131.0,1,True,direct,FID21-ALW
+Fidelity,2021,net_loans,1658412.0,1,True,direct,FID21-NL
+Fidelity,2021,total_impairment,7034.0,1,True,direct,FID21-TI
+Fidelity,2021,car,19.15,1,True,direct,FID21-CAR
+Fidelity,2021,car_minimum,15,1,True,direct,FID21-CARMIN
+Fidelity,2021,regulatory_capital,292323.0,1,True,direct,FID21-RC
+Fidelity,2021,rwa,1526722.0,1,True,direct,FID21-RWA
+Fidelity,2021,pbt,25215.0,1,True,direct,FID21-PBT
+Fidelity,2022,pat,46724.0,1,True,direct,FID22-PAT
+Fidelity,2022,assets,3989009.0,1,True,direct,FID22-A
+Fidelity,2022,liabilities,3674649.0,1,True,direct,FID22-L
+Fidelity,2022,equity,314360.0,1,True,direct,FID22-E
+Fidelity,2022,ocf,297592.0,1,True,direct,FID22-OCF
+Fidelity,2022,opening_assets,3280454.0,1,True,direct,FID22-OA
+Fidelity,2022,gross_loans,2196760.0,1,True,direct,FID22-GL
+Fidelity,2022,loan_allowance,80548.0,1,True,direct,FID22-ALW
+Fidelity,2022,net_loans,2116212.0,1,True,direct,FID22-NL
+Fidelity,2022,total_impairment,5443.0,1,True,direct,FID22-TI
+Fidelity,2022,car,18.14,1,True,direct,FID22-CAR
+Fidelity,2022,car_minimum,15,1,True,direct,FID22-CARMIN
+Fidelity,2022,regulatory_capital,289500.0,1,True,direct,FID22-RC
+Fidelity,2022,rwa,1595729.0,1,True,direct,FID22-RWA
+Fidelity,2022,gcu,0.0,1,True,direct,GC-Fidelity2022
+Fidelity,2022,pbt,53677.0,1,True,direct,FID22-PBT
 First Bank,2013,pat,59365.0,1,True,direct,DS0009
 First Bank,2013,assets,3246579.0,1,True,direct,DS0012
 First Bank,2013,liabilities,2895870.0,1,True,direct,DS0013
@@ -68,6 +99,39 @@ First Bank,2014,gross_loans,1832107.0,1,True,direct,DS0080
 First Bank,2014,loan_allowance,38070.0,1,True,direct,DS0081
 First Bank,2014,total_impairment,20924.0,1,True,direct,DS0003
 First Bank,2014,car,15.78,0,False,,
+First Bank,2016,pat,50072.0,1,True,direct,FBN16-PAT
+First Bank,2016,assets,3557782.0,1,True,direct,FBN16-A
+First Bank,2016,liabilities,3071695.0,1,True,direct,FBN16-L
+First Bank,2016,equity,486087.0,1,True,direct,FBN16-E
+First Bank,2016,ocf,-171230.0,1,True,direct,FBN16-OCF
+First Bank,2016,gross_loans,1933407.0,1,True,direct,FBN16-GL
+First Bank,2016,loan_allowance,240695.0,1,True,direct,FBN16-ALW
+First Bank,2016,net_loans,1692712.0,1,True,direct,FBN16-NL
+First Bank,2016,loan_impairment,159841.0,1,True,direct,FBN16-LI
+First Bank,2016,car,17.79,1,True,direct,FBN16-CAR
+First Bank,2016,car_minimum,15,1,True,direct,FBN16-CARMIN
+First Bank,2016,regulatory_capital,501256.0,1,True,direct,FBN16-RC
+First Bank,2016,rwa,2818158.0,1,True,direct,FBN16-RWA
+First Bank,2016,pbt,54733.0,1,True,direct,FBN16-PBT
+First Bank,2016,specific_allowance,210105.0,1,True,direct,FBN16-SA
+First Bank,2016,collective_allowance,30590.0,1,True,direct,FBN16-CA
+First Bank,2017,pat,46918.0,1,True,direct,FBN17-PAT
+First Bank,2017,assets,3777039.0,1,True,direct,FBN17-A
+First Bank,2017,liabilities,3197196.0,1,True,direct,FBN17-L
+First Bank,2017,equity,579843.0,1,True,direct,FBN17-E
+First Bank,2017,ocf,113212.0,1,True,direct,FBN17-OCF
+First Bank,2017,opening_assets,3557782.0,1,True,direct,FBN17-OA
+First Bank,2017,gross_loans,1837515.0,1,True,direct,FBN17-GL
+First Bank,2017,loan_allowance,178719.0,1,True,direct,FBN17-ALW
+First Bank,2017,net_loans,1658796.0,1,True,direct,FBN17-NL
+First Bank,2017,loan_impairment,126190.0,1,True,direct,FBN17-LI
+First Bank,2017,car,17.74,1,True,direct,FBN17-CAR
+First Bank,2017,car_minimum,15,1,True,direct,FBN17-CARMIN
+First Bank,2017,regulatory_capital,535692.0,1,True,direct,FBN17-RC
+First Bank,2017,rwa,3019880.0,1,True,direct,FBN17-RWA
+First Bank,2017,pbt,52263.0,1,True,direct,FBN17-PBT
+First Bank,2017,specific_allowance,133484.0,1,True,direct,FBN17-SA
+First Bank,2017,collective_allowance,45235.0,1,True,direct,FBN17-CA
 GTBank,2013,pat,85546.0,1,True,direct,EV0060
 GTBank,2013,assets,1904366.0,1,True,direct,EV0061
 GTBank,2013,liabilities,1574719.0,1,True,direct,EV0063
@@ -108,6 +172,7 @@ GTBank,2018,net_loans,1067999.019,1,True,direct,GTB18-NL
 GTBank,2018,total_impairment,1384.004,1,True,direct,GTB18-TI
 GTBank,2018,loan_impairment,1504.303,1,True,direct,GTB18-LI
 GTBank,2018,other_impairment,-120.299,1,True,direct,GTB18-OI
+GTBank,2018,gcu,0.0,1,True,direct,GC-GTBank2018
 GTBank,2018,stage3_allowance,74667.995,1,True,direct,GTB18-S3A
 GTBank,2018,pbt,190209.286,1,True,direct,GTB18-PBT
 GTBank,2019,pat,175125.281,1,True,direct,GTB19-PAT
@@ -122,6 +187,7 @@ GTBank,2019,net_loans,1300820.647,1,True,direct,GTB19-NL
 GTBank,2019,total_impairment,1859.247,1,True,direct,GTB19-TI
 GTBank,2019,loan_impairment,2221.501,1,True,direct,GTB19-LI
 GTBank,2019,other_impairment,-362.254,1,True,direct,GTB19-OI
+GTBank,2019,gcu,0.0,1,True,direct,GC-GTBank2019
 GTBank,2019,stage3_allowance,45503.961,1,True,direct,GTB19-S3A
 GTBank,2019,pbt,200177.89,1,True,direct,GTB19-PBT
 Stanbic,2020,pat,59489.0,1,True,direct,STAN20-PAT
@@ -197,6 +263,7 @@ Sterling,2014,total_impairment,7389.159,1,True,direct,EV0128
 Sterling,2014,npl_reported,3.1,1,True,direct,EV0267
 Sterling,2014,car,14.0,1,True,direct,EV0124
 Sterling,2014,liquidity,34.0,1,True,direct,EV0131
+Sterling,2014,gcu,0.0,1,True,direct,GC-Sterling2014
 Sterling,2018,pat,9468.0,1,True,direct,EV0149
 Sterling,2018,assets,1085876.0,1,True,direct,EV0153
 Sterling,2018,liabilities,987867.0,1,True,direct,EV0155
@@ -484,6 +551,7 @@ Union,2018,regulatory_capital,88017.0,1,True,direct,U0038
 Union,2018,rwa,767770.0,1,True,direct,U0039
 Union,2018,capital_transitional,125859.0,1,True,direct,U0041
 Union,2018,capital_addback,37842.0,1,True,direct,U0042
+Union,2018,gcu,0.0,1,True,direct,GC-Union2018
 Union,2018,stage3_gross,123328.0,1,True,direct,U0045
 Union,2018,stage3_allowance,30149.0,1,True,direct,U0046
 Union,2018,pbt,18660.0,1,True,direct,U0031
@@ -531,6 +599,7 @@ Union,2020,regulatory_capital,156168.0,1,True,direct,U0088
 Union,2020,rwa,990958.0,1,True,direct,U0089
 Union,2020,capital_transitional,172986.0,1,True,direct,U0091
 Union,2020,capital_addback,16818.0,1,True,direct,U0092
+Union,2020,gcu,0.0,1,True,direct,GC-Union2020
 Union,2020,stage3_gross,61895.0,1,True,direct,U0094
 Union,2020,stage3_allowance,22564.0,1,True,direct,U0095
 Union,2020,pbt,25425.0,1,True,direct,U0082
@@ -572,6 +641,7 @@ Union,2022,car,14.42,1,True,direct,U0131
 Union,2022,car_minimum,10.0,1,True,direct,U0134
 Union,2022,regulatory_capital,180613.0,1,True,direct,U0132
 Union,2022,rwa,1252579.0,1,True,direct,U0133
+Union,2022,gcu,0.0,1,True,direct,GC-Union2022
 Union,2022,stage3_gross,74070.0,1,True,direct,U0136
 Union,2022,pbt,30206.0,1,True,direct,U0126
 Union,2022,gross_earnings,208171.0,1,True,direct,U0127
@@ -598,7 +668,7 @@ Unity,2019,total_impairment,1921.923,1,True,direct,EV0255
 Unity,2019,car,-201.59,0,False,,
 Unity,2019,car_transitional,-200.88,1,True,direct,EV0249
 Unity,2019,car_minimum,10.0,1,True,direct,EV0248
-Unity,2019,gcu,1.0,1,True,direct,EV0251
+Unity,2019,gcu,1.0,2,True,direct,EV0251;GC-Unity2019
 Wema,2014,pat,2372.445,1,True,direct,DS0017
 Wema,2014,assets,382562.312,1,True,direct,DS0019
 Wema,2014,liabilities,338793.663,1,True,direct,DS0020
@@ -627,6 +697,7 @@ Wema,2016,equity,48501.954,1,True,direct,EV0186
 Wema,2016,ocf,15892.427,1,True,direct,EV0183
 Wema,2016,opening_assets,396743.314,1,True,prior-year closing assets,EV0177
 Wema,2016,total_impairment,412.401,1,True,direct,EV0181
+Wema,2016,gcu,0.0,1,True,direct,GC-Wema2016
 Wema,2017,pat,2301.158,1,True,direct,EV0198
 Wema,2017,assets,384779.809,1,True,direct,EV0201
 Wema,2017,liabilities,335087.669,1,True,direct,EV0203
@@ -680,6 +751,7 @@ Wema,2020,total_impairment,5635.165,1,True,direct,NI0129
 Wema,2020,car,15.01,1,True,direct,NI0172
 Wema,2020,regulatory_capital,41760.881,1,True,direct,NI0170
 Wema,2020,rwa,278133.743,1,True,direct,NI0171
+Wema,2020,gcu,0.0,1,True,direct,GC-Wema2020
 Wema,2020,stage3_allowance,5411.37,1,True,direct,NI0163
 Wema,2020,pbt,5946.523,1,True,direct,NI0128
 Wema,2021,pat,8933.202,1,True,direct,WEMA21-PAT
@@ -710,6 +782,7 @@ Wema,2022,total_impairment,4762.274,1,True,direct,NI0145
 Wema,2022,car,12.74,1,True,direct,NI0178
 Wema,2022,regulatory_capital,59144.646,1,True,direct,NI0176
 Wema,2022,rwa,464338.153,1,True,direct,NI0177
+Wema,2022,gcu,0.0,1,True,direct,GC-Wema2022
 Wema,2022,stage3_allowance,12600.451,1,True,direct,NI0169
 Wema,2022,pbt,14746.008,1,True,direct,NI0144
 Zenith,2014,pat,92479.0,1,True,direct,DS0038
@@ -800,6 +873,7 @@ Zenith,2019,car_transitional,21,1,True,direct,ZEN19-CART
 Zenith,2019,regulatory_capital,717901.0,1,True,direct,ZEN19-RC
 Zenith,2019,rwa,3669402.0,1,True,direct,ZEN19-RWA
 Zenith,2019,capital_transitional,759321.0,1,True,direct,ZEN19-RCT
+Zenith,2019,gcu,0.0,1,True,direct,GC-Zenith2019
 Zenith,2019,pbt,200020.0,1,True,direct,ZEN19-PBT
 Zenith,2020,pat,197852.0,1,True,direct,ZEN20-PAT
 Zenith,2020,assets,7124987.0,1,True,direct,ZEN20-A

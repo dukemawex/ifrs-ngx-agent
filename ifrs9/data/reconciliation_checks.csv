@@ -6,8 +6,20 @@ Ecobank Nigeria,2017,assets = liabilities + equity,0.0,1.500000001,1,True,
 Fidelity,2013,assets = liabilities + equity,0.0,1.500000001,1,True,
 Fidelity,2018,assets = liabilities + equity,0.0,1.500000001,1,True,
 Fidelity,2019,assets = liabilities + equity,0.0,1.500000001,1,True,
+Fidelity,2021,assets = liabilities + equity,0.0,1.500000001,1,True,
+Fidelity,2021,gross loans - allowance = net loans,0.0,1.500000001,1,True,
+Fidelity,2021,reported CAR vs capital/RWA,0.0029,0.015,,True,rounding from recorded decimals; basis=; transitional=
+Fidelity,2022,assets = liabilities + equity,0.0,1.500000001,1,True,
+Fidelity,2022,gross loans - allowance = net loans,0.0,1.500000001,1,True,
+Fidelity,2022,reported CAR vs capital/RWA,-0.0022,0.015,,True,rounding from recorded decimals; basis=; transitional=
 First Bank,2013,assets = liabilities + equity,0.0,1.500000001,1,True,
 First Bank,2014,assets = liabilities + equity,0.0,1.500000001,1,True,
+First Bank,2016,assets = liabilities + equity,0.0,1.500000001,1,True,
+First Bank,2016,gross loans - allowance = net loans,0.0,1.500000001,1,True,
+First Bank,2016,reported CAR vs capital/RWA,0.0033,0.015,,True,rounding from recorded decimals; basis=; transitional=
+First Bank,2017,assets = liabilities + equity,0.0,1.500000001,1,True,
+First Bank,2017,gross loans - allowance = net loans,0.0,1.500000001,1,True,
+First Bank,2017,reported CAR vs capital/RWA,0.0011,0.015,,True,rounding from recorded decimals; basis=; transitional=
 GTBank,2013,assets = liabilities + equity,0.0,1.500000001,1,True,
 GTBank,2014,assets = liabilities + equity,0.0,1.500000001,1,True,
 GTBank,2017,assets = liabilities + equity,0.0,0.001500001,0.001,True,

@@ -55,3 +55,17 @@ A new bank-year needs PAT, assets, liabilities and equity, all from one reportin
 - **Ratios:** the definitions are unchanged from the starting pack. A ratio is null when an input is missing or the denominator is not positive. Signs are kept.
 - **Reconciliation tolerance:** half the rounding unit inferred from the recorded decimals, multiplied by the number of rounded components. Published CAR is allowed a whole-percent step only where the basis note documents a whole or rounded ratio.
 - **Going concern:** auditor pages are queued for review and never coded automatically.
+
+## Review workflow used in this run
+
+1. **Find report pages:** `python -m ifrs9_recovery.locate find <job> "phrase"`. Then `rows <job> <page>` prints each table row with its column x-positions, and `render` saves the page image for inspection.
+2. **Record each value as a spec:** add a row to `data/review/specs.csv` giving the job, PDF page, a row regex and the column's x-range. `python -m ifrs9_recovery.review` then reads the value from the PDF text layer. Anything ambiguous (zero or several matching cells) is refused.
+3. **Image-only pages:** transcribe into `manual_value`. These values are labelled as manual transcriptions and must pass the balance and loan reconciliations.
+4. **Derived totals:** use `derive_from` (for example, individual plus non-individual loans).
+5. **Validate:** `python -m ifrs9_recovery validate` applies the admission rules and adds new bank-years only when PAT, assets, liabilities and equity are all present, come from one version, and balance.
+6. **Supporting registers:**
+   - `data/review/extra_sources.csv`: fallback leads (from the Nimble MCP plugin or web search) with their discovery method.
+   - `data/review/nimble_mcp_calls.csv`: ledger of Nimble MCP plugin calls.
+   - `data/review/going_concern_reviews.csv`: auditor-report reviews behind each going-concern code.
+   - `data/review/perimeter_decisions.csv`: entity and column decisions per bank.
+   - `data/review/reviewer_conflicts.csv`: restatements and problems found within sources.

@@ -321,6 +321,12 @@ def run() -> dict:
                 shutil.copy2(src, dst)
                 copied.add(dst.name)
 
+    mcp_path = C.DATA / "review" / "nimble_mcp_calls.csv"
+    mcp_calls = len(read_csv(mcp_path)) if mcp_path.is_file() else 0
+    gcr_path = C.DATA / "review" / "going_concern_reviews.csv"
+    gc_reviewed = sum(1 for r in (read_csv(gcr_path) if gcr_path.is_file() else []) if r.get("gcu_code", "") != "")
+    budget = dict(budget, mcp_calls=mcp_calls)
+
     n_base = len(before)
     new_rows = vstate.get("new_bank_years", [])
     corr = [c for c in changes if c["kind"] == "correction"]
@@ -352,7 +358,8 @@ def run() -> dict:
         {"measure": "Inherited Union exceptions carried (U01-U15)", "value": sum(e['status'].startswith('inherited') for e in exc)},
         {"measure": "Reconciliation checks passed / run", "value": f"{sum(r['passed'] == 'True' for r in recon)} / {len(recon)}"},
         {"measure": "Selected values matching an inherited evidence record", "value": f"{sum(b['value_matches_evidence'] == 'True' for b in backing)} / {len(backing)}"},
-        {"measure": "Nimble requests attempted (budget cap)", "value": f"{budget.get('attempted_requests', 0)} ({budget.get('cap', C.load_settings().max_requests)})"},
+        {"measure": "Nimble requests: REST client / MCP plugin (shared cap)", "value": f"{budget.get('attempted_requests', 0)} / {mcp_calls} (cap {budget.get('cap', C.load_settings().max_requests)})"},
+        {"measure": "Going-concern codes from full original-year auditor reports (this run)", "value": gc_reviewed},
         {"measure": "Discovery jobs by status", "value": "; ".join(f"{k}={v}" for k, v in sorted(disc_counts.items())) or "none"},
         {"measure": "Report downloads by status", "value": "; ".join(f"{k}={v}" for k, v in sorted(dl_counts.items())) or "none"},
         {"measure": "PDFs archived and hashed", "value": len(archive)},
@@ -423,9 +430,10 @@ def render_summary(inv, n_base, panel, new_rows, fills, corr, recomputed, change
          f"- Panel after run: **{len(panel)}** unique bank-years, {len({r['bank'] for r in panel})} banks; {pre} pre-adoption, {len(panel) - pre} post-adoption.",
          f"- Blank fields filled: {len(fills)}. Corrections to selected values: {len(corr)}. Derived values changed by recomputation: {len(recomputed)}.",
          f"- Remaining: {len(gap_bank_years)} bank-year positions and {len(gap_fields)} field requests in selected rows.",
-         f"- Nimble discovery blocker: `{blocker}`.",
-         f"- Report hosts refused by the session's network egress policy: {', '.join(sorted(denied_hosts)) or 'none'}.",
-         f"- Nimble requests attempted: {budget.get('attempted_requests', 0)} of the {budget.get('cap', 100)} cap. Report downloads: "
+         f"- Nimble: REST client blocked (`{blocker}`); discovery ran through the Nimble MCP plugin instead: "
+         f"{budget.get('mcp_calls', 0)} search calls logged in `data/review/nimble_mcp_calls.csv`, within the {budget.get('cap', 100)}-request cap.",
+         f"- Report hosts still refused by egress policy at last attempt: {', '.join(sorted(denied_hosts)) or 'none'}.",
+         f"- Report downloads: "
          + (", ".join(f"{k} {v}" for k, v in sorted(dl_counts.items())) or "none") + ".",
          "", "This is not 130 observations. Report links are leads and candidate amounts are unverified.", "",
          "## Progress table", "", "| Measure | Value |", "|---|---|"]

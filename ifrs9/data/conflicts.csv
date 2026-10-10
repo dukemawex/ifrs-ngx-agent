@@ -8,6 +8,18 @@ source_internal_inconsistency,Stanbic,2020,regulatory_capital,176542,221408,"202
 restated_comparative,Zenith,2017,liabilities,4126133,4135675,"2017 report original Bank liabilities/equity 4,126,133/707,525 vs 2018 report 2017 comparative 4,135,675/697,983 (total assets unchanged 4,833,658). Original admitted."
 restated_comparative,GTBank,2018,equity,511842.259,510185.839,"2018 report original Parent Dec-2018 equity/liabilities 511,842,259/2,200,679,235 vs 2019 report comparative 510,185,839/2,202,335,655; PAT 166,919,765 vs 166,753,084. Original admitted."
 not_admitted_basis_unclear,GTBank,2019,car,20.66,,"2019 report capital note (PDF p208-209, rotated table) gives Bank CAR 20.66% (2018: 20.93%) without a clear full-impact vs transitional label on the readable text; not admitted pending visual review of the rotated table."
+candidate_vs_selected,First Bank,2016,assets,3557782.0,4514792.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)
+candidate_vs_selected,First Bank,2016,assets,3557782.0,4514792.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
+candidate_vs_selected,First Bank,2016,gross_loans,1933407.0,2086740.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)
+candidate_vs_selected,First Bank,2016,gross_loans,1933407.0,2086740.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
+candidate_vs_selected,First Bank,2016,pat,50072.0,11768.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)
+candidate_vs_selected,First Bank,2016,pat,50072.0,11768.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
+candidate_vs_selected,First Bank,2017,assets,3777039.0,5014248.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)
+candidate_vs_selected,First Bank,2017,assets,3777039.0,5014248.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
+candidate_vs_selected,First Bank,2017,gross_loans,1837515.0,2026038.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)
+candidate_vs_selected,First Bank,2017,gross_loans,1837515.0,2026038.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
+candidate_vs_selected,First Bank,2017,pat,46918.0,51475.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)
+candidate_vs_selected,First Bank,2017,pat,46918.0,51475.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
 candidate_vs_selected,GTBank,2017,gross_loans,1326250.395,1163273.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)
 candidate_vs_selected,GTBank,2017,gross_loans,1326250.395,1163273.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
 candidate_vs_selected,GTBank,2017,loan_allowance,60278.707,57658.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)

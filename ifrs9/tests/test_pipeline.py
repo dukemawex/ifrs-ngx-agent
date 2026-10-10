@@ -335,10 +335,14 @@ def test_validate_retains_baseline_and_exceptions():
     assert number(panel[("UBA", 2015)]["loan_allowance"]) == 13043  # not the candidate alternative
     assert number(panel[("UBA", 2016)]["loan_allowance"]) == 29741
     assert panel[("Union", 2022)]["stage3_coverage"] == ""
-    for k, r in base.items():  # no admitted-input value changed without a logged correction
+    changes = read_csv(C.DATA / "change_register.csv")
+    filled = {(c["bank"], int(c["year"]), c["field"]) for c in changes if c["kind"] == "fill_blank"}
+    for k, r in base.items():  # non-blank baseline values never change without a logged correction
         for f in ("pat", "assets", "liabilities", "equity", "gcu"):
-            assert same(number(r[f]), number(panel[k][f])), (k, f)
-    assert sum(1 for k, r in panel.items() if k in base and r["gcu"] not in ("", None)) == 2
+            if number(r[f]) is None:
+                assert number(panel[k][f]) is None or (k[0], k[1], f) in filled, (k, f)
+            else:
+                assert same(number(r[f]), number(panel[k][f])), (k, f)
     # Every new going-concern code must come from a full original-year auditor-report review.
     reviewed = {(r["bank"], int(r["year"])) for r in read_csv(C.DATA / "review" / "going_concern_reviews.csv")
                 if r["gcu_code"] != ""} if (C.DATA / "review" / "going_concern_reviews.csv").is_file() else set()

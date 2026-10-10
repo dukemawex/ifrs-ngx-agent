@@ -52,11 +52,15 @@ def calculate(row: dict) -> dict[str, float | None]:
     }
 
 
-def decimals(value) -> int:
+def decimals(value, normalize: bool = False) -> int:
+    """Recorded decimal places. normalize=True drops float artefacts such as "1123483.0"
+    (used for monetary amounts); ratios keep their printed precision ("20.0" = 1 dp)."""
     s = str(value).strip()
     if not s or "e" in s.lower():
         return 0
     d = Decimal(s.replace(",", ""))
+    if normalize:
+        d = d.normalize()
     return max(0, -d.as_tuple().exponent)
 
 
@@ -67,7 +71,7 @@ def rounding_unit_ngnm(*values) -> float:
     numbers imply NGN-million rounding (unit 1m). Float artefacts beyond three
     decimals are treated as thousand-level precision.
     """
-    ds = [min(decimals(v), 3) for v in values if str(v).strip()]
+    ds = [min(decimals(v, normalize=True), 3) for v in values if str(v).strip()]
     return 10 ** (-max(ds)) if ds else 1.0
 
 

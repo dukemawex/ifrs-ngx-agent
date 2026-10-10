@@ -1,0 +1,11 @@
+call_no,utc,tool,purpose,query_or_url,result_summary,request_id
+1,2026-10-10T16:50Z,nimble_search (lite; pdf),Wema 2013 via 2014 report,Wema Bank Plc 2014 annual report audited financial statements pdf,"8 results; Wema 2014 audited financials mirror on pdf4pro; NGX Wema 2015 audited FS",88f62499-ea49-4f1b-b87c-2836e9fe1946
+2,2026-10-10T16:52Z,nimble_search (lite; doclib.ngxgroup.com),Wema 2013 NGX filing,WEMA BANK PLC AUDITED DEC 2013 OR DEC 2014 FINANCIAL STATEMENTS,"No relevant result",fda8e157-6751-4eda-9049-118c7e284f89
+3,2026-10-10T16:55Z,nimble_search (lite; pdf),Access 2018-2019,Access Bank Plc 2019 annual report and financial statements pdf bank separate,"Official 2019 Financial-Statement PDF and 2019 Annual Report",b36e7cd5-8d39-4788-8eef-6a639752c1ec
+4,2026-10-10T16:55Z,nimble_search (lite; pdf),Zenith 2018-2019,Zenith Bank Plc 2019 annual report financial statements pdf,"Official zenithbank.com 2019 annual report",ad7b3807-6f3e-4bf9-92f9-3259ed052bba
+5,2026-10-10T16:55Z,nimble_search (lite; pdf),First Bank 2018-2019,First Bank of Nigeria Limited 2019 annual report financial statements pdf,"Only FBN Holdings (holding company) reports; not admissible",cdd5895a-1ee7-48fd-b375-b4794e87cf12
+6,2026-10-10T16:55Z,nimble_search (lite; pdf),GTBank 2017-2018,Guaranty Trust Bank Plc 2018 annual report financial statements pdf,"Official GTBank 2018 annual report",c20f1764-aa20-4361-b087-40ba9891c164
+7,2026-10-10T16:57Z,nimble_search (lite; pdf; first-holdco/firstbank/ngx),First Bank standalone,First Bank of Nigeria Limited annual report 2019 financial statements first-holdco.com,"First Bank of Nigeria Ltd FY 2017 Financial Statements (operating bank) found",ed0263c2-54ff-4c9e-824c-5b384e4e990e
+8,2026-10-10T16:57Z,nimble_search (lite; pdf),Zenith 2017-2018,Zenith Bank Plc 2018 annual report pdf zenithbank.com,"Official zenithbank.com 2018 annual report",2db533ca-8683-4245-a64f-a7dbb48c5c24
+9,2026-10-10T16:57Z,nimble_search (lite; pdf),Access 2017-2018,Access Bank Plc 2018 audited financial statements pdf accessbankplc.com,"Official FY-2018 Financial Statement PDF",a87aa7cc-c2f5-4371-bdb4-a61127232bec
+10,2026-10-10T16:57Z,nimble_search (lite; pdf),GTBank 2019,Guaranty Trust Bank Plc 2019 annual report pdf gtbank-plc.files.svdcdn.com,"Official GTBank 2019 annual report",8ab76001-5044-4c79-bc31-d0fb97e63480

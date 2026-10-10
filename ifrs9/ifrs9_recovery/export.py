@@ -308,6 +308,19 @@ def run() -> dict:
     write_csv(C.REPORTS / "index.csv", archive,
               ["bank", "job_id", "source_url", "sha256", "bytes", "local_pdf_path", "accessed_utc"])
 
+    # Copy the rendered pages that back admitted values into a committed evidence folder.
+    ev_dir = C.OUTPUTS / "evidence_pages"
+    ev_dir.mkdir(parents=True, exist_ok=True)
+    adm_path = C.DATA / "review" / "admissions.csv"
+    copied = set()
+    for r in (read_csv(adm_path) if adm_path.is_file() else []):
+        src = C.ROOT / r.get("rendered_page_path", "")
+        if r.get("rendered_page_path") and src.is_file():
+            dst = ev_dir / ("_".join(Path(r["rendered_page_path"]).parts[-2:]))
+            if dst.name not in copied:
+                shutil.copy2(src, dst)
+                copied.add(dst.name)
+
     n_base = len(before)
     new_rows = vstate.get("new_bank_years", [])
     corr = [c for c in changes if c["kind"] == "correction"]

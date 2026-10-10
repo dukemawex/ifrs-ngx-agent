@@ -25,7 +25,7 @@ REQUIRED_EVIDENCE = [
 ]
 ADMISSIBLE_STATUS = {"verified_reported", "derived_from_verified"}
 CORE = ["pat", "assets", "liabilities", "equity"]
-UNIT_FACTORS = {"NGN thousand": 0.001, "NGN million": 1.0, "NGN billion": 1000.0, "percent": 1.0}
+UNIT_FACTORS = {"NGN thousand": 0.001, "NGN million": 1.0, "NGN billion": 1000.0, "percent": 1.0, "indicator": 1.0}
 NON_BANK_ENTITY = re.compile(r"holdings?\b|holdco|group plc|transnational|\bETI\b|\bUK\b|limited group|gtco", re.I)
 NON_BANK_SCOPE = re.compile(r"\b(group|consolidated)\b", re.I)
 PANEL_VALUE_FIELDS = ["pat", "assets", "liabilities", "equity", "ocf", "opening_assets", "gross_loans", "loan_allowance",
@@ -61,7 +61,8 @@ def ensure_admissions_template() -> None:
 
 
 def check_admission(r: dict, downloads: dict[str, dict], cohort: dict[str, dict]) -> list[str]:
-    errs = [f"missing {k}" for k in REQUIRED_EVIDENCE if not str(r.get(k, "")).strip()]
+    required = [k for k in REQUIRED_EVIDENCE if not (k == "currency" and r.get("raw_units") in ("percent", "indicator"))]
+    errs = [f"missing {k}" for k in required if not str(r.get(k, "")).strip()]
     if not (str(r.get("printed_page", "")).strip() or str(r.get("note_number", "")).strip()):
         errs.append("missing printed_page or note_number")
     if r.get("verification_status") not in ADMISSIBLE_STATUS:
@@ -87,11 +88,14 @@ def check_admission(r: dict, downloads: dict[str, dict], cohort: dict[str, dict]
     if rp and not (C.ROOT / rp).is_file():
         errs.append("rendered page image missing (page must be inspected)")
     try:
-        raw, norm = number(r.get("raw_value")), number(r.get("normalised_value_ngnm_or_pct"))
+        raw = None if r.get("raw_value") == "derived" else number(str(r.get("raw_value", "")).rstrip("%"))
+        norm = number(r.get("normalised_value_ngnm_or_pct"))
         f = UNIT_FACTORS.get(r.get("raw_units", ""))
-        if f is None:
+        if r.get("raw_value") == "derived":
+            pass  # derived_from_verified rows carry component evidence ids in the excerpt
+        elif f is None:
             errs.append(f"unknown raw_units {r.get('raw_units')!r}")
-        elif raw is not None and norm is not None and abs(raw * f - norm) > 0.5 * f + 1e-9:
+        elif raw is not None and norm is not None and abs(abs(raw) * f - abs(norm)) > 0.5 * f + 1e-9:
             errs.append("normalised value does not match raw value x unit factor")
     except ValueError:
         errs.append("non-numeric raw or normalised value")
@@ -105,6 +109,7 @@ def run() -> dict:
     dl = read_json(C.STATE / "download_state.json", {}).get("reports", {})
     downloads = {v["sha256"]: v for v in dl.values() if v.get("status") == "downloaded"}
     fieldnames = list(baseline[0].keys())
+    baseline_keys = {(r["bank"], int(r["year"])) for r in baseline}
     panel = {(r["bank"], int(r["year"])): dict(r) for r in baseline}
     if len(panel) != len(baseline):
         raise SystemExit("Duplicate bank-year keys in baseline")
@@ -143,7 +148,7 @@ def run() -> dict:
                 new = number(r["normalised_value_ngnm_or_pct"])
                 old = number(row.get(v))
                 if old is None:
-                    row[v] = new
+                    row[v] = panel_value(r)
                     changes.append({"bank": b, "year": y, "field": v, "old": "", "new": new, "kind": "fill_blank",
                                     "basis": r["evidence_id"], "reason": "admitted reviewed evidence"})
                 elif not same(old, new):
@@ -172,7 +177,7 @@ def run() -> dict:
                         "source_url": fields["assets"]["source_url"]})
             for v, r in fields.items():
                 if v in fieldnames:
-                    row[v] = number(r["normalised_value_ngnm_or_pct"])
+                    row[v] = panel_value(r)
             panel[(b, y)] = row
             admitted_new_rows.append(f"{b} {y}")
             changes.append({"bank": b, "year": y, "field": "*row*", "old": "", "new": "added", "kind": "new_bank_year",
@@ -190,7 +195,7 @@ def run() -> dict:
         row["liquidity_used"] = row.get("liquidity", "") if flag == 1 else ""
         for f, new in calc.items():
             old = number(row.get(f))
-            if not same(old, new):
+            if not same(old, new) and (b, y) in baseline_keys:
                 recompute_diffs += 1
                 changes.append({"bank": b, "year": y, "field": f, "old": "" if old is None else old,
                                 "new": "" if new is None else new, "kind": "recomputed_derived",
@@ -272,6 +277,9 @@ def run() -> dict:
                               "value_a": vals[0], "value_b": vals[-1],
                               "detail": "; ".join(f"{r['evidence_id']}={r['normalised_value_ngnm_or_pct']} [{r['review_reason'][:70]}]" for r in recs[:4])})
 
+    rc = C.DATA / "review" / "reviewer_conflicts.csv"
+    if rc.is_file():
+        conflicts += read_csv(rc)
     cands = K.load()
     conflicts += K.compare(cands, panel)
     write_csv(C.DATA / "candidates.csv", cands,
@@ -301,6 +309,13 @@ def run() -> dict:
             "exceptions_violated": [x["id"] for x in exc if x["status"] == "VIOLATED"],
             "fields_without_matching_evidence": sum(not b["value_matches_evidence"] for b in backing),
             "fields_checked_for_evidence": len(backing), "conflicts": len(conflicts)}
+
+
+def panel_value(r: dict):
+    """Percentages keep their printed precision ("20 %" stays "20") so rounding checks use it."""
+    if r.get("raw_units") == "percent" and r.get("raw_value") not in ("", "derived"):
+        return str(r["raw_value"]).replace("%", "").replace(",", "").strip()
+    return number(r["normalised_value_ngnm_or_pct"])
 
 
 def car_tolerance(car_raw, basis: str) -> tuple[float, str]:

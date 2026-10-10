@@ -1,15 +1,15 @@
 outcome,label,definition,n_available,n_missing,n_rows,pct_available,pre_2018_available,post_2018_available,banks_with_any
-roa,ROA on average assets (%),ROA_avg_pct = 100 * PAT / average_assets,33,14,47,70.2,16,17,11
-eqta,Equity / assets (%),equity_assets_pct = 100 * equity / closing assets,47,0,47,100.0,25,22,11
-ocf_ratio,OCF / average assets (%),OCF_avgassets_pct = 100 * OCF / average_assets,29,18,47,61.7,13,16,8
-allr,Loan allowance / gross loans (%),allowance_grossloans_pct = 100 * customer-loan allowance / gross customer loans,38,9,47,80.9,18,20,8
-leverage,Liabilities / assets (%),leverage_pct = 100 * liabilities / assets,47,0,47,100.0,25,22,11
-car,Reported CAR (%),,38,9,47,80.9,18,20,8
-car_computed,Capital / RWA (%),CAR_calc_pct = 100 * regulatory capital / RWA,19,28,47,40.4,4,15,4
-npl_reported,Reported NPL ratio (%),,14,33,47,29.8,13,1,6
-npl_calc,NPL amount / gross loans (%),NPL_ratio_pct = 100 * regulatory NPL amount / matched gross loans,9,38,47,19.1,5,4,2
-broad_coverage,Broad NPL coverage (%),broad_NPL_coverage_pct = 100 * total customer-loan allowance / NPL amount (not NPL-specific),9,38,47,19.1,5,4,2
-stage3_coverage,Stage 3 coverage (%),Stage3_coverage_pct = 100 * Stage 3 allowance / Stage 3 gross,4,43,47,8.5,0,4,1
-impairment_assets,Total impairment / average assets (%),100 * total income-statement impairment / average_assets (broad measure),31,16,47,66.0,14,17,10
-liquidity_used,Admitted domestic liquidity ratio (%),,10,37,47,21.3,5,5,3
-gcu,Going-concern uncertainty code,,2,45,47,4.3,0,2,2
+roa,ROA on average assets (%),ROA_avg_pct = 100 * PAT / average_assets,46,15,61,75.4,21,25,12
+eqta,Equity / assets (%),equity_assets_pct = 100 * equity / closing assets,61,0,61,100.0,30,31,12
+ocf_ratio,OCF / average assets (%),OCF_avgassets_pct = 100 * OCF / average_assets,42,19,61,68.9,18,24,10
+allr,Loan allowance / gross loans (%),allowance_grossloans_pct = 100 * customer-loan allowance / gross customer loans,52,9,61,85.2,23,29,10
+leverage,Liabilities / assets (%),leverage_pct = 100 * liabilities / assets,61,0,61,100.0,30,31,12
+car,Reported CAR (%),,48,13,61,78.7,22,26,9
+car_computed,Capital / RWA (%),CAR_calc_pct = 100 * regulatory capital / RWA,29,32,61,47.5,8,21,5
+npl_reported,Reported NPL ratio (%),,14,47,61,23.0,13,1,6
+npl_calc,NPL amount / gross loans (%),NPL_ratio_pct = 100 * regulatory NPL amount / matched gross loans,14,47,61,23.0,7,7,3
+broad_coverage,Broad NPL coverage (%),broad_NPL_coverage_pct = 100 * total customer-loan allowance / NPL amount (not NPL-specific),14,47,61,23.0,7,7,3
+stage3_coverage,Stage 3 coverage (%),Stage3_coverage_pct = 100 * Stage 3 allowance / Stage 3 gross,4,57,61,6.6,0,4,1
+impairment_assets,Total impairment / average assets (%),100 * total income-statement impairment / average_assets (broad measure),44,17,61,72.1,19,25,12
+liquidity_used,Admitted domestic liquidity ratio (%),,10,51,61,16.4,5,5,3
+gcu,Going-concern uncertainty code,,5,56,61,8.2,1,4,4

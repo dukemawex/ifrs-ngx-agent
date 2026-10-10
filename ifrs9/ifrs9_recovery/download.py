@@ -130,6 +130,15 @@ def run(resume: bool = True, settings: C.Settings | None = None, max_priority: i
                 jobs.append({"job_id": "lead-" + hashlib.sha1(l["url"].encode()).hexdigest()[:10], "kind": "report",
                              "priority": "7", "bank": l["bank"], "target_years": l["target_years"],
                              "source_ids": "", "url": l["url"], "origin": "nimble_lead"})
+    # Leads found by the reviewer's fallback discovery (web search) while Nimble is unavailable.
+    extra = C.DATA / "review" / "extra_sources.csv"
+    if extra.is_file():
+        for l in read_csv(extra):
+            if max_priority is not None and int(l["priority"]) > max_priority:
+                continue
+            jobs.append({"job_id": "xs-" + hashlib.sha1(l["url"].encode()).hexdigest()[:10], "kind": "report",
+                         "priority": l["priority"], "bank": l["bank"], "target_years": l["target_years"],
+                         "source_ids": l["source_id"], "url": l["url"], "origin": f"fallback:{l['discovery_method']}"})
     state = read_json(STATE_FILE, {}) if resume else {}
     state.setdefault("reports", {})
     for j in jobs:

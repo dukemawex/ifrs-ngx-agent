@@ -338,4 +338,36 @@ def test_validate_retains_baseline_and_exceptions():
     for k, r in base.items():  # no admitted-input value changed without a logged correction
         for f in ("pat", "assets", "liabilities", "equity", "gcu"):
             assert same(number(r[f]), number(panel[k][f])), (k, f)
-    assert sum(1 for r in panel.values() if r["gcu"] not in ("", None)) == 2
+    assert sum(1 for k, r in panel.items() if k in base and r["gcu"] not in ("", None)) == 2
+    # Every new going-concern code must come from a full original-year auditor-report review.
+    reviewed = {(r["bank"], int(r["year"])) for r in read_csv(C.DATA / "review" / "going_concern_reviews.csv")
+                if r["gcu_code"] != ""} if (C.DATA / "review" / "going_concern_reviews.csv").is_file() else set()
+    for k, r in panel.items():
+        if k not in base and r["gcu"] not in ("", None):
+            assert k in reviewed, k
+
+
+# ------------------------------------------------------------------ reviewer tooling
+
+def test_read_value_picks_only_the_specified_column(tmp_path, monkeypatch):
+    from ifrs9_recovery import review
+    pdf = tmp_path / "t.pdf"
+    _make_pdf(pdf)
+    monkeypatch.setattr(review, "pdf_for", lambda job: (pdf, {}))
+    import pymupdf
+    words = [w for w in pymupdf.open(pdf)[0].get_text("words") if w[4] in ("1,234,567", "1,111,111")]
+    xs = {w[4]: w[0] for w in words}
+    raw, _ = review.read_value("j", 1, r"^Total assets", xs["1,111,111"] - 2, xs["1,111,111"] + 2)
+    assert raw == "1,111,111"
+    with pytest.raises(ValueError):  # a range covering two cells is ambiguous and refused
+        review.read_value("j", 1, r"^Total assets", 0, 1000)
+
+
+def test_panel_value_keeps_printed_percent_precision():
+    assert validate.panel_value({"raw_units": "percent", "raw_value": "20 %", "normalised_value_ngnm_or_pct": "20.0"}) == "20"
+    assert validate.panel_value({"raw_units": "NGN thousand", "raw_value": "1,500", "normalised_value_ngnm_or_pct": "1.5"}) == 1.5
+
+
+def test_derived_admission_needs_no_raw_units_match(fake_root):
+    r = _admission(raw_value="derived", verification_status="derived_from_verified", normalised_value_ngnm_or_pct="9177")
+    assert validate.check_admission(r, fake_root, {"Wema": {}}) == []

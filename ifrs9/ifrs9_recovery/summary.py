@@ -30,6 +30,27 @@ def _git(*args) -> str:
         return ""
 
 
+def nimble_usage() -> dict:
+    """Counted from the call ledger (plugin) and the REST budget state; never from hand-kept totals."""
+    calls = read_csv(C.DATA / "review" / "nimble_calls.csv")
+    plugin = [c for c in calls if c.get("channel") == "mcp_plugin"]
+    by_tool: dict[str, int] = {}
+    for c in plugin:
+        by_tool[c["tool"]] = by_tool.get(c["tool"], 0) + 1
+    budget = read_json(C.STATE / "nimble_budget.json", {})
+    rest = [c for c in calls if c.get("channel") == "rest"]
+    return {
+        "rest_client": {"attempted_requests": int(budget.get("used", 0)) if budget else len(rest), "cap": 100,
+                        "retries": sum(int(c.get("attempts") or 1) - 1 for c in rest),
+                        "failed_attempts": sum(c.get("outcome") not in ("completed", "ok") for c in rest),
+                        "note": "REST client not run in this release (no nimble_budget state); key value never printed"},
+        "mcp_plugin": {"invocations": len(plugin), "attempts": sum(int(c.get("attempts") or 1) for c in plugin), "by_tool": by_tool,
+                       "failed": sum(c.get("outcome") not in ("completed", "ok") for c in plugin),
+                       "note": "Plugin invocation counts do not establish provider-internal HTTP request counts or billing; billed requests not available"},
+        "shared_cap": 100, "cap_changed": False,
+    }
+
+
 def release_stats() -> dict:
     D = C.DATA
     base = read_csv(C.SELECTED_CSV)
@@ -44,7 +65,7 @@ def release_stats() -> dict:
     adm_review = read_csv(D / "admission_review.csv")
     vdec = read_csv(D / "review" / "version_decisions.csv")
     denom = read_csv(D / "denominator_compatibility.csv")
-    nimble = read_json(D / "review" / "nimble_usage.json", {})
+    nimble = nimble_usage()
     tests = read_json(C.OUTPUTS / "test_results.json", {})
     base_keys = {(r["bank"], r["year"]) for r in base}
     pre = sum(int(r["year"]) < C.ADOPTION_YEAR for r in panel)

@@ -1,18 +1,18 @@
 {
-  "generated_utc": "2026-10-10T21:42:03+00:00",
-  "git_commit": "1b5ce89c0114dcd7ac3f4566b09e2ca82c4325a2",
+  "generated_utc": "2026-10-10T21:47:06+00:00",
+  "git_commit": "140165cb457d3d44e4d43d393bf1d3d825884f73",
   "git_branch": "claude/zen-hamilton-v2s80b",
   "panel": {
-    "rows": 87,
+    "rows": 90,
     "banks": 12,
-    "pre_adoption": 45,
-    "post_adoption": 42,
+    "pre_adoption": 46,
+    "post_adoption": 44,
     "baseline_rows": 47,
     "baseline_rows_retained": 47,
-    "new_rows": 40
+    "new_rows": 43
   },
   "changes": {
-    "new_bank_year": 40,
+    "new_bank_year": 43,
     "fill_blank": 9
   },
   "fills_by_field": {
@@ -20,8 +20,8 @@
   },
   "field_basis": {
     "baseline_inherited": 615,
-    "recomputed_ratio": 924,
-    "reported_text_layer": 507,
+    "recomputed_ratio": 941,
+    "reported_text_layer": 533,
     "manual_transcription": 77,
     "reported_text_layer+restated_comparative": 37,
     "derived_from_verified+restated_comparative": 4,
@@ -29,26 +29,26 @@
     "manual_transcription+restated_comparative": 4
   },
   "admissions": {
-    "rows": 667,
-    "accepted": 667,
+    "rows": 693,
+    "accepted": 693,
     "rejected": 0
   },
   "reconciliation": {
-    "run": 192,
-    "pass": 190,
+    "run": 196,
+    "pass": 194,
     "documented_source_exception": 2
   },
   "evidence_lineage": {
-    "checked": 1259,
-    "matched": 1259,
+    "checked": 1285,
+    "matched": 1285,
     "qualified": 6
   },
   "going_concern": {
     "reviews_recorded": 38,
     "reviews_coded_1": 2,
-    "not_reviewed_listed": 12,
+    "not_reviewed_listed": 15,
     "panel_coded": 39,
-    "panel_unknown": 48,
+    "panel_unknown": 51,
     "panel_coded_1": 2,
     "baseline_codes_retained": 2,
     "baseline_codes_confirmed_by_review": 1,
@@ -60,19 +60,19 @@
     "source_internal_inconsistency": 3,
     "source_unit_label_error": 1,
     "source_vs_selected": 1,
-    "candidate_vs_selected": 179
+    "candidate_vs_selected": 183
   },
   "version_decisions": {
     "unexplained difference": 1,
     "labelled restatement": 2,
     "fallback: labelled restatement": 3,
-    "fallback: comparative": 1,
+    "fallback: comparative": 4,
     "labelled reclassification": 1,
     "possible scope incompatibility with 2022": 1,
     "source internal inconsistency": 4
   },
   "denominators": {
-    "checked": 62,
+    "checked": 65,
     "incompatible": 2,
     "differing": [
       "Access 2020 (opening 6307588.216 from 2020 annual report, as originally reported; prior closing 6311041.282 from 2019 annual report, as originally reported)",
@@ -80,7 +80,7 @@
     ]
   },
   "remaining": {
-    "bank_years": 43,
+    "bank_years": 40,
     "field_requests": 345
   },
   "endpoints": {
@@ -92,11 +92,11 @@
       "post": 35
     },
     "eqta": {
-      "available": 87,
-      "eligible": 87,
+      "available": 90,
+      "eligible": 90,
       "excluded_by_flag": 0,
-      "pre": 45,
-      "post": 42
+      "pre": 46,
+      "post": 44
     },
     "ocf_ratio": {
       "available": 64,
@@ -106,18 +106,18 @@
       "post": 32
     },
     "allr": {
-      "available": 74,
-      "eligible": 74,
+      "available": 75,
+      "eligible": 75,
       "excluded_by_flag": 0,
       "pre": 36,
-      "post": 38
+      "post": 39
     },
     "leverage": {
-      "available": 87,
-      "eligible": 87,
+      "available": 90,
+      "eligible": 90,
       "excluded_by_flag": 0,
-      "pre": 45,
-      "post": 42
+      "pre": 46,
+      "post": 44
     },
     "car": {
       "available": 69,
@@ -182,23 +182,26 @@
       "cap": 100,
       "retries": 0,
       "failed_attempts": 0,
-      "note": "REST client never ran: NIMBLE_API_KEY not configured in this session; 76 discovery jobs blocked before any request"
+      "note": "REST client not run in this release (no nimble_budget state); key value never printed"
     },
     "mcp_plugin": {
-      "invocations": 23,
+      "invocations": 35,
+      "attempts": 35,
       "by_tool": {
+        "nimble_search": 23,
         "nimble_agents_list": 1,
         "nimble_agents_run": 1,
-        "nimble_agents_run_status": 7,
-        "nimble_search": 14
+        "nimble_agents_run_status": 9,
+        "nimble_agents_run_result": 1
       },
+      "failed": 1,
       "note": "Plugin invocation counts do not establish provider-internal HTTP request counts or billing; billed requests not available"
     },
     "shared_cap": 100,
     "cap_changed": false
   },
   "tests": {
-    "run_utc": "2026-10-10T21:41:58+00:00",
+    "run_utc": "2026-10-10T21:47:02+00:00",
     "exit_status": 0,
     "suites": {
       "synthetic/mock unit tests": {

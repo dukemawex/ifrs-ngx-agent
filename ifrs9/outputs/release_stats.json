@@ -1,0 +1,211 @@
+{
+  "generated_utc": "2026-10-10T21:14:53+00:00",
+  "git_commit": "dd2649a7d576b0d5b309cf79610f73766e122a3f",
+  "git_branch": "claude/zen-hamilton-v2s80b",
+  "panel": {
+    "rows": 65,
+    "banks": 12,
+    "pre_adoption": 32,
+    "post_adoption": 33,
+    "baseline_rows": 47,
+    "baseline_rows_retained": 47,
+    "new_rows": 18
+  },
+  "changes": {
+    "new_bank_year": 18,
+    "fill_blank": 9
+  },
+  "fills_by_field": {
+    "gcu": 9
+  },
+  "field_basis": {
+    "baseline_inherited": 615,
+    "recomputed_ratio": 674,
+    "manual_transcription": 30,
+    "reported_text_layer+restated_comparative": 37,
+    "reported_text_layer": 218,
+    "derived_from_verified+restated_comparative": 4,
+    "derived_from_verified": 13,
+    "manual_transcription+restated_comparative": 4
+  },
+  "admissions": {
+    "rows": 327,
+    "accepted": 327,
+    "rejected": 0
+  },
+  "reconciliation": {
+    "run": 136,
+    "pass": 135,
+    "documented_source_exception": 1
+  },
+  "evidence_lineage": {
+    "checked": 921,
+    "matched": 921,
+    "qualified": 6
+  },
+  "going_concern": {
+    "reviews_recorded": 18,
+    "reviews_coded_1": 1,
+    "not_reviewed_listed": 10,
+    "panel_coded": 19,
+    "panel_unknown": 46,
+    "panel_coded_1": 1,
+    "baseline_codes_retained": 2,
+    "baseline_codes_confirmed_by_review": 1,
+    "fills_in_baseline_rows": 9,
+    "codes_on_new_rows": 8
+  },
+  "conflicts": {
+    "restated_comparative": 4,
+    "source_internal_inconsistency": 2,
+    "source_unit_label_error": 1,
+    "source_vs_selected": 1,
+    "candidate_vs_selected": 131
+  },
+  "version_decisions": {
+    "unexplained difference": 1,
+    "labelled restatement": 2,
+    "fallback: labelled restatement": 3,
+    "fallback: comparative": 1,
+    "labelled reclassification": 1,
+    "possible scope incompatibility with 2022": 1,
+    "source internal inconsistency": 3
+  },
+  "denominators": {
+    "checked": 46,
+    "incompatible": 1,
+    "differing": [
+      "Union 2015 (opening 922755.0 from 2016 annual report; 2015 restated comparative; prior closing 920936.0 from Prior source-selection policy retained; original evidence preserved in accompanying pack.)"
+    ]
+  },
+  "remaining": {
+    "bank_years": 65,
+    "field_requests": 345
+  },
+  "endpoints": {
+    "roa": {
+      "available": 48,
+      "eligible": 48,
+      "excluded_by_flag": 0,
+      "pre": 22,
+      "post": 26
+    },
+    "eqta": {
+      "available": 65,
+      "eligible": 65,
+      "excluded_by_flag": 0,
+      "pre": 32,
+      "post": 33
+    },
+    "ocf_ratio": {
+      "available": 44,
+      "eligible": 44,
+      "excluded_by_flag": 0,
+      "pre": 19,
+      "post": 25
+    },
+    "allr": {
+      "available": 56,
+      "eligible": 56,
+      "excluded_by_flag": 0,
+      "pre": 25,
+      "post": 31
+    },
+    "leverage": {
+      "available": 65,
+      "eligible": 65,
+      "excluded_by_flag": 0,
+      "pre": 32,
+      "post": 33
+    },
+    "car": {
+      "available": 53,
+      "eligible": 52,
+      "excluded_by_flag": 1,
+      "pre": 24,
+      "post": 28
+    },
+    "car_computed": {
+      "available": 34,
+      "eligible": 33,
+      "excluded_by_flag": 1,
+      "pre": 10,
+      "post": 23
+    },
+    "npl_calc": {
+      "available": 14,
+      "eligible": 14,
+      "excluded_by_flag": 0,
+      "pre": 7,
+      "post": 7
+    },
+    "broad_coverage": {
+      "available": 14,
+      "eligible": 14,
+      "excluded_by_flag": 0,
+      "pre": 7,
+      "post": 7
+    },
+    "stage3_coverage": {
+      "available": 4,
+      "eligible": 4,
+      "excluded_by_flag": 0,
+      "pre": 0,
+      "post": 4
+    },
+    "impairment_assets": {
+      "available": 45,
+      "eligible": 45,
+      "excluded_by_flag": 0,
+      "pre": 19,
+      "post": 26
+    },
+    "liquidity_used": {
+      "available": 10,
+      "eligible": 10,
+      "excluded_by_flag": 0,
+      "pre": 5,
+      "post": 5
+    },
+    "gcu": {
+      "available": 19,
+      "eligible": 19,
+      "excluded_by_flag": 0,
+      "pre": 3,
+      "post": 16
+    }
+  },
+  "nimble": {
+    "rest_client": {
+      "attempted_requests": 0,
+      "cap": 100,
+      "retries": 0,
+      "failed_attempts": 0,
+      "note": "REST client never ran: NIMBLE_API_KEY not configured in this session; 76 discovery jobs blocked before any request"
+    },
+    "mcp_plugin": {
+      "invocations": 23,
+      "by_tool": {
+        "nimble_agents_list": 1,
+        "nimble_agents_run": 1,
+        "nimble_agents_run_status": 7,
+        "nimble_search": 14
+      },
+      "note": "Plugin invocation counts do not establish provider-internal HTTP request counts or billing; billed requests not available"
+    },
+    "shared_cap": 100,
+    "cap_changed": false
+  },
+  "tests": {
+    "run_utc": "2026-10-10T21:13:54+00:00",
+    "exit_status": 0,
+    "suites": {
+      "synthetic/mock unit tests": {
+        "passed": 62
+      },
+      "real-data regression tests": {
+        "passed": 22
+      }
+    }
+  }
+}

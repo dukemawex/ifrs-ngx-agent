@@ -1,23 +1,16 @@
 measure,value
-Baseline selected bank-years,47
-New bank-years admitted,18
-Panel bank-years after run,65
-  pre-adoption (2013-2017),32
-  post-adoption (2018-2022),33
+Selected bank-years,65
+  baseline retained / additional,47 / 18
+  pre-adoption / post-adoption,32 / 33
 Banks represented,12
-Blank fields filled from reviewed evidence,9
-Evidence-backed corrections to selected values,0
-Derived values changed by recomputation,0
-Exclusions enforced (documented exceptions),0
-Checked exceptions retained / violated,8 / 0
-Inherited Union exceptions carried (U01-U15),15
-Reconciliation checks passed / run,134 / 136
-Selected values matching an inherited evidence record,917 / 921
-Nimble requests: REST client / MCP plugin (shared cap),0 / 15 (cap 100)
-Going-concern codes from full original-year auditor reports (this run),18
-Discovery jobs by status,blocked=76
-Report downloads by status,downloaded=40; http_error=5
-PDFs archived and hashed,40
+Blank baseline cells filled (logged),9
+Corrections to non-blank baseline values,0
+Admissions accepted / rejected,327 / 0
+Reconciliation pass / fail / documented exception,135 / 0 / 1
+Evidence lineage matched / checked,921 / 921
+Going-concern reviews recorded (coded 1),18 (1)
+Panel GCU coded / unknown,19 / 46
 Remaining bank-year positions,65
 Remaining field requests in selected rows,345
-Conflicts recorded,139
+PDFs archived and hashed (not in zip),40
+Nimble REST attempts / plugin invocations,0 / 23

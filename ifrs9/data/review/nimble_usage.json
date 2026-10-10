@@ -1,0 +1,21 @@
+{
+  "rest_client": {
+    "attempted_requests": 0,
+    "cap": 100,
+    "retries": 0,
+    "failed_attempts": 0,
+    "note": "REST client never ran: NIMBLE_API_KEY not configured in this session; 76 discovery jobs blocked before any request"
+  },
+  "mcp_plugin": {
+    "invocations": 23,
+    "by_tool": {
+      "nimble_agents_list": 1,
+      "nimble_agents_run": 1,
+      "nimble_agents_run_status": 7,
+      "nimble_search": 14
+    },
+    "note": "Plugin invocation counts do not establish provider-internal HTTP request counts or billing; billed requests not available"
+  },
+  "shared_cap": 100,
+  "cap_changed": false
+}

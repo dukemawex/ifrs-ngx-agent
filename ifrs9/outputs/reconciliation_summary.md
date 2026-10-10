@@ -1,104 +1,86 @@
 # Reconciliation summary
 
-Generated 2026-10-10T17:19:14+00:00 by `python -m ifrs9_recovery export`.
+Generated 2026-10-10T21:14:53+00:00 from the saved outputs (commit `dd2649a7d576`).
+Every number below is computed by `ifrs9_recovery.summary.release_stats()`; see `outputs/release_stats.json`.
 
-## Headline
+## Panel
 
-- Baseline: **47** selected bank-years (25 pre / 22 post). Original inputs are unchanged (SHA-256 verified).
-- New bank-years admitted this run: **18** — Wema 2021, Union 2016, Union 2015, Stanbic 2022, Stanbic 2021, Stanbic 2020, Zenith 2016, Zenith 2017, Zenith 2018, Zenith 2019, Zenith 2020, GTBank 2019, GTBank 2018, GTBank 2017, First Bank 2017, First Bank 2016, Fidelity 2022, Fidelity 2021.
-- Panel after run: **65** unique bank-years, 12 banks; 32 pre-adoption, 33 post-adoption.
-- Blank fields filled: 9. Corrections to selected values: 0. Derived values changed by recomputation: 0.
-- Remaining: 65 bank-year positions and 345 field requests in selected rows.
-- Nimble: REST client blocked (`auth_missing: NIMBLE_API_KEY not set in environment or local .env`); discovery ran through the Nimble MCP plugin instead: 15 search calls logged in `data/review/nimble_mcp_calls.csv`, within the 100-request cap.
-- Report hosts still refused by egress policy at last attempt: none.
-- Report downloads: downloaded 40, http_error 5.
+- Selected bank-years: **65** across 12 banks (32 pre-adoption, 33 post-adoption).
+- Baseline rows: 47 (all 47 retained); additional rows admitted: 18.
+- These are selected rows, not complete observations for every endpoint (see endpoint table).
 
-This is not 130 observations. Report links are leads and candidate amounts are unverified.
+## What changed relative to the frozen baseline
 
-## Progress table
+- Raw input files: unchanged (SHA-256 checked by `inventory`).
+- Non-blank baseline measurements changed: 0 (corrections are the only route).
+- Authorised fills of blank baseline cells: 9 (gcu 9).
+- Recomputed derived values that differ from stored: 0.
+- Additional bank-years: 18.
+- Field basis of all non-blank cells: baseline_inherited 615, derived_from_verified 13, derived_from_verified+restated_comparative 4, manual_transcription 30, manual_transcription+restated_comparative 4, recomputed_ratio 674, reported_text_layer 218, reported_text_layer+restated_comparative 37.
 
-| Measure | Value |
-|---|---|
-| Baseline selected bank-years | 47 |
-| New bank-years admitted | 18 |
-| Panel bank-years after run | 65 |
-| pre-adoption (2013-2017) | 32 |
-| post-adoption (2018-2022) | 33 |
-| Banks represented | 12 |
-| Blank fields filled from reviewed evidence | 9 |
-| Evidence-backed corrections to selected values | 0 |
-| Derived values changed by recomputation | 0 |
-| Exclusions enforced (documented exceptions) | 0 |
-| Checked exceptions retained / violated | 8 / 0 |
-| Inherited Union exceptions carried (U01-U15) | 15 |
-| Reconciliation checks passed / run | 134 / 136 |
-| Selected values matching an inherited evidence record | 917 / 921 |
-| Nimble requests: REST client / MCP plugin (shared cap) | 0 / 15 (cap 100) |
-| Going-concern codes from full original-year auditor reports (this run) | 18 |
-| Discovery jobs by status | blocked=76 |
-| Report downloads by status | downloaded=40; http_error=5 |
-| PDFs archived and hashed | 40 |
-| Remaining bank-year positions | 65 |
-| Remaining field requests in selected rows | 345 |
-| Conflicts recorded | 139 |
+## Admission and reconciliation
 
-## Missingness by outcome (panel rows)
+- Admissions: 327 accepted, 0 rejected (file hash recomputed, page and rendered image re-verified, structured scope, explicit sign transform, derived values recomputed).
+- Reconciliation checks run: 136; pass 135; fail 0; documented source exception 1.
+- Evidence lineage: 921 of 921 non-blank inputs matched to an evidence record; 6 carry an explicit qualification.
+- Average-asset denominators: 46 checked against prior-year closing assets; 1 differ (listed in `data/denominator_compatibility.csv`). Each ratio uses the opening balance from the same report as its closing balance; differing pairs are not smoothed.
+  - Union 2015 (opening 922755.0 from 2016 annual report; 2015 restated comparative; prior closing 920936.0 from Prior source-selection policy retained; original evidence preserved in accompanying pack.)
 
-| Outcome | Available | Missing | Pre | Post | Banks |
+## Endpoint coverage (selected rows)
+
+| Outcome | Available | Eligible | Excluded by flag | Pre | Post |
 |---|---|---|---|---|---|
-| ROA on average assets (%) | 48 | 17 | 22 | 26 | 12 |
-| Equity / assets (%) | 65 | 0 | 32 | 33 | 12 |
-| OCF / average assets (%) | 44 | 21 | 19 | 25 | 10 |
-| Loan allowance / gross loans (%) | 56 | 9 | 25 | 31 | 10 |
-| Liabilities / assets (%) | 65 | 0 | 32 | 33 | 12 |
-| Reported CAR (%) | 53 | 12 | 24 | 29 | 10 |
-| Capital / RWA (%) | 34 | 31 | 10 | 24 | 8 |
-| Reported NPL ratio (%) | 14 | 51 | 13 | 1 | 6 |
-| NPL amount / gross loans (%) | 14 | 51 | 7 | 7 | 3 |
-| Broad NPL coverage (%) | 14 | 51 | 7 | 7 | 3 |
-| Stage 3 coverage (%) | 4 | 61 | 0 | 4 | 1 |
-| Total impairment / average assets (%) | 45 | 20 | 19 | 26 | 12 |
-| Admitted domestic liquidity ratio (%) | 10 | 55 | 5 | 5 | 3 |
-| Going-concern uncertainty code | 19 | 46 | 3 | 16 | 8 |
+| roa | 48 | 48 | 0 | 22 | 26 |
+| eqta | 65 | 65 | 0 | 32 | 33 |
+| ocf_ratio | 44 | 44 | 0 | 19 | 25 |
+| allr | 56 | 56 | 0 | 25 | 31 |
+| leverage | 65 | 65 | 0 | 32 | 33 |
+| car | 53 | 52 | 1 | 24 | 28 |
+| car_computed | 34 | 33 | 1 | 10 | 23 |
+| npl_calc | 14 | 14 | 0 | 7 | 7 |
+| broad_coverage | 14 | 14 | 0 | 7 | 7 |
+| stage3_coverage | 4 | 4 | 0 | 0 | 4 |
+| impairment_assets | 45 | 45 | 0 | 19 | 26 |
+| liquidity_used | 10 | 10 | 0 | 5 | 5 |
+| gcu | 19 | 19 | 0 | 3 | 16 |
 
-## Reconciliation
+## Going concern
 
-134 of 136 checks pass at rounding-based tolerance. Failures:
+- Full original-year auditor reports reviewed and recorded: 18 (1 coded 1).
+- Bank-years explicitly listed as not reviewed: 10.
+- Panel rows coded: 19 (1 coded 1); unknown: 46. Unknown is not zero.
+- Of the coded rows: 2 baseline codes retained (1 confirmed by this review), 9 filled in baseline rows, 8 on additional rows.
+- A zero means no material-uncertainty section or going-concern emphasis was found after the recorded review; it does not certify survival.
+- With 1 positive event(s), a multivariable going-concern model is not supported; report event counts before choosing an estimator.
 
-- UBA 2018: reported CAR vs capital/RWA residual 0.338 (tolerance 0.06) rounding from recorded decimals; basis=2018 full impact / reported-vintage Basel basis; see notes; transitional=22.08
-- Wema 2021: reported CAR vs capital/RWA residual 0.1469 (tolerance 0.015) rounding from recorded decimals; basis=; transitional=
+## Version decisions and conflicts
 
-## Exceptions
+- Version classifications: fallback: comparative 1, fallback: labelled restatement 3, labelled reclassification 1, labelled restatement 2, possible scope incompatibility with 2022 1, source internal inconsistency 3, unexplained difference 1 (`data/review/version_decisions.csv`).
+- Conflicts recorded: candidate_vs_selected 131, restated_comparative 4, source_internal_inconsistency 2, source_unit_label_error 1, source_vs_selected 1.
 
-- X-UBA-2015-ALW (UBA 2015 loan_allowance): retained
-- X-UBA-2016-ALW (UBA 2016 loan_allowance): retained
-- X-UBA-2022-LIQ (UBA 2022 liquidity_admissible): retained
-- X-UNION-2017-PAT (Union 2017 pat): retained
-- X-UNION-2018-ALW (Union 2018 loan_allowance): retained
-- X-UNION-2022-S3 (Union 2022 stage3_coverage): retained (documented; value not altered)
-- X-STERLING-2018-19 (Sterling 2018 scope): retained (documented; value not altered)
-- X-WEMA-2015-PAT (Wema 2015 pat): retained (documented; value not altered)
+## Remaining
 
-15 inherited Union exceptions (U01–U15) are carried in the exceptions register.
+- Bank-year positions not admitted: 65; field requests in selected rows outstanding: 345.
 
-## Evidence lineage of selected values
+## Tests
 
-917 of 921 non-blank selected input values match an inherited evidence record. Values with no match are listed in `data/evidence_backing.csv`. That is a lineage gap, not proof of error.
+- synthetic/mock unit tests: 62 passed, 0 failed, 0 skipped.
+- real-data regression tests: 22 passed, 0 failed, 0 skipped.
+- Test run: 2026-10-10T21:13:54+00:00.
 
-## Conflicts
+## Nimble usage
 
-- candidate_vs_selected: 131
-- restated_comparative: 4
-- source_internal_inconsistency: 2
-- source_unit_label_error: 1
-- source_vs_selected: 1
+- REST client attempted requests: 0 (cap 100, unchanged).
+- Plugin invocations: 23 (nimble_agents_list 1, nimble_agents_run 1, nimble_agents_run_status 7, nimble_search 14). Provider-billed requests: not available.
 
-## Workbook
+## Workbook and handoff
 
-Formula audit after LibreOffice recalculation: {'cells_checked': 1105, 'numeric_differences': 0, 'mismatches': 0, 'excel_errors': 0}.
+- Formula audit after LibreOffice recalculation: {'cells_checked': 1105, 'numeric_differences': 0, 'mismatches': 0, 'excel_errors': 0}.
+- Handoff zip: 175 files; rendered evidence page images included: 87; admission image paths without an included image: 0.
+- Source PDFs are NOT included (40 files); each is listed with URL and SHA-256 in `reports/index.csv`. Manual and image-only transcriptions cannot be reproduced from a hash alone: re-inspect the cited page.
 
 ## Not done
 
-- No regression, hypothesis test or volatility estimate was run.
-- No going-concern code was added: no original-year auditor report was reviewed in this run.
-- No candidate amount was promoted to the panel.
+- No regression, hypothesis test or volatility estimate was run, and the thesis was not updated.
+- No candidate (unverified) amount was promoted to the panel.
+- Going-concern codes remain unknown for 46 panel rows.

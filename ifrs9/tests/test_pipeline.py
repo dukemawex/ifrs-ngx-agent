@@ -75,10 +75,12 @@ def test_tolerance_depends_on_rounding_unit():
     assert tolerance(3, 1.0) == pytest.approx(1.5, abs=1e-6)
 
 
-def test_car_tolerance_whole_percent_only_when_documented():
-    assert validate.car_tolerance("20.0", "published whole-percent ratio")[0] == pytest.approx(0.51)
-    assert validate.car_tolerance("20.0", "full impact basis")[0] == pytest.approx(0.06)
-    assert validate.car_tolerance("15.91", "rounded published ratio")[0] == pytest.approx(0.015)
+def test_car_tolerance_follows_printed_precision_only():
+    assert validate.car_tolerance("20", None, None, 1.0)[0] == pytest.approx(0.5)
+    assert validate.car_tolerance("20.0", None, None, 1.0)[0] == pytest.approx(0.05)
+    assert validate.car_tolerance("11.71", None, None, 1.0)[0] == pytest.approx(0.005)
+    tol, _ = validate.car_tolerance("20", 245482, 1248509, 1.0)
+    assert 0.5 < tol < 0.5001
 
 
 # ------------------------------------------------------------------ archive and URL safety
@@ -281,25 +283,38 @@ def test_extract_emits_unreviewed_candidates_only(tmp_path):
 def _admission(**kw):
     r = {"bank_key": "Wema", "legal_entity": "Wema Bank Plc", "financial_year": "2021", "variable": "pat",
          "raw_value": "8,013,456", "raw_units": "NGN thousand", "currency": "NGN",
-         "normalised_value_ngnm_or_pct": "8013.456", "scope": "Bank", "report_title": "Annual report 2022",
-         "report_year": "2022", "source_url": "https://example.ng/r.pdf", "pdf_sha256": "abc",
-         "local_pdf_path": "reports/wema/r.pdf", "pdf_page_1_based": "90", "printed_page": "88",
+         "normalised_value_ngnm_or_pct": "8013.456", "scope": "Consolidated and separate statements; Bank column",
+         "report_title": "Annual report 2022", "report_year": "2022", "source_url": "https://example.ng/r.pdf",
+         "pdf_sha256": FAKE["sha"], "local_pdf_path": "reports/wema/r.pdf", "pdf_page_1_based": "1", "printed_page": "88",
          "source_column_heading": "Bank 2021", "original_or_comparative": "comparative",
          "reporting_version": "2022 report comparative", "short_source_excerpt": "Profit for the year",
-         "rendered_page_path": "reports/pages/x/p0090.png", "method": "visual table review",
-         "verification_status": "verified_reported", "access_timestamp_utc": "2026-10-10T00:00:00Z"}
+         "rendered_page_path": "reports/pages/x/p0001.png", "method": "visual table review",
+         "verification_status": "verified_reported", "access_timestamp_utc": "2026-10-10T00:00:00Z",
+         "document_scope": "consolidated_and_separate", "column_scope": "bank_separate",
+         "column_scope_basis": "Headings 'Group' | 'Bank'", "sign_transform": "none"}
     r.update(kw)
     return r
 
 
+FAKE = {"sha": ""}
+
+
 @pytest.fixture
 def fake_root(tmp_path, monkeypatch):
+    """A real one-page PDF with its true hash and a 110-dpi render, as the validator recomputes both."""
+    import pymupdf
+    from ifrs9_recovery.util import sha256_file
     (tmp_path / "reports/wema").mkdir(parents=True)
-    (tmp_path / "reports/wema/r.pdf").write_bytes(b"%PDF-1.4")
+    doc = pymupdf.open()
+    doc.new_page().insert_text((50, 60), "Statement of financial position  Group  Bank  Profit for the year 8,013,456")
+    pdf = tmp_path / "reports/wema/r.pdf"
+    doc.save(pdf)
     (tmp_path / "reports/pages/x").mkdir(parents=True)
-    (tmp_path / "reports/pages/x/p0090.png").write_bytes(b"png")
+    pymupdf.open(pdf)[0].get_pixmap(dpi=110).save(tmp_path / "reports/pages/x/p0001.png")
+    FAKE["sha"] = sha256_file(pdf)
     monkeypatch.setattr(C, "ROOT", tmp_path)
-    return {"abc": {"local_pdf_path": "reports/wema/r.pdf"}}
+    validate._SHA_CACHE.clear(); validate._PAGECOUNT_CACHE.clear(); validate._RENDER_CACHE.clear()
+    return {FAKE["sha"]: {"local_pdf_path": "reports/wema/r.pdf", "sha256": FAKE["sha"]}}
 
 
 def test_complete_admission_accepted(fake_root):
@@ -307,8 +322,6 @@ def test_complete_admission_accepted(fake_root):
 
 
 @pytest.mark.parametrize("kw,needle", [
-    ({"scope": "Group"}, "Group or Consolidated"),
-    ({"source_column_heading": "Consolidated 2021"}, "Group or Consolidated"),
     ({"legal_entity": "FCMB Group Plc"}, "holding company"),
     ({"legal_entity": "Stanbic IBTC Holdings Plc"}, "holding company"),
     ({"pdf_sha256": "zzz"}, "does not match"),
@@ -317,10 +330,77 @@ def test_complete_admission_accepted(fake_root):
     ({"short_source_excerpt": ""}, "missing short_source_excerpt"),
     ({"printed_page": "", "note_number": ""}, "printed_page or note_number"),
     ({"rendered_page_path": "reports/pages/x/missing.png"}, "rendered page image missing"),
+    ({"pdf_page_1_based": "5"}, "outside document"),
+    ({"column_scope": "group_consolidated"}, "not an operating-bank column"),
+    ({"column_scope": "holding_company", "source_column_heading": "Company"}, "not an operating-bank column"),
+    ({"column_scope": "", "source_column_heading": "Bank"}, "not an operating-bank column"),
+    ({"column_scope_basis": ""}, "column_scope_basis"),
+    ({"document_scope": "group_only"}, "without separate statements"),
+    ({"normalised_value_ngnm_or_pct": "-8013.456"}, "unexplained sign reversal"),
+    ({"sign_transform": "expense_presented_negative", "sign_reason": "x", "normalised_value_ngnm_or_pct": "-8013.456"},
+     "not permitted for pat"),
 ])
 def test_admission_rejections(fake_root, kw, needle):
     errs = validate.check_admission(_admission(**kw), fake_root, {"Wema": {}})
     assert any(needle in e for e in errs), errs
+
+
+def test_scope_words_in_accurate_narrative_are_not_rejected(fake_root):
+    r = _admission(scope="Bank (single-entity financial statements; one set of columns, no consolidated subsidiaries presented)",
+                   document_scope="single_entity", column_scope="bank_single_entity",
+                   column_scope_basis="Single set of columns; no Group columns")
+    assert validate.check_admission(r, fake_root, {"Wema": {}}) == []
+
+
+def test_combined_opinion_covering_bank_is_accepted_but_group_only_is_pending(fake_root):
+    gc = dict(variable="gcu", raw_value="0", raw_units="indicator", currency="", normalised_value_ngnm_or_pct="0",
+              scope="Auditor's report on the consolidated and separate financial statements", column_scope="",
+              column_scope_basis="")
+    assert validate.check_admission(_admission(**gc, opinion_applicability="covers_bank_separate"), fake_root, {"Wema": {}}) == []
+    for bad in ("group_only", "holding_company", "unclear"):
+        errs = validate.check_admission(_admission(**gc, opinion_applicability=bad), fake_root, {"Wema": {}})
+        assert any("does not establish coverage" in e for e in errs), errs
+
+
+def test_expense_sign_transform_needs_reason_and_permitted_variable(fake_root):
+    ok = _admission(variable="total_impairment", raw_value="(2,104,393)", normalised_value_ngnm_or_pct="2104.393",
+                    sign_transform="expense_presented_negative", sign_reason="printed in brackets as a charge")
+    assert validate.check_admission(ok, fake_root, {"Wema": {}}) == []
+    no_reason = dict(ok, sign_reason="")
+    assert any("without a recorded reason" in e for e in validate.check_admission(no_reason, fake_root, {"Wema": {}}))
+    negative_pat = _admission(raw_value="(7,695,320)", normalised_value_ngnm_or_pct="-7695.32")
+    assert validate.check_admission(negative_pat, fake_root, {"Wema": {}}) == []
+
+
+def test_image_must_match_the_indicated_page(fake_root, tmp_path):
+    import pymupdf
+    other = pymupdf.open(); other.new_page().insert_text((50, 60), "different page")
+    other[0].get_pixmap(dpi=110).save(tmp_path / "reports/pages/x/p0001.png")
+    errs = validate.check_admission(_admission(), fake_root, {"Wema": {}})
+    assert any("does not correspond" in e for e in errs), errs
+
+
+def test_pdf_bytes_must_hash_to_recorded_value(fake_root, tmp_path):
+    (tmp_path / "reports/wema/r.pdf").write_bytes(b"%PDF-1.4 tampered")
+    errs = validate.check_admission(_admission(), fake_root, {"Wema": {}})
+    assert any("do not hash" in e for e in errs), errs
+
+
+def test_derived_value_is_recomputed_from_components(fake_root):
+    a = _admission(evidence_id="A", variable="loan_impairment", raw_value="(16,486)", raw_units="NGN million",
+                   normalised_value_ngnm_or_pct="16486", sign_transform="expense_presented_negative", sign_reason="charge")
+    b = _admission(evidence_id="B", variable="other_impairment", raw_value="717", raw_units="NGN million",
+                   normalised_value_ngnm_or_pct="-717", sign_transform="expense_presented_negative", sign_reason="write-back")
+    d = _admission(evidence_id="D", variable="total_impairment", raw_value="derived", raw_units="NGN million",
+                   normalised_value_ngnm_or_pct="15769", verification_status="derived_from_verified",
+                   derive_formula="sum", component_ids="A;B")
+    assert validate.check_admission(d, fake_root, {"Wema": {}}) == []
+    assert validate.check_derived(d, {"A": a, "B": b}) == []
+    wrong = dict(d, normalised_value_ngnm_or_pct="17203")
+    assert any("recomputed" in e for e in validate.check_derived(wrong, {"A": a, "B": b}))
+    other_version = dict(b, reporting_version="2023 report comparative")
+    assert any("reporting version" in e for e in validate.check_derived(d, {"A": a, "B": other_version}))
+    assert any("without component_ids" in e for e in validate.check_admission(dict(d, component_ids=""), fake_root, {"Wema": {}}))
 
 
 # ------------------------------------------------------------------ end-to-end controls on real inputs
@@ -370,8 +450,3 @@ def test_read_value_picks_only_the_specified_column(tmp_path, monkeypatch):
 def test_panel_value_keeps_printed_percent_precision():
     assert validate.panel_value({"raw_units": "percent", "raw_value": "20 %", "normalised_value_ngnm_or_pct": "20.0"}) == "20"
     assert validate.panel_value({"raw_units": "NGN thousand", "raw_value": "1,500", "normalised_value_ngnm_or_pct": "1.5"}) == 1.5
-
-
-def test_derived_admission_needs_no_raw_units_match(fake_root):
-    r = _admission(raw_value="derived", verification_status="derived_from_verified", normalised_value_ngnm_or_pct="9177")
-    assert validate.check_admission(r, fake_root, {"Wema": {}}) == []

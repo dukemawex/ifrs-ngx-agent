@@ -17,7 +17,8 @@ python -m ifrs9_recovery download --resume
 python -m ifrs9_recovery extract --resume
 python -m ifrs9_recovery validate
 python -m ifrs9_recovery export
-python -m pytest -q
+python -m pytest -q                      # tests/test_pipeline.py (synthetic) + tests/test_real_data.py (real data)
+python -m ifrs9_recovery export          # rerun so the summary reports the test results
 ```
 
 `python -m ifrs9_recovery all` runs every stage in order. `--max-priority N` limits discovery and downloads to the first N priority batches. Every stage checkpoints to `state/` after each job, so a rerun resumes where the last one stopped.
@@ -36,24 +37,26 @@ python -m pytest -q
 
 ## How a value is admitted
 
-The machine never admits a number on its own. `extract` only lists candidate lines and renders the pages they came from. A value reaches the panel only after a reviewer has inspected the rendered page and added a row to `data/review/admissions.csv`. That file has the full evidence schema plus `admit`, `is_correction` and `correction_reason`. `validate` then rejects the row if any of these hold:
+The machine never admits a number on its own. `extract` only lists candidate lines and renders the pages they came from. A value reaches the panel only after a reviewer has inspected the rendered page and added a row to `data/review/admissions.csv` (built from `specs.csv` by `python -m ifrs9_recovery.review`). `validate` rejects the row unless all of these hold:
 
-- an evidence field is missing;
-- the scope or column heading is Group or Consolidated;
-- the legal entity looks like a holding company, group or foreign subsidiary;
-- the PDF hash does not match a downloaded report;
-- the rendered page image is missing;
-- the normalised value does not equal the raw value times the unit factor;
-- the status is not `verified_reported` or `derived_from_verified`.
+- every evidence field is present;
+- **structured scope**: `document_scope` (single_entity / consolidated_and_separate / separate_only / group_only), `column_scope` (an operating-bank column) with its verbatim heading in `column_scope_basis`, and for going-concern codes `opinion_applicability` showing that the auditor's opinion covers the operating bank. Narrative scope text is kept verbatim and is never pattern-matched; a holding-company `Company` column, a group-only document, or a bare "Bank" label without heading evidence is refused;
+- **file identity**: SHA-256 is recomputed from the local PDF bytes and must equal the recorded hash and the download ledger; the page must exist; the saved PNG must be pixel-identical to a fresh 110-dpi render of that page;
+- **sign**: the normalised value equals raw × unit factor. A sign flip is allowed only with `sign_transform=expense_presented_negative`, a `sign_reason`, and only for impairment/allowance variables. Negative PAT, equity and OCF are preserved;
+- **derived values** (`derived_from_verified`) are recomputed from their accepted `component_ids`, which must share entity, year, reporting version, column scope and units;
+- the status is `verified_reported` or `derived_from_verified`.
 
-A new bank-year needs PAT, assets, liabilities and equity, all from one reporting version, and the balance check must pass. A value that differs from a selected one is logged as a conflict unless the row is marked as a correction with a reason.
+A new bank-year needs PAT, assets, liabilities and equity from one reporting version, and the balance check must pass. A value that differs from a selected one is logged as a conflict unless it is a logged correction.
 
 ## Controls
 
 - **Nimble budget:** `MAX_NIMBLE_REQUESTS` is a hard, persistent cap that counts every attempt, retries included, and a stricter cap from an earlier run takes precedence. Concurrency comes from `MAX_NIMBLE_CONCURRENCY`, and 429/5xx responses back off, honouring Retry-After. A 401/403 stops without retrying. Results are cached, and keys are redacted from logs.
 - **Downloads:** public https only; private, local and metadata hosts are refused, and every redirect is re-checked. A file is kept only if the bytes start with `%PDF-` and fit within `MAX_PDF_MB`. Each kept file gets a SHA-256.
 - **Ratios:** the definitions are unchanged from the starting pack. A ratio is null when an input is missing or the denominator is not positive. Signs are kept.
-- **Reconciliation tolerance:** half the rounding unit inferred from the recorded decimals, multiplied by the number of rounded components. Published CAR is allowed a whole-percent step only where the basis note documents a whole or rounded ratio.
+- **Reconciliation tolerance:** half the rounding unit inferred from the recorded decimals, times the number of rounded components. Published CAR is compared within half its printed display step (from the evidence literal or `data/review/printed_literals.csv`) plus input rounding; there is no global tolerance. Check statuses are pass, fail or documented_source_exception (only for conflicts recorded in `reviewer_conflicts.csv`).
+- **Version policy:** `data/review/version_policy.md`; each alternative presentation is classified in `version_decisions.csv`, printed alternatives are kept in `source_alternatives.csv`, and `data/denominator_compatibility.csv` documents average-asset pairs.
+- **Field status:** `data/field_status.csv` labels every non-blank cell as baseline_inherited, reported_text_layer, manual_transcription, derived_from_verified (+restated_comparative) or recomputed_ratio.
+- **Release record:** `outputs/reconciliation_summary.md` is generated from the CSVs by `summary.py`; `outputs/release_manifest.json` records commit, run ID and hashes; `outputs/test_results.json` reports synthetic and real-data tests separately.
 - **Going concern:** auditor pages are queued for review and never coded automatically.
 
 ## Review workflow used in this run
@@ -65,7 +68,9 @@ A new bank-year needs PAT, assets, liabilities and equity, all from one reportin
 5. **Validate:** `python -m ifrs9_recovery validate` applies the admission rules and adds new bank-years only when PAT, assets, liabilities and equity are all present, come from one version, and balance.
 6. **Supporting registers:**
    - `data/review/extra_sources.csv`: fallback leads (from the Nimble MCP plugin or web search) with their discovery method.
-   - `data/review/nimble_mcp_calls.csv`: ledger of Nimble MCP plugin calls.
+   - `data/review/nimble_calls.csv`: ledger of Nimble calls, with `channel` separating MCP plugin invocations from REST client requests (retries and failures included); `nimble_usage.json` summarises them.
+   - `data/review/document_status.csv`: per-document type and audit-report coverage.
+   - `data/review/privacy_inventory.md`: tracked research inputs and exposure.
    - `data/review/going_concern_reviews.csv`: auditor-report reviews behind each going-concern code.
    - `data/review/perimeter_decisions.csv`: entity and column decisions per bank.
    - `data/review/reviewer_conflicts.csv`: restatements and problems found within sources.

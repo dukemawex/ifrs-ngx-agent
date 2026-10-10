@@ -1,0 +1,3 @@
+evidence_id,bank,year,variable,printed_literal,pdf_page_1_based,printed_page,job_id,verification,note
+NP0011,UBA,2015,car,20%,150,148,pdf-9fd693dc62,"text-layer row 'Risk-weighted capital adequacy ratio 20% 20%' (Bank Dec 2016 / Dec 2015 columns) re-read 2026-10-10","Inherited record stores 20.0; printed figure is the whole-percent literal 20%."
+NP0031,UBA,2016,car,20%,150,148,pdf-9fd693dc62,"text-layer row 'Risk-weighted capital adequacy ratio 20% 20%' re-read 2026-10-10","Inherited record stores 20.0; printed figure is the whole-percent literal 20%."

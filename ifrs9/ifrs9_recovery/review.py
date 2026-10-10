@@ -21,7 +21,15 @@ SPECS = C.DATA / "review" / "specs.csv"
 SPEC_COLUMNS = ["spec_id", "bank", "year", "variable", "job_id", "page", "printed_page", "row_regex", "x_min",
                 "x_max", "row_occurrence", "sign", "raw_units", "scope", "column_heading", "report_title", "report_year",
                 "original_or_comparative", "reporting_version", "note_number", "admit", "is_correction",
-                "correction_reason", "reviewer_note", "manual_value", "derive_from"]
+                "correction_reason", "reviewer_note", "manual_value", "derive_from",
+                "document_scope", "column_scope", "column_scope_basis", "opinion_applicability", "sign_reason"]
+STRUCTURED = ["document_scope", "column_scope", "column_scope_basis", "opinion_applicability",
+              "sign_transform", "sign_reason", "derive_formula", "component_ids", "value_basis"]
+DEFAULT_SIGN_REASON = {
+    "impairment": "Income-statement charge printed in brackets as a deduction (reversal unbracketed); stored as "
+                  "positive expense / negative reversal per panel convention 'positive expense reduces profit'.",
+    "allowance": "Allowance printed in brackets as a deduction from gross loans; stored as a positive stock amount.",
+}
 NUM = re.compile(r"^\(?-?[\d,]+(\.\d+)?\)?%?$")
 FACTOR = {"NGN thousand": 0.001, "NGN million": 1.0, "NGN billion": 1000.0, "percent": 1.0, "indicator": 1.0}
 
@@ -89,6 +97,11 @@ def build() -> dict:
         # sign: 1 keeps the printed sign; -1 converts a bracketed expense to the panel's
         # expense-positive convention. Recorded per value so the conversion is auditable.
         mult = int(s.get("sign") or 1)
+        sign_reason = (s.get("sign_reason") or "").strip()
+        if mult == -1 and not sign_reason:
+            sign_reason = DEFAULT_SIGN_REASON["allowance" if "allowance" in s["variable"] else "impairment"]
+        value_basis = ("derived_from_verified" if raw == "derived" else
+                       "manual_transcription" if (s.get("manual_value") or "").strip() else "reported_text_layer")
         if raw == "derived":
             norm = round(val, 6)  # components are already normalised and signed
         else:
@@ -112,8 +125,16 @@ def build() -> dict:
             "review_reason": (s["reviewer_note"] + (" Sign converted to expense-positive." if mult == -1 else "")).strip(), "access_timestamp_utc": rec["accessed_utc"],
             "evidence_origin": "review/specs.csv", "admit": s["admit"], "is_correction": s["is_correction"],
             "correction_reason": s["correction_reason"],
+            "document_scope": s.get("document_scope", ""), "column_scope": s.get("column_scope", ""),
+            "column_scope_basis": s.get("column_scope_basis", ""), "opinion_applicability": s.get("opinion_applicability", ""),
+            "sign_transform": "expense_presented_negative" if mult == -1 else "none",
+            "sign_reason": sign_reason if mult == -1 else "",
+            "derive_formula": "sum" if raw == "derived" else "",
+            "component_ids": ";".join(parts) if raw == "derived" else "",
+            "value_basis": value_basis,
         })
-    write_csv(C.DATA / "review" / "admissions.csv", out, EVIDENCE_COLUMNS + ["admit", "is_correction", "correction_reason"])
+    write_csv(C.DATA / "review" / "admissions.csv", out,
+              EVIDENCE_COLUMNS + [c for c in STRUCTURED if c not in EVIDENCE_COLUMNS] + ["admit", "is_correction", "correction_reason"])
     write_csv(C.DATA / "review" / "spec_errors.csv", errors, ["spec_id", "error"])
     return {"specs": len(specs), "admission_rows": len(out), "errors": len(errors), "built_utc": utcnow()}
 

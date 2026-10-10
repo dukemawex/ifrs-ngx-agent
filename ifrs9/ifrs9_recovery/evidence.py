@@ -14,7 +14,8 @@ EVIDENCE_COLUMNS = [
     "source_url", "pdf_sha256", "local_pdf_path", "pdf_page_1_based", "printed_page", "note_number",
     "source_column_heading", "original_or_comparative", "reporting_version", "short_source_excerpt",
     "rendered_page_path", "method", "verification_status", "review_reason", "access_timestamp_utc",
-    "evidence_origin",
+    "evidence_origin", "document_scope", "column_scope", "column_scope_basis", "opinion_applicability",
+    "sign_transform", "sign_reason", "derive_formula", "component_ids", "value_basis",
 ]
 
 PRIOR_NAME_MAP = {
@@ -128,4 +129,31 @@ def component_match(value, field: str, bank: str, year: int, idx) -> tuple[list[
         vals = [number(r[0]["normalised_value_ngnm_or_pct"]) for r in recs]
         if None not in vals and abs(sum(vals) - v) <= 0.0005 * len(vals) + 1e-9:
             return [r[0] for r in recs], "sum of " + " + ".join(parts)
+    return [], ""
+
+
+# Inherited evidence named with a more specific CAR label than the panel column.
+CAR_ALIASES = ("CAR_Basel_II", "CAR_full_IFRS9_pct", "CAR_reported")
+QUALIFICATIONS = {
+    ("First Bank", 2013, "car"): "Basel II comparator reconstructed in the 2014 report (DS0036); the original 2013 "
+                                 "report's Basel I CAR was 16.76% (DS0037). Not the originally published 2013 ratio.",
+    ("First Bank", 2014, "car"): "Basel II CAR from the 2014 report regulatory table (DS0033).",
+    ("Unity", 2018, "car"): "Full IFRS 9 impact CAR from the 2019 report's restated 2018 comparative (EV0224); "
+                            "transition-adjusted -213.68% held separately (EV0226).",
+    ("Unity", 2019, "car"): "Full IFRS 9 impact CAR, 2019 report current year (EV0247); transition-adjusted -200.88% (EV0249).",
+    ("Wema", 2022, "total_impairment"): "2023 report comparative: litigation claim reclassified out of impairment "
+                                        "(2023 report note 11); original 2022 presentation 4,808.387 held as an alternative.",
+    ("Stanbic", 2020, "regulatory_capital"): "Derived: eligible Tier I + Tier II; printed subtotal 176,542 conflicts "
+                                             "(held as a source alternative, unresolved).",
+}
+
+
+def alias_match(value, field: str, bank: str, year: int, idx) -> tuple[list[dict], str]:
+    """Match evidence recorded under the original CAR naming (still a direct source value)."""
+    if field != "car":
+        return [], ""
+    for name in CAR_ALIASES:
+        recs = idx.get((bank, year, name), [])
+        if evidence_matches(value, recs):
+            return recs, f"evidence recorded as {name}"
     return [], ""

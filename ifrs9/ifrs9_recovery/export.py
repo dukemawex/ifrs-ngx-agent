@@ -321,20 +321,11 @@ def run() -> dict:
                 shutil.copy2(src, dst)
                 copied.add(dst.name)
 
-    mcp_path = C.DATA / "review" / "nimble_mcp_calls.csv"
-    mcp_calls = len(read_csv(mcp_path)) if mcp_path.is_file() else 0
-    gcr_path = C.DATA / "review" / "going_concern_reviews.csv"
-    gc_reviewed = sum(1 for r in (read_csv(gcr_path) if gcr_path.is_file() else []) if r.get("gcu_code", "") != "")
-    budget = dict(budget, mcp_calls=mcp_calls)
-
+    from . import summary as S
     n_base = len(before)
     new_rows = vstate.get("new_bank_years", [])
     corr = [c for c in changes if c["kind"] == "correction"]
     fills = [c for c in changes if c["kind"] == "fill_blank"]
-    recomputed = [c for c in changes if c["kind"] == "recomputed_derived"]
-    dl_counts = Counter(v["status"] for v in dl.values())
-    disc_counts = Counter(v.get("status") for v in disc.get("jobs", {}).values())
-    pre = sum(int(r["year"]) < C.ADOPTION_YEAR for r in panel)
     recon = read_csv(C.DATA / "reconciliation_checks.csv")
     exc = read_csv(C.DATA / "exceptions_register.csv")
     conflicts = read_csv(C.DATA / "conflicts.csv")
@@ -342,30 +333,24 @@ def run() -> dict:
     evidence = read_csv(C.DATA / "evidence_long.csv")
     gap_bank_years = [g for g in gaps if g["gap_type"] == "bank_year"]
     gap_fields = [g for g in gaps if g["gap_type"] != "bank_year"]
-
+    stats = S.release_stats()
+    pst, rcs, gcs = stats["panel"], stats["reconciliation"], stats["going_concern"]
     progress = [
-        {"measure": "Baseline selected bank-years", "value": n_base},
-        {"measure": "New bank-years admitted", "value": len(new_rows)},
-        {"measure": "Panel bank-years after run", "value": len(panel)},
-        {"measure": "  pre-adoption (2013-2017)", "value": pre},
-        {"measure": "  post-adoption (2018-2022)", "value": len(panel) - pre},
-        {"measure": "Banks represented", "value": len({r['bank'] for r in panel})},
-        {"measure": "Blank fields filled from reviewed evidence", "value": len(fills)},
-        {"measure": "Evidence-backed corrections to selected values", "value": len(corr)},
-        {"measure": "Derived values changed by recomputation", "value": len(recomputed)},
-        {"measure": "Exclusions enforced (documented exceptions)", "value": sum(c['kind'] == 'exception_enforced' for c in changes)},
-        {"measure": "Checked exceptions retained / violated", "value": f"{sum(e['status'].startswith('retained') for e in exc)} / {sum(e['status'] == 'VIOLATED' for e in exc)}"},
-        {"measure": "Inherited Union exceptions carried (U01-U15)", "value": sum(e['status'].startswith('inherited') for e in exc)},
-        {"measure": "Reconciliation checks passed / run", "value": f"{sum(r['passed'] == 'True' for r in recon)} / {len(recon)}"},
-        {"measure": "Selected values matching an inherited evidence record", "value": f"{sum(b['value_matches_evidence'] == 'True' for b in backing)} / {len(backing)}"},
-        {"measure": "Nimble requests: REST client / MCP plugin (shared cap)", "value": f"{budget.get('attempted_requests', 0)} / {mcp_calls} (cap {budget.get('cap', C.load_settings().max_requests)})"},
-        {"measure": "Going-concern codes from full original-year auditor reports (this run)", "value": gc_reviewed},
-        {"measure": "Discovery jobs by status", "value": "; ".join(f"{k}={v}" for k, v in sorted(disc_counts.items())) or "none"},
-        {"measure": "Report downloads by status", "value": "; ".join(f"{k}={v}" for k, v in sorted(dl_counts.items())) or "none"},
-        {"measure": "PDFs archived and hashed", "value": len(archive)},
-        {"measure": "Remaining bank-year positions", "value": len(gap_bank_years)},
-        {"measure": "Remaining field requests in selected rows", "value": len(gap_fields)},
-        {"measure": "Conflicts recorded", "value": len(conflicts)},
+        {"measure": "Selected bank-years", "value": pst["rows"]},
+        {"measure": "  baseline retained / additional", "value": f"{pst['baseline_rows_retained']} / {pst['new_rows']}"},
+        {"measure": "  pre-adoption / post-adoption", "value": f"{pst['pre_adoption']} / {pst['post_adoption']}"},
+        {"measure": "Banks represented", "value": pst["banks"]},
+        {"measure": "Blank baseline cells filled (logged)", "value": stats["changes"].get("fill_blank", 0)},
+        {"measure": "Corrections to non-blank baseline values", "value": stats["changes"].get("correction", 0)},
+        {"measure": "Admissions accepted / rejected", "value": f"{stats['admissions']['accepted']} / {stats['admissions']['rejected']}"},
+        {"measure": "Reconciliation pass / fail / documented exception", "value": f"{rcs.get('pass', 0)} / {rcs.get('fail', 0)} / {rcs.get('documented_source_exception', 0)}"},
+        {"measure": "Evidence lineage matched / checked", "value": f"{stats['evidence_lineage']['matched']} / {stats['evidence_lineage']['checked']}"},
+        {"measure": "Going-concern reviews recorded (coded 1)", "value": f"{gcs['reviews_recorded']} ({gcs['reviews_coded_1']})"},
+        {"measure": "Panel GCU coded / unknown", "value": f"{gcs['panel_coded']} / {gcs['panel_unknown']}"},
+        {"measure": "Remaining bank-year positions", "value": stats["remaining"]["bank_years"]},
+        {"measure": "Remaining field requests in selected rows", "value": stats["remaining"]["field_requests"]},
+        {"measure": "PDFs archived and hashed (not in zip)", "value": len(archive)},
+        {"measure": "Nimble REST attempts / plugin invocations", "value": f"{stats['nimble'].get('rest_client', {}).get('attempted_requests', 0)} / {stats['nimble'].get('mcp_plugin', {}).get('invocations', 0)}"},
     ]
     write_csv(C.OUTPUTS / "progress_table.csv", progress, ["measure", "value"])
 
@@ -388,8 +373,20 @@ def run() -> dict:
         "Field_Coverage": (cov, list(cov[0].keys()), "Non-blank input cells before (baseline CSV) and after."),
         "Missingness": (miss, list(miss[0].keys()), "Available observations by outcome."),
         "Change_Register": (changes, ["bank", "year", "field", "old", "new", "kind", "basis", "reason"], "Before/after log."),
-        "Reconciliation": (recon, ["bank", "year", "check", "residual", "tolerance", "rounding_unit_ngnm", "passed", "note"],
-                           "Tolerance = 0.5 x inferred rounding unit x number of rounded components."),
+        "Reconciliation": (recon, ["bank", "year", "check", "residual", "tolerance", "rounding_unit_ngnm", "passed", "status", "exception_detail", "note"],
+                           "Status: pass / fail / documented_source_exception. Tolerances from printed precision and input rounding."),
+        "Field_Status": (read_csv(C.DATA / "field_status.csv"), list(read_csv(C.DATA / "field_status.csv")[0].keys()),
+                         "Basis of every non-blank cell: baseline_inherited, reported_text_layer, manual_transcription, derived_from_verified, restated comparative, recomputed_ratio."),
+        "Version_Decisions": (read_csv(C.DATA / "review" / "version_decisions.csv"), list(read_csv(C.DATA / "review" / "version_decisions.csv")[0].keys()),
+                              "Primary rule: original-year report; alternatives classified and kept for sensitivity."),
+        "Source_Alternatives": (read_csv(C.DATA / "review" / "source_alternatives.csv"), ["evidence_id", "bank_key", "financial_year", "variable", "raw_value", "normalised_value_ngnm_or_pct", "pdf_page_1_based", "printed_page", "verification_status", "review_reason"],
+                                "Printed values not selected (conflicting subtotals, original presentations, later comparatives)."),
+        "Going_Concern": (read_csv(C.DATA / "review" / "going_concern_reviews.csv"), list(read_csv(C.DATA / "review" / "going_concern_reviews.csv")[0].keys()),
+                          "Reviews of original-year auditor reports; blank code = not reviewed (unknown, not zero)."),
+        "Document_Status": (read_csv(C.DATA / "review" / "document_status.csv"), list(read_csv(C.DATA / "review" / "document_status.csv")[0].keys()),
+                            "Document type and audit-report coverage per downloaded file."),
+        "Denominators": (read_csv(C.DATA / "denominator_compatibility.csv") or [{"bank": ""}], list((read_csv(C.DATA / "denominator_compatibility.csv") or [{"bank": ""}])[0].keys()),
+                         "Opening assets vs prior-year closing assets in the panel."),
         "Exceptions": (exc, ["id", "bank", "year", "field", "expected", "actual", "status", "rule"], "Known exceptions."),
         "Conflicts": (conflicts, ["type", "bank", "year", "field", "value_a", "value_b", "detail"], "Unresolved conflicts."),
         "Unresolved_Gaps": (gaps, list(gaps[0].keys()) if gaps else ["gap_type"], "Outstanding bank-years and field requests."),
@@ -405,82 +402,51 @@ def run() -> dict:
     recalculated = recalc_with_libreoffice(xlsx)
     audit = formula_audit(xlsx) if recalculated else {"note": "LibreOffice unavailable; formulas not cached"}
 
-    summary_md = render_summary(inv, n_base, panel, new_rows, fills, corr, recomputed, changes, recon, exc,
-                                conflicts, backing, miss, gap_bank_years, gap_fields, progress, budget, disc, dl_counts,
-                                audit)
-    (C.OUTPUTS / "reconciliation_summary.md").write_text(summary_md, encoding="utf-8")
     write_json(C.OUTPUTS / "workbook_formula_audit.json", {"recalculated": recalculated, **audit})
-    zpath = build_handoff_zip()
+    stats = S.release_stats()
+    write_json(C.OUTPUTS / "release_stats.json", stats)
+    write_json(C.OUTPUTS / "release_manifest.json", S.release_manifest(stats))
+    summary = C.OUTPUTS / "reconciliation_summary.md"
+    # Two passes: the first creates every file the zip will hold, so the counts in the final summary are final.
+    for _ in range(2):
+        handoff = build_handoff_zip()
+        summary.write_text(S.render(stats, audit, handoff), encoding="utf-8")
+    handoff = build_handoff_zip()
     return {"panel_rows": len(panel), "workbook": str(xlsx.relative_to(C.ROOT)), "recalculated": recalculated,
-            "formula_audit": audit, "handoff_zip": str(zpath.relative_to(C.ROOT)),
+            "formula_audit": audit, "handoff": handoff,
             "remaining_bank_years": len(gap_bank_years), "remaining_field_requests": len(gap_fields)}
 
 
-def render_summary(inv, n_base, panel, new_rows, fills, corr, recomputed, changes, recon, exc, conflicts, backing,
-                   miss, gap_bank_years, gap_fields, progress, budget, disc, dl_counts, audit) -> str:
-    pre = sum(int(r["year"]) < C.ADOPTION_YEAR for r in panel)
-    blocker = (disc.get("last_run") or {}).get("blocker") or "none"
-    from urllib.parse import urlparse
-    dls = read_json(C.STATE / "download_state.json", {}).get("reports", {})
-    denied_hosts = {urlparse(v["requested_url"]).hostname for v in dls.values() if v.get("status") == "egress_denied"}
-    L = ["# Reconciliation summary", "", f"Generated {utcnow()} by `python -m ifrs9_recovery export`.", "",
-         "## Headline", "",
-         f"- Baseline: **{n_base}** selected bank-years (25 pre / 22 post). Original inputs are unchanged (SHA-256 verified).",
-         f"- New bank-years admitted this run: **{len(new_rows)}**{(' — ' + ', '.join(new_rows)) if new_rows else ''}.",
-         f"- Panel after run: **{len(panel)}** unique bank-years, {len({r['bank'] for r in panel})} banks; {pre} pre-adoption, {len(panel) - pre} post-adoption.",
-         f"- Blank fields filled: {len(fills)}. Corrections to selected values: {len(corr)}. Derived values changed by recomputation: {len(recomputed)}.",
-         f"- Remaining: {len(gap_bank_years)} bank-year positions and {len(gap_fields)} field requests in selected rows.",
-         f"- Nimble: REST client blocked (`{blocker}`); discovery ran through the Nimble MCP plugin instead: "
-         f"{budget.get('mcp_calls', 0)} search calls logged in `data/review/nimble_mcp_calls.csv`, within the {budget.get('cap', 100)}-request cap.",
-         f"- Report hosts still refused by egress policy at last attempt: {', '.join(sorted(denied_hosts)) or 'none'}.",
-         f"- Report downloads: "
-         + (", ".join(f"{k} {v}" for k, v in sorted(dl_counts.items())) or "none") + ".",
-         "", "This is not 130 observations. Report links are leads and candidate amounts are unverified.", "",
-         "## Progress table", "", "| Measure | Value |", "|---|---|"]
-    L += [f"| {p['measure'].strip()} | {p['value']} |" for p in progress]
-    L += ["", "## Missingness by outcome (panel rows)", "",
-          "| Outcome | Available | Missing | Pre | Post | Banks |", "|---|---|---|---|---|---|"]
-    L += [f"| {m['label']} | {m['n_available']} | {m['n_missing']} | {m['pre_2018_available']} | {m['post_2018_available']} | {m['banks_with_any']} |" for m in miss]
-    failed = [r for r in recon if r["passed"] != "True"]
-    L += ["", "## Reconciliation", "",
-          f"{len(recon) - len(failed)} of {len(recon)} checks pass at rounding-based tolerance. Failures:", ""]
-    L += [f"- {r['bank']} {r['year']}: {r['check']} residual {r['residual']} (tolerance {float(r['tolerance']):.4g}) {r.get('note', '')}" for r in failed] or ["- none"]
-    L += ["", "## Exceptions", ""]
-    L += [f"- {e['id']} ({e['bank']} {e['year']} {e['field']}): {e['status']}" for e in exc if not e["id"].startswith("U")]
-    L += ["", f"{sum(e['id'].startswith('U') for e in exc)} inherited Union exceptions (U01–U15) are carried in the exceptions register.", "",
-          "## Evidence lineage of selected values", "",
-          f"{sum(b['value_matches_evidence'] == 'True' for b in backing)} of {len(backing)} non-blank selected input values match an inherited evidence record. "
-          "Values with no match are listed in `data/evidence_backing.csv`. That is a lineage gap, not proof of error.",
-          "", "## Conflicts", ""]
-    ct = Counter(c["type"] for c in conflicts)
-    L += [f"- {k}: {v}" for k, v in sorted(ct.items())] or ["- none"]
-    L += ["", "## Workbook", "", f"Formula audit after LibreOffice recalculation: {audit}.", "",
-          "## Not done", "",
-          "- No regression, hypothesis test or volatility estimate was run.",
-          "- No going-concern code was added: no original-year auditor report was reviewed in this run.",
-          "- No candidate amount was promoted to the panel."]
-    return "\n".join(L) + "\n"
-
-
-def build_handoff_zip() -> Path:
+def build_handoff_zip() -> dict:
     z = C.OUTPUTS / "research_data_handoff.zip"
     include = []
     for d in ("data", "outputs", "ifrs9_recovery", "tests", "tasks", "seeds", "checks"):
         for p in sorted((C.ROOT / d).rglob("*")):
-            if p.is_file() and p != z and "__pycache__" not in p.parts and p.suffix != ".tmp":
+            if p.is_file() and p != z and "__pycache__" not in p.parts and p.suffix != ".tmp" and "_recalc" not in p.parts:
                 include.append(p)
     for f in ("requirements.txt", "requirements.lock", "README_PIPELINE.md", "CLAUDE_PROMPT.md", "START_HERE.md",
-              ".env.example", ".gitignore", "reports/index.csv"):
+              ".env.example", ".gitignore", "reports/index.csv", "pytest.ini"):
         if (C.ROOT / f).is_file():
             include.append(C.ROOT / f)
     pdfs = read_csv(C.REPORTS / "index.csv") if (C.REPORTS / "index.csv").is_file() else []
+    adm_path = C.DATA / "review" / "admissions.csv"
+    ev_dir = C.OUTPUTS / "evidence_pages"
+    needed = {"_".join(Path(r["rendered_page_path"]).parts[-2:]) for r in (read_csv(adm_path) if adm_path.is_file() else [])
+              if r.get("rendered_page_path")}
+    present = {p.name for p in ev_dir.glob("*.png")} if ev_dir.is_dir() else set()
+    missing = sorted(needed - present)
     manifest = ["research_data_handoff.zip manifest", f"created_utc: {utcnow()}", "",
-                "Source PDFs are NOT inside this zip; they are listed in reports/index.csv with SHA-256 hashes.",
-                f"PDFs archived this run: {len(pdfs)}", "Original inputs are referenced by checks/snapshot_manifest.json.", "", "files:"]
+                "CONTENTS: code, tests, data registers, outputs, and rendered page images (outputs/evidence_pages/) for every admitted value.",
+                f"Rendered evidence images included: {len(needed & present)}; admission image paths without an included image: {len(missing)}.",
+                "Image name = <first 12 hex of PDF SHA-256>_p<PDF page>.png, rendered at 110 dpi with PyMuPDF.",
+                f"SOURCE PDFs ARE NOT INCLUDED ({len(pdfs)} files). Retrieve each from the URL in reports/index.csv and verify its SHA-256.",
+                "Manual and image-only transcriptions cannot be reproduced from a hash alone: re-inspect the cited PDF page.",
+                "Original inputs are identified by checks/snapshot_manifest.json.", "", "files:"]
+    manifest += [f"  MISSING IMAGE: {m}" for m in missing]
     with zipfile.ZipFile(z, "w", zipfile.ZIP_DEFLATED) as zf:
         for p in include:
             rel = p.relative_to(C.ROOT).as_posix()
             zf.write(p, rel)
             manifest.append(f"  {rel}  sha256={sha256_file(p)}")
         zf.writestr("MANIFEST.txt", "\n".join(manifest) + "\n")
-    return z
+    return {"files": len(include) + 1, "evidence_images": len(needed & present), "missing_images": len(missing), "pdfs": len(pdfs)}

@@ -1,5 +1,10 @@
 bank,year,opening_assets,prior_year_closing_assets,difference,compatible,opening_version,prior_closing_version
 Access,2014,1704094.012,1704094.012,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Access,2015,1981955.73,1981955.73,0.0,True,"2015 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Access,2016,2411944.061,2411944.061,0.0,True,"2016 annual report, as originally reported","2015 annual report, as originally reported"
+Access,2017,3094960.515,3094960.515,0.0,True,"2017 annual report, as originally reported","2016 annual report, as originally reported"
+Access,2020,6307588.216,6311041.282,-3453.066,False,"2020 annual report, as originally reported","2019 annual report, as originally reported"
+Access,2021,7624979.724,7624979.724,0.0,True,"2021 annual report, as originally reported","2020 annual report, as originally reported"
 Ecobank Nigeria,2017,1808503.0,1808503.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Fidelity,2014,1081217.0,1081217.0,0.0,True,"2014 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Fidelity,2015,1187025.0,1187025.0,0.0,True,"2015 annual report, as originally reported","2014 annual report, as originally reported"
@@ -17,7 +22,10 @@ Stanbic,2019,1599245.0,1599245.0,0.0,True,"2019 audited financial statements, as
 Stanbic,2021,2370347.0,2370347.0,0.0,True,"2021 audited financial statements, as originally reported","2021 audited financial statements; 2020 comparative, not labelled restated"
 Stanbic,2022,2614087.0,2614087.0,0.0,True,"2022 audited financial statements, as originally reported","2021 audited financial statements, as originally reported"
 Sterling,2014,707797.181,707797.181,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Sterling,2015,824539.426,824539.426,0.0,True,"2015 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Sterling,2019,1085876.0,1085876.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Sterling,2020,1165509.0,1165509.0,0.0,True,"2020 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Sterling,2021,1281830.0,1281830.0,0.0,True,"2021 annual report, as originally reported","2020 annual report, as originally reported"
 UBA,2014,2217417.0,2217417.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 UBA,2015,2338858.0,2338858.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 UBA,2016,2216337.0,2216337.0,0.0,True,baseline/inherited,2016 report 2015 comparative Bank columns; opening assets retained from the prior selected 2014 statement.
@@ -36,6 +44,8 @@ Union,2019,1324297.0,1324297.0,0.0,True,baseline/inherited,Original 2018 present
 Union,2020,1711739.0,1711739.0,0.0,True,baseline/inherited,2020 audited-report comparative
 Union,2021,2073758.0,2073758.0,0.0,True,baseline/inherited,2020 audited-report current-year
 Union,2022,2567441.0,2567441.0,0.0,True,baseline/inherited,2022 audited-report comparative
+Unity,2015,413305.111,413305.111,0.0,True,"2015 annual report, as originally reported","2014 annual report, as originally reported"
+Unity,2016,443321.012,443321.012,0.0,True,"2016 annual report, as originally reported","2015 annual report, as originally reported"
 Unity,2019,210800.841,210800.841,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Wema,2015,382562.312,382562.312,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Wema,2016,396743.314,396743.314,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.

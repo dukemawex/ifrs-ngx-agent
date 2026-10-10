@@ -1,18 +1,18 @@
 {
-  "generated_utc": "2026-10-10T21:27:57+00:00",
-  "git_commit": "5a209c1ca855eec828f8e23791f6ebedf9b722de",
+  "generated_utc": "2026-10-10T21:42:03+00:00",
+  "git_commit": "1b5ce89c0114dcd7ac3f4566b09e2ca82c4325a2",
   "git_branch": "claude/zen-hamilton-v2s80b",
   "panel": {
-    "rows": 73,
+    "rows": 87,
     "banks": 12,
-    "pre_adoption": 37,
-    "post_adoption": 36,
+    "pre_adoption": 45,
+    "post_adoption": 42,
     "baseline_rows": 47,
     "baseline_rows_retained": 47,
-    "new_rows": 26
+    "new_rows": 40
   },
   "changes": {
-    "new_bank_year": 26,
+    "new_bank_year": 40,
     "fill_blank": 9
   },
   "fills_by_field": {
@@ -20,47 +20,47 @@
   },
   "field_basis": {
     "baseline_inherited": 615,
-    "recomputed_ratio": 759,
-    "reported_text_layer": 312,
-    "manual_transcription": 51,
+    "recomputed_ratio": 924,
+    "reported_text_layer": 507,
+    "manual_transcription": 77,
     "reported_text_layer+restated_comparative": 37,
     "derived_from_verified+restated_comparative": 4,
-    "derived_from_verified": 13,
+    "derived_from_verified": 15,
     "manual_transcription+restated_comparative": 4
   },
   "admissions": {
-    "rows": 442,
-    "accepted": 442,
+    "rows": 667,
+    "accepted": 667,
     "rejected": 0
   },
   "reconciliation": {
-    "run": 154,
-    "pass": 152,
+    "run": 192,
+    "pass": 190,
     "documented_source_exception": 2
   },
   "evidence_lineage": {
-    "checked": 1036,
-    "matched": 1036,
+    "checked": 1259,
+    "matched": 1259,
     "qualified": 6
   },
   "going_concern": {
-    "reviews_recorded": 25,
-    "reviews_coded_1": 1,
-    "not_reviewed_listed": 11,
-    "panel_coded": 26,
-    "panel_unknown": 47,
-    "panel_coded_1": 1,
+    "reviews_recorded": 38,
+    "reviews_coded_1": 2,
+    "not_reviewed_listed": 12,
+    "panel_coded": 39,
+    "panel_unknown": 48,
+    "panel_coded_1": 2,
     "baseline_codes_retained": 2,
     "baseline_codes_confirmed_by_review": 1,
     "fills_in_baseline_rows": 9,
-    "codes_on_new_rows": 15
+    "codes_on_new_rows": 28
   },
   "conflicts": {
     "restated_comparative": 4,
     "source_internal_inconsistency": 3,
     "source_unit_label_error": 1,
     "source_vs_selected": 1,
-    "candidate_vs_selected": 141
+    "candidate_vs_selected": 179
   },
   "version_decisions": {
     "unexplained difference": 1,
@@ -72,65 +72,66 @@
     "source internal inconsistency": 4
   },
   "denominators": {
-    "checked": 52,
-    "incompatible": 1,
+    "checked": 62,
+    "incompatible": 2,
     "differing": [
+      "Access 2020 (opening 6307588.216 from 2020 annual report, as originally reported; prior closing 6311041.282 from 2019 annual report, as originally reported)",
       "Union 2015 (opening 922755.0 from 2016 annual report; 2015 restated comparative; prior closing 920936.0 from Prior source-selection policy retained; original evidence preserved in accompanying pack.)"
     ]
   },
   "remaining": {
-    "bank_years": 57,
+    "bank_years": 43,
     "field_requests": 345
   },
   "endpoints": {
     "roa": {
-      "available": 56,
-      "eligible": 56,
+      "available": 70,
+      "eligible": 70,
       "excluded_by_flag": 0,
-      "pre": 27,
-      "post": 29
+      "pre": 35,
+      "post": 35
     },
     "eqta": {
-      "available": 73,
-      "eligible": 73,
+      "available": 87,
+      "eligible": 87,
       "excluded_by_flag": 0,
-      "pre": 37,
-      "post": 36
+      "pre": 45,
+      "post": 42
     },
     "ocf_ratio": {
-      "available": 50,
-      "eligible": 50,
+      "available": 64,
+      "eligible": 64,
       "excluded_by_flag": 0,
-      "pre": 24,
-      "post": 26
-    },
-    "allr": {
-      "available": 61,
-      "eligible": 61,
-      "excluded_by_flag": 0,
-      "pre": 29,
+      "pre": 32,
       "post": 32
     },
-    "leverage": {
-      "available": 73,
-      "eligible": 73,
+    "allr": {
+      "available": 74,
+      "eligible": 74,
       "excluded_by_flag": 0,
-      "pre": 37,
-      "post": 36
+      "pre": 36,
+      "post": 38
+    },
+    "leverage": {
+      "available": 87,
+      "eligible": 87,
+      "excluded_by_flag": 0,
+      "pre": 45,
+      "post": 42
     },
     "car": {
-      "available": 58,
-      "eligible": 56,
+      "available": 69,
+      "eligible": 67,
       "excluded_by_flag": 2,
-      "pre": 27,
-      "post": 29
+      "pre": 33,
+      "post": 34
     },
     "car_computed": {
-      "available": 39,
-      "eligible": 38,
+      "available": 50,
+      "eligible": 49,
       "excluded_by_flag": 1,
-      "pre": 14,
-      "post": 24
+      "pre": 20,
+      "post": 29
     },
     "npl_calc": {
       "available": 14,
@@ -147,18 +148,18 @@
       "post": 7
     },
     "stage3_coverage": {
-      "available": 4,
-      "eligible": 4,
+      "available": 5,
+      "eligible": 5,
       "excluded_by_flag": 0,
       "pre": 0,
-      "post": 4
+      "post": 5
     },
     "impairment_assets": {
-      "available": 53,
-      "eligible": 53,
+      "available": 67,
+      "eligible": 67,
       "excluded_by_flag": 0,
-      "pre": 24,
-      "post": 29
+      "pre": 32,
+      "post": 35
     },
     "liquidity_used": {
       "available": 10,
@@ -168,11 +169,11 @@
       "post": 5
     },
     "gcu": {
-      "available": 26,
-      "eligible": 26,
+      "available": 39,
+      "eligible": 39,
       "excluded_by_flag": 0,
-      "pre": 7,
-      "post": 19
+      "pre": 14,
+      "post": 25
     }
   },
   "nimble": {
@@ -197,14 +198,14 @@
     "cap_changed": false
   },
   "tests": {
-    "run_utc": "2026-10-10T21:27:53+00:00",
+    "run_utc": "2026-10-10T21:41:58+00:00",
     "exit_status": 0,
     "suites": {
       "synthetic/mock unit tests": {
         "passed": 62
       },
       "real-data regression tests": {
-        "passed": 27
+        "passed": 30
       }
     }
   }

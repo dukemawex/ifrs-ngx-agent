@@ -299,6 +299,25 @@ def test_wema_2013_from_exchange_filing_audit_unverified_gcu_unknown(panel):
     assert doc["audit_report_in_file"] == "No" and doc["audit_report_reviewed_for_gcu"] == "unverified"
 
 
-def test_zenith_2013_group_only_filing_not_admitted(panel, admissions):
-    assert ("Zenith", 2013) not in panel
+def test_zenith_2013_group_only_filing_not_used(panel, admissions):
+    # The NGX filing holds only consolidated group figures; Zenith 2013 comes from the full report's Bank columns.
     assert not [a for a in admissions if a["source_id"] == "xs-86dd272867"]
+    z = [a for a in admissions if a["bank_key"] == "Zenith" and a["financial_year"] == "2013" and a["variable"] != "gcu"]
+    assert z and all(a["source_id"] == "xs-44bcf809bd" and a["column_scope"] == "bank_separate" for a in z)
+
+
+def test_unity_2021_material_uncertainty_coded_one(panel):
+    r = next(r for r in rows(REVIEW / "going_concern_reviews.csv") if (r["bank"], r["year"]) == ("Unity", "2021"))
+    assert r["gcu_code"] == "1" and r["mu_section"].lower().startswith(("yes", "true"))
+    assert panel[("Unity", 2021)]["gcu"].strip() in ("1", "1.0")
+    assert num(panel[("Unity", 2021)]["equity"]) < 0
+
+
+def test_access_2020_full_impact_and_transitional_car_kept_separate(panel):
+    p = panel[("Access", 2020)]
+    assert num(p["car"]) == 15.87 and num(p["car_transitional"]) == 17.22
+
+
+def test_unity_2016_capital_kam_flagged_not_coded(panel):
+    r = next(r for r in rows(REVIEW / "going_concern_reviews.csv") if (r["bank"], r["year"]) == ("Unity", "2016"))
+    assert r["gcu_code"] == "0" and "FLAG for sensitivity" in r["coding_basis"]

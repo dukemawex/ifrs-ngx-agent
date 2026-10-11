@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-RELEASE_ID = "IFRS9_release_2026-10-11_v4"  # earlier results archived in thesis_results_v1/ (97), _v2/ (98), _v3/ (114)
+RELEASE_ID = "IFRS9_release_2026-10-11_v5"  # earlier results archived in thesis_results_v1/ (97), _v2/ (98), _v3/ (114), _v4/ (115)
 REL = ROOT / "releases" / RELEASE_ID
 OUT = ROOT / "thesis_results"
 ADOPTION = 2018

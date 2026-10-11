@@ -2,17 +2,17 @@
 
 | variable | definition | units | available_N | eligible_N | excluded_N | banks | pre | post | tier1 | tier2 | fallback_rows_in_eligible | analysis_role | excluded_rows |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Allowance / gross loans | Loan-loss allowance / gross customer loans | % | 93 | 92 | 1 | 12 | 45 | 47 | 38 | 54 | 5 | inferential models | Union 2018 (AUTO-POOL;EL-UNION18-ALLOWANCE) |
-| Impairment / average assets | Total impairment charge / average total assets | % | 90 | 88 | 2 | 12 | 45 | 43 | 33 | 55 | 2 | inferential models | Unity 2017 (EL-UNITY17-IMP); Wema 2021 (AUTO-FALLBACK;EL-WEMA21-IMP) |
-| CAR | Reported capital adequacy ratio (full-impact basis where both printed) | % | 87 | 84 | 3 | 12 | 41 | 43 | 33 | 51 | 2 | inferential models | Fidelity 2016 (AUTO-FLAG;EL-FID16-CAR); GTBank 2015 (AUTO-FLAG); Wema 2021 (AUTO-FALLBACK;AUTO-FLAG;EL-WEMA21-CAR) |
-| ROA | Profit after tax / average total assets | % | 95 | 95 | 0 | 12 | 49 | 46 | 37 | 58 | 3 | inferential models |  |
-| OCF / average assets | Operating cash flow / average total assets | % | 84 | 84 | 0 | 12 | 41 | 43 | 35 | 49 | 3 | inferential models |  |
-| Equity / assets | Total equity / total assets | % | 115 | 115 | 0 | 12 | 60 | 55 | 45 | 70 | 7 | inferential models |  |
-| Leverage | Total liabilities / total assets | % | 115 | 115 | 0 | 12 | 60 | 55 | 45 | 70 | 7 | inferential models |  |
+| Allowance / gross loans | Loan-loss allowance / gross customer loans | % | 95 | 93 | 2 | 12 | 45 | 48 | 39 | 54 | 5 | inferential models | First Bank 2018 (AUTO-FLAG); Union 2018 (AUTO-POOL;EL-UNION18-ALLOWANCE) |
+| Impairment / average assets | Total impairment charge / average total assets | % | 92 | 90 | 2 | 12 | 45 | 45 | 35 | 55 | 2 | inferential models | Unity 2017 (EL-UNITY17-IMP); Wema 2021 (AUTO-FALLBACK;EL-WEMA21-IMP) |
+| CAR | Reported capital adequacy ratio (full-impact basis where both printed) | % | 89 | 86 | 3 | 12 | 41 | 45 | 35 | 51 | 2 | inferential models | Fidelity 2016 (AUTO-FLAG;EL-FID16-CAR); GTBank 2015 (AUTO-FLAG); Wema 2021 (AUTO-FALLBACK;AUTO-FLAG;EL-WEMA21-CAR) |
+| ROA | Profit after tax / average total assets | % | 97 | 97 | 0 | 12 | 49 | 48 | 39 | 58 | 3 | inferential models |  |
+| OCF / average assets | Operating cash flow / average total assets | % | 86 | 86 | 0 | 12 | 41 | 45 | 37 | 49 | 3 | inferential models |  |
+| Equity / assets | Total equity / total assets | % | 118 | 118 | 0 | 12 | 60 | 58 | 48 | 70 | 8 | inferential models |  |
+| Leverage | Total liabilities / total assets | % | 118 | 118 | 0 | 12 | 60 | 58 | 48 | 70 | 8 | inferential models |  |
 | NPL ratio | NPL amount / gross loans | % | 19 | 19 | 0 | 4 | 7 | 12 | 6 | 13 | 1 | descriptive only (too sparse) |  |
 | Broad NPL coverage | Total loan allowance / NPL amount | % | 19 | 18 | 1 | 4 | 7 | 11 | 6 | 12 | 1 | descriptive only (too sparse) | Union 2018 (AUTO-POOL;EL-UNION18-ALLOWANCE) |
 | Stage 3 coverage | Stage 3 allowance / Stage 3 gross exposure | % | 6 | 5 | 1 | 2 | 0 | 5 | 0 | 5 | 0 | descriptive only (too sparse) | Unity 2021 (EL-UNITY21-S3) |
 | Liquidity ratio | Liquidity ratio used | % | 10 | 10 | 0 | 3 | 5 | 5 | 7 | 3 | 0 | descriptive only (too sparse) |  |
-| Going-concern uncertainty | Auditor material-uncertainty section or going-concern emphasis (1/0) | indicator | 56 | 56 | 0 | 11 | 23 | 33 | 15 | 41 | 0 | event description only |  |
+| Going-concern uncertainty | Auditor material-uncertainty section or going-concern emphasis (1/0) | indicator | 58 | 58 | 0 | 11 | 23 | 35 | 17 | 41 | 0 | event description only |  |
 
 *Note.* Eligible = inferential_use in the frozen outcome_eligibility.csv. Fallback rows are original-year-unavailable comparatives kept in the primary sample.

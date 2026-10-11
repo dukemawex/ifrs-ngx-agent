@@ -7,7 +7,7 @@
 | CAR | 8 | 2.346 | 2.034 | 0.776 | 3 | 5 | 0.641 | EXPLORATORY (>=3 observations per regime per bank) |
 | ROA | 11 | 0.444 | 0.398 | 0.990 | 5 | 6 | 0.638 | EXPLORATORY (>=3 observations per regime per bank) |
 | OCF / average assets | 9 | 5.819 | 5.557 | 0.758 | 4 | 5 | 0.734 | EXPLORATORY (>=3 observations per regime per bank) |
-| Equity / assets | 11 | 1.006 | 1.482 | 1.278 | 6 | 5 | 0.278 | EXPLORATORY (>=3 observations per regime per bank) |
-| Leverage | 11 | 1.006 | 1.482 | 1.278 | 6 | 5 | 0.278 | EXPLORATORY (>=3 observations per regime per bank) |
+| Equity / assets | 12 | 1.059 | 1.347 | 1.127 | 6 | 6 | 0.424 | EXPLORATORY (>=3 observations per regime per bank) |
+| Leverage | 12 | 1.059 | 1.347 | 1.127 | 6 | 6 | 0.424 | EXPLORATORY (>=3 observations per regime per bank) |
 
 *Note.* Sample SD per bank and regime, banks with >= 3 comparable observations in each regime. Wilcoxon signed-rank on log(SD post / SD pre). Source: volatility_results.csv.

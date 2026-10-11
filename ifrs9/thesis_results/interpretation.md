@@ -5,19 +5,19 @@ Decision rule: H0 (no effect) rejected when the wild-cluster-bootstrap p < 0.05 
 ## O1. IFRS 9 adoption and loan-loss provisioning
 
 ### Allowance / gross loans
-- Usable sample: N = 92 bank-years, 12 banks (45 pre / 47 post)
+- Usable sample: N = 93 bank-years, 12 banks (45 pre / 48 post)
 - Estimator: Bank FE: y ~ IFRS9_D  [principal] (term IFRS9_D)
-- Direction: decrease; magnitude: -0.40 pp vs pre-period mean 4.88 / median 3.16
-- Significance: p conventional 0.619, p CR1 0.815, p WCB 0.951
+- Direction: decrease; magnitude: -0.52 pp vs pre-period mean 4.88 / median 3.16
+- Significance: p conventional 0.508, p CR1 0.752, p WCB 0.916
 - Robustness: primary not significant; same sign in 4/6 sensitivities, WCB p < 0.05 in 0/6 (none); jackknife sign changes 1
 - Decision: H0 not rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); IFRS9_D is a single common adoption date: without year FE it also absorbs 2018-2022 macro shocks (2020 pandemic, FX reforms)
 
 ### Impairment / average assets
-- Usable sample: N = 88 bank-years, 12 banks (45 pre / 43 post)
+- Usable sample: N = 90 bank-years, 12 banks (45 pre / 45 post)
 - Estimator: Bank FE: y ~ IFRS9_D  [principal] (term IFRS9_D)
-- Direction: decrease; magnitude: -1.09 pp vs pre-period mean 1.42 / median 0.88
-- Significance: p conventional 0.000, p CR1 0.032, p WCB 0.011
+- Direction: decrease; magnitude: -1.08 pp vs pre-period mean 1.42 / median 0.88
+- Significance: p conventional 0.000, p CR1 0.028, p WCB 0.008
 - Robustness: robust: same sign in 6/6 sensitivities, WCB p < 0.05 in 6/6, jackknife sign changes 0
 - Decision: H0 rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); IFRS9_D is a single common adoption date: without year FE it also absorbs 2018-2022 macro shocks (2020 pandemic, FX reforms)
@@ -25,10 +25,10 @@ Decision rule: H0 (no effect) rejected when the wild-cluster-bootstrap p < 0.05 
 ## O2. IFRS 9 adoption and capital adequacy
 
 ### CAR
-- Usable sample: N = 84 bank-years, 12 banks (41 pre / 43 post)
+- Usable sample: N = 86 bank-years, 12 banks (41 pre / 45 post)
 - Estimator: Bank FE: y ~ IFRS9_D  [principal] (term IFRS9_D)
-- Direction: decrease; magnitude: -2.59 pp vs pre-period mean 11.25 / median 17.79
-- Significance: p conventional 0.570, p CR1 0.209, p WCB 0.150
+- Direction: decrease; magnitude: -2.80 pp vs pre-period mean 11.25 / median 17.79
+- Significance: p conventional 0.519, p CR1 0.153, p WCB 0.082
 - Robustness: primary not significant; same sign in 6/6 sensitivities, WCB p < 0.05 in 0/6 (none); jackknife sign changes 0
 - Decision: H0 not rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); IFRS9_D is a single common adoption date: without year FE it also absorbs 2018-2022 macro shocks (2020 pandemic, FX reforms); Unity's negative-capital years dominate the variance (see S3/S5)
@@ -36,102 +36,102 @@ Decision rule: H0 (no effect) rejected when the wild-cluster-bootstrap p < 0.05 
 ## O3. IFRS 9 adoption, profitability, cash generation and balance-sheet stability
 
 ### ROA
-- Usable sample: N = 95 bank-years, 12 banks (49 pre / 46 post)
+- Usable sample: N = 97 bank-years, 12 banks (49 pre / 48 post)
 - Estimator: Bank FE: y ~ IFRS9_D  [principal] (term IFRS9_D)
-- Direction: decrease; magnitude: -0.07 pp vs pre-period mean 1.69 / median 1.50
-- Significance: p conventional 0.699, p CR1 0.656, p WCB 0.657
+- Direction: decrease; magnitude: -0.06 pp vs pre-period mean 1.69 / median 1.50
+- Significance: p conventional 0.709, p CR1 0.664, p WCB 0.665
 - Robustness: primary not significant; same sign in 5/5 sensitivities, WCB p < 0.05 in 0/5 (none); jackknife sign changes 1
 - Decision: H0 not rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); IFRS9_D is a single common adoption date: without year FE it also absorbs 2018-2022 macro shocks (2020 pandemic, FX reforms)
 
 ### OCF / average assets
-- Usable sample: N = 84 bank-years, 12 banks (41 pre / 43 post)
+- Usable sample: N = 86 bank-years, 12 banks (41 pre / 45 post)
 - Estimator: Bank FE: y ~ IFRS9_D  [principal] (term IFRS9_D)
-- Direction: increase; magnitude: +6.58 pp vs pre-period mean -1.18 / median -0.10
-- Significance: p conventional 0.000, p CR1 0.003, p WCB 0.010
+- Direction: increase; magnitude: +6.35 pp vs pre-period mean -1.18 / median -0.10
+- Significance: p conventional 0.000, p CR1 0.002, p WCB 0.008
 - Robustness: robust: same sign in 5/5 sensitivities, WCB p < 0.05 in 5/5, jackknife sign changes 0
 - Decision: H0 rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); IFRS9_D is a single common adoption date: without year FE it also absorbs 2018-2022 macro shocks (2020 pandemic, FX reforms)
 
 ### Equity / assets
-- Usable sample: N = 115 bank-years, 12 banks (60 pre / 55 post)
+- Usable sample: N = 118 bank-years, 12 banks (60 pre / 58 post)
 - Estimator: Bank FE: y ~ IFRS9_D  [principal] (term IFRS9_D)
-- Direction: decrease; magnitude: -8.37 pp vs pre-period mean 11.44 / median 13.81
-- Significance: p conventional 0.022, p CR1 0.134, p WCB 0.012
+- Direction: decrease; magnitude: -8.00 pp vs pre-period mean 11.44 / median 13.81
+- Significance: p conventional 0.021, p CR1 0.128, p WCB 0.009
 - Robustness: robust: same sign in 5/5 sensitivities, WCB p < 0.05 in 5/5, jackknife sign changes 0
-- Decision: H0 rejected at 5% (WCB); CR1 t(G-1) p = 0.134 gives the opposite decision
+- Decision: H0 rejected at 5% (WCB); CR1 t(G-1) p = 0.128 gives the opposite decision
 - Limitations: 12 bank clusters (few-cluster inference); IFRS9_D is a single common adoption date: without year FE it also absorbs 2018-2022 macro shocks (2020 pandemic, FX reforms); Unity's negative-capital years dominate the variance (see S3/S5)
 
 ### Leverage
-- Usable sample: N = 115 bank-years, 12 banks (60 pre / 55 post)
+- Usable sample: N = 118 bank-years, 12 banks (60 pre / 58 post)
 - Estimator: Bank FE: y ~ IFRS9_D  [principal] (term IFRS9_D)
-- Direction: increase; magnitude: +8.37 pp vs pre-period mean 88.56 / median 86.19
-- Significance: p conventional 0.022, p CR1 0.134, p WCB 0.012
+- Direction: increase; magnitude: +8.00 pp vs pre-period mean 88.56 / median 86.19
+- Significance: p conventional 0.021, p CR1 0.128, p WCB 0.009
 - Robustness: robust: same sign in 5/5 sensitivities, WCB p < 0.05 in 5/5, jackknife sign changes 0
-- Decision: H0 rejected at 5% (WCB); CR1 t(G-1) p = 0.134 gives the opposite decision
+- Decision: H0 rejected at 5% (WCB); CR1 t(G-1) p = 0.128 gives the opposite decision
 - Limitations: 12 bank clusters (few-cluster inference); IFRS9_D is a single common adoption date: without year FE it also absorbs 2018-2022 macro shocks (2020 pandemic, FX reforms); Unity's negative-capital years dominate the variance (see S3/S5); leverage = 100 - equity/assets, so results mirror equity/assets
 
 ## O5. Tier 1 versus Tier 2 difference in the IFRS 9 effect
 
 ### Allowance / gross loans
-- Usable sample: N = 92 bank-years, 12 banks (45 pre / 47 post)
+- Usable sample: N = 93 bank-years, 12 banks (45 pre / 48 post)
 - Estimator: Bank FE + year FE: y ~ Tier1 x IFRS9_D  [principal tier model; IFRS9_D absorbed by year FE] (term Tier1_x_IFRS9_D)
-- Direction: increase; magnitude: +4.11 pp vs pre-period mean 4.88 / median 3.16
-- Significance: p conventional 0.010, p CR1 0.156, p WCB 0.135
+- Direction: increase; magnitude: +3.57 pp vs pre-period mean 4.88 / median 3.16
+- Significance: p conventional 0.022, p CR1 0.216, p WCB 0.217
 - Robustness: primary not significant; same sign in 6/6 sensitivities, WCB p < 0.05 in 0/6 (none); jackknife sign changes 0
 - Decision: H0 not rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); year FE absorb common shocks; identification rests on Tier 1 vs Tier 2 differences only; only 5 Tier 1 banks
 
 ### Impairment / average assets
-- Usable sample: N = 88 bank-years, 12 banks (45 pre / 43 post)
+- Usable sample: N = 90 bank-years, 12 banks (45 pre / 45 post)
 - Estimator: Bank FE + year FE: y ~ Tier1 x IFRS9_D  [principal tier model; IFRS9_D absorbed by year FE] (term Tier1_x_IFRS9_D)
-- Direction: increase; magnitude: +1.16 pp vs pre-period mean 1.42 / median 0.88
-- Significance: p conventional 0.010, p CR1 0.122, p WCB 0.111
+- Direction: increase; magnitude: +1.07 pp vs pre-period mean 1.42 / median 0.88
+- Significance: p conventional 0.012, p CR1 0.146, p WCB 0.133
 - Robustness: primary not significant; same sign in 6/6 sensitivities, WCB p < 0.05 in 0/6 (none); jackknife sign changes 0
 - Decision: H0 not rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); year FE absorb common shocks; identification rests on Tier 1 vs Tier 2 differences only; only 5 Tier 1 banks
 
 ### CAR
-- Usable sample: N = 84 bank-years, 12 banks (41 pre / 43 post)
+- Usable sample: N = 86 bank-years, 12 banks (41 pre / 45 post)
 - Estimator: Bank FE + year FE: y ~ Tier1 x IFRS9_D  [principal tier model; IFRS9_D absorbed by year FE] (term Tier1_x_IFRS9_D)
-- Direction: increase; magnitude: +6.03 pp vs pre-period mean 11.25 / median 17.79
-- Significance: p conventional 0.528, p CR1 0.271, p WCB 0.270
+- Direction: increase; magnitude: +6.43 pp vs pre-period mean 11.25 / median 17.79
+- Significance: p conventional 0.470, p CR1 0.328, p WCB 0.369
 - Robustness: primary not significant; same sign in 6/6 sensitivities, WCB p < 0.05 in 0/6 (none); jackknife sign changes 0
 - Decision: H0 not rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); year FE absorb common shocks; identification rests on Tier 1 vs Tier 2 differences only; Unity's negative-capital years dominate the variance (see S3/S5); only 5 Tier 1 banks
 
 ### ROA
-- Usable sample: N = 95 bank-years, 12 banks (49 pre / 46 post)
+- Usable sample: N = 97 bank-years, 12 banks (49 pre / 48 post)
 - Estimator: Bank FE + year FE: y ~ Tier1 x IFRS9_D  [principal tier model; IFRS9_D absorbed by year FE] (term Tier1_x_IFRS9_D)
-- Direction: decrease; magnitude: -0.49 pp vs pre-period mean 1.69 / median 1.50
-- Significance: p conventional 0.170, p CR1 0.055, p WCB 0.056
+- Direction: decrease; magnitude: -0.48 pp vs pre-period mean 1.69 / median 1.50
+- Significance: p conventional 0.154, p CR1 0.059, p WCB 0.059
 - Robustness: primary not significant; same sign in 5/5 sensitivities, WCB p < 0.05 in 0/5 (none); jackknife sign changes 0
 - Decision: H0 not rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); year FE absorb common shocks; identification rests on Tier 1 vs Tier 2 differences only; only 5 Tier 1 banks
 
 ### OCF / average assets
-- Usable sample: N = 84 bank-years, 12 banks (41 pre / 43 post)
+- Usable sample: N = 86 bank-years, 12 banks (41 pre / 45 post)
 - Estimator: Bank FE + year FE: y ~ Tier1 x IFRS9_D  [principal tier model; IFRS9_D absorbed by year FE] (term Tier1_x_IFRS9_D)
-- Direction: increase; magnitude: +3.61 pp vs pre-period mean -1.18 / median -0.10
-- Significance: p conventional 0.274, p CR1 0.311, p WCB 0.320
+- Direction: increase; magnitude: +2.61 pp vs pre-period mean -1.18 / median -0.10
+- Significance: p conventional 0.413, p CR1 0.450, p WCB 0.456
 - Robustness: primary not significant; same sign in 5/5 sensitivities, WCB p < 0.05 in 0/5 (none); jackknife sign changes 0
 - Decision: H0 not rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); year FE absorb common shocks; identification rests on Tier 1 vs Tier 2 differences only; only 5 Tier 1 banks
 
 ### Equity / assets
-- Usable sample: N = 115 bank-years, 12 banks (60 pre / 55 post)
+- Usable sample: N = 118 bank-years, 12 banks (60 pre / 58 post)
 - Estimator: Bank FE + year FE: y ~ Tier1 x IFRS9_D  [principal tier model; IFRS9_D absorbed by year FE] (term Tier1_x_IFRS9_D)
-- Direction: increase; magnitude: +8.58 pp vs pre-period mean 11.44 / median 13.81
-- Significance: p conventional 0.258, p CR1 0.320, p WCB 0.373
+- Direction: increase; magnitude: +8.84 pp vs pre-period mean 11.44 / median 13.81
+- Significance: p conventional 0.213, p CR1 0.318, p WCB 0.369
 - Robustness: primary not significant; same sign in 5/5 sensitivities, WCB p < 0.05 in 0/5 (none); jackknife sign changes 0
 - Decision: H0 not rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); year FE absorb common shocks; identification rests on Tier 1 vs Tier 2 differences only; Unity's negative-capital years dominate the variance (see S3/S5); only 5 Tier 1 banks
 
 ### Leverage
-- Usable sample: N = 115 bank-years, 12 banks (60 pre / 55 post)
+- Usable sample: N = 118 bank-years, 12 banks (60 pre / 58 post)
 - Estimator: Bank FE + year FE: y ~ Tier1 x IFRS9_D  [principal tier model; IFRS9_D absorbed by year FE] (term Tier1_x_IFRS9_D)
-- Direction: decrease; magnitude: -8.58 pp vs pre-period mean 88.56 / median 86.19
-- Significance: p conventional 0.258, p CR1 0.320, p WCB 0.373
+- Direction: decrease; magnitude: -8.84 pp vs pre-period mean 88.56 / median 86.19
+- Significance: p conventional 0.213, p CR1 0.318, p WCB 0.369
 - Robustness: primary not significant; same sign in 5/5 sensitivities, WCB p < 0.05 in 0/5 (none); jackknife sign changes 0
 - Decision: H0 not rejected at 5% (WCB)
 - Limitations: 12 bank clusters (few-cluster inference); year FE absorb common shocks; identification rests on Tier 1 vs Tier 2 differences only; Unity's negative-capital years dominate the variance (see S3/S5); leverage = 100 - equity/assets, so results mirror equity/assets; only 5 Tier 1 banks
@@ -139,7 +139,7 @@ Decision rule: H0 (no effect) rejected when the wild-cluster-bootstrap p < 0.05 
 ## O4. Going-concern indicators before and after IFRS 9
 
 ### Going-concern uncertainty
-- Usable sample: 56 coded bank-years, 11 banks; 3 events
+- Usable sample: 58 coded bank-years, 11 banks; 3 events
 - Estimator: descriptive only (event table, coverage, Fisher exact share comparison)
 - Direction: events only after adoption; magnitude: events: Unity 2019, Unity 2021, Unity 2022
 - Significance: p conventional , p CR1 , p WCB 

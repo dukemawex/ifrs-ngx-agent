@@ -1,0 +1,2 @@
+bank,year,tier,pat,assets,liabilities,equity,ocf,gross_loans,loan_allowance,total_impairment,car,regulatory_capital,rwa,gcu,version_note,source_url,change
+Stanbic,2014,Tier 2,19456.0,911052.0,829231.0,81821.0,,,,3217.0,,,,,"Stanbic IBTC Holdings 2014 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC)",https://thevault.exchange/?get_group_doc=18/1447238694-StanbicIBTCFY14Annualreport.pdf,added

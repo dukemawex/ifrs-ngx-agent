@@ -1,0 +1,13 @@
+outcome,variable,eligible_N_prev,pre_prev,post_prev,tier1_prev,tier2_prev,banks_prev,eligible_N_new,pre_new,post_new,tier1_new,tier2_new,banks_new,eligible_N_change,pre_change,post_change,tier1_change,tier2_change,banks_change
+allr,Allowance / gross loans,92,45,47,38,54,12,92,45,47,38,54,12,0,0,0,0,0,0
+impairment_assets,Impairment / average assets,87,44,43,33,54,12,88,45,43,33,55,12,1,1,0,0,1,0
+car,CAR,84,41,43,33,51,12,84,41,43,33,51,12,0,0,0,0,0,0
+roa,ROA,94,48,46,37,57,12,95,49,46,37,58,12,1,1,0,0,1,0
+ocf_ratio,OCF / average assets,84,41,43,35,49,12,84,41,43,35,49,12,0,0,0,0,0,0
+eqta,Equity / assets,114,59,55,45,69,12,115,60,55,45,70,12,1,1,0,0,1,0
+leverage,Leverage,114,59,55,45,69,12,115,60,55,45,70,12,1,1,0,0,1,0
+npl_calc,NPL ratio,19,7,12,6,13,4,19,7,12,6,13,4,0,0,0,0,0,0
+broad_coverage,Broad NPL coverage,18,7,11,6,12,4,18,7,11,6,12,4,0,0,0,0,0,0
+stage3_coverage,Stage 3 coverage,5,0,5,0,5,2,5,0,5,0,5,2,0,0,0,0,0,0
+liquidity,Liquidity ratio,10,5,5,7,3,3,10,5,5,7,3,3,0,0,0,0,0,0
+gcu,Going-concern uncertainty,56,23,33,15,41,11,56,23,33,15,41,11,0,0,0,0,0,0

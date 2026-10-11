@@ -5,7 +5,7 @@
 | Access | Tier 1 | included | 10 | 5 | 5 |  |
 | Ecobank Nigeria | Tier 2 | included | 10 | 5 | 5 |  |
 | Fidelity | Tier 2 | included | 10 | 5 | 5 |  |
-| First Bank | Tier 1 | included | 5 | 5 | 0 | 2018 2019 2020 2021 2022 |
+| First Bank | Tier 1 | included | 8 | 5 | 3 | 2020 2021 |
 | GTBank | Tier 1 | included | 10 | 5 | 5 |  |
 | Stanbic | Tier 2 | included | 10 | 5 | 5 |  |
 | Sterling | Tier 2 | included | 10 | 5 | 5 |  |
@@ -15,6 +15,6 @@
 | Wema | Tier 2 | included | 10 | 5 | 5 |  |
 | Zenith | Tier 1 | included | 10 | 5 | 5 |  |
 | FCMB | Tier 2 | excluded (see note) | 0 | 0 | 0 | all (excluded) |
-| Total (12-bank cohort) | 5 Tier 1 / 7 Tier 2 |  | 115 | 60 | 55 |  |
+| Total (12-bank cohort) | 5 Tier 1 / 7 Tier 2 |  | 118 | 60 | 58 |  |
 
 *Note.* FCMB is formally excluded (no consistent standalone First City Monument Bank Limited series); it is not replaced. Source: verified_panel.csv of the frozen release.

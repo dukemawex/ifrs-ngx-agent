@@ -1,0 +1,98 @@
+bank,year,tier,regime,ifrs9_d,value,available,descriptive_use,longitudinal_use,change_comparable,inferential_use,sensitivity_drop,excluded_uses,rule_ids,reasons,fallback_class,primary_version,pat,assets,opening_assets,average_assets
+Access,2014,Tier 1,IAS 39,0,2.1671506786736137,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,39941.126,1981955.73,1704094.012,1843024.871
+Access,2015,Tier 1,IAS 39,0,2.682116015512926,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",58924.745,2411944.061,1981955.73,2196949.8955
+Access,2016,Tier 1,IAS 39,0,2.3253039567468257,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported",64026.135,3094960.515,2411944.061,2753452.288
+Access,2017,Tier 1,IAS 39,0,1.6146077942014383,True,True,True,True,True,False,,,,,"2017 annual report, as originally reported",53238.822,3499683.979,3094960.515,3297322.247
+Access,2019,Tier 1,IFRS 9,1,1.4314220891311515,True,True,True,False,True,False,,,,,"2019 annual report, as originally reported",73569.054,6311041.282,3968114.609,5139577.945499999
+Access,2020,Tier 1,IFRS 9,1,1.1489529904994669,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported",80039.328,7624979.724,6307588.216,6966283.970000001
+Access,2021,Tier 1,IFRS 9,1,1.2880731191918613,True,True,True,True,True,False,,,,,"2021 annual report, as originally reported",111326.487,9660760.556,7624979.724,8642870.14
+Access,2022,Tier 1,IFRS 9,1,1.5017092462570238,True,True,True,True,True,False,,,,,"2022 financial statements, as originally reported",166660.0,12535280.0,9660761.0,11098020.5
+Ecobank Nigeria,2013,Tier 2,IAS 39,0,0.8368609316305149,True,True,True,False,True,False,,,,,"2013 annual report, as originally reported",11658.0,1460811.0,1325315.0,1393063.0
+Ecobank Nigeria,2014,Tier 2,IAS 39,0,1.8389273325905386,True,True,True,True,True,False,,,,,"2014 annual report, as originally reported",29733.0,1772922.0,1460811.0,1616866.5
+Ecobank Nigeria,2015,Tier 2,IAS 39,0,0.6337619524173949,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",11304.0,1794348.0,1772922.0,1783635.0
+Ecobank Nigeria,2017,Tier 2,IAS 39,0,1.1106395797556197,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,20204.0,1829761.0,1808503.0,1819132.0
+Ecobank Nigeria,2018,Tier 2,IFRS 9,1,1.4342716179275765,True,True,True,True,True,False,,,,,"2018 annual report, as originally reported",27155.0,1956830.0,1829761.0,1893295.5
+Ecobank Nigeria,2019,Tier 2,IFRS 9,1,0.0640991454553017,True,True,True,True,True,False,,,,,"2019 annual report, as originally reported",1256.0,1991040.0,1927889.0,1959464.5
+Ecobank Nigeria,2020,Tier 2,IFRS 9,1,0.3871460057945038,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported",8087.0,2186712.0,1991040.0,2088876.0
+Ecobank Nigeria,2021,Tier 2,IFRS 9,1,0.41898069196596155,True,True,True,True,True,False,,,,,"2021 annual report, as originally reported",9766.0,2475079.0,2186711.0,2330895.0
+Ecobank Nigeria,2022,Tier 2,IFRS 9,1,0.38555339298853575,True,True,True,True,True,False,,,,,"2022 annual report, as originally reported",10396.0,2917689.0,2475079.0,2696384.0
+Fidelity,2013,Tier 2,IAS 39,0,0.7738112836538004,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,7721.0,1081217.0,914360.0,997788.5
+Fidelity,2014,Tier 2,IAS 39,0,1.2164486858104206,True,True,True,True,True,False,,,,,"2014 annual report, as originally reported",13796.0,1187025.0,1081217.0,1134121.0
+Fidelity,2015,Tier 2,IAS 39,0,1.1496861804893195,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",13904.0,1231722.0,1187025.0,1209373.5
+Fidelity,2016,Tier 2,IAS 39,0,0.7695278360923101,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported",9734.0,1298141.0,1231722.0,1264931.5
+Fidelity,2017,Tier 2,IAS 39,0,1.4086290387341238,True,True,True,True,True,False,,,,,"2017 annual report, as originally reported",18857.0,1379214.0,1298141.0,1338677.5
+Fidelity,2019,Tier 2,IFRS 9,1,1.4828165428595277,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,28425.0,2114037.0,1719883.0,1916960.0
+Fidelity,2020,Tier 2,IFRS 9,1,1.0939650280110464,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported",26650.0,2758148.0,2114037.0,2436092.5
+Fidelity,2022,Tier 2,IFRS 9,1,1.285486974760034,True,True,True,False,True,False,,,,,"2022 annual report, as originally reported",46724.0,3989009.0,3280454.0,3634731.5
+First Bank,2014,Tier 1,IAS 39,0,2.355520263601214,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,79351.0,3490871.0,3246579.0,3368725.0
+First Bank,2015,Tier 1,IAS 39,0,0.0010845278039220629,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",37.0,3332375.0,3490871.0,3411623.0
+First Bank,2017,Tier 1,IAS 39,0,1.279322290209945,True,True,True,False,True,False,,,,,"FY2017 financial statements, as originally reported",46918.0,3777039.0,3557782.0,3667410.5
+First Bank,2018,Tier 1,IFRS 9,1,1.4672780153307778,True,True,True,True,True,False,,,,,"FY2018 financial statements, as originally reported (reproduced in FBN Finance prospectus)",56952.0,3985907.0,3777039.0,3881473.0
+First Bank,2019,Tier 1,IFRS 9,1,1.0149308092060882,True,True,True,True,True,False,,,,,"FY2019 financial statements, as originally reported (reproduced in FBN Finance prospectus)",43917.0,4668279.0,3985907.0,4327093.0
+GTBank,2014,Tier 1,IAS 39,0,4.635703430486031,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,93432.0,2126608.0,1904366.0,2015487.0
+GTBank,2015,Tier 1,IAS 39,0,4.2826083847263225,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",94308.123,2277629.224,2126608.312,2202118.768
+GTBank,2016,Tier 1,IAS 39,0,5.186570770414187,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported (public mirror copy)",126836.792,2613340.074,2277629.224,2445484.649
+GTBank,2017,Tier 1,IAS 39,0,5.837434789561042,True,True,True,False,True,True,,AUTO-FALLBACK,fallback: labelled restatement (original-year report unavailable; source xs-21e7fbfbf9),fallback: labelled restatement,2018 annual report; 2017 restated comparative,158727.705,2824928.985,2613340.074,2719134.5295
+GTBank,2018,Tier 1,IFRS 9,1,6.028758744950214,True,True,True,True,True,False,,,,,"2018 annual report, as originally reported",166919.765,2712521.494,2824928.985,2768725.2395
+GTBank,2019,Tier 1,IFRS 9,1,6.028647651510322,True,True,True,True,True,False,,,,,"2019 annual report, as originally reported",175125.281,3097248.495,2712521.494,2904884.9945
+GTBank,2020,Tier 1,IFRS 9,1,4.978169375808524,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported",178188.398,4061543.605,3097248.495,3579396.05
+GTBank,2021,Tier 1,IFRS 9,1,3.472892664214509,True,True,True,True,True,False,,,,,GTCO 2021 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (GT Bank Nigeria condensed results),146184.067,4357033.134,4061543.605,4209288.3695
+GTBank,2022,Tier 1,IFRS 9,1,3.0378870035732457,True,True,True,True,True,False,,,,,GTCO 2022 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (GT Bank Nigeria condensed results),145296.211,5208576.833,4357033.134,4782804.9835
+Stanbic,2013,Tier 2,IAS 39,0,1.472698590402524,True,True,True,False,True,False,,,,,"Stanbic IBTC Holdings 2013 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC)",10129.0,725100.0,650470.0,687785.0
+Stanbic,2014,Tier 2,IAS 39,0,2.3782631442555457,True,True,True,True,True,False,,,,,"Stanbic IBTC Holdings 2014 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC)",19456.0,911052.0,725100.0,818076.0
+Stanbic,2015,Tier 2,IAS 39,0,0.6928258835836841,True,True,True,True,True,False,,,,,"Stanbic IBTC Holdings 2015 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC)",6232.0,890580.0,908429.0,899504.5
+Stanbic,2016,Tier 2,IAS 39,0,1.5952543570981654,True,True,True,True,True,False,,,,,"Stanbic IBTC Holdings 2016 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC)",15030.0,993759.0,890580.0,942169.5
+Stanbic,2017,Tier 2,IAS 39,0,2.4795093594127993,True,True,True,True,True,False,,,,,"Stanbic IBTC Holdings 2017 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC)",28842.0,1332669.0,993759.0,1163214.0
+Stanbic,2018,Tier 2,IFRS 9,1,3.4046756308390815,True,True,True,True,True,False,,,,,"2018 audited financial statements, as originally reported (issuer-hosted scanned extract)",49912.0,1599245.0,1332723.0,1465984.0
+Stanbic,2019,Tier 2,IFRS 9,1,3.083355324164508,True,True,True,True,True,False,,,,,"2019 audited financial statements, as originally reported (issuer-hosted scanned extract)",52287.0,1792320.0,1599245.0,1695782.5
+Stanbic,2021,Tier 2,IFRS 9,1,1.1864937924747323,True,True,True,False,True,False,,,,,"2021 audited financial statements, as originally reported",29570.0,2614087.0,2370347.0,2492217.0
+Stanbic,2022,Tier 2,IFRS 9,1,2.0169710836200005,True,True,True,True,True,False,,,,,"2022 audited financial statements, as originally reported",55150.0,2854509.0,2614087.0,2734298.0
+Sterling,2014,Tier 2,IAS 39,0,1.1753257030946858,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,9004.973,824539.426,707797.181,766168.3034999999
+Sterling,2015,Tier 2,IAS 39,0,1.267565891071961,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",10292.577,799451.417,824539.426,811995.4214999999
+Sterling,2016,Tier 2,IAS 39,0,0.6356021995230128,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported",5180.964,830802.224,799451.417,815126.8205
+Sterling,2017,Tier 2,IAS 39,0,0.8901860020225278,True,True,True,True,True,False,,,,,"2017 annual report, as originally reported",8455.0,1068798.0,830805.0,949801.5
+Sterling,2019,Tier 2,IFRS 9,1,0.9028220406549746,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,10163.0,1165509.0,1085876.0,1125692.5
+Sterling,2020,Tier 2,IFRS 9,1,0.9079248931186076,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported",11110.0,1281830.0,1165509.0,1223669.5
+Sterling,2021,Tier 2,IFRS 9,1,0.9263959961003311,True,True,True,True,True,False,,,,,"2021 annual report, as originally reported",13403.0,1611749.0,1281830.0,1446789.5
+Sterling,2022,Tier 2,IFRS 9,1,1.1212117696199007,True,True,True,False,True,False,,EL-STER22-RESTATE-BREAK,"2022 report restates 2021 (Note 49); the selected 2021 row is the original presentation, so the 2021->2022 change crosses versions. 2022 levels usable.",,"2022 annual report, as originally reported",19327.0,1840622.0,1606898.0,1723760.0
+UBA,2014,Tier 1,IAS 39,0,1.7594635969075616,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,40083.0,2338858.0,2217417.0,2278137.5
+UBA,2015,Tier 1,IAS 39,0,2.091765555590924,True,True,True,True,True,False,,,,,2016 report 2015 comparative Bank columns; opening assets retained from the prior selected 2014 statement.,47642.0,2216337.0,2338858.0,2277597.5
+UBA,2016,Tier 1,IAS 39,0,1.999233797358325,True,True,True,True,True,False,,,,,2016 report current-year Bank columns.,47541.0,2539585.0,2216337.0,2377961.0
+UBA,2017,Tier 1,IAS 39,0,1.5131745723360939,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,41396.0,2931826.0,2539585.0,2735705.5
+UBA,2018,Tier 1,IFRS 9,1,1.2585060762998628,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,41047.0,3591305.0,2931826.0,3261565.5
+UBA,2019,Tier 1,IFRS 9,1,1.62400725277757,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,62750.0,4136493.0,3591305.0,3863899.0
+UBA,2020,Tier 1,IFRS 9,1,1.218086783359228,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,56911.0,5207833.0,4136493.0,4672163.0
+UBA,2021,Tier 1,IFRS 9,1,1.088195107601368,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,58669.0,5574976.0,5207833.0,5391404.5
+UBA,2022,Tier 1,IFRS 9,1,2.0670345283943594,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,133696.0,7361044.0,5574976.0,6468010.0
+Union,2014,Tier 2,IAS 39,0,2.2723932396134736,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,20486.0,920936.0,882097.0,901516.5
+Union,2015,Tier 2,IAS 39,0,1.87500227422649,True,True,True,False,True,True,,AUTO-FALLBACK,fallback: labelled restatement (original-year report unavailable; source xs-15d472ad0d),fallback: labelled restatement,2016 annual report; 2015 restated comparative,18035.0,1000976.0,922755.0,961865.5
+Union,2016,Tier 2,IAS 39,0,1.4954395448441227,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported",15885.0,1123483.0,1000976.0,1062229.5
+Union,2017,Tier 2,IAS 39,0,0.9143330388333244,True,True,True,True,True,False,,,,,2018 report: restated 2017 main statements,11239.0,1334921.0,1123483.0,1229202.0
+Union,2018,Tier 2,IFRS 9,1,1.3867234653195037,True,True,True,True,True,False,,,,,Original 2018 presentation; loan reinstatement alternatives held separately,18438.0,1324297.0,1334921.0,1329609.0
+Union,2019,Tier 2,IFRS 9,1,1.6057121852310052,True,True,True,True,True,False,,,,,2020 audited-report comparative,24375.0,1711739.0,1324297.0,1518018.0
+Union,2020,Tier 2,IFRS 9,1,1.3024973999451064,True,True,True,True,True,False,,,,,2020 audited-report current-year,24653.0,2073758.0,1711739.0,1892748.5
+Union,2021,Tier 2,IFRS 9,1,0.8265105633264163,True,True,True,True,True,False,,,,,2022 audited-report comparative,19180.0,2567441.0,2073758.0,2320599.5
+Union,2022,Tier 2,IFRS 9,1,1.0822002512537037,True,True,True,True,True,False,,,,,2022 audited-report current-year,29009.0,2793674.0,2567441.0,2680557.5
+Unity,2014,Tier 2,IAS 39,0,2.6177073671794124,True,True,True,False,True,False,,,,,"2014 annual report, as originally reported",10692.476,413305.111,403629.29,408467.2005
+Unity,2015,Tier 2,IAS 39,0,1.0947966386030934,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",4689.157,443321.012,413305.111,428313.06149999995
+Unity,2016,Tier 2,IAS 39,0,0.4666221786876355,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported",2183.798,492681.647,443321.012,468001.3295
+Unity,2017,Tier 2,IAS 39,0,-4.595875010047743,True,True,True,True,True,False,,,,,"2017 annual report, as originally reported",-14917.938,156506.504,492681.647,324594.0755
+Unity,2019,Tier 2,IFRS 9,1,1.3429272417163824,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,3383.189,293052.07,210800.841,251926.45549999998
+Unity,2021,Tier 2,IFRS 9,1,0.615634416786588,True,True,True,False,True,False,,,,,"2021 annual report, as originally reported",3173.254,538868.755,492020.329,515444.542
+Unity,2022,Tier 2,IFRS 9,1,0.17947828211024114,True,True,True,True,True,False,,,,,"2022 annual report, as originally reported",941.375,510143.959,538868.756,524506.3575
+Wema,2013,Tier 2,IAS 39,0,0.5537962147756026,True,True,True,False,True,False,,,,,"2013 audited financial statements as filed with the NSE (April 2014), as originally reported",1596.531,330872.475,245704.597,288288.53599999996
+Wema,2015,Tier 2,IAS 39,0,0.5833924263238927,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,2273.205,396743.314,382562.312,389652.81299999997
+Wema,2016,Tier 2,IAS 39,0,0.6337195502469025,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,2591.8,421221.036,396743.314,408982.17500000005
+Wema,2017,Tier 2,IAS 39,0,0.5710063492551302,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,2301.158,384779.809,421221.036,403000.4225
+Wema,2018,Tier 2,IFRS 9,1,0.7787820387171558,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,3359.259,477915.742,384779.809,431347.7755
+Wema,2019,Tier 2,IFRS 9,1,0.8810337688237481,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,5210.748,704955.604,477915.742,591435.6730000001
+Wema,2020,Tier 2,IFRS 9,1,0.5488035355197808,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,4592.217,968582.084,704955.604,836768.844
+Wema,2021,Tier 2,IFRS 9,1,0.8375793177612606,True,True,True,True,True,True,,AUTO-FALLBACK,fallback: comparative (original-year report unavailable; source pdf-2b23016b97),fallback: comparative,"2022 annual report; 2021 comparative, not labelled restated",8933.202,1164517.865,968582.084,1066549.9745
+Zenith,2013,Tier 1,IAS 39,0,3.13847277972917,True,True,True,False,True,False,,,,,"2013 annual report, as originally reported",83414.0,2878693.0,2436886.0,2657789.5
+Zenith,2015,Tier 1,IAS 39,0,2.7538887555396836,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,98784.0,3750327.0,3423819.0,3587073.0
+Zenith,2016,Tier 1,IAS 39,0,2.9694813197257726,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported (annualreports.com archive of LSE-filed report)",119285.0,4283736.0,3750327.0,4017031.5
+Zenith,2017,Tier 1,IAS 39,0,3.4471472879202105,True,True,True,True,True,False,,,,,"2017 annual report, as originally reported (annualreports.com archive of LSE-filed report)",157145.0,4833658.0,4283736.0,4558697.0
+Zenith,2018,Tier 1,IFRS 9,1,3.380902213410156,True,True,True,True,True,False,,,,,"2018 annual report, as originally reported (annualreports.com archive of LSE-filed report)",165480.0,4955445.0,4833658.0,4894551.5
+Zenith,2019,Tier 1,IFRS 9,1,3.426258440628273,True,True,True,True,True,False,,,,,"2019 annual report, as originally reported (annualreports.com archive of LSE-filed report)",178003.0,5435073.0,4955445.0,5195259.0
+Zenith,2020,Tier 1,IFRS 9,1,3.1504945040071464,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported (annualreports.com archive of LSE-filed report)",197852.0,7124987.0,5435073.0,6280030.0
+Zenith,2022,Tier 1,IFRS 9,1,2.543982883450984,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,234593.0,10570678.0,7872292.0,9221485.0

@@ -1,8 +1,8 @@
 group,coded_bank_years,events_gcu_1,coded_0,banks,event_rate
-All coded,56,3,53.0,11.0,0.0535714285714285
+All coded,58,3,55.0,11.0,0.0517241379310344
 Pre-IFRS 9,23,0,23.0,10.0,0.0
-Post-IFRS 9,33,3,30.0,10.0,0.0909090909090909
-Tier 1,15,0,15.0,4.0,0.0
+Post-IFRS 9,35,3,32.0,11.0,0.0857142857142857
+Tier 1,17,0,17.0,4.0,0.0
 Tier 2,41,3,38.0,7.0,0.073170731707317
 Unity,6,3,3.0,1.0,0.5
-"Fisher exact (post vs pre event share; descriptive, events clustered in one bank)",56,3,,,0.2607142857142856
+"Fisher exact (post vs pre event share; descriptive, events clustered in one bank)",58,3,,,0.2695099818511798

@@ -1,9 +1,9 @@
 {
-  "run_utc": "2026-10-11T12:48:50+00:00",
+  "run_utc": "2026-10-11T22:09:16+00:00",
   "exit_status": 0,
   "suites": {
-    "other": {
-      "passed": 9
+    "real-data regression tests": {
+      "passed": 44
     }
   }
 }

@@ -1979,6 +1979,24 @@
       "target_years": "2022",
       "source_ids": "BD_20240529",
       "origin": "fallback:user supplement 2026-10-11 (Source and Quality Supplement)"
+    },
+    "xs-88fb2d1f79": {
+      "job_id": "xs-88fb2d1f79",
+      "bank": "First Bank",
+      "priority": "1",
+      "target_years": "2020;2021",
+      "source_ids": "FBNH21_FS_PROSHARE",
+      "origin": "fallback:user link 2026-10-11; plain curl fetch (direct link supplied by user)",
+      "requested_url": "https://erpapi.proshare.co/uploads/Others/News/2d3e68c5-7b07-49ac-96d9-f0d2eaf2ee4c.pdf",
+      "final_url": "https://erpapi.proshare.co/uploads/Others/News/2d3e68c5-7b07-49ac-96d9-f0d2eaf2ee4c.pdf",
+      "http_status": "200",
+      "content_type": "application/pdf",
+      "bytes": 1737480,
+      "sha256": "bbfbc7499c21c99e814e31f297f3a2c241273927ca694c10ea3d774cde4d0c26",
+      "local_pdf_path": "reports/first_bank/first_bank_xs-88fb2d1f79_bbfbc7499c21.pdf",
+      "status": "downloaded",
+      "reason": "",
+      "accessed_utc": "2026-10-11T22:07:14+00:00"
     }
   }
 }

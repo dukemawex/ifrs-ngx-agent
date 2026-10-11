@@ -116,6 +116,19 @@ Access,2021,Tier 1,IFRS 9,1,broad_coverage,,False,False,False,False,False,False,
 Access,2021,Tier 1,IFRS 9,1,stage3_coverage,,False,False,False,False,False,False,,,,,"2021 annual report, as originally reported"
 Access,2021,Tier 1,IFRS 9,1,liquidity,,False,False,False,False,False,False,,,,,"2021 annual report, as originally reported"
 Access,2021,Tier 1,IFRS 9,1,leverage,90.97948749533214,True,True,True,True,True,False,,,,,"2021 annual report, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,gcu,,False,False,False,False,False,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,car,17.85,True,True,True,True,True,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,car_computed,17.845932286737938,True,True,True,True,True,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,roa,1.5017092462570238,True,True,True,True,True,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,eqta,8.52527426591189,True,True,True,True,True,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,ocf_ratio,6.294167504916755,True,True,True,True,True,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,allr,1.567956720625303,True,True,True,True,True,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,impairment_assets,1.0693889058864146,True,True,True,True,True,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,npl_calc,,False,False,False,False,False,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,broad_coverage,,False,False,False,False,False,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,stage3_coverage,,False,False,False,False,False,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,liquidity,,False,False,False,False,False,False,,,,,"2022 financial statements, as originally reported"
+Access,2022,Tier 1,IFRS 9,1,leverage,91.47472573408811,True,True,True,True,True,False,,,,,"2022 financial statements, as originally reported"
 Ecobank Nigeria,2016,Tier 2,IAS 39,0,gcu,,False,False,False,False,False,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Ecobank Nigeria,2016,Tier 2,IAS 39,0,car,,False,False,False,False,False,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Ecobank Nigeria,2016,Tier 2,IAS 39,0,car_computed,,False,False,False,False,False,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.

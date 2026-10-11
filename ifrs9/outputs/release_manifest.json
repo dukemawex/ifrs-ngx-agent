@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-10-11T06:06:17+00:00",
-  "git_commit_at_export": "8d503d9a124b21e235c9c922fe7425f994cc2e75",
+  "generated_utc": "2026-10-11T07:50:31+00:00",
+  "git_commit_at_export": "a4137af30962bdbb3636be4bad51a7114b0a8e9a",
   "git_branch": "claude/zen-hamilton-v2s80b",
-  "run_id": "export-2026-10-11T06:06:17+00:00",
+  "run_id": "export-2026-10-11T07:50:31+00:00",
   "input_hashes": {
     "IFRS9_Data_Update_Pack_20261010.zip": "19ec27a6b0aab7899f8a538acecd755301c0257c050c1bb6079c6b94a3aabbda",
     "IFRS9_Master_Data_Updated_20261010.xlsx": "38e6ea7ded4e61d3b12203c38f15a257baf1b8d641bab8ab9a9a50512303d0cf",
@@ -11,19 +11,19 @@
     "nigerian_banks_ifrs9_thesis_data.docx": "50023ab5bd3d7229cf2056b152dee53169d0d4a1af9756041cbdeba3593e1e77"
   },
   "output_hashes": {
-    "data/verified_panel.csv": "25425abb52c299faddec8d62fa6518af8f72b75918f781eb0e3377ba83a68c78",
-    "data/evidence_long.csv": "7c665610dbe3ca5c192dff7017de8520d06199c06a1ec6fb33fc2716ad80593d",
-    "data/change_register.csv": "5c82a880fbe183acbb341e9ae787e56abdf7bce4e81bef9dac038f3477da3d46",
-    "data/field_status.csv": "6c70a7144252336407173490f4b5cefc1a52a1dbd7964f7a98f56e960e08237c",
-    "data/reconciliation_checks.csv": "88cf1348fdc37b03ea7e30871c63abf8f7b604aa96f38784bff220c21440aad5",
-    "data/admission_review.csv": "296d8b2f24a165fa5cb2fcdae0432e27119e757b892a7f25452234eefd2b1090",
-    "data/conflicts.csv": "33f7d652e23a2c9e624401beea3b8dfe47c68e03c2df338ff228f0651a4a3a38",
-    "data/unresolved_gaps.csv": "bc272ebb4477aaf65a8d2107b10faecae03e470bf4336e8b093c9c0494f5a451",
-    "data/review/specs.csv": "0335aedf4b4f69db6383e9cc683f6d8afe0be422637f82af03aaa2b7673f09bc",
-    "data/review/admissions.csv": "450650501e605c47b56e49cc61321be8bf97924c8ddc27447f3b9415fc2453fe",
-    "data/review/going_concern_reviews.csv": "aca0606316c27830e01ca4ab8f0cb4ddefc60f42d880d3e24f06725d9077d2d1",
+    "data/verified_panel.csv": "2d0c971524c58177ecd1c9950bc1ec328ac74cff00b52fc5767eaf83eeca29b5",
+    "data/evidence_long.csv": "20c4e8f2c6dd3748a652109f3b1d6cdfb7ba192c3bafe3c0903477329956cab2",
+    "data/change_register.csv": "4c17f0278efef6e5d2ac942b488efa6f674eda0e47bb265c924620d739c9729a",
+    "data/field_status.csv": "31a87496eb12b038f5b5482f87b7648a9f46e68672c93cc3cc36d8d19499fab6",
+    "data/reconciliation_checks.csv": "08a9c647152f1b4038a8753fc3b4811b6f9b4664f9df0bd5d4f481715e755110",
+    "data/admission_review.csv": "5e9cc5a846a751e41b0c75a9df60a61a85fd0265c9530c0afa728f3da2d8f376",
+    "data/conflicts.csv": "f0f533ba46875537953a745effa23c80837af884b770f1395726ad44fa3f9ebd",
+    "data/unresolved_gaps.csv": "f9db5f66f79eeb442659dcd9a3cee9cb83bda364c3be99aef83ed38742b9878c",
+    "data/review/specs.csv": "5e88c9774ef969bef61132803294131c32364ffb83ec78c32a33e88d7766c046",
+    "data/review/admissions.csv": "b19d9f1d78b2bbc423519fa9055c93c8779832eff7b14e8efc2de546b26abc97",
+    "data/review/going_concern_reviews.csv": "5999220cc7c8e5be653d1e178c7db94c19080dd424a69219288931c85a5bfea2",
     "data/review/version_decisions.csv": "3b40b29b2610cf83101c3a28cd1bc3018560ec6cf121612ecd8744dd5e38f6f3",
-    "outputs/IFRS9_Verified_Master.xlsx": "53f21596ed11ae2bb9a3c7e8175f79f9aef92676530a08f824ec50a13ec987a4"
+    "outputs/IFRS9_Verified_Master.xlsx": "df860918139570db3ac680160a204e142dc194d1782f277f2dc9390ca89c7532"
   },
   "note": "git_commit_at_export is the commit checked out when exporting; outputs are committed in the following commit."
 }

@@ -1,18 +1,18 @@
 {
-  "generated_utc": "2026-10-11T06:06:17+00:00",
-  "git_commit": "8d503d9a124b21e235c9c922fe7425f994cc2e75",
+  "generated_utc": "2026-10-11T07:50:31+00:00",
+  "git_commit": "a4137af30962bdbb3636be4bad51a7114b0a8e9a",
   "git_branch": "claude/zen-hamilton-v2s80b",
   "panel": {
-    "rows": 97,
+    "rows": 98,
     "banks": 12,
     "pre_adoption": 50,
-    "post_adoption": 47,
+    "post_adoption": 48,
     "baseline_rows": 47,
     "baseline_rows_retained": 47,
-    "new_rows": 50
+    "new_rows": 51
   },
   "changes": {
-    "new_bank_year": 50,
+    "new_bank_year": 51,
     "fill_blank": 9
   },
   "fills_by_field": {
@@ -20,35 +20,36 @@
   },
   "field_basis": {
     "baseline_inherited": 615,
-    "recomputed_ratio": 1027,
-    "reported_text_layer": 637,
+    "recomputed_ratio": 1039,
+    "reported_text_layer": 650,
     "manual_transcription": 95,
-    "reported_text_layer+restated_comparative": 37,
+    "reported_text_layer+restated_comparative": 38,
     "derived_from_verified+restated_comparative": 4,
     "derived_from_verified": 18,
     "manual_transcription+restated_comparative": 4
   },
   "admissions": {
-    "rows": 820,
-    "accepted": 820,
+    "rows": 834,
+    "accepted": 834,
     "rejected": 0
   },
   "reconciliation": {
-    "run": 217,
-    "pass": 215,
+    "run": 220,
+    "pass": 218,
     "documented_source_exception": 2
   },
   "evidence_lineage": {
-    "checked": 1410,
-    "matched": 1410,
+    "checked": 1424,
+    "matched": 1424,
     "qualified": 6
   },
   "going_concern": {
     "reviews_recorded": 45,
     "reviews_coded_1": 3,
-    "not_reviewed_listed": 15,
+    "partial_reviews": 1,
+    "not_reviewed_listed": 16,
     "panel_coded": 46,
-    "panel_unknown": 51,
+    "panel_unknown": 52,
     "panel_coded_1": 3,
     "baseline_codes_retained": 2,
     "baseline_codes_confirmed_by_review": 1,
@@ -61,7 +62,7 @@
     "source_unit_label_error": 1,
     "source_vs_selected": 1,
     "source_internal_inconsistency_cross_report": 1,
-    "candidate_vs_selected": 199
+    "candidate_vs_selected": 201
   },
   "version_decisions": {
     "unexplained difference": 4,
@@ -75,7 +76,7 @@
     "corroborated by original-year summary": 1
   },
   "denominators": {
-    "checked": 72,
+    "checked": 73,
     "incompatible": 4,
     "differing": [
       "Access 2020 (opening 6307588.216 from 2020 annual report, as originally reported; prior closing 6311041.282 from 2019 annual report, as originally reported)",
@@ -85,15 +86,15 @@
     ]
   },
   "remaining": {
-    "bank_years": 33,
+    "bank_years": 32,
     "field_requests": 345
   },
   "endpoints": {
     "gcu": {
       "label": "Going-concern uncertainty (auditor material-uncertainty section or GC emphasis = 1)",
-      "panel_rows": 97,
+      "panel_rows": 98,
       "available": 46,
-      "missing": 51,
+      "missing": 52,
       "descriptive": 46,
       "longitudinal": 46,
       "change_pairs": 22,
@@ -109,18 +110,18 @@
     },
     "car": {
       "label": "Reported CAR, full-impact basis where both are printed (%)",
-      "panel_rows": 97,
-      "available": 76,
+      "panel_rows": 98,
+      "available": 77,
       "missing": 21,
-      "descriptive": 76,
-      "longitudinal": 76,
-      "change_pairs": 57,
-      "eligible": 74,
+      "descriptive": 77,
+      "longitudinal": 77,
+      "change_pairs": 58,
+      "eligible": 75,
       "excluded_from_inference": 2,
       "banks": 11,
       "pre": 37,
-      "post": 37,
-      "tier1": 31,
+      "post": 38,
+      "tier1": 32,
       "tier2": 43,
       "fallback_rows_in_sample": 2,
       "excluded_rows": [
@@ -130,18 +131,18 @@
     },
     "car_computed": {
       "label": "Regulatory capital / RWA (%)",
-      "panel_rows": 97,
-      "available": 57,
+      "panel_rows": 98,
+      "available": 58,
       "missing": 40,
-      "descriptive": 57,
-      "longitudinal": 57,
-      "change_pairs": 38,
-      "eligible": 54,
+      "descriptive": 58,
+      "longitudinal": 58,
+      "change_pairs": 39,
+      "eligible": 55,
       "excluded_from_inference": 3,
       "banks": 11,
       "pre": 23,
-      "post": 31,
-      "tier1": 25,
+      "post": 32,
+      "tier1": 26,
       "tier2": 29,
       "fallback_rows_in_sample": 2,
       "excluded_rows": [
@@ -152,72 +153,72 @@
     },
     "roa": {
       "label": "PAT / average assets (%)",
-      "panel_rows": 97,
-      "available": 77,
+      "panel_rows": 98,
+      "available": 78,
       "missing": 20,
-      "descriptive": 77,
-      "longitudinal": 77,
-      "change_pairs": 51,
-      "eligible": 77,
+      "descriptive": 78,
+      "longitudinal": 78,
+      "change_pairs": 52,
+      "eligible": 78,
       "excluded_from_inference": 0,
       "banks": 12,
       "pre": 39,
-      "post": 38,
-      "tier1": 32,
+      "post": 39,
+      "tier1": 33,
       "tier2": 45,
       "fallback_rows_in_sample": 3,
       "excluded_rows": []
     },
     "eqta": {
       "label": "Equity / total assets (%)",
-      "panel_rows": 97,
-      "available": 97,
+      "panel_rows": 98,
+      "available": 98,
       "missing": 0,
-      "descriptive": 97,
-      "longitudinal": 97,
-      "change_pairs": 81,
-      "eligible": 97,
+      "descriptive": 98,
+      "longitudinal": 98,
+      "change_pairs": 82,
+      "eligible": 98,
       "excluded_from_inference": 0,
       "banks": 12,
       "pre": 50,
-      "post": 47,
-      "tier1": 40,
+      "post": 48,
+      "tier1": 41,
       "tier2": 57,
       "fallback_rows_in_sample": 7,
       "excluded_rows": []
     },
     "ocf_ratio": {
       "label": "Operating cash flow / average assets (%)",
-      "panel_rows": 97,
-      "available": 71,
+      "panel_rows": 98,
+      "available": 72,
       "missing": 26,
-      "descriptive": 71,
-      "longitudinal": 71,
-      "change_pairs": 48,
-      "eligible": 71,
+      "descriptive": 72,
+      "longitudinal": 72,
+      "change_pairs": 49,
+      "eligible": 72,
       "excluded_from_inference": 0,
       "banks": 11,
       "pre": 36,
-      "post": 35,
-      "tier1": 30,
+      "post": 36,
+      "tier1": 31,
       "tier2": 41,
       "fallback_rows_in_sample": 3,
       "excluded_rows": []
     },
     "allr": {
       "label": "Customer-loan allowance / gross customer loans (%)",
-      "panel_rows": 97,
-      "available": 82,
+      "panel_rows": 98,
+      "available": 83,
       "missing": 15,
-      "descriptive": 82,
-      "longitudinal": 81,
-      "change_pairs": 62,
-      "eligible": 81,
+      "descriptive": 83,
+      "longitudinal": 82,
+      "change_pairs": 63,
+      "eligible": 82,
       "excluded_from_inference": 1,
       "banks": 11,
       "pre": 40,
-      "post": 41,
-      "tier1": 35,
+      "post": 42,
+      "tier1": 36,
       "tier2": 46,
       "fallback_rows_in_sample": 5,
       "excluded_rows": [
@@ -226,18 +227,18 @@
     },
     "impairment_assets": {
       "label": "Total impairment / average assets (%)",
-      "panel_rows": 97,
-      "available": 74,
+      "panel_rows": 98,
+      "available": 75,
       "missing": 23,
-      "descriptive": 74,
-      "longitudinal": 72,
-      "change_pairs": 49,
-      "eligible": 72,
+      "descriptive": 75,
+      "longitudinal": 73,
+      "change_pairs": 50,
+      "eligible": 73,
       "excluded_from_inference": 2,
       "banks": 12,
       "pre": 35,
-      "post": 37,
-      "tier1": 30,
+      "post": 38,
+      "tier1": 31,
       "tier2": 42,
       "fallback_rows_in_sample": 2,
       "excluded_rows": [
@@ -247,9 +248,9 @@
     },
     "npl_calc": {
       "label": "NPL amount / gross loans (%)",
-      "panel_rows": 97,
+      "panel_rows": 98,
       "available": 14,
-      "missing": 83,
+      "missing": 84,
       "descriptive": 14,
       "longitudinal": 14,
       "change_pairs": 9,
@@ -265,9 +266,9 @@
     },
     "broad_coverage": {
       "label": "Total loan allowance / NPL amount (%)",
-      "panel_rows": 97,
+      "panel_rows": 98,
       "available": 14,
-      "missing": 83,
+      "missing": 84,
       "descriptive": 14,
       "longitudinal": 13,
       "change_pairs": 7,
@@ -285,9 +286,9 @@
     },
     "stage3_coverage": {
       "label": "Stage 3 allowance / Stage 3 gross (%)",
-      "panel_rows": 97,
+      "panel_rows": 98,
       "available": 6,
-      "missing": 91,
+      "missing": 92,
       "descriptive": 6,
       "longitudinal": 5,
       "change_pairs": 3,
@@ -305,9 +306,9 @@
     },
     "liquidity": {
       "label": "Liquidity ratio used (%)",
-      "panel_rows": 97,
+      "panel_rows": 98,
       "available": 10,
-      "missing": 87,
+      "missing": 88,
       "descriptive": 10,
       "longitudinal": 10,
       "change_pairs": 7,
@@ -323,28 +324,28 @@
     },
     "leverage": {
       "label": "Liabilities / assets (%)",
-      "panel_rows": 97,
-      "available": 97,
+      "panel_rows": 98,
+      "available": 98,
       "missing": 0,
-      "descriptive": 97,
-      "longitudinal": 97,
-      "change_pairs": 81,
-      "eligible": 97,
+      "descriptive": 98,
+      "longitudinal": 98,
+      "change_pairs": 82,
+      "eligible": 98,
       "excluded_from_inference": 0,
       "banks": 12,
       "pre": 50,
-      "post": 47,
-      "tier1": 40,
+      "post": 48,
+      "tier1": 41,
       "tier2": 57,
       "fallback_rows_in_sample": 7,
       "excluded_rows": []
     }
   },
   "row_versions": {
-    "rows": 97,
+    "rows": 98,
     "treatments": {
       "primary (baseline selection retained)": 47,
-      "primary (original-year presentation)": 43,
+      "primary (original-year presentation)": 44,
       "primary; drop in sensitivity (fallback: original-year report unavailable)": 7
     },
     "fallback_rows": [
@@ -373,9 +374,6 @@
     "Unity 2021 stage3_gross: source_internal_inconsistency_cross_report"
   ],
   "remaining_by_bank": {
-    "Access": [
-      "2022"
-    ],
     "Ecobank Nigeria": [
       "2013",
       "2014",
@@ -423,7 +421,17 @@
     "estimators": [
       {
         "outcome": "car",
-        "eligible_n": "74",
+        "eligible_n": "75",
+        "banks": "11",
+        "status": "testable",
+        "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
+        "tier_did_feasible": "True",
+        "volatility_banks_feasible": "7",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "car_computed",
+        "eligible_n": "55",
         "banks": "11",
         "status": "testable",
         "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
@@ -432,18 +440,8 @@
         "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
       },
       {
-        "outcome": "car_computed",
-        "eligible_n": "54",
-        "banks": "11",
-        "status": "testable",
-        "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
-        "tier_did_feasible": "True",
-        "volatility_banks_feasible": "5",
-        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
-      },
-      {
         "outcome": "roa",
-        "eligible_n": "77",
+        "eligible_n": "78",
         "banks": "12",
         "status": "testable",
         "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
@@ -453,7 +451,7 @@
       },
       {
         "outcome": "eqta",
-        "eligible_n": "97",
+        "eligible_n": "98",
         "banks": "12",
         "status": "testable",
         "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
@@ -463,7 +461,7 @@
       },
       {
         "outcome": "ocf_ratio",
-        "eligible_n": "71",
+        "eligible_n": "72",
         "banks": "11",
         "status": "testable",
         "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
@@ -473,7 +471,7 @@
       },
       {
         "outcome": "allr",
-        "eligible_n": "81",
+        "eligible_n": "82",
         "banks": "11",
         "status": "testable",
         "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
@@ -483,7 +481,7 @@
       },
       {
         "outcome": "impairment_assets",
-        "eligible_n": "72",
+        "eligible_n": "73",
         "banks": "12",
         "status": "testable",
         "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
@@ -533,7 +531,7 @@
       },
       {
         "outcome": "leverage",
-        "eligible_n": "97",
+        "eligible_n": "98",
         "banks": "12",
         "status": "testable",
         "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
@@ -618,10 +616,10 @@
       "note": "REST client not run in this release (no nimble_budget state); key value never printed"
     },
     "mcp_plugin": {
-      "invocations": 48,
-      "attempts": 48,
+      "invocations": 60,
+      "attempts": 60,
       "by_tool": {
-        "nimble_search": 36,
+        "nimble_search": 48,
         "nimble_agents_list": 1,
         "nimble_agents_run": 1,
         "nimble_agents_run_status": 9,
@@ -634,14 +632,18 @@
     "cap_changed": false
   },
   "tests": {
-    "run_utc": "2026-10-11T06:06:11+00:00",
-    "exit_status": 0,
+    "run_utc": "2026-10-11T07:50:00+00:00",
+    "exit_status": 1,
     "suites": {
       "synthetic/mock unit tests": {
         "passed": 62
       },
       "real-data regression tests": {
-        "passed": 39
+        "passed": 38,
+        "failed": 1
+      },
+      "other": {
+        "passed": 8
       }
     }
   }

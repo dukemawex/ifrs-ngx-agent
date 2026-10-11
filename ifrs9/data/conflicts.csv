@@ -23,6 +23,8 @@ candidate_vs_selected,Access,2020,gross_loans,2937918.27,2829171.0,selected reta
 candidate_vs_selected,Access,2020,gross_loans,2937918.27,2829171.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
 candidate_vs_selected,Access,2020,loan_allowance,119042.539,116211.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)
 candidate_vs_selected,Access,2020,loan_allowance,119042.539,116211.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
+candidate_vs_selected,Access,2022,loan_allowance,65061.0,65065.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)
+candidate_vs_selected,Access,2022,loan_allowance,65061.0,65065.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
 candidate_vs_selected,Fidelity,2017,pat,18857.0,17768.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)
 candidate_vs_selected,Fidelity,2017,pat,18857.0,17768.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
 candidate_vs_selected,First Bank,2015,gross_loans,1594936.0,1457285.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)

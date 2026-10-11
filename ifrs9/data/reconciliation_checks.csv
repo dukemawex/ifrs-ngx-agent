@@ -19,6 +19,9 @@ Access,2020,reported CAR vs capital/RWA,-0.0039,0.005,,True,pass,,display precis
 Access,2021,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
 Access,2021,gross loans - allowance = net loans,-0.001,0.001500001,0.001,True,pass,,
 Access,2021,reported CAR vs capital/RWA,-0.0007,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 1.51e-08; printed literal '20.93' from ACC21-CAR; basis=; transitional=
+Access,2022,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Access,2022,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Access,2022,reported CAR vs capital/RWA,0.0041,0.005012,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 1.22e-05; printed literal '17.85' from ACC22-CAR; basis=; transitional=
 Ecobank Nigeria,2016,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Ecobank Nigeria,2017,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Fidelity,2013,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,

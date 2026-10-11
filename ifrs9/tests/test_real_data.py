@@ -75,7 +75,8 @@ def test_summary_text_does_not_contradict_going_concern_fills(stats):
     assert "No going-concern code was added" not in text
     assert "no original-year auditor report was reviewed" not in text.lower()
     assert f"{fills} filled in baseline rows" in text
-    reviews = sum(r["report_reviewed"] != "not reviewed" for r in rows(REVIEW / "going_concern_reviews.csv"))
+    reviews = sum(r["report_reviewed"] != "not reviewed" and not r["report_reviewed"].startswith("partially")
+                  for r in rows(REVIEW / "going_concern_reviews.csv"))
     assert f"auditor reports reviewed and recorded: {reviews}" in text
 
 
@@ -462,3 +463,23 @@ def test_same_rows_excluded_everywhere(elig):
         assert e == a == s == w, outcome
         for b, y in e:
             assert f"{b} {y}" in text
+
+
+def test_access_2022_from_bank_columns_only():
+    panel = [r for r in rows(DATA / "verified_panel.csv") if r["bank"] == "Access" and r["year"] == "2022"]
+    assert len(panel) == 1
+    r = panel[0]
+    assert (num(r["assets"]), num(r["liabilities"]), num(r["equity"]), num(r["pat"])) == (12535280.0, 11466613.0, 1068667.0, 166660.0)
+    assert num(r["assets"]) == num(r["liabilities"]) + num(r["equity"])
+    assert r["gcu"] == ""  # auditor's report incomplete in the available PDF
+    specs = [s for s in rows(REVIEW / "specs.csv") if s["bank"] == "Access" and s["year"] == "2022"]
+    assert specs and all(s["column_scope"] == "bank_separate" and "Bank" in s["column_scope_basis"] and "Company" not in s["column_scope_basis"] for s in specs)
+
+
+def test_holdco_sources_rejected_and_unused():
+    scr = rows(REVIEW / "source_scope_screening.csv")
+    rejected = {s["job_id"] for s in scr if s["decision"].startswith("rejected") and s["job_id"]}
+    assert {s["source_id"] for s in scr if s["decision"] == "admitted"} == {"ACC22_WEB"}
+    assert rejected  # GTCO, FBN Holdings and Stanbic IBTC Holdings reports
+    used = {s["job_id"] for s in rows(REVIEW / "specs.csv")}
+    assert not rejected & used

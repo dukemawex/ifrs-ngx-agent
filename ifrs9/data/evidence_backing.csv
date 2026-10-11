@@ -121,6 +121,20 @@ Access,2021,regulatory_capital,835939.161,1,True,direct,,ACC21-RC
 Access,2021,rwa,3993848.672,1,True,direct,,ACC21-RWA
 Access,2021,gcu,0.0,1,True,direct,,GC-Access2021
 Access,2021,pbt,106483.0,1,True,direct,,ACC21-PBT
+Access,2022,pat,166660.0,1,True,direct,,ACC22-PAT
+Access,2022,assets,12535280.0,1,True,direct,,ACC22-A
+Access,2022,liabilities,11466613.0,1,True,direct,,ACC22-L
+Access,2022,equity,1068667.0,1,True,direct,,ACC22-E
+Access,2022,ocf,698528.0,1,True,direct,,ACC22-OCF
+Access,2022,opening_assets,9660761.0,1,True,direct,,ACC22-OA
+Access,2022,gross_loans,4149413.0,1,True,direct,,ACC22-GL
+Access,2022,loan_allowance,65061.0,1,True,direct,,ACC22-ALW
+Access,2022,net_loans,4084352.0,1,True,direct,,ACC22-NL
+Access,2022,total_impairment,118681.0,1,True,direct,,ACC22-TI
+Access,2022,car,17.85,1,True,direct,,ACC22-CAR
+Access,2022,regulatory_capital,863711.0,1,True,direct,,ACC22-RC
+Access,2022,rwa,4839820.0,1,True,direct,,ACC22-RWA
+Access,2022,pbt,162709.0,1,True,direct,,ACC22-PBT
 Ecobank Nigeria,2016,pat,5780.0,1,True,direct,,DS0180
 Ecobank Nigeria,2016,assets,1808503.0,1,True,direct,,DS0183
 Ecobank Nigeria,2016,liabilities,1587728.0,1,True,direct,,DS0184

@@ -22,8 +22,32 @@ Access,2021,reported CAR vs capital/RWA,-0.0007,0.005,,True,pass,,display precis
 Access,2022,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Access,2022,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
 Access,2022,reported CAR vs capital/RWA,0.0041,0.005012,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 1.22e-05; printed literal '17.85' from ACC22-CAR; basis=; transitional=
+Ecobank Nigeria,2013,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2013,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2013,reported CAR vs capital/RWA,-0.3859,0.500062,,True,pass,,display precision 0 dp (+/-0.5) + input rounding 6.16e-05; printed literal '17' from ECO13-CAR; basis=; transitional=
+Ecobank Nigeria,2014,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2014,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2014,reported CAR vs capital/RWA,-0.0336,0.500039,,True,pass,,display precision 0 dp (+/-0.5) + input rounding 3.89e-05; printed literal '16' from ECO14-CAR; basis=; transitional=
+Ecobank Nigeria,2015,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2015,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2015,reported CAR vs capital/RWA,0.2756,0.500044,,True,pass,,display precision 0 dp (+/-0.5) + input rounding 4.37e-05; printed literal '19' from ECO15-CAR; basis=; transitional=
 Ecobank Nigeria,2016,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Ecobank Nigeria,2017,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2018,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2018,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2018,reported CAR vs capital/RWA,-0.022,0.05004,,True,pass,,display precision 1 dp (+/-0.05) + input rounding 3.99e-05; printed literal '14.3' from ECO18-CAR; basis=; transitional=14.3
+Ecobank Nigeria,2019,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2019,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2019,reported CAR vs capital/RWA,-0.0038,0.00504,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 4.02e-05; printed literal '16.31' from ECO19-CAR; basis=; transitional=16.31
+Ecobank Nigeria,2020,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2020,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2020,reported CAR vs capital/RWA,0.0009,0.005043,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 4.32e-05; printed literal '21.44' from ECO20-CAR; basis=; transitional=21.44
+Ecobank Nigeria,2021,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2021,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2021,reported CAR vs capital/RWA,-0.0001,0.005038,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 3.75e-05; printed literal '11.48' from ECO21-CAR; basis=; transitional=
+Ecobank Nigeria,2022,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2022,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Ecobank Nigeria,2022,reported CAR vs capital/RWA,-0.0021,0.005032,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 3.24e-05; printed literal '13.27' from ECO22-CAR; basis=; transitional=
 Fidelity,2013,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Fidelity,2014,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Fidelity,2014,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
@@ -61,6 +85,12 @@ First Bank,2017,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,
 First Bank,2017,reported CAR vs capital/RWA,0.0011,0.005019,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 1.95e-05; printed literal '17.74' from FBN17-CAR; basis=; transitional=
 GTBank,2013,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 GTBank,2014,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+GTBank,2015,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
+GTBank,2015,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
+GTBank,2015,reported CAR vs capital/RWA,0.0004,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 3.22e-08; printed literal '18.17' from GTB15-CAR; basis=; transitional=
+GTBank,2016,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
+GTBank,2016,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
+GTBank,2016,reported CAR vs capital/RWA,-0.0006,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 2.92e-08; printed literal '19.79' from GTB16-CAR; basis=; transitional=
 GTBank,2017,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
 GTBank,2017,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
 GTBank,2018,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
@@ -71,6 +101,12 @@ GTBank,2019,reported CAR vs capital/RWA,0.0001,0.005,,True,pass,,display precisi
 GTBank,2020,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 GTBank,2020,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
 GTBank,2020,reported CAR vs capital/RWA,-0.0,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 2.50e-07; printed literal '19.55' from GTB20-CAR; basis=; transitional=23.05
+GTBank,2021,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
+GTBank,2022,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
+Stanbic,2013,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Stanbic,2015,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Stanbic,2016,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Stanbic,2017,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Stanbic,2018,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Stanbic,2019,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Stanbic,2020,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,

@@ -135,6 +135,51 @@ Access,2022,car,17.85,1,True,direct,,ACC22-CAR
 Access,2022,regulatory_capital,863711.0,1,True,direct,,ACC22-RC
 Access,2022,rwa,4839820.0,1,True,direct,,ACC22-RWA
 Access,2022,pbt,162709.0,1,True,direct,,ACC22-PBT
+Ecobank Nigeria,2013,pat,11658.0,1,True,direct,,ECO13-PAT
+Ecobank Nigeria,2013,assets,1460811.0,1,True,direct,,ECO13-A
+Ecobank Nigeria,2013,liabilities,1304183.0,1,True,direct,,ECO13-L
+Ecobank Nigeria,2013,equity,156628.0,1,True,direct,,ECO13-E
+Ecobank Nigeria,2013,ocf,4606.0,1,True,direct,,ECO13-OCF
+Ecobank Nigeria,2013,opening_assets,1325315.0,1,True,direct,,ECO13-OA
+Ecobank Nigeria,2013,gross_loans,660730.0,1,True,direct,,ECO13-GL
+Ecobank Nigeria,2013,loan_allowance,34823.0,1,True,direct,,ECO13-ALW
+Ecobank Nigeria,2013,net_loans,625907.0,1,True,direct,,ECO13-NL
+Ecobank Nigeria,2013,total_impairment,32606.0,1,True,direct,,ECO13-TI
+Ecobank Nigeria,2013,car,17,1,True,direct,,ECO13-CAR
+Ecobank Nigeria,2013,regulatory_capital,165746.0,1,True,direct,,ECO13-RC
+Ecobank Nigeria,2013,rwa,953338.0,1,True,direct,,ECO13-RWA
+Ecobank Nigeria,2013,gcu,0.0,1,True,direct,,GC-EcobankNigeria2013
+Ecobank Nigeria,2013,pbt,10533.0,1,True,direct,,ECO13-PBT
+Ecobank Nigeria,2014,pat,29733.0,1,True,direct,,ECO14-PAT
+Ecobank Nigeria,2014,assets,1772922.0,1,True,direct,,ECO14-A
+Ecobank Nigeria,2014,liabilities,1574528.0,1,True,direct,,ECO14-L
+Ecobank Nigeria,2014,equity,198394.0,1,True,direct,,ECO14-E
+Ecobank Nigeria,2014,ocf,-110701.0,1,True,direct,,ECO14-OCF
+Ecobank Nigeria,2014,opening_assets,1460811.0,1,True,direct,,ECO14-OA
+Ecobank Nigeria,2014,gross_loans,930956.0,1,True,direct,,ECO14-GL
+Ecobank Nigeria,2014,loan_allowance,38235.0,1,True,direct,,ECO14-ALW
+Ecobank Nigeria,2014,net_loans,892721.0,1,True,direct,,ECO14-NL
+Ecobank Nigeria,2014,total_impairment,32994.0,1,True,direct,,ECO14-TI
+Ecobank Nigeria,2014,car,16,1,True,direct,,ECO14-CAR
+Ecobank Nigeria,2014,regulatory_capital,239281.0,1,True,direct,,ECO14-RC
+Ecobank Nigeria,2014,rwa,1492373.0,1,True,direct,,ECO14-RWA
+Ecobank Nigeria,2014,gcu,0.0,1,True,direct,,GC-EcobankNigeria2014
+Ecobank Nigeria,2014,pbt,28663.0,1,True,direct,,ECO14-PBT
+Ecobank Nigeria,2015,pat,11304.0,1,True,direct,,ECO15-PAT
+Ecobank Nigeria,2015,assets,1794348.0,1,True,direct,,ECO15-A
+Ecobank Nigeria,2015,liabilities,1566561.0,1,True,direct,,ECO15-L
+Ecobank Nigeria,2015,equity,227787.0,1,True,direct,,ECO15-E
+Ecobank Nigeria,2015,ocf,24229.0,1,True,direct,,ECO15-OCF
+Ecobank Nigeria,2015,opening_assets,1772922.0,1,True,direct,,ECO15-OA
+Ecobank Nigeria,2015,gross_loans,885701.0,1,True,direct,,ECO15-GL
+Ecobank Nigeria,2015,loan_allowance,68353.0,1,True,direct,,ECO15-ALW
+Ecobank Nigeria,2015,net_loans,817348.0,1,True,direct,,ECO15-NL
+Ecobank Nigeria,2015,total_impairment,55740.0,1,True,direct,,ECO15-TI
+Ecobank Nigeria,2015,car,19,1,True,direct,,ECO15-CAR
+Ecobank Nigeria,2015,regulatory_capital,254109.0,1,True,direct,,ECO15-RC
+Ecobank Nigeria,2015,rwa,1357098.0,1,True,direct,,ECO15-RWA
+Ecobank Nigeria,2015,gcu,0.0,1,True,direct,,GC-EcobankNigeria2015
+Ecobank Nigeria,2015,pbt,11380.0,1,True,direct,,ECO15-PBT
 Ecobank Nigeria,2016,pat,5780.0,1,True,direct,,DS0180
 Ecobank Nigeria,2016,assets,1808503.0,1,True,direct,,DS0183
 Ecobank Nigeria,2016,liabilities,1587728.0,1,True,direct,,DS0184
@@ -148,6 +193,89 @@ Ecobank Nigeria,2017,equity,267329.0,1,True,direct,,DS0176
 Ecobank Nigeria,2017,opening_assets,1808503.0,1,True,prior-year closing assets,,DS0183
 Ecobank Nigeria,2017,total_impairment,59901.0,1,True,direct,,DS0173
 Ecobank Nigeria,2017,npl_reported,14.5,1,True,direct,,DS0179
+Ecobank Nigeria,2018,pat,27155.0,1,True,direct,,ECO18-PAT
+Ecobank Nigeria,2018,assets,1956830.0,1,True,direct,,ECO18-A
+Ecobank Nigeria,2018,liabilities,1709348.0,1,True,direct,,ECO18-L
+Ecobank Nigeria,2018,equity,247482.0,1,True,direct,,ECO18-E
+Ecobank Nigeria,2018,ocf,31236.0,1,True,direct,,ECO18-OCF
+Ecobank Nigeria,2018,opening_assets,1829761.0,1,True,direct,,ECO18-OA
+Ecobank Nigeria,2018,gross_loans,926546.0,1,True,direct,,ECO18-GL
+Ecobank Nigeria,2018,loan_allowance,84071.0,1,True,direct,,ECO18-ALW
+Ecobank Nigeria,2018,net_loans,842475.0,1,True,direct,,ECO18-NL
+Ecobank Nigeria,2018,total_impairment,27360.0,1,True,direct,,ECO18-TI
+Ecobank Nigeria,2018,npl_amount,126844.0,1,True,direct,,ECO18-NPL
+Ecobank Nigeria,2018,car,14.3,1,True,direct,,ECO18-CAR
+Ecobank Nigeria,2018,car_transitional,14.3,1,True,direct,,ECO18-CART
+Ecobank Nigeria,2018,regulatory_capital,205312.0,1,True,direct,,ECO18-RC
+Ecobank Nigeria,2018,rwa,1433545.0,1,True,direct,,ECO18-RWA
+Ecobank Nigeria,2018,gcu,0.0,1,True,direct,,GC-EcobankNigeria2018
+Ecobank Nigeria,2018,pbt,27521.0,1,True,direct,,ECO18-PBT
+Ecobank Nigeria,2019,pat,1256.0,1,True,direct,,ECO19-PAT
+Ecobank Nigeria,2019,assets,1991040.0,1,True,direct,,ECO19-A
+Ecobank Nigeria,2019,liabilities,1726770.0,1,True,direct,,ECO19-L
+Ecobank Nigeria,2019,equity,264270.0,1,True,direct,,ECO19-E
+Ecobank Nigeria,2019,ocf,49052.0,1,True,direct,,ECO19-OCF
+Ecobank Nigeria,2019,opening_assets,1927889.0,1,True,direct,,ECO19-OA
+Ecobank Nigeria,2019,gross_loans,913082.0,1,True,direct,,ECO19-GL
+Ecobank Nigeria,2019,loan_allowance,101476.0,1,True,direct,,ECO19-ALW
+Ecobank Nigeria,2019,net_loans,811606.0,1,True,direct,,ECO19-NL
+Ecobank Nigeria,2019,total_impairment,2704.0,1,True,direct,,ECO19-TI
+Ecobank Nigeria,2019,npl_amount,218515.0,1,True,direct,,ECO19-NPL
+Ecobank Nigeria,2019,car,16.31,1,True,direct,,ECO19-CAR
+Ecobank Nigeria,2019,car_transitional,16.31,1,True,direct,,ECO19-CART
+Ecobank Nigeria,2019,regulatory_capital,236196.0,1,True,direct,,ECO19-RC
+Ecobank Nigeria,2019,rwa,1447830.0,1,True,direct,,ECO19-RWA
+Ecobank Nigeria,2019,gcu,0.0,1,True,direct,,GC-EcobankNigeria2019
+Ecobank Nigeria,2019,pbt,2238.0,1,True,direct,,ECO19-PBT
+Ecobank Nigeria,2020,pat,8087.0,1,True,direct,,ECO20-PAT
+Ecobank Nigeria,2020,assets,2186712.0,1,True,direct,,ECO20-A
+Ecobank Nigeria,2020,liabilities,1887991.0,1,True,direct,,ECO20-L
+Ecobank Nigeria,2020,equity,298721.0,1,True,direct,,ECO20-E
+Ecobank Nigeria,2020,ocf,-13271.0,1,True,direct,,ECO20-OCF
+Ecobank Nigeria,2020,opening_assets,1991040.0,1,True,direct,,ECO20-OA
+Ecobank Nigeria,2020,gross_loans,993191.0,1,True,direct,,ECO20-GL
+Ecobank Nigeria,2020,loan_allowance,111609.0,1,True,direct,,ECO20-ALW
+Ecobank Nigeria,2020,net_loans,881582.0,1,True,direct,,ECO20-NL
+Ecobank Nigeria,2020,total_impairment,9164.0,1,True,direct,,ECO20-TI
+Ecobank Nigeria,2020,npl_amount,197204.0,1,True,direct,,ECO20-NPL
+Ecobank Nigeria,2020,car,21.44,1,True,direct,,ECO20-CAR
+Ecobank Nigeria,2020,car_transitional,21.44,1,True,direct,,ECO20-CART
+Ecobank Nigeria,2020,regulatory_capital,301364.0,1,True,direct,,ECO20-RC
+Ecobank Nigeria,2020,rwa,1405676.0,1,True,direct,,ECO20-RWA
+Ecobank Nigeria,2020,gcu,0.0,1,True,direct,,GC-EcobankNigeria2020
+Ecobank Nigeria,2020,pbt,8639.0,1,True,direct,,ECO20-PBT
+Ecobank Nigeria,2021,pat,9766.0,1,True,direct,,ECO21-PAT
+Ecobank Nigeria,2021,assets,2475079.0,1,True,direct,,ECO21-A
+Ecobank Nigeria,2021,liabilities,2196302.0,1,True,direct,,ECO21-L
+Ecobank Nigeria,2021,equity,278777.0,1,True,direct,,ECO21-E
+Ecobank Nigeria,2021,ocf,-86740.0,1,True,direct,,ECO21-OCF
+Ecobank Nigeria,2021,opening_assets,2186711.0,1,True,direct,,ECO21-OA
+Ecobank Nigeria,2021,gross_loans,1113022.0,1,True,direct,,ECO21-GL
+Ecobank Nigeria,2021,loan_allowance,97419.0,1,True,direct,,ECO21-ALW
+Ecobank Nigeria,2021,net_loans,1015603.0,1,True,direct,,ECO21-NL
+Ecobank Nigeria,2021,total_impairment,7041.0,1,True,direct,,ECO21-TI
+Ecobank Nigeria,2021,npl_amount,181954.0,1,True,direct,,ECO21-NPL
+Ecobank Nigeria,2021,car,11.48,1,True,direct,,ECO21-CAR
+Ecobank Nigeria,2021,regulatory_capital,170600.0,1,True,direct,,ECO21-RC
+Ecobank Nigeria,2021,rwa,1486056.0,1,True,direct,,ECO21-RWA
+Ecobank Nigeria,2021,gcu,0.0,1,True,direct,,GC-EcobankNigeria2021
+Ecobank Nigeria,2021,pbt,10676.0,1,True,direct,,ECO21-PBT
+Ecobank Nigeria,2022,pat,10396.0,1,True,direct,,ECO22-PAT
+Ecobank Nigeria,2022,assets,2917689.0,1,True,direct,,ECO22-A
+Ecobank Nigeria,2022,liabilities,2623076.0,1,True,direct,,ECO22-L
+Ecobank Nigeria,2022,equity,294613.0,1,True,direct,,ECO22-E
+Ecobank Nigeria,2022,ocf,-75642.0,1,True,direct,,ECO22-OCF
+Ecobank Nigeria,2022,opening_assets,2475079.0,1,True,direct,,ECO22-OA
+Ecobank Nigeria,2022,gross_loans,1190306.0,1,True,direct,,ECO22-GL
+Ecobank Nigeria,2022,loan_allowance,62880.0,1,True,direct,,ECO22-ALW
+Ecobank Nigeria,2022,net_loans,1127426.0,1,True,direct,,ECO22-NL
+Ecobank Nigeria,2022,total_impairment,12377.0,1,True,direct,,ECO22-TI
+Ecobank Nigeria,2022,npl_amount,82348.0,1,True,direct,,ECO22-NPL
+Ecobank Nigeria,2022,car,13.27,1,True,direct,,ECO22-CAR
+Ecobank Nigeria,2022,regulatory_capital,232070.0,1,True,direct,,ECO22-RC
+Ecobank Nigeria,2022,rwa,1748560.0,1,True,direct,,ECO22-RWA
+Ecobank Nigeria,2022,gcu,0.0,1,True,direct,,GC-EcobankNigeria2022
+Ecobank Nigeria,2022,pbt,12396.0,1,True,direct,,ECO22-PBT
 Fidelity,2013,pat,7721.0,1,True,direct,,EV0087
 Fidelity,2013,assets,1081217.0,1,True,direct,,EV0090
 Fidelity,2013,liabilities,917762.0,1,True,direct,,EV0092
@@ -374,6 +502,36 @@ GTBank,2014,opening_assets,1904366.0,1,True,prior-year closing assets,,EV0061
 GTBank,2014,loan_impairment,6184.0,1,True,direct,,EV0066
 GTBank,2014,npl_amount,32616.0,1,True,direct,,EV0068
 GTBank,2014,npl_reported,2.7,1,True,direct,,EV0069
+GTBank,2015,pat,94308.123,1,True,direct,,GTB15-PAT
+GTBank,2015,assets,2277629.224,1,True,direct,,GTB15-A
+GTBank,2015,liabilities,1872020.876,1,True,direct,,GTB15-L
+GTBank,2015,equity,405608.348,1,True,direct,,GTB15-E
+GTBank,2015,ocf,10429.148,1,True,direct,,GTB15-OCF
+GTBank,2015,opening_assets,2126608.312,1,True,direct,,GTB15-OA
+GTBank,2015,gross_loans,1291516.228,1,True,direct,,GTB15-GL
+GTBank,2015,loan_allowance,26308.785,1,True,direct,,GTB15-ALW
+GTBank,2015,net_loans,1265207.443,1,True,direct,,GTB15-NL
+GTBank,2015,total_impairment,11769.374,1,True,direct,,GTB15-TI
+GTBank,2015,car,18.17,1,True,direct,,GTB15-CAR
+GTBank,2015,regulatory_capital,333426.139,1,True,direct,,GTB15-RC
+GTBank,2015,rwa,1835072.113,1,True,direct,,GTB15-RWA
+GTBank,2015,gcu,0.0,1,True,direct,,GC-GTBank2015
+GTBank,2015,pbt,113027.057,1,True,direct,,GTB15-PBT
+GTBank,2016,pat,126836.792,1,True,direct,,GTB16-PAT
+GTBank,2016,assets,2613340.074,1,True,direct,,GTB16-A
+GTBank,2016,liabilities,2136422.221,1,True,direct,,GTB16-L
+GTBank,2016,equity,476917.853,1,True,direct,,GTB16-E
+GTBank,2016,ocf,286884.139,1,True,direct,,GTB16-OCF
+GTBank,2016,opening_assets,2277629.224,1,True,direct,,GTB16-OA
+GTBank,2016,gross_loans,1491117.716,1,True,direct,,GTB16-GL
+GTBank,2016,loan_allowance,73899.764,1,True,direct,,GTB16-ALW
+GTBank,2016,net_loans,1417217.952,1,True,direct,,GTB16-NL
+GTBank,2016,total_impairment,63542.64,1,True,direct,,GTB16-TI
+GTBank,2016,car,19.79,1,True,direct,,GTB16-CAR
+GTBank,2016,regulatory_capital,405526.626,1,True,direct,,GTB16-RC
+GTBank,2016,rwa,2049087.592,1,True,direct,,GTB16-RWA
+GTBank,2016,gcu,0.0,1,True,direct,,GC-GTBank2016
+GTBank,2016,pbt,154005.487,1,True,direct,,GTB16-PBT
 GTBank,2017,pat,158727.705,1,True,direct,,GTB17-PAT
 GTBank,2017,assets,2824928.985,1,True,direct,,GTB17-A
 GTBank,2017,liabilities,2246352.209,1,True,direct,,GTB17-L
@@ -442,6 +600,56 @@ GTBank,2020,rwa,2393202.25,1,True,direct,,GTB20-RWA
 GTBank,2020,capital_transitional,566721.721,1,True,direct,,GTB20-RCT
 GTBank,2020,gcu,0.0,1,True,direct,,GC-GTBank2020
 GTBank,2020,pbt,205130.559,1,True,direct,,GTB20-PBT
+GTBank,2021,pat,146184.067,1,True,direct,,GTB21-PAT
+GTBank,2021,assets,4357033.134,1,True,direct,,GTB21-A
+GTBank,2021,liabilities,3610197.551,1,True,direct,,GTB21-L
+GTBank,2021,equity,746835.583,1,True,direct,,GTB21-E
+GTBank,2021,ocf,364670.769,1,True,direct,,GTB21-OCF
+GTBank,2021,opening_assets,4061543.605,1,True,direct,,GTB21-OA
+GTBank,2021,net_loans,1475674.16,1,True,direct,,GTB21-NL
+GTBank,2021,loan_impairment,4088.901,1,True,direct,,GTB21-LI
+GTBank,2021,pbt,176121.448,1,True,direct,,GTB21-PBT
+GTBank,2022,pat,145296.211,1,True,direct,,GTB22-PAT
+GTBank,2022,assets,5208576.833,1,True,direct,,GTB22-A
+GTBank,2022,liabilities,4412624.546,1,True,direct,,GTB22-L
+GTBank,2022,equity,795952.287,1,True,direct,,GTB22-E
+GTBank,2022,ocf,671361.457,1,True,direct,,GTB22-OCF
+GTBank,2022,opening_assets,4357033.134,1,True,direct,,GTB22-OA
+GTBank,2022,net_loans,1577191.692,1,True,direct,,GTB22-NL
+GTBank,2022,loan_impairment,8937.161,1,True,direct,,GTB22-LI
+GTBank,2022,pbt,180628.262,1,True,direct,,GTB22-PBT
+Stanbic,2013,pat,10129.0,1,True,direct,,STANH13-PAT
+Stanbic,2013,assets,725100.0,1,True,direct,,STANH13-A
+Stanbic,2013,liabilities,654520.0,1,True,direct,,STANH13-L
+Stanbic,2013,equity,70580.0,1,True,direct,,STANH13-E
+Stanbic,2013,opening_assets,650470.0,1,True,direct,,STANH13-OA
+Stanbic,2013,net_loans,289747.0,1,True,direct,,STANH13-NL
+Stanbic,2013,total_impairment,2667.0,1,True,direct,,STANH13-TI
+Stanbic,2013,pbt,9474.0,1,True,direct,,STANH13-PBT
+Stanbic,2015,pat,6232.0,1,True,direct,,STANH15-PAT
+Stanbic,2015,assets,890580.0,1,True,direct,,STANH15-A
+Stanbic,2015,liabilities,795663.0,1,True,direct,,STANH15-L
+Stanbic,2015,equity,94917.0,1,True,direct,,STANH15-E
+Stanbic,2015,opening_assets,908429.0,1,True,direct,,STANH15-OA
+Stanbic,2015,net_loans,353513.0,1,True,direct,,STANH15-NL
+Stanbic,2015,total_impairment,14931.0,1,True,direct,,STANH15-TI
+Stanbic,2015,pbt,4479.0,1,True,direct,,STANH15-PBT
+Stanbic,2016,pat,15030.0,1,True,direct,,STANH16-PAT
+Stanbic,2016,assets,993759.0,1,True,direct,,STANH16-A
+Stanbic,2016,liabilities,884443.0,1,True,direct,,STANH16-L
+Stanbic,2016,equity,109316.0,1,True,direct,,STANH16-E
+Stanbic,2016,opening_assets,890580.0,1,True,direct,,STANH16-OA
+Stanbic,2016,net_loans,352965.0,1,True,direct,,STANH16-NL
+Stanbic,2016,total_impairment,19803.0,1,True,direct,,STANH16-TI
+Stanbic,2016,pbt,14908.0,1,True,direct,,STANH16-PBT
+Stanbic,2017,pat,28842.0,1,True,direct,,STANH17-PAT
+Stanbic,2017,assets,1332669.0,1,True,direct,,STANH17-A
+Stanbic,2017,liabilities,1193969.0,1,True,direct,,STANH17-L
+Stanbic,2017,equity,138700.0,1,True,direct,,STANH17-E
+Stanbic,2017,opening_assets,993759.0,1,True,direct,,STANH17-OA
+Stanbic,2017,net_loans,372088.0,1,True,direct,,STANH17-NL
+Stanbic,2017,total_impairment,25577.0,1,True,direct,,STANH17-TI
+Stanbic,2017,pbt,30345.0,1,True,direct,,STANH17-PBT
 Stanbic,2018,pat,49912.0,1,True,direct,,STAN18-PAT
 Stanbic,2018,assets,1599245.0,1,True,direct,,STAN18-A
 Stanbic,2018,liabilities,1428904.0,1,True,direct,,STAN18-L

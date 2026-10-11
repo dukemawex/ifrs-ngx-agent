@@ -1,4 +1,9 @@
 bank,year,tier,regime,ifrs9_d,value,available,descriptive_use,longitudinal_use,change_comparable,inferential_use,sensitivity_drop,excluded_uses,rule_ids,reasons,fallback_class,primary_version,npl_amount,gross_loans,npl_reported
+Ecobank Nigeria,2018,Tier 2,IFRS 9,1,13.689984091453635,True,True,True,False,True,False,,,,,"2018 annual report, as originally reported",126844.0,926546.0,
+Ecobank Nigeria,2019,Tier 2,IFRS 9,1,23.93158555310476,True,True,True,True,True,False,,,,,"2019 annual report, as originally reported",218515.0,913082.0,
+Ecobank Nigeria,2020,Tier 2,IFRS 9,1,19.85559675832745,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported",197204.0,993191.0,
+Ecobank Nigeria,2021,Tier 2,IFRS 9,1,16.34774514789465,True,True,True,True,True,False,,,,,"2021 annual report, as originally reported",181954.0,1113022.0,
+Ecobank Nigeria,2022,Tier 2,IFRS 9,1,6.918221028878288,True,True,True,True,True,False,,,,,"2022 annual report, as originally reported",82348.0,1190306.0,
 Union,2013,Tier 2,IAS 39,0,5.913661581137309,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,13644.0,230720.0,5.91
 Union,2014,Tier 2,IAS 39,0,5.143853530950305,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,16756.0,325748.0,5.14
 Union,2017,Tier 2,IAS 39,0,20.813001709266707,True,True,True,False,True,False,,,,,2018 report: restated 2017 main statements,110685.0,531807.0,

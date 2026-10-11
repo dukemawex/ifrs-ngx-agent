@@ -75,7 +75,7 @@ def test_summary_text_does_not_contradict_going_concern_fills(stats):
     assert "No going-concern code was added" not in text
     assert "no original-year auditor report was reviewed" not in text.lower()
     assert f"{fills} filled in baseline rows" in text
-    reviews = sum(r["report_reviewed"] != "not reviewed" and not r["report_reviewed"].startswith("partially")
+    reviews = sum(r["report_reviewed"] not in ("not reviewed", "not coded") and not r["report_reviewed"].startswith("partially")
                   for r in rows(REVIEW / "going_concern_reviews.csv"))
     assert f"auditor reports reviewed and recorded: {reviews}" in text
 
@@ -478,8 +478,30 @@ def test_access_2022_from_bank_columns_only():
 
 def test_holdco_sources_rejected_and_unused():
     scr = rows(REVIEW / "source_scope_screening.csv")
-    rejected = {s["job_id"] for s in scr if s["decision"].startswith("rejected") and s["job_id"]}
-    assert {s["source_id"] for s in scr if s["decision"] == "admitted"} == {"ACC22_WEB"}
-    assert rejected  # GTCO, FBN Holdings and Stanbic IBTC Holdings reports
+    rejected = {s["job_id"] for s in scr if s["decision"] == "rejected" and s["job_id"]}  # whole-document rejections
+    assert rejected  # FBN Holdings 2018-2022 (subgroup column) and others
     used = {s["job_id"] for s in rows(REVIEW / "specs.csv")}
     assert not rejected & used
+    fbn = [s for s in scr if s["source_id"].startswith("FBNH") and s["source_id"].endswith("_AR")]
+    assert len(fbn) == 5 and all(s["decision"] == "rejected" and s["nigeria_operating_bank_only"] == "no" for s in fbn)
+
+
+def test_holdco_disclosure_rows_are_labelled_and_reconcile():
+    panel = rows(DATA / "verified_panel.csv")
+    held = [r for r in panel if "HoldCo package" in r["scope"]]
+    assert sorted((r["bank"], r["year"]) for r in held) == [("GTBank", "2021"), ("GTBank", "2022"), ("Stanbic", "2013"),
+                                                          ("Stanbic", "2015"), ("Stanbic", "2016"), ("Stanbic", "2017")]
+    for r in held:
+        assert abs(num(r["assets"]) - num(r["liabilities"]) - num(r["equity"])) < 0.01
+        assert r["gcu"] == ""  # no auditor opinion on the operating bank
+    specs = [s for s in rows(REVIEW / "specs.csv") if s["column_scope"] == "bank_subsidiary_disclosure"]
+    assert specs and all(s["document_scope"] == "holding_company_report" for s in specs)
+
+
+def test_new_full_report_rows_balance():
+    panel = {(r["bank"], r["year"]): r for r in rows(DATA / "verified_panel.csv")}
+    for y in (2013, 2014, 2015, 2018, 2019, 2020, 2021, 2022):
+        r = panel[("Ecobank Nigeria", str(y))]
+        assert abs(num(r["assets"]) - num(r["liabilities"]) - num(r["equity"])) < 0.01 and r["gcu"] == "0.0"
+    for y in (2015, 2016):
+        assert ("GTBank", str(y)) in panel

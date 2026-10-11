@@ -1,7 +1,7 @@
 {
-  "at": "2026-10-11T07:51:35+00:00",
-  "admissions_reviewed": 834,
-  "admissions_accepted": 834,
+  "at": "2026-10-11T11:24:29+00:00",
+  "admissions_reviewed": 1074,
+  "admissions_accepted": 1074,
   "new_bank_years": [
     "Wema 2021",
     "Union 2016",
@@ -53,10 +53,26 @@
     "First Bank 2015",
     "Sterling 2022",
     "GTBank 2020",
-    "Access 2022"
+    "Access 2022",
+    "Ecobank Nigeria 2013",
+    "Ecobank Nigeria 2014",
+    "Ecobank Nigeria 2015",
+    "Ecobank Nigeria 2018",
+    "Ecobank Nigeria 2019",
+    "Ecobank Nigeria 2020",
+    "Ecobank Nigeria 2021",
+    "Ecobank Nigeria 2022",
+    "GTBank 2015",
+    "GTBank 2016",
+    "GTBank 2021",
+    "GTBank 2022",
+    "Stanbic 2013",
+    "Stanbic 2015",
+    "Stanbic 2016",
+    "Stanbic 2017"
   ],
   "partial_new": 0,
   "recompute_differences": 0,
-  "changes": 60,
+  "changes": 76,
   "exceptions_violated": []
 }

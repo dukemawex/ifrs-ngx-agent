@@ -7,7 +7,14 @@ Access,2019,3968114.609,3968114.609,0.0,True,"2019 annual report, as originally 
 Access,2020,6307588.216,6311041.282,-3453.066,False,"2020 annual report, as originally reported","2019 annual report, as originally reported"
 Access,2021,7624979.724,7624979.724,0.0,True,"2021 annual report, as originally reported","2020 annual report, as originally reported"
 Access,2022,9660761.0,9660760.556,0.444,True,"2022 financial statements, as originally reported","2021 annual report, as originally reported"
+Ecobank Nigeria,2014,1460811.0,1460811.0,0.0,True,"2014 annual report, as originally reported","2013 annual report, as originally reported"
+Ecobank Nigeria,2015,1772922.0,1772922.0,0.0,True,"2015 annual report, as originally reported","2014 annual report, as originally reported"
 Ecobank Nigeria,2017,1808503.0,1808503.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Ecobank Nigeria,2018,1829761.0,1829761.0,0.0,True,"2018 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Ecobank Nigeria,2019,1927889.0,1956830.0,-28941.0,False,"2019 annual report, as originally reported","2018 annual report, as originally reported"
+Ecobank Nigeria,2020,1991040.0,1991040.0,0.0,True,"2020 annual report, as originally reported","2019 annual report, as originally reported"
+Ecobank Nigeria,2021,2186711.0,2186712.0,-1.0,False,"2021 annual report, as originally reported","2020 annual report, as originally reported"
+Ecobank Nigeria,2022,2475079.0,2475079.0,0.0,True,"2022 annual report, as originally reported","2021 annual report, as originally reported"
 Fidelity,2014,1081217.0,1081217.0,0.0,True,"2014 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Fidelity,2015,1187025.0,1187025.0,0.0,True,"2015 annual report, as originally reported","2014 annual report, as originally reported"
 Fidelity,2016,1231722.0,1231722.0,0.0,True,"2016 annual report, as originally reported","2015 annual report, as originally reported"
@@ -19,9 +26,17 @@ First Bank,2014,3246579.0,3246579.0,0.0,True,baseline/inherited,Prior source-sel
 First Bank,2015,3490871.0,3490871.0,0.0,True,"2015 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
 First Bank,2017,3557782.0,3557782.0,0.0,True,"FY2017 financial statements, as originally reported","FY2017 financial statements; 2016 comparative, not labelled restated"
 GTBank,2014,1904366.0,1904366.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+GTBank,2015,2126608.312,2126608.0,0.312,True,"2015 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
+GTBank,2016,2277629.224,2277629.224,0.0,True,"2016 annual report, as originally reported (public mirror copy)","2015 annual report, as originally reported"
+GTBank,2017,2613340.074,2613340.074,0.0,True,2018 annual report; 2017 restated comparative,"2016 annual report, as originally reported (public mirror copy)"
 GTBank,2018,2824928.985,2824928.985,0.0,True,"2018 annual report, as originally reported",2018 annual report; 2017 restated comparative
 GTBank,2019,2712521.494,2712521.494,0.0,True,"2019 annual report, as originally reported","2018 annual report, as originally reported"
 GTBank,2020,3097248.495,3097248.495,0.0,True,"2020 annual report, as originally reported","2019 annual report, as originally reported"
+GTBank,2021,4061543.605,4061543.605,0.0,True,GTCO 2021 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (GT Bank Nigeria condensed results),"2020 annual report, as originally reported"
+GTBank,2022,4357033.134,4357033.134,0.0,True,GTCO 2022 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (GT Bank Nigeria condensed results),GTCO 2021 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (GT Bank Nigeria condensed results)
+Stanbic,2016,890580.0,890580.0,0.0,True,"Stanbic IBTC Holdings 2016 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC)","Stanbic IBTC Holdings 2015 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC)"
+Stanbic,2017,993759.0,993759.0,0.0,True,"Stanbic IBTC Holdings 2017 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC)","Stanbic IBTC Holdings 2016 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC)"
+Stanbic,2018,1332723.0,1332669.0,54.0,False,"2018 audited financial statements, as originally reported (issuer-hosted scanned extract)","Stanbic IBTC Holdings 2017 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC)"
 Stanbic,2019,1599245.0,1599245.0,0.0,True,"2019 audited financial statements, as originally reported (issuer-hosted scanned extract)","2018 audited financial statements, as originally reported (issuer-hosted scanned extract)"
 Stanbic,2021,2370347.0,2370347.0,0.0,True,"2021 audited financial statements, as originally reported","2021 audited financial statements; 2020 comparative, not labelled restated"
 Stanbic,2022,2614087.0,2614087.0,0.0,True,"2022 audited financial statements, as originally reported","2021 audited financial statements, as originally reported"

@@ -1,12 +1,12 @@
 # Reconciliation summary
 
-Generated 2026-10-11T07:52:27+00:00 from the saved outputs (code commit `1d69f9db8fa3fe7daf210715a0e08e16276f139c`, branch `claude/zen-hamilton-v2s80b`).
+Generated 2026-10-11T11:22:21+00:00 from the saved outputs (code commit `51da1df3c0eb9481089be21acbcf391b5a7d6fcd`, branch `claude/zen-hamilton-v2s80b`).
 Every number below is computed by `ifrs9_recovery.summary.release_stats()`; see `outputs/release_stats.json`.
 
 ## Panel
 
-- Selected bank-years: **98** across 12 banks (50 pre-adoption, 48 post-adoption).
-- Baseline rows: 47 (all 47 retained); additional rows admitted: 51.
+- Selected bank-years: **114** across 12 banks (59 pre-adoption, 55 post-adoption).
+- Baseline rows: 47 (all 47 retained); additional rows admitted: 67.
 - These are selected rows, not complete observations for every endpoint (see endpoint table).
 
 ## What changed relative to the frozen baseline
@@ -15,16 +15,19 @@ Every number below is computed by `ifrs9_recovery.summary.release_stats()`; see 
 - Non-blank baseline measurements changed: 0 (corrections are the only route).
 - Authorised fills of blank baseline cells: 9 (gcu 9).
 - Recomputed derived values that differ from stored: 0.
-- Additional bank-years: 51.
-- Field basis of all non-blank cells: baseline_inherited 615, derived_from_verified 18, derived_from_verified+restated_comparative 4, manual_transcription 95, manual_transcription+restated_comparative 4, recomputed_ratio 1039, reported_text_layer 650, reported_text_layer+restated_comparative 38.
+- Additional bank-years: 67.
+- Field basis of all non-blank cells: baseline_inherited 615, derived_from_verified 25, derived_from_verified+restated_comparative 4, manual_transcription 105, manual_transcription+restated_comparative 4, recomputed_ratio 1217, reported_text_layer 831, reported_text_layer+restated_comparative 48.
 
 ## Admission and reconciliation
 
-- Admissions: 834 accepted, 0 rejected (file hash recomputed, page and rendered image re-verified, structured scope, explicit sign transform, derived values recomputed).
-- Reconciliation checks run: 220; pass 218; fail 0; documented source exception 2.
-- Evidence lineage: 1424 of 1424 non-blank inputs matched to an evidence record; 6 carry an explicit qualification.
-- Average-asset denominators: 73 checked against prior-year closing assets; 4 differ (listed in `data/denominator_compatibility.csv`). Each ratio uses the opening balance from the same report as its closing balance; differing pairs are not smoothed.
+- Admissions: 1074 accepted, 0 rejected (file hash recomputed, page and rendered image re-verified, structured scope, explicit sign transform, derived values recomputed).
+- Reconciliation checks run: 256; pass 254; fail 0; documented source exception 2.
+- Evidence lineage: 1632 of 1632 non-blank inputs matched to an evidence record; 6 carry an explicit qualification.
+- Average-asset denominators: 88 checked against prior-year closing assets; 7 differ (listed in `data/denominator_compatibility.csv`). Each ratio uses the opening balance from the same report as its closing balance; differing pairs are not smoothed.
   - Access 2020 (opening 6307588.216 from 2020 annual report, as originally reported; prior closing 6311041.282 from 2019 annual report, as originally reported)
+  - Ecobank Nigeria 2019 (opening 1927889.0 from 2019 annual report, as originally reported; prior closing 1956830.0 from 2018 annual report, as originally reported)
+  - Ecobank Nigeria 2021 (opening 2186711.0 from 2021 annual report, as originally reported; prior closing 2186712.0 from 2020 annual report, as originally reported)
+  - Stanbic 2018 (opening 1332723.0 from 2018 audited financial statements, as originally reported (issuer-hosted scanned extract); prior closing 1332669.0 from Stanbic IBTC Holdings 2017 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC))
   - Sterling 2017 (opening 830805.0 from 2017 annual report, as originally reported; prior closing 830802.224 from 2016 annual report, as originally reported)
   - Sterling 2022 (opening 1606898.0 from 2022 annual report, as originally reported; prior closing 1611749.0 from 2021 annual report, as originally reported)
   - Union 2015 (opening 922755.0 from 2016 annual report; 2015 restated comparative; prior closing 920936.0 from Prior source-selection policy retained; original evidence preserved in accompanying pack.)
@@ -35,23 +38,23 @@ Available = value present; descriptive/longitudinal/inferential uses are distinc
 
 | Outcome | Available | Descriptive | Longitudinal | Change pairs | Eligible (inferential) | Excluded from inference | Banks | Pre | Post | Tier 1 | Tier 2 | Fallback rows |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| gcu | 46 | 46 | 46 | 22 | 46 | 0 | 10 | 18 | 28 | 13 | 33 | 0 |
-| car | 77 | 77 | 77 | 58 | 75 | 2 | 11 | 37 | 38 | 32 | 43 | 2 |
-| car_computed | 58 | 58 | 58 | 39 | 55 | 3 | 11 | 23 | 32 | 26 | 29 | 2 |
-| roa | 78 | 78 | 78 | 52 | 78 | 0 | 12 | 39 | 39 | 33 | 45 | 3 |
-| eqta | 98 | 98 | 98 | 82 | 98 | 0 | 12 | 50 | 48 | 41 | 57 | 7 |
-| ocf_ratio | 72 | 72 | 72 | 49 | 72 | 0 | 11 | 36 | 36 | 31 | 41 | 3 |
-| allr | 83 | 83 | 82 | 63 | 82 | 1 | 11 | 40 | 42 | 36 | 46 | 5 |
-| impairment_assets | 75 | 75 | 73 | 50 | 73 | 2 | 12 | 35 | 38 | 31 | 42 | 2 |
-| npl_calc | 14 | 14 | 14 | 9 | 14 | 0 | 3 | 7 | 7 | 6 | 8 | 1 |
-| broad_coverage | 14 | 14 | 13 | 7 | 13 | 1 | 3 | 7 | 6 | 6 | 7 | 1 |
+| gcu | 56 | 56 | 56 | 29 | 56 | 0 | 11 | 23 | 33 | 15 | 41 | 0 |
+| car | 87 | 87 | 87 | 65 | 84 | 3 | 12 | 41 | 43 | 33 | 51 | 2 |
+| car_computed | 68 | 68 | 68 | 46 | 65 | 3 | 12 | 28 | 37 | 28 | 37 | 2 |
+| roa | 94 | 94 | 94 | 66 | 94 | 0 | 12 | 48 | 46 | 37 | 57 | 3 |
+| eqta | 114 | 114 | 114 | 97 | 114 | 0 | 12 | 59 | 55 | 45 | 69 | 7 |
+| ocf_ratio | 84 | 84 | 84 | 58 | 84 | 0 | 12 | 41 | 43 | 35 | 49 | 3 |
+| allr | 93 | 93 | 92 | 70 | 92 | 1 | 12 | 45 | 47 | 38 | 54 | 5 |
+| impairment_assets | 89 | 89 | 87 | 61 | 87 | 2 | 12 | 44 | 43 | 33 | 54 | 2 |
+| npl_calc | 19 | 19 | 19 | 13 | 19 | 0 | 4 | 7 | 12 | 6 | 13 | 1 |
+| broad_coverage | 19 | 19 | 18 | 11 | 18 | 1 | 4 | 7 | 11 | 6 | 12 | 1 |
 | stage3_coverage | 6 | 6 | 5 | 3 | 5 | 1 | 2 | 0 | 5 | 0 | 5 | 0 |
 | liquidity | 10 | 10 | 10 | 7 | 10 | 0 | 3 | 5 | 5 | 7 | 3 | 0 |
-| leverage | 98 | 98 | 98 | 82 | 98 | 0 | 12 | 50 | 48 | 41 | 57 | 7 |
+| leverage | 114 | 114 | 114 | 97 | 114 | 0 | 12 | 59 | 55 | 45 | 69 | 7 |
 
 Rows excluded from inference (rule ids in `data/outcome_eligibility.csv`, reasons in `data/review/eligibility_rules.csv`):
 
-- car: Fidelity 2016 (AUTO-FLAG;EL-FID16-CAR); Wema 2021 (AUTO-FALLBACK;AUTO-FLAG;EL-WEMA21-CAR)
+- car: Fidelity 2016 (AUTO-FLAG;EL-FID16-CAR); GTBank 2015 (AUTO-FLAG); Wema 2021 (AUTO-FALLBACK;AUTO-FLAG;EL-WEMA21-CAR)
 - car_computed: Fidelity 2016 (EL-FID16-CAR); Stanbic 2020 (AUTO-FLAG;EL-STAN20-CAPITAL); Wema 2021 (AUTO-FALLBACK;EL-WEMA21-CAR)
 - allr: Union 2018 (AUTO-POOL;EL-UNION18-ALLOWANCE)
 - impairment_assets: Unity 2017 (EL-UNITY17-IMP); Wema 2021 (AUTO-FALLBACK;EL-WEMA21-IMP)
@@ -60,22 +63,22 @@ Rows excluded from inference (rule ids in `data/outcome_eligibility.csv`, reason
 
 ## Going concern
 
-- Full original-year auditor reports reviewed and recorded: 45 (3 coded 1); partially available reports (left uncoded): 1.
-- Bank-years explicitly listed as not reviewed: 16.
-- Panel rows coded: 46 (3 coded 1); unknown: 52. Unknown is not zero.
-- Of the coded rows: 2 baseline codes retained (1 confirmed by this review), 9 filled in baseline rows, 35 on additional rows.
+- Full original-year auditor reports reviewed and recorded: 55 (3 coded 1); partially available reports (left uncoded): 1; HoldCo-derived bank-years with no opinion on the operating bank (left uncoded): 6.
+- Bank-years explicitly listed as not reviewed: 22.
+- Panel rows coded: 56 (3 coded 1); unknown: 58. Unknown is not zero.
+- Of the coded rows: 2 baseline codes retained (1 confirmed by this review), 9 filled in baseline rows, 45 on additional rows.
 - A zero means no material-uncertainty section or going-concern emphasis was found after the recorded review; it does not certify survival.
 - With 3 positive event(s), a multivariable going-concern model is not supported; report event counts before choosing an estimator.
 
 ## Version decisions and conflicts
 
-- Version classifications: confirmed scope difference with 2022 selected basis 1, corroborated by original-year report 1, corroborated by original-year summary 1, fallback: comparative 4, fallback: labelled restatement 3, labelled reclassification 1, labelled restatement 3, source internal inconsistency 4, unexplained difference 4 (`data/review/version_decisions.csv`).
-- Conflicts recorded: candidate_vs_selected 201, restated_comparative 4, source_internal_inconsistency 3, source_internal_inconsistency_cross_report 1, source_unit_label_error 1, source_vs_selected 1.
+- Version classifications: confirmed scope difference with 2022 selected basis 1, corroborated by original-year report 1, corroborated by original-year summary 1, fallback: comparative 4, fallback: labelled restatement 3, labelled reclassification 2, labelled restatement 5, source internal inconsistency 4, unexplained difference 6 (`data/review/version_decisions.csv`).
+- Conflicts recorded: candidate_vs_selected 253, later_comparative 2, restated_comparative 6, source_internal_inconsistency 4, source_internal_inconsistency_cross_report 1, source_unit_label_error 1, source_vs_selected 1.
 
 ## Reporting versions (`data/row_versions.csv`)
 
 - primary (baseline selection retained): 47
-- primary (original-year presentation): 44
+- primary (original-year presentation): 60
 - primary; drop in sensitivity (fallback: original-year report unavailable): 7
 - Fallback rows (primary, dropped in sensitivity): Access 2018 (fallback: comparative; source xs-6951b12082; labelled restated: no); Fidelity 2021 (fallback: labelled restatement; source pdf-0960512f5d; labelled restated: yes); GTBank 2017 (fallback: labelled restatement; source xs-21e7fbfbf9; labelled restated: yes); Union 2015 (fallback: labelled restatement; source xs-15d472ad0d; labelled restated: yes); Unity 2013 (fallback: comparative; source xs-901cfd21b1; labelled restated: no); Unity 2020 (fallback: comparative; source xs-848eb8a062; labelled restated: no); Wema 2021 (fallback: comparative; source pdf-2b23016b97; labelled restated: no).
 - Unreconciled version mixes: 0.
@@ -93,6 +96,8 @@ Rows excluded from inference (rule ids in `data/outcome_eligibility.csv`, reason
 - Sterling 2016 assets/equity/pat: unexplained difference
 - First Bank 2016 pbt: unexplained difference; OWNER DECISION PENDING
 - Stanbic 2020 total_impairment: unexplained difference; OWNER DECISION PENDING
+- Ecobank Nigeria 2020 regulatory_capital / rwa / car: unexplained difference
+- Ecobank Nigeria 2020 ocf: unexplained difference
 - Unity 2021 stage3_gross: source_internal_inconsistency_cross_report
 
 ## Model readiness (`outputs/readiness/readiness.md`; no thesis regressions run)
@@ -107,19 +112,15 @@ Rows excluded from inference (rule ids in `data/outcome_eligibility.csv`, reason
 
 ## Remaining
 
-- Bank-year positions not admitted: 32; field requests in selected rows outstanding: 345.
-  - Ecobank Nigeria: 2013, 2014, 2015, 2018, 2019, 2020, 2021, 2022
+- Bank-year positions not admitted: 16; field requests in selected rows outstanding: 345.
   - FCMB: 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022
   - First Bank: 2018, 2019, 2020, 2021, 2022
-  - GTBank: 2015, 2016, 2021, 2022
-  - Stanbic: 2013, 2014, 2015, 2016, 2017
+  - Stanbic: 2014
 
 ## Tests
 
-- synthetic/mock unit tests: 62 passed, 0 failed, 0 skipped.
-- real-data regression tests: 41 passed, 0 failed, 0 skipped.
-- other: 8 passed, 0 failed, 0 skipped.
-- Test run: 2026-10-11T07:51:45+00:00.
+- real-data regression tests: 0 passed, 2 failed, 0 skipped.
+- Test run: 2026-10-11T11:21:54+00:00.
 
 ## Nimble usage
 
@@ -128,12 +129,12 @@ Rows excluded from inference (rule ids in `data/outcome_eligibility.csv`, reason
 
 ## Workbook and handoff
 
-- Formula audit after LibreOffice recalculation: {'cells_checked': 1666, 'numeric_differences': 0, 'mismatches': 0, 'excel_errors': 0}.
-- Handoff zip: 390 files; rendered evidence page images included: 268; admission image paths without an included image: 0.
-- Source PDFs are NOT included (80 files); each is listed with URL and SHA-256 in `reports/index.csv`. Manual and image-only transcriptions cannot be reproduced from a hash alone: re-inspect the cited page.
+- Formula audit after LibreOffice recalculation: {'cells_checked': 1938, 'numeric_differences': 0, 'mismatches': 0, 'excel_errors': 0}.
+- Handoff zip: 470 files; rendered evidence page images included: 347; admission image paths without an included image: 0.
+- Source PDFs are NOT included (100 files); each is listed with URL and SHA-256 in `reports/index.csv`. Manual and image-only transcriptions cannot be reproduced from a hash alone: re-inspect the cited page.
 
 ## Not done
 
 - No regression, hypothesis test or volatility estimate was run, and the thesis was not updated.
 - No candidate (unverified) amount was promoted to the panel.
-- Going-concern codes remain unknown for 52 panel rows.
+- Going-concern codes remain unknown for 58 panel rows.

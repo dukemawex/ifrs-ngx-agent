@@ -60,7 +60,13 @@ def ensure_admissions_template() -> None:
 
 
 DOC_SCOPES = {"consolidated_and_separate", "separate_only", "single_entity", "group_only", "holding_company_report"}
-BANK_COLUMN_SCOPES = {"bank_separate", "bank_single_entity"}
+BANK_COLUMN_SCOPES = {"bank_separate", "bank_single_entity", "bank_subsidiary_disclosure"}
+# bank_subsidiary_disclosure: an explicit operating-bank column in the audited notes of a holding-company report
+# (e.g. GTCO 'GT Bank Nigeria' condensed results). Admissible only inside a holding_company_report, only when the
+# reviewer has established entity-only (Nigeria operating bank, not subgroup) scope in column_scope_basis.
+SCOPE_LABEL = {"bank_separate": "Standalone operating bank",
+               "bank_single_entity": "Standalone operating bank",
+               "bank_subsidiary_disclosure": "Operating bank: audited HoldCo package - explicit operating-bank subsidiary disclosure"}
 GC_APPLICABLE = {"covers_bank_separate", "bank_single_entity"}
 # Variables whose printed presentation is a deduction/expense and may be stored with the
 # panel's expense-positive convention. Any other sign change is rejected.
@@ -126,6 +132,8 @@ def check_scope(r: dict) -> list[str]:
         errs.append("bank_separate column claimed in a document without separate statements")
     elif cs == "bank_single_entity" and ds != "single_entity":
         errs.append("bank_single_entity column claimed in a document that is not single-entity")
+    elif cs == "bank_subsidiary_disclosure" and ds != "holding_company_report":
+        errs.append("bank_subsidiary_disclosure column claimed outside a holding-company report")
     if not str(r.get("column_scope_basis", "")).strip():
         errs.append("column_scope_basis (verbatim heading evidence) missing")
     return errs
@@ -306,16 +314,17 @@ def run() -> dict:
             continue
         core_ok = all(c in fields for c in CORE)
         versions = {fields[c]["reporting_version"] for c in CORE if c in fields}
+        scopes = {fields[c].get("column_scope", "") for c in CORE if c in fields}
         bal_ok = False
         if core_ok:
             a, l, e = (number(fields[c]["normalised_value_ngnm_or_pct"]) for c in ("assets", "liabilities", "equity"))
             unit = max(UNIT_FACTORS.get(fields[c]["raw_units"], 1.0) for c in ("assets", "liabilities", "equity"))
             bal_ok = abs(a - l - e) <= tolerance(3, unit)
-        if core_ok and len(versions) == 1 and bal_ok:
+        if core_ok and len(versions) == 1 and len(scopes) == 1 and bal_ok:
             row = {k: "" for k in fieldnames}
             row.update({"bank": b, "year": y, "tier": cohort[b]["analytical_tier"],
                         "regime": "IAS 39" if y < C.ADOPTION_YEAR else "IFRS 9",
-                        "origin": "Admitted this run", "scope": "Standalone operating bank",
+                        "origin": "Admitted this run", "scope": SCOPE_LABEL.get(next(iter(scopes)), "Standalone operating bank"),
                         "version_note": next(iter(versions)),
                         "source_url": fields["assets"]["source_url"]})
             for v, r in fields.items():
@@ -327,7 +336,7 @@ def run() -> dict:
                             "basis": ";".join(r["evidence_id"] for r in fields.values()), "reason": "core set admitted and reconciled"})
         else:
             partial_new.append({"bank": b, "year": y, "admitted_fields": ";".join(sorted(fields)),
-                                "core_complete": core_ok, "single_version": len(versions) == 1, "balance_ok": bal_ok})
+                                "core_complete": core_ok, "single_version": len(versions) == 1 and len(scopes) <= 1, "balance_ok": bal_ok})
 
     # 3. Recompute derived ratios from eligible inputs only.
     recompute_diffs = 0

@@ -89,6 +89,7 @@ def release_stats() -> dict:
                              "qualified": sum(bool(b.get("qualification")) for b in backing)},
         "going_concern": {"reviews_recorded": len(reviews), "reviews_coded_1": sum(r["gcu_code"] == "1" for r in reviews),
                           "partial_reviews": sum(r["report_reviewed"].startswith("partially") for r in gcr),
+                          "not_coded_holdco": sum(r["report_reviewed"] == "not coded" for r in gcr),
                           "not_reviewed_listed": sum(r["gcu_code"] == "" for r in gcr),
                           "panel_coded": len(gc_panel), "panel_unknown": len(panel) - len(gc_panel),
                           "panel_coded_1": sum(number(r["value"]) == 1 for r in gc_panel),
@@ -174,7 +175,8 @@ def render(stats: dict, audit: dict, handoff: dict) -> str:
     L += [f"- {k}: " + "; ".join(v["excluded_rows"]) for k, v in stats["endpoints"].items() if v["excluded_rows"]]
     L += ["", "## Going concern", "",
           f"- Full original-year auditor reports reviewed and recorded: {g['reviews_recorded']} ({g['reviews_coded_1']} coded 1); "
-          f"partially available reports (left uncoded): {g.get('partial_reviews', 0)}.",
+          f"partially available reports (left uncoded): {g.get('partial_reviews', 0)}; "
+          f"HoldCo-derived bank-years with no opinion on the operating bank (left uncoded): {g.get('not_coded_holdco', 0)}.",
           f"- Bank-years explicitly listed as not reviewed: {g['not_reviewed_listed']}.",
           f"- Panel rows coded: {g['panel_coded']} ({g['panel_coded_1']} coded 1); unknown: {g['panel_unknown']}. Unknown is not zero.",
           f"- Of the coded rows: {g['baseline_codes_retained']} baseline codes retained ({g['baseline_codes_confirmed_by_review']} confirmed by this review), "

@@ -6,6 +6,14 @@ Access,2019,Tier 1,IFRS 9,1,21.29694843831219,True,True,True,False,True,False,,,
 Access,2020,Tier 1,IFRS 9,1,-0.9389121414182028,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported",-65407.286,7624979.724,6307588.216,6966283.970000001
 Access,2021,Tier 1,IFRS 9,1,5.794774222999028,True,True,True,True,True,False,,,,,"2021 annual report, as originally reported",500834.811,9660760.556,7624979.724,8642870.14
 Access,2022,Tier 1,IFRS 9,1,6.294167504916755,True,True,True,True,True,False,,,,,"2022 financial statements, as originally reported",698528.0,12535280.0,9660761.0,11098020.5
+Ecobank Nigeria,2013,Tier 2,IAS 39,0,0.3306383128401228,True,True,True,False,True,False,,,,,"2013 annual report, as originally reported",4606.0,1460811.0,1325315.0,1393063.0
+Ecobank Nigeria,2014,Tier 2,IAS 39,0,-6.846638235129492,True,True,True,True,True,False,,,,,"2014 annual report, as originally reported",-110701.0,1772922.0,1460811.0,1616866.5
+Ecobank Nigeria,2015,Tier 2,IAS 39,0,1.3584057276292516,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",24229.0,1794348.0,1772922.0,1783635.0
+Ecobank Nigeria,2018,Tier 2,IFRS 9,1,1.649821699782205,True,True,True,False,True,False,,,,,"2018 annual report, as originally reported",31236.0,1956830.0,1829761.0,1893295.5
+Ecobank Nigeria,2019,Tier 2,IFRS 9,1,2.5033370086572124,True,True,True,True,True,False,,,,,"2019 annual report, as originally reported",49052.0,1991040.0,1927889.0,1959464.5
+Ecobank Nigeria,2020,Tier 2,IFRS 9,1,-0.6353177498329245,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported",-13271.0,2186712.0,1991040.0,2088876.0
+Ecobank Nigeria,2021,Tier 2,IFRS 9,1,-3.7213173480572914,True,True,True,True,True,False,,,,,"2021 annual report, as originally reported",-86740.0,2475079.0,2186711.0,2330895.0
+Ecobank Nigeria,2022,Tier 2,IFRS 9,1,-2.805312596425435,True,True,True,True,True,False,,,,,"2022 annual report, as originally reported",-75642.0,2917689.0,2475079.0,2696384.0
 Fidelity,2013,Tier 2,IAS 39,0,1.508135241085661,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,15048.0,1081217.0,914360.0,997788.5
 Fidelity,2014,Tier 2,IAS 39,0,4.72304101590571,True,True,True,True,True,False,,,,,"2014 annual report, as originally reported",53565.0,1187025.0,1081217.0,1134121.0
 Fidelity,2015,Tier 2,IAS 39,0,8.858470935571185,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",107132.0,1231722.0,1187025.0,1209373.5
@@ -16,10 +24,14 @@ Fidelity,2022,Tier 2,IFRS 9,1,8.187454836760294,True,True,True,False,True,False,
 First Bank,2014,Tier 1,IAS 39,0,-15.040260039035541,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,-506665.0,3490871.0,3246579.0,3368725.0
 First Bank,2015,Tier 1,IAS 39,0,8.96793109906927,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",305952.0,3332375.0,3490871.0,3411623.0
 First Bank,2017,Tier 1,IAS 39,0,3.0869737652766167,True,True,True,False,True,False,,,,,"FY2017 financial statements, as originally reported",113212.0,3777039.0,3557782.0,3667410.5
+GTBank,2015,Tier 1,IAS 39,0,0.47359607263471626,True,True,True,False,True,False,,,,,"2015 annual report, as originally reported",10429.148,2277629.224,2126608.312,2202118.768
+GTBank,2016,Tier 1,IAS 39,0,11.73117725835293,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported (public mirror copy)",286884.139,2613340.074,2277629.224,2445484.649
 GTBank,2017,Tier 1,IAS 39,0,12.99668417159865,True,True,True,False,True,True,,AUTO-FALLBACK,fallback: labelled restatement (original-year report unavailable; source xs-21e7fbfbf9),fallback: labelled restatement,2018 annual report; 2017 restated comparative,353397.327,2824928.985,2613340.074,2719134.5295
 GTBank,2018,Tier 1,IFRS 9,1,8.112963352064678,True,True,True,True,True,False,,,,,"2018 annual report, as originally reported",224625.664,2712521.494,2824928.985,2768725.2395
 GTBank,2019,Tier 1,IFRS 9,1,6.81106712914999,True,True,True,True,True,False,,,,,"2019 annual report, as originally reported",197853.667,3097248.495,2712521.494,2904884.9945
 GTBank,2020,Tier 1,IFRS 9,1,9.157786437184006,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported",327793.446,4061543.605,3097248.495,3579396.05
+GTBank,2021,Tier 1,IFRS 9,1,8.663477932335564,True,True,True,True,True,False,,,,,GTCO 2021 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (GT Bank Nigeria condensed results),364670.769,4357033.134,4061543.605,4209288.3695
+GTBank,2022,Tier 1,IFRS 9,1,14.036981631408807,True,True,True,True,True,False,,,,,GTCO 2022 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (GT Bank Nigeria condensed results),671361.457,5208576.833,4357033.134,4782804.9835
 Stanbic,2021,Tier 2,IFRS 9,1,2.23780673994279,True,True,True,False,True,False,,,,,"2021 audited financial statements, as originally reported",55771.0,2614087.0,2370347.0,2492217.0
 Stanbic,2022,Tier 2,IFRS 9,1,-5.280733848322312,True,True,True,True,True,False,,,,,"2022 audited financial statements, as originally reported",-144391.0,2854509.0,2614087.0,2734298.0
 Sterling,2014,Tier 2,IAS 39,0,-0.09854310032808607,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,-755.006,824539.426,707797.181,766168.3034999999

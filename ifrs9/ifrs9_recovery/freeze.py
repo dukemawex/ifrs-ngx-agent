@@ -48,7 +48,14 @@ def run(release_id: str) -> dict:
     head = _git("rev-parse", "HEAD")
     if stats.get("git_commit") != head:
         raise SystemExit(f"release_stats commit {stats.get('git_commit')} != HEAD {head}: commit, then re-export")
-    dirty = [l for l in _git("status", "--porcelain", "--", "ifrs9_recovery", "tests", "data").splitlines() if l.strip()]
+    dirty = []
+    for line in _git("status", "--porcelain", "--", "ifrs9_recovery", "tests", "data").splitlines():
+        path = line[3:].strip()
+        if path.endswith(("data/inventory.json", "data/validate_state.json")):
+            changed = [l for l in _git("diff", "-U0", "--", path).splitlines() if l[:1] in "+-" and l[:3] not in ("+++", "---")]
+            if all(('"generated_utc"' in l or '"at"' in l) for l in changed):
+                continue  # run timestamps only
+        dirty.append(line)
     if dirty:
         raise SystemExit(f"uncommitted code/data changes: {dirty[:5]}")
     if tests.get("exit_status") != 0:

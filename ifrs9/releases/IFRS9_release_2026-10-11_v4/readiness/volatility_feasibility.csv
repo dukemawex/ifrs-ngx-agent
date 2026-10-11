@@ -1,0 +1,121 @@
+outcome,bank,tier,n_pre,years_pre,sd_pre,n_post,years_post,sd_post,feasible,units
+car,Access,Tier 1,3,2015 2016 2017,0.8477,3,2020 2021 2022,2.5498,True,percent
+car,Ecobank Nigeria,Tier 2,3,2013 2014 2015,1.5275,5,2018 2019 2020 2021 2022,3.8215,True,percent
+car,Fidelity,Tier 2,5,2013 2014 2015 2016 2017,4.3876,3,2020 2021 2022,0.5719,True,percent
+car,First Bank,Tier 1,5,2013 2014 2015 2016 2017,1.7856,0,,,False,percent
+car,GTBank,Tier 1,2,2015 2016,1.1455,2,2019 2020,0.7849,False,percent
+car,Stanbic,Tier 2,0,,,3,2020 2021 2022,1.6921,False,percent
+car,Sterling,Tier 2,5,2013 2014 2015 2016 2017,2.6263,5,2018 2019 2020 2021 2022,1.8501,True,percent
+car,UBA,Tier 1,5,2013 2014 2015 2016 2017,1.3416,5,2018 2019 2020 2021 2022,1.0431,True,percent
+car,Union,Tier 2,5,2013 2014 2015 2016 2017,4.3219,5,2018 2019 2020 2021 2022,1.7731,True,percent
+car,Unity,Tier 2,2,2016 2017,106.8368,4,2018 2019 2021 2022,69.656,False,percent
+car,Wema,Tier 2,3,2014 2015 2017,2.0656,5,2018 2019 2020 2021 2022,2.4425,True,percent
+car,Zenith,Tier 1,5,2013 2014 2015 2016 2017,2.8636,4,2018 2019 2021 2022,2.2174,True,percent
+car_computed,Access,Tier 1,3,2015 2016 2017,0.8382,3,2020 2021 2022,2.5487,True,percent
+car_computed,Ecobank Nigeria,Tier 2,3,2013 2014 2015,1.3454,5,2018 2019 2020 2021 2022,3.8195,True,percent
+car_computed,Fidelity,Tier 2,4,2014 2015 2016 2017,3.5963,3,2020 2021 2022,0.5688,True,percent
+car_computed,First Bank,Tier 1,3,2015 2016 2017,0.3955,0,,,False,percent
+car_computed,GTBank,Tier 1,2,2015 2016,1.1462,2,2019 2020,0.7848,False,percent
+car_computed,Stanbic,Tier 2,0,,,3,2020 2021 2022,1.6768,False,percent
+car_computed,Sterling,Tier 2,3,2015 2016 2017,3.6736,3,2020 2021 2022,1.867,True,percent
+car_computed,UBA,Tier 1,3,2015 2016 2017,0.2283,5,2018 2019 2020 2021 2022,1.1303,True,percent
+car_computed,Union,Tier 2,3,2015 2016 2017,2.2677,5,2018 2019 2020 2021 2022,1.7871,True,percent
+car_computed,Unity,Tier 2,2,2016 2017,106.842,2,2021 2022,2.477,False,percent
+car_computed,Wema,Tier 2,0,,,4,2019 2020 2021 2022,1.454,False,percent
+car_computed,Zenith,Tier 1,3,2013 2016 2017,2.3621,4,2018 2019 2021 2022,2.2473,True,percent
+roa,Access,Tier 1,4,2014 2015 2016 2017,0.4442,4,2019 2020 2021 2022,0.1567,True,percent
+roa,Ecobank Nigeria,Tier 2,4,2013 2014 2015 2017,0.5268,5,2018 2019 2020 2021 2022,0.5215,True,percent
+roa,Fidelity,Tier 2,5,2013 2014 2015 2016 2017,0.283,3,2019 2020 2022,0.1944,True,percent
+roa,First Bank,Tier 1,3,2014 2015 2017,1.1787,0,,,False,percent
+roa,GTBank,Tier 1,4,2014 2015 2016 2017,0.6789,5,2018 2019 2020 2021 2022,1.4032,True,percent
+roa,Stanbic,Tier 2,5,2013 2014 2015 2016 2017,0.7318,4,2018 2019 2021 2022,1.0155,True,percent
+roa,Sterling,Tier 2,4,2014 2015 2016 2017,0.2869,4,2019 2020 2021 2022,0.1049,True,percent
+roa,UBA,Tier 1,4,2014 2015 2016 2017,0.2595,5,2018 2019 2020 2021 2022,0.3976,True,percent
+roa,Union,Tier 2,4,2014 2015 2016 2017,0.5781,5,2018 2019 2020 2021 2022,0.2979,True,percent
+roa,Unity,Tier 2,4,2014 2015 2016 2017,3.1277,3,2019 2021 2022,0.5878,True,percent
+roa,Wema,Tier 2,4,2013 2015 2016 2017,0.0344,4,2018 2019 2020 2021,0.1479,True,percent
+roa,Zenith,Tier 1,4,2013 2015 2016 2017,0.2925,4,2018 2019 2020 2022,0.406,True,percent
+eqta,Access,Tier 1,5,2013 2014 2015 2016 2017,0.6211,5,2018 2019 2020 2021 2022,1.1035,True,percent
+eqta,Ecobank Nigeria,Tier 2,5,2013 2014 2015 2016 2017,1.5183,5,2018 2019 2020 2021 2022,1.4817,True,percent
+eqta,Fidelity,Tier 2,5,2013 2014 2015 2016 2017,0.3166,5,2018 2019 2020 2021 2022,1.4821,True,percent
+eqta,First Bank,Tier 1,5,2013 2014 2015 2016 2017,1.7395,0,,,False,percent
+eqta,GTBank,Tier 1,5,2013 2014 2015 2016 2017,1.3057,5,2018 2019 2020 2021 2022,1.6686,True,percent
+eqta,Stanbic,Tier 2,5,2013 2014 2015 2016 2017,0.8042,5,2018 2019 2020 2021 2022,0.6561,True,percent
+eqta,Sterling,Tier 2,5,2013 2014 2015 2016 2017,1.1117,5,2018 2019 2020 2021 2022,0.9662,True,percent
+eqta,UBA,Tier 1,5,2013 2014 2015 2016 2017,1.7289,5,2018 2019 2020 2021 2022,1.0983,True,percent
+eqta,Union,Tier 2,5,2013 2014 2015 2016 2017,1.006,5,2018 2019 2020 2021 2022,2.1986,True,percent
+eqta,Unity,Tier 2,5,2013 2014 2015 2016 2017,76.171,5,2018 2019 2020 2021 2022,36.4476,True,percent
+eqta,Wema,Tier 2,5,2013 2014 2015 2016 2017,0.6703,5,2018 2019 2020 2021 2022,2.0608,True,percent
+eqta,Zenith,Tier 1,5,2013 2014 2015 2016 2017,0.8201,5,2018 2019 2020 2021 2022,1.1416,True,percent
+ocf_ratio,Access,Tier 1,3,2015 2016 2017,5.8192,4,2019 2020 2021 2022,9.3886,True,percent
+ocf_ratio,Ecobank Nigeria,Tier 2,3,2013 2014 2015,4.4701,5,2018 2019 2020 2021 2022,2.7065,True,percent
+ocf_ratio,Fidelity,Tier 2,5,2013 2014 2015 2016 2017,5.4623,2,2020 2022,1.2529,False,percent
+ocf_ratio,First Bank,Tier 1,3,2014 2015 2017,12.5138,0,,,False,percent
+ocf_ratio,GTBank,Tier 1,3,2015 2016 2017,6.894,5,2018 2019 2020 2021 2022,2.7592,True,percent
+ocf_ratio,Stanbic,Tier 2,0,,,2,2021 2022,5.3164,False,percent
+ocf_ratio,Sterling,Tier 2,4,2014 2015 2016 2017,9.2738,4,2019 2020 2021 2022,4.7891,True,percent
+ocf_ratio,UBA,Tier 1,4,2014 2015 2016 2017,5.5086,5,2018 2019 2020 2021 2022,10.4476,True,percent
+ocf_ratio,Union,Tier 2,4,2014 2015 2016 2017,8.4353,5,2018 2019 2020 2021 2022,6.3908,True,percent
+ocf_ratio,Unity,Tier 2,4,2014 2015 2016 2017,2.9742,3,2019 2021 2022,5.4075,True,percent
+ocf_ratio,Wema,Tier 2,4,2013 2015 2016 2017,5.3278,4,2018 2019 2020 2021,7.4514,True,percent
+ocf_ratio,Zenith,Tier 1,4,2013 2015 2016 2017,8.5846,4,2018 2019 2020 2022,5.5565,True,percent
+allr,Access,Tier 1,3,2015 2016 2017,0.6416,4,2019 2020 2021 2022,2.2668,True,percent
+allr,Ecobank Nigeria,Tier 2,3,2013 2014 2015,1.8428,5,2018 2019 2020 2021 2022,2.4143,True,percent
+allr,Fidelity,Tier 2,5,2013 2014 2015 2016 2017,0.229,3,2020 2021 2022,0.5892,True,percent
+allr,First Bank,Tier 1,5,2013 2014 2015 2016 2017,4.5311,0,,,False,percent
+allr,GTBank,Tier 1,3,2015 2016 2017,1.58,3,2018 2019 2020,2.1041,True,percent
+allr,Stanbic,Tier 2,0,,,3,2020 2021 2022,1.1086,False,percent
+allr,Sterling,Tier 2,5,2013 2014 2015 2016 2017,1.0519,5,2018 2019 2020 2021 2022,0.4743,True,percent
+allr,UBA,Tier 1,5,2013 2014 2015 2016 2017,0.7736,5,2018 2019 2020 2021 2022,0.8392,True,percent
+allr,Union,Tier 2,5,2013 2014 2015 2016 2017,1.4488,4,2019 2020 2021 2022,2.091,True,percent
+allr,Unity,Tier 2,3,2015 2016 2017,11.0967,5,2018 2019 2020 2021 2022,0.6302,True,percent
+allr,Wema,Tier 2,3,2014 2015 2017,0.3795,5,2018 2019 2020 2021 2022,0.2933,True,percent
+allr,Zenith,Tier 1,5,2013 2014 2015 2016 2017,2.0325,5,2018 2019 2020 2021 2022,2.6285,True,percent
+impairment_assets,Access,Tier 1,4,2014 2015 2016 2017,0.141,4,2019 2020 2021 2022,0.2827,True,percent
+impairment_assets,Ecobank Nigeria,Tier 2,4,2013 2014 2015 2017,0.6045,5,2018 2019 2020 2021 2022,0.513,True,percent
+impairment_assets,Fidelity,Tier 2,5,2013 2014 2015 2016 2017,0.196,3,2019 2020 2022,0.4852,True,percent
+impairment_assets,First Bank,Tier 1,2,2014 2015,2.0489,0,,,False,percent
+impairment_assets,GTBank,Tier 1,3,2015 2016 2017,1.2247,3,2018 2019 2020,0.1375,True,percent
+impairment_assets,Stanbic,Tier 2,5,2013 2014 2015 2016 2017,0.8976,4,2018 2019 2021 2022,0.2446,True,percent
+impairment_assets,Sterling,Tier 2,4,2014 2015 2016 2017,0.228,4,2019 2020 2021 2022,0.0818,True,percent
+impairment_assets,UBA,Tier 1,4,2014 2015 2016 2017,0.548,5,2018 2019 2020 2021 2022,0.1593,True,percent
+impairment_assets,Union,Tier 2,3,2015 2016 2017,0.5596,5,2018 2019 2020 2021 2022,0.1616,True,percent
+impairment_assets,Unity,Tier 2,3,2014 2015 2016,2.0327,3,2019 2021 2022,0.664,True,percent
+impairment_assets,Wema,Tier 2,4,2013 2015 2016 2017,0.4121,3,2018 2019 2020,0.1831,True,percent
+impairment_assets,Zenith,Tier 1,4,2013 2015 2016 2017,0.8355,4,2018 2019 2020 2022,0.1584,True,percent
+npl_calc,Ecobank Nigeria,Tier 2,0,,,5,2018 2019 2020 2021 2022,6.4343,False,percent
+npl_calc,Union,Tier 2,3,2013 2014 2017,8.8328,4,2018 2019 2021 2022,1.8832,True,percent
+npl_calc,Wema,Tier 2,0,,,1,2021,,False,percent
+npl_calc,Zenith,Tier 1,4,2014 2015 2016 2017,1.2698,2,2018 2019,0.4678,False,percent
+broad_coverage,Ecobank Nigeria,Tier 2,0,,,5,2018 2019 2020 2021 2022,11.6633,False,percent
+broad_coverage,Union,Tier 2,3,2013 2014 2017,61.5692,3,2019 2021 2022,28.6802,True,percent
+broad_coverage,Wema,Tier 2,0,,,1,2021,,False,percent
+broad_coverage,Zenith,Tier 1,4,2014 2015 2016 2017,25.0571,2,2018 2019,33.738,False,percent
+stage3_coverage,Union,Tier 2,0,,,4,2018 2019 2020 2021,6.5034,False,percent
+stage3_coverage,Unity,Tier 2,0,,,1,2022,,False,percent
+liquidity,Sterling,Tier 2,1,2014,,0,,,False,percent
+liquidity,UBA,Tier 1,3,2015 2016 2017,7.3931,4,2018 2019 2020 2021,5.5198,True,percent
+liquidity,Wema,Tier 2,1,2017,,1,2018,,False,percent
+leverage,Access,Tier 1,5,2013 2014 2015 2016 2017,0.6211,5,2018 2019 2020 2021 2022,1.1035,True,percent
+leverage,Ecobank Nigeria,Tier 2,5,2013 2014 2015 2016 2017,1.5183,5,2018 2019 2020 2021 2022,1.4817,True,percent
+leverage,Fidelity,Tier 2,5,2013 2014 2015 2016 2017,0.3166,5,2018 2019 2020 2021 2022,1.4821,True,percent
+leverage,First Bank,Tier 1,5,2013 2014 2015 2016 2017,1.7395,0,,,False,percent
+leverage,GTBank,Tier 1,5,2013 2014 2015 2016 2017,1.3057,5,2018 2019 2020 2021 2022,1.6686,True,percent
+leverage,Stanbic,Tier 2,5,2013 2014 2015 2016 2017,0.8042,5,2018 2019 2020 2021 2022,0.6561,True,percent
+leverage,Sterling,Tier 2,5,2013 2014 2015 2016 2017,1.1117,5,2018 2019 2020 2021 2022,0.9662,True,percent
+leverage,UBA,Tier 1,5,2013 2014 2015 2016 2017,1.7289,5,2018 2019 2020 2021 2022,1.0983,True,percent
+leverage,Union,Tier 2,5,2013 2014 2015 2016 2017,1.006,5,2018 2019 2020 2021 2022,2.1986,True,percent
+leverage,Unity,Tier 2,5,2013 2014 2015 2016 2017,76.171,5,2018 2019 2020 2021 2022,36.4476,True,percent
+leverage,Wema,Tier 2,5,2013 2014 2015 2016 2017,0.6703,5,2018 2019 2020 2021 2022,2.0608,True,percent
+leverage,Zenith,Tier 1,5,2013 2014 2015 2016 2017,0.8201,5,2018 2019 2020 2021 2022,1.1416,True,percent
+gcu,Access,Tier 1,3,2015 2016 2017,0.0,3,2019 2020 2021,0.0,True,indicator
+gcu,Ecobank Nigeria,Tier 2,3,2013 2014 2015,0.0,5,2018 2019 2020 2021 2022,0.0,True,indicator
+gcu,Fidelity,Tier 2,4,2014 2015 2016 2017,0.0,3,2019 2020 2022,0.0,True,indicator
+gcu,First Bank,Tier 1,1,2016,,0,,,False,indicator
+gcu,GTBank,Tier 1,2,2015 2016,0.0,3,2018 2019 2020,0.0,False,indicator
+gcu,Stanbic,Tier 2,0,,,4,2018 2019 2021 2022,0.0,False,indicator
+gcu,Sterling,Tier 2,4,2014 2015 2016 2017,0.0,4,2019 2020 2021 2022,0.0,True,indicator
+gcu,Union,Tier 2,1,2016,,3,2018 2020 2022,0.0,False,indicator
+gcu,Unity,Tier 2,3,2015 2016 2017,0.0,3,2019 2021 2022,0.0,True,indicator
+gcu,Wema,Tier 2,1,2016,,3,2018 2020 2022,0.0,False,indicator
+gcu,Zenith,Tier 1,1,2013,,2,2019 2020,0.0,False,indicator

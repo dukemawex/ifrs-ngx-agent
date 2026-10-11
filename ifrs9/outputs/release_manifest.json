@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-10-11T11:56:10+00:00",
-  "git_commit_at_export": "8fc4264da34e5ad7ccec16f5322163f580aa7e64",
+  "generated_utc": "2026-10-11T11:58:06+00:00",
+  "git_commit_at_export": "c4b5ef9d78bbee612df0ef0e0008e1c3b5f56692",
   "git_branch": "claude/zen-hamilton-v2s80b",
-  "run_id": "export-2026-10-11T11:56:10+00:00",
+  "run_id": "export-2026-10-11T11:58:06+00:00",
   "input_hashes": {
     "IFRS9_Data_Update_Pack_20261010.zip": "19ec27a6b0aab7899f8a538acecd755301c0257c050c1bb6079c6b94a3aabbda",
     "IFRS9_Master_Data_Updated_20261010.xlsx": "38e6ea7ded4e61d3b12203c38f15a257baf1b8d641bab8ab9a9a50512303d0cf",
@@ -23,7 +23,7 @@
     "data/review/admissions.csv": "7c780313bd0c9c52167dc0f45acb4959a129836dd6efedf13b78e38179bd4f3b",
     "data/review/going_concern_reviews.csv": "f911348968fbaf3953b5ddabd07561c9ed44bae7eb9c79dc1ec6c47e340ec86f",
     "data/review/version_decisions.csv": "e69ee6bc9212465c498de9e1d12c119826bf20e52a747e1eed4a8db438828b3b",
-    "outputs/IFRS9_Verified_Master.xlsx": "6a9406899094e5bfff10a42084c4c2dac8dd006b91495b35c795c5c380fd54f5"
+    "outputs/IFRS9_Verified_Master.xlsx": "e5976c8e5414b1f3bef9ca1df633b967d492b92dec21ea29e770ad0bb9ac15eb"
   },
   "note": "git_commit_at_export is the commit checked out when exporting; outputs are committed in the following commit."
 }

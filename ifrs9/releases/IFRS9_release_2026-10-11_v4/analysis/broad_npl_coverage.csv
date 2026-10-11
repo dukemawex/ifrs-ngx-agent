@@ -1,0 +1,20 @@
+bank,year,tier,regime,ifrs9_d,value,available,descriptive_use,longitudinal_use,change_comparable,inferential_use,sensitivity_drop,excluded_uses,rule_ids,reasons,fallback_class,primary_version,loan_allowance,npl_amount
+Ecobank Nigeria,2018,Tier 2,IFRS 9,1,66.2790514332566,True,True,True,False,True,False,,,,,"2018 annual report, as originally reported",84071.0,126844.0
+Ecobank Nigeria,2019,Tier 2,IFRS 9,1,46.438917236802965,True,True,True,True,True,False,,,,,"2019 annual report, as originally reported",101476.0,218515.0
+Ecobank Nigeria,2020,Tier 2,IFRS 9,1,56.59570799780938,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported",111609.0,197204.0
+Ecobank Nigeria,2021,Tier 2,IFRS 9,1,53.54045527990591,True,True,True,True,True,False,,,,,"2021 annual report, as originally reported",97419.0,181954.0
+Ecobank Nigeria,2022,Tier 2,IFRS 9,1,76.3588672463205,True,True,True,True,True,False,,,,,"2022 annual report, as originally reported",62880.0,82348.0
+Union,2013,Tier 2,IAS 39,0,150.99677513925536,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,20602.0,13644.0
+Union,2014,Tier 2,IAS 39,0,139.50823585581284,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,23376.0,16756.0
+Union,2017,Tier 2,IAS 39,0,39.07665898721597,True,True,True,False,True,False,,,,,2018 report: restated 2017 main statements,43252.0,110685.0
+Union,2018,Tier 2,IFRS 9,1,117.82782626766418,True,True,False,False,False,False,inferential;longitudinal,AUTO-POOL;EL-UNION18-ALLOWANCE,"Allowance pool from the original 2018 presentation; revised comparatives (reinstatement 496,630/68,593 and 496,820/68,783) unreconciled. Qualified descriptive presentation only; excluded from pooled allowance inference. | panel allowance_pool_status: Exclude from pooled allowance inference: unreconciled revised comparatives",,Original 2018 presentation; loan reinstatement alternatives held separately,45359.0,38496.0
+Union,2019,Tier 2,IFRS 9,1,128.55293440736477,True,True,True,False,True,False,,,,,2020 audited-report comparative,44685.0,34760.0
+Union,2021,Tier 2,IFRS 9,1,78.28763579927573,True,True,True,False,True,False,,,,,2022 audited-report comparative,30266.0,38660.0
+Union,2022,Tier 2,IFRS 9,1,79.48902572251465,True,True,True,True,True,False,,,,,2022 audited-report current-year,32015.0,40276.0
+Wema,2021,Tier 2,IFRS 9,1,78.48094955561066,True,True,True,False,True,True,,AUTO-FALLBACK,fallback: comparative (original-year report unavailable; source pdf-2b23016b97),fallback: comparative,"2022 annual report; 2021 comparative, not labelled restated",16687.668,21263.336
+Zenith,2014,Tier 1,IAS 39,0,95.92532283106752,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,25331.0,26407.0
+Zenith,2015,Tier 1,IAS 39,0,115.69434096725082,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,35716.0,30871.0
+Zenith,2016,Tier 1,IAS 39,0,95.68404050228389,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported (annualreports.com archive of LSE-filed report)",55092.0,57577.0
+Zenith,2017,Tier 1,IAS 39,0,148.90775905295516,True,True,True,True,True,False,,,,,"2017 annual report, as originally reported (annualreports.com archive of LSE-filed report)",136605.0,91738.0
+Zenith,2018,Tier 1,IFRS 9,1,199.71715426967506,True,True,True,True,True,False,,,,,"2018 annual report, as originally reported (annualreports.com archive of LSE-filed report)",184998.0,92630.0
+Zenith,2019,Tier 1,IFRS 9,1,152.00438380405603,True,True,True,True,True,False,,,,,"2019 annual report, as originally reported (annualreports.com archive of LSE-filed report)",151179.0,99457.0

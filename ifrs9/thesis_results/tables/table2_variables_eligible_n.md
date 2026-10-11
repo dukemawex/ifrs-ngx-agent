@@ -3,12 +3,12 @@
 | variable | definition | units | available_N | eligible_N | excluded_N | banks | pre | post | tier1 | tier2 | fallback_rows_in_eligible | analysis_role | excluded_rows |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Allowance / gross loans | Loan-loss allowance / gross customer loans | % | 93 | 92 | 1 | 12 | 45 | 47 | 38 | 54 | 5 | inferential models | Union 2018 (AUTO-POOL;EL-UNION18-ALLOWANCE) |
-| Impairment / average assets | Total impairment charge / average total assets | % | 89 | 87 | 2 | 12 | 44 | 43 | 33 | 54 | 2 | inferential models | Unity 2017 (EL-UNITY17-IMP); Wema 2021 (AUTO-FALLBACK;EL-WEMA21-IMP) |
+| Impairment / average assets | Total impairment charge / average total assets | % | 90 | 88 | 2 | 12 | 45 | 43 | 33 | 55 | 2 | inferential models | Unity 2017 (EL-UNITY17-IMP); Wema 2021 (AUTO-FALLBACK;EL-WEMA21-IMP) |
 | CAR | Reported capital adequacy ratio (full-impact basis where both printed) | % | 87 | 84 | 3 | 12 | 41 | 43 | 33 | 51 | 2 | inferential models | Fidelity 2016 (AUTO-FLAG;EL-FID16-CAR); GTBank 2015 (AUTO-FLAG); Wema 2021 (AUTO-FALLBACK;AUTO-FLAG;EL-WEMA21-CAR) |
-| ROA | Profit after tax / average total assets | % | 94 | 94 | 0 | 12 | 48 | 46 | 37 | 57 | 3 | inferential models |  |
+| ROA | Profit after tax / average total assets | % | 95 | 95 | 0 | 12 | 49 | 46 | 37 | 58 | 3 | inferential models |  |
 | OCF / average assets | Operating cash flow / average total assets | % | 84 | 84 | 0 | 12 | 41 | 43 | 35 | 49 | 3 | inferential models |  |
-| Equity / assets | Total equity / total assets | % | 114 | 114 | 0 | 12 | 59 | 55 | 45 | 69 | 7 | inferential models |  |
-| Leverage | Total liabilities / total assets | % | 114 | 114 | 0 | 12 | 59 | 55 | 45 | 69 | 7 | inferential models |  |
+| Equity / assets | Total equity / total assets | % | 115 | 115 | 0 | 12 | 60 | 55 | 45 | 70 | 7 | inferential models |  |
+| Leverage | Total liabilities / total assets | % | 115 | 115 | 0 | 12 | 60 | 55 | 45 | 70 | 7 | inferential models |  |
 | NPL ratio | NPL amount / gross loans | % | 19 | 19 | 0 | 4 | 7 | 12 | 6 | 13 | 1 | descriptive only (too sparse) |  |
 | Broad NPL coverage | Total loan allowance / NPL amount | % | 19 | 18 | 1 | 4 | 7 | 11 | 6 | 12 | 1 | descriptive only (too sparse) | Union 2018 (AUTO-POOL;EL-UNION18-ALLOWANCE) |
 | Stage 3 coverage | Stage 3 allowance / Stage 3 gross exposure | % | 6 | 5 | 1 | 2 | 0 | 5 | 0 | 5 | 0 | descriptive only (too sparse) | Unity 2021 (EL-UNITY21-S3) |

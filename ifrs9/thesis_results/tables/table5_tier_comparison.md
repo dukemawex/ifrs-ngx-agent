@@ -6,28 +6,28 @@
 | Allowance / gross loans | Pre-IFRS 9 | 21.00 | 24.00 | 3.69 | 5.93 | 2.51 | 3.93 | -2.23 | 0.04 |
 | Allowance / gross loans | Post-IFRS 9 | 17.00 | 30.00 | 4.49 | 4.28 | 4.14 | 3.48 | 0.21 | 0.42 |
 | Allowance / gross loans | Difference-in-means (T1 change - T2 change) |  |  |  |  |  |  | 2.45 |  |
-| Impairment / average assets | All years | 33.00 | 54.00 | 0.69 | 1.03 | 0.53 | 0.66 | -0.34 | 0.56 |
-| Impairment / average assets | Pre-IFRS 9 | 17.00 | 27.00 | 0.96 | 1.75 | 0.62 | 1.29 | -0.80 | 0.09 |
+| Impairment / average assets | All years | 33.00 | 55.00 | 0.69 | 1.02 | 0.53 | 0.65 | -0.33 | 0.60 |
+| Impairment / average assets | Pre-IFRS 9 | 17.00 | 28.00 | 0.96 | 1.71 | 0.62 | 1.15 | -0.75 | 0.13 |
 | Impairment / average assets | Post-IFRS 9 | 16.00 | 27.00 | 0.40 | 0.31 | 0.42 | 0.30 | 0.10 | 0.46 |
-| Impairment / average assets | Difference-in-means (T1 change - T2 change) |  |  |  |  |  |  | 0.89 |  |
+| Impairment / average assets | Difference-in-means (T1 change - T2 change) |  |  |  |  |  |  | 0.85 |  |
 | CAR | All years | 33.00 | 51.00 | 19.67 | -2.03 | 20.00 | 15.09 | 21.70 | 0.00 |
 | CAR | Pre-IFRS 9 | 19.00 | 22.00 | 19.23 | 4.36 | 19.55 | 16.02 | 14.88 | 0.01 |
 | CAR | Post-IFRS 9 | 14.00 | 29.00 | 20.25 | -6.88 | 20.00 | 14.70 | 27.13 | 0.00 |
 | CAR | Difference-in-means (T1 change - T2 change) |  |  |  |  |  |  | 12.26 |  |
-| ROA | All years | 37.00 | 57.00 | 2.72 | 1.05 | 2.36 | 1.08 | 1.67 | 0.00 |
-| ROA | Pre-IFRS 9 | 19.00 | 29.00 | 2.74 | 0.98 | 2.36 | 1.09 | 1.76 | 0.00 |
+| ROA | All years | 37.00 | 58.00 | 2.72 | 1.07 | 2.36 | 1.09 | 1.65 | 0.00 |
+| ROA | Pre-IFRS 9 | 19.00 | 30.00 | 2.74 | 1.03 | 2.36 | 1.10 | 1.71 | 0.00 |
 | ROA | Post-IFRS 9 | 18.00 | 28.00 | 2.70 | 1.12 | 2.31 | 1.00 | 1.58 | 0.00 |
-| ROA | Difference-in-means (T1 change - T2 change) |  |  |  |  |  |  | -0.18 |  |
+| ROA | Difference-in-means (T1 change - T2 change) |  |  |  |  |  |  | -0.13 |  |
 | OCF / average assets | All years | 35.00 | 49.00 | 4.29 | 0.53 | 5.79 | 1.14 | 3.76 | 0.04 |
 | OCF / average assets | Pre-IFRS 9 | 17.00 | 24.00 | -0.39 | -1.75 | 0.47 | -1.09 | 1.36 | 0.62 |
 | OCF / average assets | Post-IFRS 9 | 18.00 | 25.00 | 8.71 | 2.72 | 8.39 | 2.50 | 6.00 | 0.02 |
 | OCF / average assets | Difference-in-means (T1 change - T2 change) |  |  |  |  |  |  | 4.64 |  |
-| Equity / assets | All years | 45.00 | 69.00 | 13.70 | 3.21 | 13.80 | 10.72 | 10.49 | 0.00 |
-| Equity / assets | Pre-IFRS 9 | 25.00 | 34.00 | 14.81 | 9.04 | 14.58 | 12.36 | 5.77 | 0.05 |
+| Equity / assets | All years | 45.00 | 70.00 | 13.70 | 3.29 | 13.80 | 10.70 | 10.41 | 0.00 |
+| Equity / assets | Pre-IFRS 9 | 25.00 | 35.00 | 14.81 | 9.04 | 14.58 | 12.21 | 5.77 | 0.03 |
 | Equity / assets | Post-IFRS 9 | 20.00 | 35.00 | 12.32 | -2.45 | 11.21 | 9.92 | 14.77 | 0.02 |
 | Equity / assets | Difference-in-means (T1 change - T2 change) |  |  |  |  |  |  | 9.00 |  |
-| Leverage | All years | 45.00 | 69.00 | 86.30 | 96.79 | 86.20 | 89.28 | -10.49 | 0.00 |
-| Leverage | Pre-IFRS 9 | 25.00 | 34.00 | 85.19 | 90.96 | 85.42 | 87.64 | -5.77 | 0.05 |
+| Leverage | All years | 45.00 | 70.00 | 86.30 | 96.71 | 86.20 | 89.30 | -10.41 | 0.00 |
+| Leverage | Pre-IFRS 9 | 25.00 | 35.00 | 85.19 | 90.96 | 85.42 | 87.79 | -5.77 | 0.03 |
 | Leverage | Post-IFRS 9 | 20.00 | 35.00 | 87.68 | 102.45 | 88.79 | 90.08 | -14.77 | 0.02 |
 | Leverage | Difference-in-means (T1 change - T2 change) |  |  |  |  |  |  | -9.00 |  |
 | NPL ratio | All years | 6.00 | 13.00 | 3.20 | 10.75 | 3.39 | 6.92 | -7.55 | 0.00 |

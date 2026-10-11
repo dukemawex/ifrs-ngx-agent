@@ -1,0 +1,228 @@
+{
+  "release_id": "IFRS9_release_2026-10-11_v4",
+  "frozen_utc": "2026-10-11T11:58:16+00:00",
+  "code_commit": "c4b5ef9d78bbee612df0ef0e0008e1c3b5f56692",
+  "branch": "claude/zen-hamilton-v2s80b",
+  "panel_rows": 115,
+  "tests": {
+    "real-data regression tests": {
+      "passed": 43
+    },
+    "synthetic/mock unit tests": {
+      "passed": 62
+    }
+  },
+  "files": {
+    "verified_panel.csv": {
+      "sha256": "a902556f71702ed98e1389fb2f4af472ff46a7e4111da74a686149c4e77d22dd",
+      "bytes": 73498,
+      "source": "data/verified_panel.csv"
+    },
+    "field_status.csv": {
+      "sha256": "2031f1d83f3f79a3451260e8d8adcd9a14147822aa1bc00f91fc0a4832820077",
+      "bytes": 292667,
+      "source": "data/field_status.csv"
+    },
+    "outcome_eligibility.csv": {
+      "sha256": "1a649b633e1948f777475e94654da7eb4689ad2f50333202d891399544b5e213",
+      "bytes": 251700,
+      "source": "data/outcome_eligibility.csv"
+    },
+    "row_versions.csv": {
+      "sha256": "8c07cc0593391d8b6588e8ee50f16871b6d22cd306709d8361cd830b9e8844f5",
+      "bytes": 25439,
+      "source": "data/row_versions.csv"
+    },
+    "version_decisions.csv": {
+      "sha256": "e69ee6bc9212465c498de9e1d12c119826bf20e52a747e1eed4a8db438828b3b",
+      "bytes": 10570,
+      "source": "data/review/version_decisions.csv"
+    },
+    "version_reconciliations.csv": {
+      "sha256": "f864e81a2b5176509615c994918ae92ab66593a6f65e9ed72c9eb89441306548",
+      "bytes": 532,
+      "source": "data/review/version_reconciliations.csv"
+    },
+    "eligibility_rules.csv": {
+      "sha256": "4bdfb6c1280f36d4cd9c0b660478c87763b660a30d0575d74e58cf05d2396a94",
+      "bytes": 3616,
+      "source": "data/review/eligibility_rules.csv"
+    },
+    "conflicts.csv": {
+      "sha256": "15791d08037f5ff854278d9c8044877c1c15988b59e66118e417484156913c13",
+      "bytes": 40076,
+      "source": "data/conflicts.csv"
+    },
+    "reviewer_conflicts.csv": {
+      "sha256": "80af10a2c4db825b893f05a97fc92bc085033982bc7a0d88a67be3c27c176b3b",
+      "bytes": 3747,
+      "source": "data/review/reviewer_conflicts.csv"
+    },
+    "exceptions_register.csv": {
+      "sha256": "fc526c3d2b052a5e502b8a089dd3c0c3f1ec1f21c4e900940283d48f43dab1dd",
+      "bytes": 4857,
+      "source": "data/exceptions_register.csv"
+    },
+    "exception_investigations.md": {
+      "sha256": "0ea80054d0a9ea7f4c6707e66d8396fe58fec9bf9d076de9aab60253c7f02c4e",
+      "bytes": 4139,
+      "source": "data/review/exception_investigations.md"
+    },
+    "denominator_compatibility.csv": {
+      "sha256": "4d488897c3fa67be81a6194eaa059f3c84eae6283cafa0b6d9bdd71947fda51b",
+      "bytes": 14919,
+      "source": "data/denominator_compatibility.csv"
+    },
+    "going_concern_reviews.csv": {
+      "sha256": "f911348968fbaf3953b5ddabd07561c9ed44bae7eb9c79dc1ec6c47e340ec86f",
+      "bytes": 64856,
+      "source": "data/review/going_concern_reviews.csv"
+    },
+    "unresolved_gaps.csv": {
+      "sha256": "d4083003f2bcd1a3c10717d471081ab437f1dc4413d06abbaa1aeacd3c30b905",
+      "bytes": 83888,
+      "source": "data/unresolved_gaps.csv"
+    },
+    "evidence_long.csv": {
+      "sha256": "d8d1800d6d4d16093c1ed5ee5b91e48d2f063c0ef1c8b43db8d70cc237e1adad",
+      "bytes": 1798799,
+      "source": "data/evidence_long.csv"
+    },
+    "change_register.csv": {
+      "sha256": "c880ba38cae589835f6f8f7e542416d57bc71582ae633e7810304587bc50a934",
+      "bytes": 16591,
+      "source": "data/change_register.csv"
+    },
+    "IFRS9_Verified_Master.xlsx": {
+      "sha256": "e5976c8e5414b1f3bef9ca1df633b967d492b92dec21ea29e770ad0bb9ac15eb",
+      "bytes": 820853,
+      "source": "outputs/IFRS9_Verified_Master.xlsx"
+    },
+    "release_stats.json": {
+      "sha256": "d01925c8edde08f9ba8f1c51c4206959af688f960c8780e79d3997d55405c750",
+      "bytes": 22842,
+      "source": "outputs/release_stats.json"
+    },
+    "reconciliation_summary.md": {
+      "sha256": "3f23122a95fa2f77c7d0abb6549eccb8d3950bcae3e97a38f09cae29a7c25e79",
+      "bytes": 11116,
+      "source": "outputs/reconciliation_summary.md"
+    },
+    "test_results.json": {
+      "sha256": "bdc4ec66cfeb838ee317887a5dd986f0df67181829e24737cdd73c66812d9e56",
+      "bytes": 205,
+      "source": "outputs/test_results.json"
+    },
+    "release_manifest.json": {
+      "sha256": "241e74a5e6b640783b513873a2700a6a665735ef444321048ad6de0f380fd4e6",
+      "bytes": 2299,
+      "source": "outputs/release_manifest.json"
+    },
+    "research_data_handoff.zip": {
+      "sha256": "32b93925530d24ad285dfbf8448e59cc05cd6ecc8948eda89893abeb3bfa8a92",
+      "bytes": 64779701,
+      "source": "outputs/research_data_handoff.zip"
+    },
+    "analysis/allowance_gross_loans.csv": {
+      "sha256": "4df3e2a07a7d3789a5335ec8631f27c00b534d721040db5679b43861c291e7aa",
+      "bytes": 18953,
+      "source": "outputs/analysis/allowance_gross_loans.csv"
+    },
+    "analysis/broad_npl_coverage.csv": {
+      "sha256": "d1c2741830326317b8e42739f5af5ade1b0f0666174327e4a0e37ba592f2e7a6",
+      "bytes": 3876,
+      "source": "outputs/analysis/broad_npl_coverage.csv"
+    },
+    "analysis/car.csv": {
+      "sha256": "48e263e217a201412123d8eb1d449f4607ecdfcb6f523bbd4db6e3b0b3cf8acd",
+      "bytes": 17912,
+      "source": "outputs/analysis/car.csv"
+    },
+    "analysis/equity_assets.csv": {
+      "sha256": "46c04dd5b639c856906cb1c04200b56c53c6ac201a73be1ec506bbfab9638062",
+      "bytes": 21325,
+      "source": "outputs/analysis/equity_assets.csv"
+    },
+    "analysis/going_concern.csv": {
+      "sha256": "3af0945c803597e2a334c3cbd5d88f25afeddaf03e7be0553ff5e84d4fdb64ef",
+      "bytes": 7274,
+      "source": "outputs/analysis/going_concern.csv"
+    },
+    "analysis/impairment_average_assets.csv": {
+      "sha256": "7e7e9e8bcb846b5826675d15538b6a2156651f9b4c6df77b75d3b654ca409057",
+      "bytes": 18560,
+      "source": "outputs/analysis/impairment_average_assets.csv"
+    },
+    "analysis/liquidity.csv": {
+      "sha256": "f995e299555fa5ac2dd707c23fdb94657a08ca256f789f379f7712ce830714ae",
+      "bytes": 1991,
+      "source": "outputs/analysis/liquidity.csv"
+    },
+    "analysis/npl_ratio.csv": {
+      "sha256": "27b88e16ed104161db29c246b74374d1ba7ceb4fb3f7c96e4c3ecbce793eb763",
+      "bytes": 3549,
+      "source": "outputs/analysis/npl_ratio.csv"
+    },
+    "analysis/ocf_average_assets.csv": {
+      "sha256": "ff1bb0cfc704c35ec38c7184d154b80e39711c7a7309d7608cbac7d7765b39da",
+      "bytes": 16659,
+      "source": "outputs/analysis/ocf_average_assets.csv"
+    },
+    "analysis/outcome_summary.csv": {
+      "sha256": "2d6a7978d115fc9e28679baaf2cbd60619abb23ac2e340847874271104d5c2ff",
+      "bytes": 3655,
+      "source": "outputs/analysis/outcome_summary.csv"
+    },
+    "analysis/roa.csv": {
+      "sha256": "be41e59db8c41db721fc394f68af17b8f92acd32ededf89ff20ddabad26526f3",
+      "bytes": 19222,
+      "source": "outputs/analysis/roa.csv"
+    },
+    "analysis/stage3_coverage.csv": {
+      "sha256": "d2a2532c9d7935cb5595563869f125deeb21ed2d8bfadceda9315be062ff146f",
+      "bytes": 1293,
+      "source": "outputs/analysis/stage3_coverage.csv"
+    },
+    "readiness/estimator_recommendations.csv": {
+      "sha256": "5563e4fb3c7d959ec7ead29f1a7ed7a6a7cf69fa76163e2947c846ebb99f44bd",
+      "bytes": 3440,
+      "source": "outputs/readiness/estimator_recommendations.csv"
+    },
+    "readiness/model_sample_sizes.csv": {
+      "sha256": "13332fcee7be07fe0ecbfec0f82fe3568747ca4b78eb03fbadc4051973623744",
+      "bytes": 7315,
+      "source": "outputs/readiness/model_sample_sizes.csv"
+    },
+    "readiness/objective_readiness.csv": {
+      "sha256": "205744553c5410f705026182f3e77a28d0743ca7e6eb8b2fa8954db362c5db94",
+      "bytes": 1483,
+      "source": "outputs/readiness/objective_readiness.csv"
+    },
+    "readiness/readiness.md": {
+      "sha256": "18e903e760c1095c74c5d0e7283431b7ed058cf64c588d119c3b8a7c6865de1d",
+      "bytes": 4485,
+      "source": "outputs/readiness/readiness.md"
+    },
+    "readiness/tier_comparison.csv": {
+      "sha256": "f5f8f85d5373d3ed8b775c62b7d6ee6b53e7378ff25c1c5a53cd0d709edc44f6",
+      "bytes": 4457,
+      "source": "outputs/readiness/tier_comparison.csv"
+    },
+    "readiness/trend_matched_pre_post.csv": {
+      "sha256": "d9ba80eef7cd3ed55ec7597bfcf25b920cd86234112c01c3545b30e570a24018",
+      "bytes": 4871,
+      "source": "outputs/readiness/trend_matched_pre_post.csv"
+    },
+    "readiness/volatility_feasibility.csv": {
+      "sha256": "ec24b359a5a2a3a990574dfab88910b7d15d1faa103e6586bcabd81281022010",
+      "bytes": 10822,
+      "source": "outputs/readiness/volatility_feasibility.csv"
+    },
+    "readiness/within_bank_variation.csv": {
+      "sha256": "720aedc8e6529a1814cf2b82b5c08fe54c097c4138c0cb865b5078047e826dec",
+      "bytes": 707,
+      "source": "outputs/readiness/within_bank_variation.csv"
+    }
+  },
+  "note": "Outputs generated by the code at code_commit; this folder is added in a later commit. Thesis not updated."
+}

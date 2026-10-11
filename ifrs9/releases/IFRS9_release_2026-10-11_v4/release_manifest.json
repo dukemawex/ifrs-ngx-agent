@@ -1,0 +1,29 @@
+{
+  "generated_utc": "2026-10-11T11:58:06+00:00",
+  "git_commit_at_export": "c4b5ef9d78bbee612df0ef0e0008e1c3b5f56692",
+  "git_branch": "claude/zen-hamilton-v2s80b",
+  "run_id": "export-2026-10-11T11:58:06+00:00",
+  "input_hashes": {
+    "IFRS9_Data_Update_Pack_20261010.zip": "19ec27a6b0aab7899f8a538acecd755301c0257c050c1bb6079c6b94a3aabbda",
+    "IFRS9_Master_Data_Updated_20261010.xlsx": "38e6ea7ded4e61d3b12203c38f15a257baf1b8d641bab8ab9a9a50512303d0cf",
+    "IFRS9_Selected_Data_Updated_20261010.csv": "502c1a245076fb15deeebccc5b8352bc98a02cd140045915780c014410cc306d",
+    "extract_nigerian_bank_ifrs_9_financial_data_6085ddb6.csv": "7859117c8313cca9491dc5f1af0f2c0dee7b4d047ed8801917e6716dfe8a0e75",
+    "nigerian_banks_ifrs9_thesis_data.docx": "50023ab5bd3d7229cf2056b152dee53169d0d4a1af9756041cbdeba3593e1e77"
+  },
+  "output_hashes": {
+    "data/verified_panel.csv": "a902556f71702ed98e1389fb2f4af472ff46a7e4111da74a686149c4e77d22dd",
+    "data/evidence_long.csv": "d8d1800d6d4d16093c1ed5ee5b91e48d2f063c0ef1c8b43db8d70cc237e1adad",
+    "data/change_register.csv": "c880ba38cae589835f6f8f7e542416d57bc71582ae633e7810304587bc50a934",
+    "data/field_status.csv": "2031f1d83f3f79a3451260e8d8adcd9a14147822aa1bc00f91fc0a4832820077",
+    "data/reconciliation_checks.csv": "afb1743d51a51ea6141c6ef7bea7d6ee25e5cb8720dcdd74903e90faab8bdd44",
+    "data/admission_review.csv": "354a345294f7d58f5bb031629f628f5976dab66f41b5a8bf9bc2249cec2cc32c",
+    "data/conflicts.csv": "15791d08037f5ff854278d9c8044877c1c15988b59e66118e417484156913c13",
+    "data/unresolved_gaps.csv": "d4083003f2bcd1a3c10717d471081ab437f1dc4413d06abbaa1aeacd3c30b905",
+    "data/review/specs.csv": "d3520791c9078138b0e1c014e1eaa41ba060f9c8076a27837a511788876f89ba",
+    "data/review/admissions.csv": "7c780313bd0c9c52167dc0f45acb4959a129836dd6efedf13b78e38179bd4f3b",
+    "data/review/going_concern_reviews.csv": "f911348968fbaf3953b5ddabd07561c9ed44bae7eb9c79dc1ec6c47e340ec86f",
+    "data/review/version_decisions.csv": "e69ee6bc9212465c498de9e1d12c119826bf20e52a747e1eed4a8db438828b3b",
+    "outputs/IFRS9_Verified_Master.xlsx": "e5976c8e5414b1f3bef9ca1df633b967d492b92dec21ea29e770ad0bb9ac15eb"
+  },
+  "note": "git_commit_at_export is the commit checked out when exporting; outputs are committed in the following commit."
+}

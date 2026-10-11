@@ -105,7 +105,7 @@ with a full set of year fixed effects. No thesis regression is estimated.
 
 ## Thesis analysis (12-bank cohort)
 
-`python -m thesis_analysis --B 9999` reads only the frozen release named in `thesis_analysis/data.py` (currently `releases/IFRS9_release_2026-10-11_v3`, 114 bank-years) (every file
+`python -m thesis_analysis --B 9999` reads only the frozen release named in `thesis_analysis/data.py` (currently `releases/IFRS9_release_2026-10-11_v4`, 115 bank-years) (every file
 hash-verified against `RELEASE_MANIFEST.json` first; nothing is written there) and writes `thesis_results/`: sample
 profile, descriptives, trends, matched pre/post, exploratory volatility, bank-FE models (conventional, CR1 bank-clustered
 and wild-cluster-bootstrap p-values), robustness, diagnostics, going-concern event description, tables, figures,
@@ -114,8 +114,8 @@ excluded from the cohort and not replaced. IFRS9_D is never combined with year f
 scipy, statsmodels (>= 0.15), matplotlib and openpyxl. `tests/test_thesis_analysis.py` checks the outputs against the
 release and the report against the CSVs.
 
-Results for earlier releases are archived in `thesis_results_v1/` (97 rows) and `thesis_results_v2/` (98 rows). The run compares
-the current release with the previous one (`compare.py`: `PREV`/`NEW`) and writes `comparison_v2_v3.md` and `comparison_*.csv`
+Results for earlier releases are archived in `thesis_results_v1/` (97 rows), `thesis_results_v2/` (98) and `thesis_results_v3/` (114). The run compares
+the current release with the previous one (`compare.py`: `PREV`/`NEW`) and writes `comparison_v3_v4.md` and `comparison_*.csv`
 (material-change rule, including bank direction reversals, stated in the file). Sensitivity S6 drops bank-years taken from
 HoldCo subsidiary disclosures.
 

@@ -1,0 +1,61 @@
+{
+  "generated_utc": "2026-10-11T11:30:37+00:00",
+  "code_commit": "9171cc7da3b6ffa69bb7b73d4ac38d0d5452545d",
+  "release": {
+    "release_id": "IFRS9_release_2026-10-11_v3",
+    "code_commit": "9171cc7da3b6ffa69bb7b73d4ac38d0d5452545d",
+    "files_verified": 42
+  },
+  "bootstrap": {
+    "B": 9999,
+    "weights": "Webb six-point",
+    "seed": 20261011,
+    "type": "wild cluster restricted (WCR) bootstrap-t"
+  },
+  "software": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.11.2"
+  },
+  "figures": [
+    "fig01_sample_coverage",
+    "fig02_eligible_n",
+    "fig03_trend_allr",
+    "fig04_trend_impairment_assets",
+    "fig05_trend_car",
+    "fig06_trend_roa",
+    "fig07_trend_ocf_ratio",
+    "fig08_trend_eqta",
+    "fig09_trend_leverage",
+    "fig10_matched_prepost",
+    "fig11_ifrs9_effects",
+    "fig12_tier_interaction",
+    "fig13_robustness_m1",
+    "fig14_jackknife",
+    "fig15_volatility",
+    "fig16_going_concern_unity"
+  ],
+  "tables": [
+    "table10_volatility",
+    "table11_diagnostics",
+    "table12_going_concern_coverage",
+    "table1_sample_coverage",
+    "table2_variables_eligible_n",
+    "table3_descriptive_statistics",
+    "table4_prepost",
+    "table5_tier_comparison",
+    "table6_regression_ifrs9",
+    "table7_tier_interaction",
+    "table8_robustness",
+    "table9_going_concern_events"
+  ],
+  "comparison_v1": {
+    "previous_release": "v2",
+    "rows_added": 16,
+    "material_changes": 18,
+    "bank_classification_changes": 16
+  }
+}

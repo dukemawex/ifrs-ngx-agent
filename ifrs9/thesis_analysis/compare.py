@@ -16,8 +16,8 @@ import pandas as pd
 
 from . import data as D
 
-PREV = "v2"  # release compared against; its results are archived in thesis_results_<PREV>/
-NEW = "v3"
+PREV = "v3"  # release compared against; its results are archived in thesis_results_<PREV>/
+NEW = "v4"
 V1_DIR = D.ROOT / f"thesis_results_{PREV}"
 V1_REL = D.ROOT / "releases" / f"IFRS9_release_2026-10-11_{PREV}"
 ALPHA = 0.05

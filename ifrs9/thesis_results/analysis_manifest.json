@@ -1,9 +1,9 @@
 {
-  "generated_utc": "2026-10-11T11:30:37+00:00",
-  "code_commit": "9171cc7da3b6ffa69bb7b73d4ac38d0d5452545d",
+  "generated_utc": "2026-10-11T11:59:09+00:00",
+  "code_commit": "c4b5ef9d78bbee612df0ef0e0008e1c3b5f56692",
   "release": {
-    "release_id": "IFRS9_release_2026-10-11_v3",
-    "code_commit": "9171cc7da3b6ffa69bb7b73d4ac38d0d5452545d",
+    "release_id": "IFRS9_release_2026-10-11_v4",
+    "code_commit": "c4b5ef9d78bbee612df0ef0e0008e1c3b5f56692",
     "files_verified": 42
   },
   "bootstrap": {
@@ -53,9 +53,9 @@
     "table9_going_concern_events"
   ],
   "comparison_v1": {
-    "previous_release": "v2",
-    "rows_added": 16,
-    "material_changes": 18,
-    "bank_classification_changes": 16
+    "previous_release": "v3",
+    "rows_added": 1,
+    "material_changes": 3,
+    "bank_classification_changes": 2
   }
 }

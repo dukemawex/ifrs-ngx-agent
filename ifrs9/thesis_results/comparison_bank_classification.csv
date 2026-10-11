@@ -1,75 +1,75 @@
 outcome,bank,tier,n_pre_prev,n_post_prev,diff_post_minus_pre_prev,n_pre_new,n_post_new,diff_post_minus_pre_new,direction_prev,direction_new,classification_changed
-allr,Access,Tier 1,3.0,4.0,1.4058516948999338,3,4,1.4058516948999338,increase,increase,False
-allr,Ecobank Nigeria,Tier 2,,,,3,5,3.393701370013232,not classifiable,increase,True
-allr,Fidelity,Tier 2,5.0,3.0,0.8630198150268926,5,3,0.8630198150268926,increase,increase,False
-allr,GTBank,Tier 1,1.0,3.0,0.8766038320499581,3,3,1.5756205263585603,increase,increase,False
-allr,Sterling,Tier 2,5.0,5.0,-0.3112454081867821,5,5,-0.3112454081867821,decrease,decrease,False
-allr,UBA,Tier 1,5.0,5.0,1.6594505447689385,5,5,1.6594505447689385,increase,increase,False
-allr,Union,Tier 2,5.0,4.0,-2.1222108003009,5,4,-2.1222108003009,decrease,decrease,False
-allr,Unity,Tier 2,3.0,5.0,-16.000991892865912,3,5,-16.000991892865912,decrease,decrease,False
-allr,Wema,Tier 2,3.0,5.0,2.0246799183688067,3,5,2.0246799183688067,increase,increase,False
-allr,Zenith,Tier 1,5.0,5.0,2.674657955024406,5,5,2.674657955024406,increase,increase,False
-car,Access,Tier 1,3.0,3.0,-0.360000000000003,3,3,-0.360000000000003,decrease,decrease,False
-car,Ecobank Nigeria,Tier 2,,,,3,5,-1.9733333333333327,not classifiable,decrease,True
-car,Fidelity,Tier 2,4.0,3.0,-2.820000000000004,4,3,-2.820000000000004,decrease,decrease,False
-car,GTBank,Tier 1,,,,1,2,0.3150000000000013,not classifiable,increase,True
-car,Sterling,Tier 2,5.0,5.0,1.4300000000000015,5,5,1.4300000000000015,increase,increase,False
-car,UBA,Tier 1,5.0,5.0,1.740000000000002,5,5,1.740000000000002,increase,increase,False
-car,Union,Tier 2,5.0,5.0,-3.197999999999997,5,5,-3.197999999999997,decrease,decrease,False
-car,Unity,Tier 2,2.0,4.0,-25.540000000000006,2,4,-25.540000000000006,decrease,decrease,False
-car,Wema,Tier 2,3.0,4.0,-1.0366666666666653,3,4,-1.0366666666666653,decrease,decrease,False
-car,Zenith,Tier 1,5.0,4.0,-1.4499999999999993,5,4,-1.4499999999999993,decrease,decrease,False
-eqta,Access,Tier 1,5.0,5.0,-4.874153942216335,5,5,-4.874153942216335,decrease,decrease,False
-eqta,Ecobank Nigeria,Tier 2,,,,5,5,-0.096589583400318,not classifiable,decrease,True
-eqta,Fidelity,Tier 2,5.0,5.0,-4.95097812689683,5,5,-4.95097812689683,decrease,decrease,False
-eqta,GTBank,Tier 1,3.0,3.0,0.1860111501319252,5,5,-0.615438883308375,increase,decrease,True
-eqta,Stanbic,Tier 2,,,,4,5,-0.1481869700190348,not classifiable,decrease,True
-eqta,Sterling,Tier 2,5.0,5.0,-0.8430984088184346,5,5,-0.8430984088184346,decrease,decrease,False
-eqta,UBA,Tier 1,5.0,5.0,-4.2026231981897855,5,5,-4.2026231981897855,decrease,decrease,False
-eqta,Union,Tier 2,5.0,5.0,-10.507473610388958,5,5,-10.507473610388958,decrease,decrease,False
-eqta,Unity,Tier 2,5.0,5.0,-59.472638912737736,5,5,-59.472638912737736,decrease,decrease,False
-eqta,Wema,Tier 2,5.0,5.0,-4.706949712822765,5,5,-4.706949712822765,decrease,decrease,False
-eqta,Zenith,Tier 1,5.0,5.0,-1.9402337229762043,5,5,-1.9402337229762043,decrease,decrease,False
-impairment_assets,Access,Tier 1,4.0,4.0,-0.0086186349913762,4,4,-0.0086186349913762,decrease,decrease,False
-impairment_assets,Ecobank Nigeria,Tier 2,,,,4,5,-2.143201905481697,not classifiable,decrease,True
-impairment_assets,Fidelity,Tier 2,5.0,3.0,-0.4417757139170113,5,3,-0.4417757139170113,decrease,decrease,False
-impairment_assets,GTBank,Tier 1,1.0,3.0,-0.2877840305950822,3,3,-1.0493386184817957,decrease,decrease,False
-impairment_assets,Stanbic,Tier 2,,,,4,4,-1.5328548891518083,not classifiable,decrease,True
-impairment_assets,Sterling,Tier 2,4.0,4.0,-0.5813501088330807,4,4,-0.5813501088330807,decrease,decrease,False
-impairment_assets,UBA,Tier 1,4.0,5.0,-0.3452004677445058,4,5,-0.3452004677445058,decrease,decrease,False
-impairment_assets,Union,Tier 2,3.0,5.0,-1.5544760006276062,3,5,-1.5544760006276062,decrease,decrease,False
-impairment_assets,Unity,Tier 2,3.0,3.0,-5.887742176847477,3,3,-5.887742176847477,decrease,decrease,False
-impairment_assets,Wema,Tier 2,4.0,3.0,0.8011391169113365,4,3,0.8011391169113365,increase,increase,False
-impairment_assets,Zenith,Tier 1,4.0,4.0,-0.3496309752225526,4,4,-0.3496309752225526,decrease,decrease,False
-leverage,Access,Tier 1,5.0,5.0,4.874153952307381,5,5,4.874153952307381,increase,increase,False
-leverage,Ecobank Nigeria,Tier 2,,,,5,5,0.0965895834003305,not classifiable,increase,True
-leverage,Fidelity,Tier 2,5.0,5.0,4.950978126896814,5,5,4.950978126896814,increase,increase,False
-leverage,GTBank,Tier 1,3.0,3.0,-0.1860111501319181,5,5,0.6154388833083999,decrease,increase,True
-leverage,Stanbic,Tier 2,,,,4,5,0.1481869700190259,not classifiable,increase,True
-leverage,Sterling,Tier 2,5.0,5.0,0.8430984088184204,5,5,0.8430984088184204,increase,increase,False
-leverage,UBA,Tier 1,5.0,5.0,4.2026231981897695,5,5,4.2026231981897695,increase,increase,False
-leverage,Union,Tier 2,5.0,5.0,10.507473610388956,5,5,10.507473610388956,increase,increase,False
-leverage,Unity,Tier 2,5.0,5.0,59.472638962288144,5,5,59.472638962288144,increase,increase,False
-leverage,Wema,Tier 2,5.0,5.0,4.706949695648262,5,5,4.706949695648262,increase,increase,False
-leverage,Zenith,Tier 1,5.0,5.0,1.9402337229762168,5,5,1.9402337229762168,increase,increase,False
-ocf_ratio,Access,Tier 1,3.0,4.0,11.309500646653122,3,4,11.309500646653122,increase,increase,False
-ocf_ratio,Ecobank Nigeria,Tier 2,,,,3,5,1.1174402677114592,not classifiable,increase,True
-ocf_ratio,Fidelity,Tier 2,5.0,2.0,7.523350493004846,5,2,7.523350493004846,increase,increase,False
-ocf_ratio,GTBank,Tier 1,1.0,3.0,-4.969411865465759,3,5,0.9559694622331776,decrease,increase,True
-ocf_ratio,Sterling,Tier 2,4.0,4.0,9.56062780018995,4,4,9.56062780018995,increase,increase,False
-ocf_ratio,UBA,Tier 1,4.0,5.0,12.357133024694951,4,5,12.357133024694951,increase,increase,False
-ocf_ratio,Union,Tier 2,4.0,5.0,9.047544565294004,4,5,9.047544565294004,increase,increase,False
-ocf_ratio,Unity,Tier 2,4.0,3.0,-5.241865125482098,4,3,-5.241865125482098,decrease,decrease,False
-ocf_ratio,Wema,Tier 2,4.0,4.0,7.507766416856469,4,4,7.507766416856469,increase,increase,False
-ocf_ratio,Zenith,Tier 1,4.0,4.0,9.284777064279943,4,4,9.284777064279943,increase,increase,False
-roa,Access,Tier 1,4.0,4.0,-0.8547552500138249,4,4,-0.8547552500138249,decrease,decrease,False
-roa,Ecobank Nigeria,Tier 2,,,,4,5,-0.5670372782721411,not classifiable,decrease,True
-roa,Fidelity,Tier 2,5.0,3.0,0.223802243587541,5,3,0.223802243587541,increase,increase,False
-roa,GTBank,Tier 1,2.0,3.0,0.4419561473994831,4,5,-0.2763082557855334,increase,decrease,True
-roa,Stanbic,Tier 2,,,,4,4,0.8628019101502873,not classifiable,increase,True
-roa,Sterling,Tier 2,4.0,4.0,-0.0275812740545933,4,4,-0.0275812740545933,decrease,decrease,False
-roa,UBA,Tier 1,4.0,5.0,-0.3897434308617484,4,5,-0.3897434308617484,decrease,decrease,False
-roa,Union,Tier 2,4.0,5.0,-0.3985632513642057,4,5,-0.3985632513642057,decrease,decrease,False
-roa,Unity,Tier 2,4.0,3.0,0.8168671865988042,4,3,0.8168671865988042,increase,increase,False
-roa,Wema,Tier 2,4.0,4.0,0.1760710300551042,4,4,0.1760710300551042,increase,increase,False
-roa,Zenith,Tier 1,4.0,4.0,0.0481619746454304,4,4,0.0481619746454304,increase,increase,False
+allr,Access,Tier 1,3,4,1.4058516948999338,3,4,1.4058516948999338,increase,increase,False
+allr,Ecobank Nigeria,Tier 2,3,5,3.393701370013232,3,5,3.393701370013232,increase,increase,False
+allr,Fidelity,Tier 2,5,3,0.8630198150268926,5,3,0.8630198150268926,increase,increase,False
+allr,GTBank,Tier 1,3,3,1.5756205263585603,3,3,1.5756205263585603,increase,increase,False
+allr,Sterling,Tier 2,5,5,-0.3112454081867821,5,5,-0.3112454081867821,decrease,decrease,False
+allr,UBA,Tier 1,5,5,1.6594505447689385,5,5,1.6594505447689385,increase,increase,False
+allr,Union,Tier 2,5,4,-2.1222108003009,5,4,-2.1222108003009,decrease,decrease,False
+allr,Unity,Tier 2,3,5,-16.000991892865912,3,5,-16.000991892865912,decrease,decrease,False
+allr,Wema,Tier 2,3,5,2.0246799183688067,3,5,2.0246799183688067,increase,increase,False
+allr,Zenith,Tier 1,5,5,2.674657955024406,5,5,2.674657955024406,increase,increase,False
+car,Access,Tier 1,3,3,-0.360000000000003,3,3,-0.360000000000003,decrease,decrease,False
+car,Ecobank Nigeria,Tier 2,3,5,-1.9733333333333327,3,5,-1.9733333333333327,decrease,decrease,False
+car,Fidelity,Tier 2,4,3,-2.820000000000004,4,3,-2.820000000000004,decrease,decrease,False
+car,GTBank,Tier 1,1,2,0.3150000000000013,1,2,0.3150000000000013,increase,increase,False
+car,Sterling,Tier 2,5,5,1.4300000000000015,5,5,1.4300000000000015,increase,increase,False
+car,UBA,Tier 1,5,5,1.740000000000002,5,5,1.740000000000002,increase,increase,False
+car,Union,Tier 2,5,5,-3.197999999999997,5,5,-3.197999999999997,decrease,decrease,False
+car,Unity,Tier 2,2,4,-25.540000000000006,2,4,-25.540000000000006,decrease,decrease,False
+car,Wema,Tier 2,3,4,-1.0366666666666653,3,4,-1.0366666666666653,decrease,decrease,False
+car,Zenith,Tier 1,5,4,-1.4499999999999993,5,4,-1.4499999999999993,decrease,decrease,False
+eqta,Access,Tier 1,5,5,-4.874153942216335,5,5,-4.874153942216335,decrease,decrease,False
+eqta,Ecobank Nigeria,Tier 2,5,5,-0.096589583400318,5,5,-0.096589583400318,decrease,decrease,False
+eqta,Fidelity,Tier 2,5,5,-4.95097812689683,5,5,-4.95097812689683,decrease,decrease,False
+eqta,GTBank,Tier 1,5,5,-0.615438883308375,5,5,-0.615438883308375,decrease,decrease,False
+eqta,Stanbic,Tier 2,4,5,-0.1481869700190348,5,5,0.1456084598686118,decrease,increase,True
+eqta,Sterling,Tier 2,5,5,-0.8430984088184346,5,5,-0.8430984088184346,decrease,decrease,False
+eqta,UBA,Tier 1,5,5,-4.2026231981897855,5,5,-4.2026231981897855,decrease,decrease,False
+eqta,Union,Tier 2,5,5,-10.507473610388958,5,5,-10.507473610388958,decrease,decrease,False
+eqta,Unity,Tier 2,5,5,-59.472638912737736,5,5,-59.472638912737736,decrease,decrease,False
+eqta,Wema,Tier 2,5,5,-4.706949712822765,5,5,-4.706949712822765,decrease,decrease,False
+eqta,Zenith,Tier 1,5,5,-1.9402337229762043,5,5,-1.9402337229762043,decrease,decrease,False
+impairment_assets,Access,Tier 1,4,4,-0.0086186349913762,4,4,-0.0086186349913762,decrease,decrease,False
+impairment_assets,Ecobank Nigeria,Tier 2,4,5,-2.143201905481697,4,5,-2.143201905481697,decrease,decrease,False
+impairment_assets,Fidelity,Tier 2,5,3,-0.4417757139170113,5,3,-0.4417757139170113,decrease,decrease,False
+impairment_assets,GTBank,Tier 1,3,3,-1.0493386184817957,3,3,-1.0493386184817957,decrease,decrease,False
+impairment_assets,Stanbic,Tier 2,4,4,-1.5328548891518083,5,4,-1.2940851866446053,decrease,decrease,False
+impairment_assets,Sterling,Tier 2,4,4,-0.5813501088330807,4,4,-0.5813501088330807,decrease,decrease,False
+impairment_assets,UBA,Tier 1,4,5,-0.3452004677445058,4,5,-0.3452004677445058,decrease,decrease,False
+impairment_assets,Union,Tier 2,3,5,-1.5544760006276062,3,5,-1.5544760006276062,decrease,decrease,False
+impairment_assets,Unity,Tier 2,3,3,-5.887742176847477,3,3,-5.887742176847477,decrease,decrease,False
+impairment_assets,Wema,Tier 2,4,3,0.8011391169113365,4,3,0.8011391169113365,increase,increase,False
+impairment_assets,Zenith,Tier 1,4,4,-0.3496309752225526,4,4,-0.3496309752225526,decrease,decrease,False
+leverage,Access,Tier 1,5,5,4.874153952307381,5,5,4.874153952307381,increase,increase,False
+leverage,Ecobank Nigeria,Tier 2,5,5,0.0965895834003305,5,5,0.0965895834003305,increase,increase,False
+leverage,Fidelity,Tier 2,5,5,4.950978126896814,5,5,4.950978126896814,increase,increase,False
+leverage,GTBank,Tier 1,5,5,0.6154388833083999,5,5,0.6154388833083999,increase,increase,False
+leverage,Stanbic,Tier 2,4,5,0.1481869700190259,5,5,-0.145608459868626,increase,decrease,True
+leverage,Sterling,Tier 2,5,5,0.8430984088184204,5,5,0.8430984088184204,increase,increase,False
+leverage,UBA,Tier 1,5,5,4.2026231981897695,5,5,4.2026231981897695,increase,increase,False
+leverage,Union,Tier 2,5,5,10.507473610388956,5,5,10.507473610388956,increase,increase,False
+leverage,Unity,Tier 2,5,5,59.472638962288144,5,5,59.472638962288144,increase,increase,False
+leverage,Wema,Tier 2,5,5,4.706949695648262,5,5,4.706949695648262,increase,increase,False
+leverage,Zenith,Tier 1,5,5,1.9402337229762168,5,5,1.9402337229762168,increase,increase,False
+ocf_ratio,Access,Tier 1,3,4,11.309500646653122,3,4,11.309500646653122,increase,increase,False
+ocf_ratio,Ecobank Nigeria,Tier 2,3,5,1.1174402677114592,3,5,1.1174402677114592,increase,increase,False
+ocf_ratio,Fidelity,Tier 2,5,2,7.523350493004846,5,2,7.523350493004846,increase,increase,False
+ocf_ratio,GTBank,Tier 1,3,5,0.9559694622331776,3,5,0.9559694622331776,increase,increase,False
+ocf_ratio,Sterling,Tier 2,4,4,9.56062780018995,4,4,9.56062780018995,increase,increase,False
+ocf_ratio,UBA,Tier 1,4,5,12.357133024694951,4,5,12.357133024694951,increase,increase,False
+ocf_ratio,Union,Tier 2,4,5,9.047544565294004,4,5,9.047544565294004,increase,increase,False
+ocf_ratio,Unity,Tier 2,4,3,-5.241865125482098,4,3,-5.241865125482098,decrease,decrease,False
+ocf_ratio,Wema,Tier 2,4,4,7.507766416856469,4,4,7.507766416856469,increase,increase,False
+ocf_ratio,Zenith,Tier 1,4,4,9.284777064279943,4,4,9.284777064279943,increase,increase,False
+roa,Access,Tier 1,4,4,-0.8547552500138249,4,4,-0.8547552500138249,decrease,decrease,False
+roa,Ecobank Nigeria,Tier 2,4,5,-0.5670372782721411,4,5,-0.5670372782721411,decrease,decrease,False
+roa,Fidelity,Tier 2,5,3,0.223802243587541,5,3,0.223802243587541,increase,increase,False
+roa,GTBank,Tier 1,4,5,-0.2763082557855334,4,5,-0.2763082557855334,decrease,decrease,False
+roa,Stanbic,Tier 2,4,4,0.8628019101502873,5,4,0.6991636908240366,increase,increase,False
+roa,Sterling,Tier 2,4,4,-0.0275812740545933,4,4,-0.0275812740545933,decrease,decrease,False
+roa,UBA,Tier 1,4,5,-0.3897434308617484,4,5,-0.3897434308617484,decrease,decrease,False
+roa,Union,Tier 2,4,5,-0.3985632513642057,4,5,-0.3985632513642057,decrease,decrease,False
+roa,Unity,Tier 2,4,3,0.8168671865988042,4,3,0.8168671865988042,increase,increase,False
+roa,Wema,Tier 2,4,4,0.1760710300551042,4,4,0.1760710300551042,increase,increase,False
+roa,Zenith,Tier 1,4,4,0.0481619746454304,4,4,0.0481619746454304,increase,increase,False

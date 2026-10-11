@@ -34,6 +34,9 @@ First Bank,2014,Tier 1,IAS 39,0,12.118666086486725,True,True,True,True,True,Fals
 First Bank,2015,Tier 1,IAS 39,0,13.796376458231741,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",459747.0,3332375.0
 First Bank,2016,Tier 1,IAS 39,0,13.662641499675921,True,True,True,True,True,False,,,,,"FY2017 financial statements; 2016 comparative, not labelled restated",486087.0,3557782.0
 First Bank,2017,Tier 1,IAS 39,0,15.351787471614669,True,True,True,True,True,False,,,,,"FY2017 financial statements, as originally reported",579843.0,3777039.0
+First Bank,2018,Tier 1,IFRS 9,1,11.106230024935353,True,True,True,True,True,False,,,,,"FY2018 financial statements, as originally reported (reproduced in FBN Finance prospectus)",442684.0,3985907.0
+First Bank,2019,Tier 1,IFRS 9,1,11.555971697492803,True,True,True,True,True,False,,,,,"FY2019 financial statements, as originally reported (reproduced in FBN Finance prospectus)",539465.0,4668279.0
+First Bank,2022,Tier 1,IFRS 9,1,9.26622080329253,True,True,True,False,True,True,,AUTO-FALLBACK,fallback: unlabelled comparative (original-year report unavailable; source xs-8f94f07a8d),fallback: unlabelled comparative,"FY2023 audited summary financial statements, 2022 comparative (later-year presentation; not the 2022 annual report)",752886.0,8125060.0
 GTBank,2013,Tier 1,IAS 39,0,17.310065397092785,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,329647.0,1904366.0
 GTBank,2014,Tier 1,IAS 39,0,17.376498160450822,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,369530.0,2126608.0
 GTBank,2015,Tier 1,IAS 39,0,17.808357204324313,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",405608.348,2277629.224

@@ -15,3 +15,4 @@ later_comparative,Ecobank Nigeria,2020,car,21.44,23.21,"2020 report CAR 21.44% (
 later_comparative,Ecobank Nigeria,2021,ocf,-86740,-98241,"2021 report OCF (86,740) vs 2022 report comparative (98,241) marked '*' (comparatives restated to current presentation)."
 source_internal_inconsistency,GTBank,2015,car,18.17,18.11,"GTBank 2015 report: capital table (p201) 18.17% recomputes from 333,426,139 / 1,835,072,113; narrative on p200 states 18.11%. Table value admitted."
 later_comparative,Stanbic,2014,pat,19456,21851,"2014 note 13.4 (original, admitted) vs 2015 note 13.4 comparative; assets 911,052 vs 908,429."
+source_internal_inconsistency,First Bank,2018,loan_allowance,277549,277548,"2018 report note 20 BANK reconciliation (S1 p581, printed 82): closing row 252,222 + 25,327 = 277,549; stage split 252,205 + 25,343 = 277,548. Closing row used (agrees with 2019 report comparative 252,222 / 25,327)."

@@ -26,6 +26,8 @@ First Bank,2014,Tier 1,IAS 39,0,15.78,True,True,True,True,True,False,,,,,Prior s
 First Bank,2015,Tier 1,IAS 39,0,17.08,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",,,15,430099.0,2518285.0,,17.07904387311206
 First Bank,2016,Tier 1,IAS 39,0,17.79,True,True,True,True,True,False,,,,,"FY2017 financial statements; 2016 comparative, not labelled restated",,,15,501256.0,2818158.0,,17.786653551717116
 First Bank,2017,Tier 1,IAS 39,0,17.74,True,True,True,True,True,False,,,,,"FY2017 financial statements, as originally reported",,,15,535692.0,3019880.0,,17.738850550352993
+First Bank,2018,Tier 1,IFRS 9,1,10.66,True,True,True,True,True,False,,,,,"FY2018 financial statements, as originally reported (reproduced in FBN Finance prospectus)",,17.26,,269341.0,2527208.0,,10.657650656376523
+First Bank,2019,Tier 1,IFRS 9,1,11.16,True,True,True,True,True,False,,,,,"FY2019 financial statements, as originally reported (reproduced in FBN Finance prospectus)",,15.45,,332265.0,2978121.0,,11.156867031258972
 GTBank,2015,Tier 1,IAS 39,0,18.17,True,True,True,False,False,False,inferential,AUTO-FLAG,car flagged source_internal_inconsistency,,"2015 annual report, as originally reported",,,,333426.139,1835072.113,,18.169647755962604
 GTBank,2016,Tier 1,IAS 39,0,19.79,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported (public mirror copy)",,,,405526.626,2049087.592,,19.79059497423378
 GTBank,2019,Tier 1,IFRS 9,1,20.66,True,True,True,False,True,False,,,,,"2019 annual report, as originally reported",,24.74,,418652.17,2026402.562,517502.852,20.65987172789609

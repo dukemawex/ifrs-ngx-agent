@@ -26,6 +26,8 @@ Fidelity,2020,Tier 2,IFRS 9,1,0.6920098477377193,True,True,True,True,True,False,
 Fidelity,2022,Tier 2,IFRS 9,1,0.14974971328693742,True,True,True,False,True,False,,,,,"2022 annual report, as originally reported",5443.0,3989009.0,3280454.0,3634731.5
 First Bank,2014,Tier 1,IAS 39,0,0.6211252031554965,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,20924.0,3490871.0,3246579.0,3368725.0
 First Bank,2015,Tier 1,IAS 39,0,3.518735804043999,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported",120046.0,3332375.0,3490871.0,3411623.0
+First Bank,2018,Tier 1,IFRS 9,1,1.5938536735924738,True,True,True,False,True,False,,,,,"FY2018 financial statements, as originally reported (reproduced in FBN Finance prospectus)",61865.0,3985907.0,3777039.0,3881473.0
+First Bank,2019,Tier 1,IFRS 9,1,1.0778598934665837,True,True,True,True,True,False,,,,,"FY2019 financial statements, as originally reported (reproduced in FBN Finance prospectus)",46640.0,4668279.0,3985907.0,4327093.0
 GTBank,2015,Tier 1,IAS 39,0,0.5344568227211984,True,True,True,False,True,False,,,,,"2015 annual report, as originally reported",11769.374,2277629.224,2126608.312,2202118.768
 GTBank,2016,Tier 1,IAS 39,0,2.598365932330986,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported (public mirror copy)",63542.64,2613340.074,2277629.224,2445484.649
 GTBank,2017,Tier 1,IAS 39,0,0.42407949569602194,True,True,True,False,True,True,,AUTO-FALLBACK,fallback: labelled restatement (original-year report unavailable; source xs-21e7fbfbf9),fallback: labelled restatement,2018 annual report; 2017 restated comparative,11531.292,2824928.985,2613340.074,2719134.5295

@@ -2,6 +2,7 @@ outcome,bank,tier,n_pre,n_post,mean_pre,mean_post,diff_post_minus_pre
 car,Access,Tier 1,3,3,18.5767,18.2167,-0.36
 car,Ecobank Nigeria,Tier 2,3,5,17.3333,15.36,-1.9733
 car,Fidelity,Tier 2,4,3,21.31,18.49,-2.82
+car,First Bank,Tier 1,5,2,16.386,10.91,-5.476
 car,GTBank,Tier 1,1,2,19.79,20.105,0.315
 car,Sterling,Tier 2,5,5,13.576,15.006,1.43
 car,UBA,Tier 1,5,5,19.4,21.14,1.74
@@ -12,6 +13,7 @@ car,Zenith,Tier 1,5,4,22.2,20.75,-1.45
 car_computed,Access,Tier 1,3,3,18.5899,18.2168,-0.373
 car_computed,Ecobank Nigeria,Tier 2,3,5,17.3813,15.3654,-2.0159
 car_computed,Fidelity,Tier 2,3,3,19.7235,18.4907,-1.2327
+car_computed,First Bank,Tier 1,3,2,17.5348,10.9073,-6.6276
 car_computed,GTBank,Tier 1,2,2,18.9801,20.1049,1.1248
 car_computed,Sterling,Tier 2,3,3,13.2937,15.822,2.5283
 car_computed,UBA,Tier 1,3,5,19.9378,20.9078,0.97
@@ -21,6 +23,7 @@ car_computed,Zenith,Tier 1,3,4,24.0608,20.4998,-3.561
 roa,Access,Tier 1,4,4,2.1973,1.3425,-0.8548
 roa,Ecobank Nigeria,Tier 2,4,5,1.105,0.538,-0.567
 roa,Fidelity,Tier 2,5,3,1.0636,1.2874,0.2238
+roa,First Bank,Tier 1,3,2,1.212,1.2411,0.0291
 roa,GTBank,Tier 1,4,5,4.9856,4.7093,-0.2763
 roa,Stanbic,Tier 2,5,4,1.7237,2.4229,0.6992
 roa,Sterling,Tier 2,4,4,0.9922,0.9646,-0.0276
@@ -32,6 +35,7 @@ roa,Zenith,Tier 1,4,4,3.0772,3.1254,0.0482
 eqta,Access,Tier 1,5,5,14.0408,9.1666,-4.8742
 eqta,Ecobank Nigeria,Tier 2,5,5,12.2849,12.1883,-0.0966
 eqta,Fidelity,Tier 2,5,5,14.7248,9.7738,-4.951
+eqta,First Bank,Tier 1,5,3,13.1464,10.6428,-2.5036
 eqta,GTBank,Tier 1,5,5,18.2451,17.6296,-0.6154
 eqta,Stanbic,Tier 2,5,5,10.1561,10.3017,0.1456
 eqta,Sterling,Tier 2,5,5,10.2267,9.3836,-0.8431
@@ -43,6 +47,7 @@ eqta,Zenith,Tier 1,5,5,15.0005,13.0602,-1.9402
 ocf_ratio,Access,Tier 1,3,4,-3.1978,8.1117,11.3095
 ocf_ratio,Ecobank Nigeria,Tier 2,3,5,-1.7192,-0.6018,1.1174
 ocf_ratio,Fidelity,Tier 2,5,2,1.5501,9.0734,7.5234
+ocf_ratio,First Bank,Tier 1,3,2,-0.9951,1.691,2.6861
 ocf_ratio,GTBank,Tier 1,3,5,8.4005,9.3565,0.956
 ocf_ratio,Sterling,Tier 2,4,4,-3.3963,6.1644,9.5606
 ocf_ratio,UBA,Tier 1,4,5,-2.0782,10.279,12.3571
@@ -53,6 +58,7 @@ ocf_ratio,Zenith,Tier 1,4,4,-2.7343,6.5505,9.2848
 allr,Access,Tier 1,3,4,2.3539,3.7597,1.4059
 allr,Ecobank Nigeria,Tier 2,3,5,5.6983,9.092,3.3937
 allr,Fidelity,Tier 2,5,3,3.4004,4.2634,0.863
+allr,First Bank,Tier 1,5,1,7.1238,3.664,-3.4598
 allr,GTBank,Tier 1,3,3,3.846,5.4217,1.5756
 allr,Sterling,Tier 2,5,5,2.8046,2.4933,-0.3112
 allr,UBA,Tier 1,5,5,1.8031,3.4626,1.6595
@@ -63,6 +69,7 @@ allr,Zenith,Tier 1,5,5,2.8674,5.542,2.6747
 impairment_assets,Access,Tier 1,4,4,0.6763,0.6677,-0.0086
 impairment_assets,Ecobank Nigeria,Tier 2,4,5,2.6998,0.5566,-2.1432
 impairment_assets,Fidelity,Tier 2,5,3,0.6303,0.1886,-0.4418
+impairment_assets,First Bank,Tier 1,2,2,2.0699,1.3359,-0.7341
 impairment_assets,GTBank,Tier 1,3,3,1.1856,0.1363,-1.0493
 impairment_assets,Stanbic,Tier 2,5,4,1.3483,0.0542,-1.2941
 impairment_assets,Sterling,Tier 2,4,4,1.1742,0.5929,-0.5814
@@ -80,6 +87,7 @@ liquidity,Wema,Tier 2,1,1,26.25,34.64,8.39
 leverage,Access,Tier 1,5,5,85.9592,90.8334,4.8742
 leverage,Ecobank Nigeria,Tier 2,5,5,87.7151,87.8117,0.0966
 leverage,Fidelity,Tier 2,5,5,85.2752,90.2262,4.951
+leverage,First Bank,Tier 1,5,3,86.8536,89.3572,2.5036
 leverage,GTBank,Tier 1,5,5,81.7549,82.3704,0.6154
 leverage,Stanbic,Tier 2,5,5,89.8439,89.6983,-0.1456
 leverage,Sterling,Tier 2,5,5,89.7733,90.6164,0.8431
@@ -91,6 +99,7 @@ leverage,Zenith,Tier 1,5,5,84.9995,86.9398,1.9402
 gcu,Access,Tier 1,3,3,0.0,0.0,0.0
 gcu,Ecobank Nigeria,Tier 2,3,5,0.0,0.0,0.0
 gcu,Fidelity,Tier 2,4,3,0.0,0.0,0.0
+gcu,First Bank,Tier 1,1,2,0.0,0.0,0.0
 gcu,GTBank,Tier 1,2,3,0.0,0.0,0.0
 gcu,Sterling,Tier 2,4,4,0.0,0.0,0.0
 gcu,Union,Tier 2,1,3,0.0,0.0,0.0

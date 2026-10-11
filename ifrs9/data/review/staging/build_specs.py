@@ -415,6 +415,100 @@ for o in OUT:
         o["printed_page"] = STAN_PRINTED[(o["job_id"], int(o["page"]))]
         o["note_number"] = o["note_number"] or "13.4"
 
+# ---------------- First Bank of Nigeria Limited 2018-2019 (FBN Finance Company B.V. prospectus, xs-3fed493f9a; image-only pages) ----------------
+# User-supplied source/quality supplement S1: First Bank 2019 FS at PDF pp383-506, 2018 FS at pp507-622 (reproduced in full with the original auditor's reports).
+# Pages have no usable text layer: values transcribed from 170-220 dpi renders (manual_value), checked by balance and loan reconciliations.
+FBT = "FBN Finance Company B.V. offering circular (approved 23 Oct 2020): First Bank of Nigeria Limited audited consolidated and separate financial statements"
+B = ("Columns 'GROUP' | 'GROUP' | 'BANK' | 'BANK' over '31 December 2019' | '31 December 2018' ('N millions'); "
+     "BANK = First Bank of Nigeria Limited, the operating bank (separate statements); BANK 31 December 2019 column used")
+a = doc("First Bank", 2019, "xs-3fed493f9a", FBT + " for the year ended 31 December 2019 (S1 pp383-506)",
+        "FY2019 financial statements, as originally reported (reproduced in FBN Finance prospectus)", "consolidated_and_separate", "bank_separate", B, "NGN million", 375)
+def f(*args, **kw):
+    kw.setdefault("colhead", "BANK 31 December 2019")
+    a(*args, **kw)
+f("FBN19-A", "assets", 393, "Total assets", "", "", "SOFP BANK Total assets 4,668,279 (image page, printed p18)", manual="4,668,279")
+f("FBN19-L", "liabilities", 393, "Total liabilities", "", "", "SOFP BANK Total liabilities 4,128,814", manual="4,128,814")
+f("FBN19-E", "equity", 393, "Total equity", "", "", "SOFP BANK Total equity 539,465; 4,128,814 + 539,465 = 4,668,279", manual="539,465")
+f("FBN19-NL", "net_loans", 393, "Loans and advances to customers", "", "", "SOFP BANK Loans and advances to customers 1,559,504 (note 20 current/non-current table prints 1,559,503)", nn="20", manual="1,559,504")
+f("FBN19-OA", "opening_assets", 393, "Total assets", "", "", "Prior-year (BANK 31 December 2018) column of the 2019 SOFP: Total assets 3,985,907; not labelled restated; equals the 2018 original",
+  colhead="BANK 31 December 2018", ori="prior-year comparative in 2019 report (not restated)", cbasis=B.replace("2019 column used", "2018 (prior-year) column used"), manual="3,985,907")
+f("FBN19-PAT", "pat", 391, "PROFIT FOR THE YEAR", "", "", "Income statement BANK Profit for the year 43,917 (printed p16)", manual="43,917")
+f("FBN19-PBT", "pbt", 391, "Profit before tax", "", "", "BANK Profit before tax 46,770", manual="46,770")
+f("FBN19-TI", "total_impairment", 391, "Impairment charge for credit losses", "", "", "BANK Impairment charge for credit losses (46,640) (IFRS 9 ECL, note 9)", nn="9", sign=-1, sign_reason=EXP, manual="(46,640)")
+f("FBN19-OCF", "ocf", 396, "Net cash flow generated from/(used in) operating activities", "", "", "Statement of cash flows BANK Net cash flow used in operating activities (218,752) (printed p21)", manual="(218,752)")
+f("FBN19-GLC", "gross_loans_corporate", 473, "Corporate 31 December 2019 Gross Amount", "", "", "Note 20 BANK Corporate 31 Dec 2019 gross amount 1,521,178 (printed p98)", nn="20", manual="1,521,178")
+f("FBN19-GLR", "gross_loans_retail", 473, "Retail 31 December 2019 Gross Amount", "", "", "Note 20 BANK Retail 31 Dec 2019 gross amount 97,639", nn="20", manual="97,639")
+f("FBN19-ALC", "loan_allowance_corporate", 473, "Corporate 31 December 2019 Total Impairment", "", "", "Note 20 BANK Corporate total impairment 52,706 = stage 1 1,741 + stage 2 9,295 + stage 3 41,670 (printed unbracketed)", nn="20", manual="52,706")
+f("FBN19-ALR", "loan_allowance_retail", 473, "Retail 31 December 2019 Total Impairment", "", "", "Note 20 BANK Retail total impairment 6,608", nn="20", manual="6,608")
+f("FBN19-GL", "gross_loans", 473, "derived", "", "", "Corporate + retail = 1,618,817", nn="20", derive="FBN19-GLC+FBN19-GLR")
+f("FBN19-ALW", "loan_allowance", 473, "derived", "", "", "Corporate + retail allowance = 59,314; gross - allowance = 1,559,503 = printed carrying amount (SOFP 1,559,504; rounding 1)", nn="20", derive="FBN19-ALC+FBN19-ALR")
+f("FBN19-RC", "regulatory_capital", 463, "Total regulatory capital", "", "", "Capital management table, column 'Bank 31 Dec 2019 Full Impact': Total regulatory capital 332,265 (printed p88)", nn="4", colhead="Bank 31 Dec 2019 Basel II (Full Impact)", manual="332,265")
+f("FBN19-RWA", "rwa", 463, "Total risk-weighted assets", "", "", "Bank 31 Dec 2019 Full Impact Total risk-weighted assets 2,978,121 (credit 2,196,691 + operational 620,501 + market 160,929)", nn="4", colhead="Bank 31 Dec 2019 Basel II (Full Impact)", manual="2,978,121")
+f("FBN19-CAR", "car", 463, "Risk-weighted Capital Adequacy Ratio (CAR)", "", "", "Bank Full Impact CAR 11.16% (332,265 / 2,978,121 = 11.16%)", nn="4", u="percent", colhead="Bank 31 Dec 2019 Basel II (Full Impact)", manual="11.16%")
+f("FBN19-CART", "car_transitional", 463, "Risk-weighted Capital Adequacy Ratio (CAR)", "", "", "Bank 'Adjusted Impact' (CBN IFRS 9 transitional arrangement) CAR 15.45% (466,348 / 3,018,951)", nn="4", u="percent", colhead="Bank 31 Dec 2019 Basel II adjusted for IFRS 9 transitional adjustment", manual="15.45%")
+f("GC-FirstBank2019", "gcu", 385, "Independent auditor's report", "", "", "Independent auditor's report to the members of First Bank of Nigeria Limited, PDF pp385-390 (image pages), complete, reproduced in the prospectus as the original report: "
+  "PricewaterhouseCoopers, Samuel Abu FRC/2013/ICAN/00000001495, dated 26 March 2020. Opinion on the consolidated and separate financial statements: true and fair (unmodified). KAMs on ECL; "
+  "no material-uncertainty section, no emphasis-of-matter or other-matter paragraph.",
+  u="indicator", manual="0", opinion="covers_bank_separate", colhead="Auditor's report on the consolidated and separate financial statements of First Bank of Nigeria Limited")
+# 2018 gross-loan components: the 2018 report's BANK gross-loan tables are among the misassembled note pages flagged in the supplement,
+# so gross loans come from the 2019 report's 31 December 2018 comparative (not restated); they reconcile exactly to the 2018 original (NL + ALW).
+f("FBN18C-GLC", "gross_loans_corporate", 473, "Corporate 31 December 2018 Gross Amount", "", "", "Note 20 BANK Corporate 31 Dec 2018 comparative gross amount 1,609,031 (incl. AFL 737); total impairment 252,222", nn="20", manual="1,609,031",
+  year_=2018, colhead="BANK 31 December 2018", ori="prior-year comparative in 2019 report (not restated)")
+f("FBN18C-GLR", "gross_loans_retail", 474, "Retail 31 December 2018 Gross Amount", "", "", "Note 20 BANK Retail 31 Dec 2018 comparative gross amount 119,933; total impairment 25,327 (printed p99)", nn="20", manual="119,933",
+  year_=2018, colhead="BANK 31 December 2018", ori="prior-year comparative in 2019 report (not restated)")
+f("FBN18-GL", "gross_loans", 474, "derived", "", "", "Corporate + retail (2019 report, 2018 comparative) = 1,728,964 = 2018 original net loans 1,451,415 + 2018 original allowance 277,549", nn="20",
+  derive="FBN18C-GLC+FBN18C-GLR", year_=2018, colhead="BANK 31 December 2018", ori="prior-year comparative in 2019 report (not restated)")
+
+B = ("Columns 'GROUP' (31 December 2018 | 31 December 2017 Restated | 1 January 2017 Restated) | 'BANK' (same three) ('N millions'); "
+     "BANK = First Bank of Nigeria Limited, the operating bank (separate statements); BANK 31 December 2018 column used")
+a = doc("First Bank", 2018, "xs-3fed493f9a", FBT + " for the year ended 31 December 2018 (S1 pp507-622)",
+        "FY2018 financial statements, as originally reported (reproduced in FBN Finance prospectus)", "consolidated_and_separate", "bank_separate", B, "NGN million", 499)
+def f(*args, **kw):
+    kw.setdefault("colhead", "BANK 31 December 2018")
+    a(*args, **kw)
+f("FBN18-A", "assets", 517, "Total assets", "", "", "SOFP BANK Total assets 3,985,907 (image page, printed p18)", manual="3,985,907")
+f("FBN18-L", "liabilities", 517, "Total liabilities", "", "", "SOFP BANK Total liabilities 3,543,223", manual="3,543,223")
+f("FBN18-E", "equity", 517, "Total equity", "", "", "SOFP BANK Total equity 442,684; 3,543,223 + 442,684 = 3,985,907", manual="442,684")
+f("FBN18-NL", "net_loans", 517, "Loans and advances to customers", "", "", "SOFP BANK Loans and advances to customers 1,451,415", nn="20", manual="1,451,415")
+f("FBN18-OA", "opening_assets", 517, "Total assets", "", "", "Prior-year column 'BANK 31 December 2017 Restated' (note 47 restatement): Total assets 3,777,039",
+  colhead="BANK 31 December 2017 (Restated)", ori="prior-year comparative in 2018 report (labelled Restated, note 47)", cbasis=B.replace("BANK 31 December 2018 column used", "BANK 31 December 2017 (Restated) column used"), manual="3,777,039")
+f("FBN18-PAT", "pat", 515, "PROFIT FOR THE YEAR", "", "", "Income statement BANK Profit for the year 56,952 (= profit from continuing operations; printed p16)", manual="56,952")
+f("FBN18-PBT", "pbt", 515, "Profit before tax", "", "", "BANK Profit before tax 58,194", manual="58,194")
+f("FBN18-TI", "total_impairment", 515, "Impairment charge for credit losses", "", "", "BANK Impairment charge for credit losses (61,865) (IFRS 9 ECL, note 9)", nn="9", sign=-1, sign_reason=EXP, manual="(61,865)")
+f("FBN18-OCF", "ocf", 520, "Net cash flow generated from/(used in) operating activities", "", "", "Statement of cash flows BANK Net cash flow generated from operating activities 327,497 (printed p21; 2019 report comparative prints 327,496)", manual="327,497")
+f("FBN18-ALW", "loan_allowance", 581, "At 31 December 2018 Total", "", "", "Note 20 BANK allowance reconciliation: At 31 December 2018 total 277,549 = corporate 252,222 + retail 25,327 (stage split below sums to 277,548, a 1 rounding difference in the source); "
+  "1,728,964 - 277,549 = 1,451,415 = SOFP net loans (printed p82)", nn="20", manual="277,549")
+f("FBN18-RC", "regulatory_capital", 570, "Total regulatory capital", "", "", "Capital management table, column 'Bank 31 Dec 2018 Full Impact': Total regulatory capital 269,341 (printed p71)", nn="4", colhead="Bank 31 Dec 2018 Basel II (Full Impact)", manual="269,341")
+f("FBN18-RWA", "rwa", 570, "Total risk-weighted assets", "", "", "Bank 31 Dec 2018 Full Impact Total risk-weighted assets 2,527,208 (credit 1,827,500 + operational 655,770 + market 43,938)", nn="4", colhead="Bank 31 Dec 2018 Basel II (Full Impact)", manual="2,527,208")
+f("FBN18-CAR", "car", 570, "Risk-weighted Capital Adequacy Ratio (CAR)", "", "", "Bank Full Impact CAR 10.66% (269,341 / 2,527,208 = 10.66%)", nn="4", u="percent", colhead="Bank 31 Dec 2018 Basel II (Full Impact)", manual="10.66%")
+f("FBN18-CART", "car_transitional", 570, "Risk-weighted Capital Adequacy Ratio (CAR)", "", "", "Bank 'Adjusted Impact' (CBN IFRS 9 transitional arrangement) CAR 17.26% (443,246 / 2,568,038)", nn="4", u="percent", colhead="Bank 31 Dec 2018 Basel II adjusted for IFRS 9 transitional adjustment", manual="17.26%")
+f("GC-FirstBank2018", "gcu", 510, "Independent auditor's report", "", "", "Independent auditor's report to the members of First Bank of Nigeria Limited, PDF pp510-514 (image pages), complete, reproduced in the prospectus as the original report: "
+  "PricewaterhouseCoopers, Samuel Abu FRC/2013/ICAN/00000001495, dated 12 April 2019. Opinion on the consolidated and separate financial statements: true and fair (unmodified). KAMs on ECL/IFRS 9 adoption; "
+  "no material-uncertainty section, no emphasis-of-matter or other-matter paragraph.",
+  u="indicator", manual="0", opinion="covers_bank_separate", colhead="Auditor's report on the consolidated and separate financial statements of First Bank of Nigeria Limited")
+
+# ---------------- First Bank of Nigeria Limited 2022: later comparative in the 2023 audited summary FS (BusinessDay 29 May 2024 p4, xs-8f94f07a8d) ----------------
+# Fallback only: no 2022 original report located. Summary statements (SOFP, P&L, OCI) - no cash flow, notes, gross loans, capital or ECL detail;
+# KPMG ISA 810 report on summary FS is not a full auditor's report, so going concern is not coded.
+B = ("Newspaper reproduction of the 2023 audited summary consolidated and separate financial statements; columns 'GROUP' | 'GROUP' | 'BANK' | 'BANK' over "
+     "'31 Dec 2023' | '31 Dec 2022' ('N'Million'); BANK = First Bank of Nigeria Limited, the operating bank; BANK 31 Dec 2022 (comparative) column used")
+a = doc("First Bank", 2022, "xs-8f94f07a8d", "First Bank of Nigeria Limited audited summary financial statements for the year ended 31 December 2023 (BusinessDay, 29 May 2024, p4)",
+        "FY2023 audited summary financial statements, 2022 comparative (later-year presentation; not the 2022 annual report)", "consolidated_and_separate", "bank_separate", B, "NGN million", 0,
+        orig="comparative in 2023 audited summary financial statements (later-year report; fallback, 2022 original not located)")
+def f(*args, **kw):
+    kw.setdefault("colhead", "BANK 31 Dec 2022")
+    a(*args, **kw)
+f("FBN22-A", "assets", 4, "Total assets", "", "", "Summary SOFP BANK 31 Dec 2022 Total assets 8,125,060 (image page)", manual="8,125,060")
+f("FBN22-L", "liabilities", 4, "Total liabilities", "", "", "BANK Total liabilities 7,372,174", manual="7,372,174")
+f("FBN22-E", "equity", 4, "Total equity", "", "", "BANK Total equity 752,886; 7,372,174 + 752,886 = 8,125,060", manual="752,886")
+f("FBN22-NL", "net_loans", 4, "Loans and advances to customers", "", "", "BANK Loans and advances to customers 3,301,779", manual="3,301,779")
+f("FBN22-PAT", "pat", 4, "PROFIT FOR THE YEAR", "", "", "Summary statement of profit or loss BANK 2022 Profit for the year 91,415", manual="91,415")
+f("FBN22-PBT", "pbt", 4, "Profit before tax", "", "", "BANK 'Profit before tax' 94,592 (= profit before minimum tax 97,715 - minimum tax 3,124 +1 rounding; income tax (3,176))", manual="94,592")
+f("FBN22-TI", "total_impairment", 4, "Impairment charge for credit losses", "", "", "BANK 2022 impairment charge for credit losses (49,773)", sign=-1, sign_reason=EXP, manual="(49,773)")
+for o in OUT:
+    if o["spec_id"].startswith("FBN22-"):
+        o["printed_page"] = 4
+
 if __name__ == "__main__":
     prefixes = {o["spec_id"] for o in OUT}
     keep = [r for r in csv.DictReader(open(P)) if r["spec_id"] not in prefixes]

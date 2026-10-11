@@ -12,19 +12,19 @@ With 12 banks the number of clusters is small: report wild-cluster-bootstrap inf
 
 | Outcome | Eligible N | Banks | Status | Tier DiD feasible | Banks with volatility feasible | Recommended estimator |
 |---|---|---|---|---|---|---|
-| car | 84 | 12 | testable | True | 8 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
-| car_computed | 65 | 12 | testable | True | 7 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
-| roa | 95 | 12 | testable | True | 11 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
-| eqta | 115 | 12 | testable | True | 11 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
-| ocf_ratio | 84 | 12 | testable | True | 9 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
-| allr | 92 | 12 | testable | True | 10 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
-| impairment_assets | 88 | 12 | testable | True | 11 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
+| car | 86 | 12 | testable | True | 8 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
+| car_computed | 67 | 12 | testable | True | 7 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
+| roa | 97 | 12 | testable | True | 11 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
+| eqta | 118 | 12 | testable | True | 12 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
+| ocf_ratio | 86 | 12 | testable | True | 9 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
+| allr | 93 | 12 | testable | True | 10 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
+| impairment_assets | 90 | 12 | testable | True | 11 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
 | npl_calc | 19 | 4 | descriptive | False | 1 | descriptive only (too few eligible observations / banks observed in both regimes) |
 | broad_coverage | 18 | 4 | descriptive | False | 1 | descriptive only (too few eligible observations / banks observed in both regimes) |
 | stage3_coverage | 5 | 2 | descriptive | False | 0 | descriptive only (too few eligible observations / banks observed in both regimes) |
 | liquidity | 10 | 3 | descriptive | False | 1 | descriptive only (too few eligible observations / banks observed in both regimes) |
-| leverage | 115 | 12 | testable | True | 11 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
-| gcu | 56 | 11 | descriptive | True | 5 | descriptive only: event counts by regime and tier; exact (Fisher) comparison of event shares; no multivariable model |
+| leverage | 118 | 12 | testable | True | 12 | bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows |
+| gcu | 58 | 11 | descriptive | True | 5 | descriptive only: event counts by regime and tier; exact (Fisher) comparison of event shares; no multivariable model |
 
 ## Objectives
 

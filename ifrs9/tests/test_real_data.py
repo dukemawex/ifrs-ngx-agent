@@ -505,3 +505,17 @@ def test_new_full_report_rows_balance():
         assert abs(num(r["assets"]) - num(r["liabilities"]) - num(r["equity"])) < 0.01 and r["gcu"] == "0.0"
     for y in (2015, 2016):
         assert ("GTBank", str(y)) in panel
+
+
+def test_first_bank_2018_2019_2022_from_bank_columns():
+    panel = {(r["bank"], r["year"]): r for r in rows(DATA / "verified_panel.csv")}
+    expect = {"2018": (3985907.0, 3543223.0, 442684.0, 56952.0, "0.0"), "2019": (4668279.0, 4128814.0, 539465.0, 43917.0, "0.0"),
+              "2022": (8125060.0, 7372174.0, 752886.0, 91415.0, "")}
+    for y, (a, l, e, pat, gcu) in expect.items():
+        r = panel[("First Bank", y)]
+        assert (num(r["assets"]), num(r["liabilities"]), num(r["equity"]), num(r["pat"])) == (a, l, e, pat)
+        assert r["gcu"] == gcu  # 2022: only an ISA 810 summary-FS report, so not coded
+    assert ("First Bank", "2020") not in panel and ("First Bank", "2021") not in panel
+    specs = [s for s in rows(REVIEW / "specs.csv") if s["bank"] == "First Bank" and s["year"] in ("2018", "2019", "2022")]
+    assert specs and all(s["column_scope"] == "bank_separate" and "BANK" in s["column_scope_basis"] for s in specs)
+    assert all("comparative" in s["original_or_comparative"] for s in specs if s["year"] == "2022")

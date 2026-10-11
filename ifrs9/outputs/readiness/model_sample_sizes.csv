@@ -1,32 +1,32 @@
 outcome,model,N,banks,parameters,obs_per_parameter,feasible,note
-car,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,84,12,5,16.8,True,cluster-robust SE by bank
-car,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,84,12,15,5.6,True,identified from 10 banks observed in both regimes
-car,bank FE + year FE: y ~ IFRS9_D | bank + year,84,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
-car,DiD: y ~ Tier1 x Post | bank + year,84,12,22,3.8,True,Tier 1 banks in both regimes: 4; Tier 2: 6; few clusters -> wild cluster bootstrap
-car_computed,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,65,12,5,13.0,True,cluster-robust SE by bank
-car_computed,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,65,12,15,4.3,True,identified from 9 banks observed in both regimes
-car_computed,bank FE + year FE: y ~ IFRS9_D | bank + year,65,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
-car_computed,DiD: y ~ Tier1 x Post | bank + year,65,12,22,3.0,True,Tier 1 banks in both regimes: 4; Tier 2: 5; few clusters -> wild cluster bootstrap
-roa,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,95,12,5,19.0,True,cluster-robust SE by bank
-roa,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,95,12,15,6.3,True,identified from 11 banks observed in both regimes
-roa,bank FE + year FE: y ~ IFRS9_D | bank + year,95,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
-roa,DiD: y ~ Tier1 x Post | bank + year,95,12,22,4.3,True,Tier 1 banks in both regimes: 4; Tier 2: 7; few clusters -> wild cluster bootstrap
-eqta,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,115,12,5,23.0,True,cluster-robust SE by bank
-eqta,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,115,12,15,7.7,True,identified from 11 banks observed in both regimes
-eqta,bank FE + year FE: y ~ IFRS9_D | bank + year,115,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
-eqta,DiD: y ~ Tier1 x Post | bank + year,115,12,22,5.2,True,Tier 1 banks in both regimes: 4; Tier 2: 7; few clusters -> wild cluster bootstrap
-ocf_ratio,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,84,12,5,16.8,True,cluster-robust SE by bank
-ocf_ratio,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,84,12,15,5.6,True,identified from 10 banks observed in both regimes
-ocf_ratio,bank FE + year FE: y ~ IFRS9_D | bank + year,84,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
-ocf_ratio,DiD: y ~ Tier1 x Post | bank + year,84,12,22,3.8,True,Tier 1 banks in both regimes: 4; Tier 2: 6; few clusters -> wild cluster bootstrap
-allr,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,92,12,5,18.4,True,cluster-robust SE by bank
-allr,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,92,12,15,6.1,True,identified from 10 banks observed in both regimes
-allr,bank FE + year FE: y ~ IFRS9_D | bank + year,92,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
-allr,DiD: y ~ Tier1 x Post | bank + year,92,12,22,4.2,True,Tier 1 banks in both regimes: 4; Tier 2: 6; few clusters -> wild cluster bootstrap
-impairment_assets,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,88,12,5,17.6,True,cluster-robust SE by bank
-impairment_assets,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,88,12,15,5.9,True,identified from 11 banks observed in both regimes
-impairment_assets,bank FE + year FE: y ~ IFRS9_D | bank + year,88,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
-impairment_assets,DiD: y ~ Tier1 x Post | bank + year,88,12,22,4.0,True,Tier 1 banks in both regimes: 4; Tier 2: 7; few clusters -> wild cluster bootstrap
+car,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,86,12,5,17.2,True,cluster-robust SE by bank
+car,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,86,12,15,5.7,True,identified from 11 banks observed in both regimes
+car,bank FE + year FE: y ~ IFRS9_D | bank + year,86,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
+car,DiD: y ~ Tier1 x Post | bank + year,86,12,22,3.9,True,Tier 1 banks in both regimes: 5; Tier 2: 6; few clusters -> wild cluster bootstrap
+car_computed,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,67,12,5,13.4,True,cluster-robust SE by bank
+car_computed,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,67,12,15,4.5,True,identified from 10 banks observed in both regimes
+car_computed,bank FE + year FE: y ~ IFRS9_D | bank + year,67,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
+car_computed,DiD: y ~ Tier1 x Post | bank + year,67,12,22,3.0,True,Tier 1 banks in both regimes: 5; Tier 2: 5; few clusters -> wild cluster bootstrap
+roa,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,97,12,5,19.4,True,cluster-robust SE by bank
+roa,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,97,12,15,6.5,True,identified from 12 banks observed in both regimes
+roa,bank FE + year FE: y ~ IFRS9_D | bank + year,97,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
+roa,DiD: y ~ Tier1 x Post | bank + year,97,12,22,4.4,True,Tier 1 banks in both regimes: 5; Tier 2: 7; few clusters -> wild cluster bootstrap
+eqta,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,118,12,5,23.6,True,cluster-robust SE by bank
+eqta,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,118,12,15,7.9,True,identified from 12 banks observed in both regimes
+eqta,bank FE + year FE: y ~ IFRS9_D | bank + year,118,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
+eqta,DiD: y ~ Tier1 x Post | bank + year,118,12,22,5.4,True,Tier 1 banks in both regimes: 5; Tier 2: 7; few clusters -> wild cluster bootstrap
+ocf_ratio,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,86,12,5,17.2,True,cluster-robust SE by bank
+ocf_ratio,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,86,12,15,5.7,True,identified from 11 banks observed in both regimes
+ocf_ratio,bank FE + year FE: y ~ IFRS9_D | bank + year,86,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
+ocf_ratio,DiD: y ~ Tier1 x Post | bank + year,86,12,22,3.9,True,Tier 1 banks in both regimes: 5; Tier 2: 6; few clusters -> wild cluster bootstrap
+allr,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,93,12,5,18.6,True,cluster-robust SE by bank
+allr,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,93,12,15,6.2,True,identified from 11 banks observed in both regimes
+allr,bank FE + year FE: y ~ IFRS9_D | bank + year,93,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
+allr,DiD: y ~ Tier1 x Post | bank + year,93,12,22,4.2,True,Tier 1 banks in both regimes: 5; Tier 2: 6; few clusters -> wild cluster bootstrap
+impairment_assets,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,90,12,5,18.0,True,cluster-robust SE by bank
+impairment_assets,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,90,12,15,6.0,True,identified from 12 banks observed in both regimes
+impairment_assets,bank FE + year FE: y ~ IFRS9_D | bank + year,90,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
+impairment_assets,DiD: y ~ Tier1 x Post | bank + year,90,12,22,4.1,True,Tier 1 banks in both regimes: 5; Tier 2: 7; few clusters -> wild cluster bootstrap
 npl_calc,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,19,4,5,3.8,False,cluster-robust SE by bank
 npl_calc,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,19,4,7,2.7,False,identified from 2 banks observed in both regimes
 npl_calc,bank FE + year FE: y ~ IFRS9_D | bank + year,19,4,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
@@ -43,12 +43,12 @@ liquidity,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,10,3,5,2.0,Fals
 liquidity,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,10,3,6,1.7,False,identified from 2 banks observed in both regimes
 liquidity,bank FE + year FE: y ~ IFRS9_D | bank + year,10,3,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
 liquidity,DiD: y ~ Tier1 x Post | bank + year,10,3,13,0.8,False,Tier 1 banks in both regimes: 1; Tier 2: 1; few clusters -> wild cluster bootstrap
-leverage,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,115,12,5,23.0,True,cluster-robust SE by bank
-leverage,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,115,12,15,7.7,True,identified from 11 banks observed in both regimes
-leverage,bank FE + year FE: y ~ IFRS9_D | bank + year,115,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
-leverage,DiD: y ~ Tier1 x Post | bank + year,115,12,22,5.2,True,Tier 1 banks in both regimes: 4; Tier 2: 7; few clusters -> wild cluster bootstrap
-gcu,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,56,11,5,11.2,True,cluster-robust SE by bank
-gcu,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,56,11,14,4.0,True,identified from 9 banks observed in both regimes
-gcu,bank FE + year FE: y ~ IFRS9_D | bank + year,56,11,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
-gcu,DiD: y ~ Tier1 x Post | bank + year,56,11,21,2.7,True,Tier 1 banks in both regimes: 3; Tier 2: 6; few clusters -> wild cluster bootstrap
-gcu,logit: gcu ~ IFRS9_D (+ covariates),56,11,2,28.0,False,3 positive events; events per parameter 1.5; multivariable model needs >= 10 events per parameter
+leverage,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,118,12,5,23.6,True,cluster-robust SE by bank
+leverage,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,118,12,15,7.9,True,identified from 12 banks observed in both regimes
+leverage,bank FE + year FE: y ~ IFRS9_D | bank + year,118,12,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
+leverage,DiD: y ~ Tier1 x Post | bank + year,118,12,22,5.4,True,Tier 1 banks in both regimes: 5; Tier 2: 7; few clusters -> wild cluster bootstrap
+gcu,pooled OLS: y ~ IFRS9_D + Tier1 + ln_assets + leverage,58,11,5,11.6,True,cluster-robust SE by bank
+gcu,bank FE: y ~ IFRS9_D + ln_assets + leverage | bank,58,11,14,4.1,True,identified from 10 banks observed in both regimes
+gcu,bank FE + year FE: y ~ IFRS9_D | bank + year,58,11,,,False,NOT IDENTIFIED: IFRS9_D = 1{year>=2018} is an exact linear combination of the year dummies
+gcu,DiD: y ~ Tier1 x Post | bank + year,58,11,21,2.8,True,Tier 1 banks in both regimes: 4; Tier 2: 6; few clusters -> wild cluster bootstrap
+gcu,logit: gcu ~ IFRS9_D (+ covariates),58,11,2,29.0,False,3 positive events; events per parameter 1.5; multivariable model needs >= 10 events per parameter

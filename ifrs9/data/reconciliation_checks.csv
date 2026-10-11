@@ -83,6 +83,13 @@ First Bank,2016,reported CAR vs capital/RWA,0.0033,0.005021,,True,pass,,display 
 First Bank,2017,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 First Bank,2017,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
 First Bank,2017,reported CAR vs capital/RWA,0.0011,0.005019,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 1.95e-05; printed literal '17.74' from FBN17-CAR; basis=; transitional=
+First Bank,2018,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+First Bank,2018,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+First Bank,2018,reported CAR vs capital/RWA,0.0023,0.005022,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 2.19e-05; printed literal '10.66' from FBN18-CAR; basis=; transitional=17.26
+First Bank,2019,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+First Bank,2019,gross loans - allowance = net loans,-1.0,1.500000001,1,True,pass,,
+First Bank,2019,reported CAR vs capital/RWA,0.0031,0.005019,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 1.87e-05; printed literal '11.16' from FBN19-CAR; basis=; transitional=15.45
+First Bank,2022,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 GTBank,2013,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 GTBank,2014,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 GTBank,2015,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,

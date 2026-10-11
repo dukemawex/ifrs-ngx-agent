@@ -1,12 +1,12 @@
 {
-  "run_utc": "2026-10-11T11:57:45+00:00",
+  "run_utc": "2026-10-11T12:46:46+00:00",
   "exit_status": 0,
   "suites": {
-    "real-data regression tests": {
-      "passed": 43
-    },
     "synthetic/mock unit tests": {
       "passed": 62
+    },
+    "real-data regression tests": {
+      "passed": 44
     }
   }
 }

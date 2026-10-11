@@ -487,6 +487,45 @@ First Bank,2017,rwa,3019880.0,1,True,direct,,FBN17-RWA
 First Bank,2017,pbt,52263.0,1,True,direct,,FBN17-PBT
 First Bank,2017,specific_allowance,133484.0,1,True,direct,,FBN17-SA
 First Bank,2017,collective_allowance,45235.0,1,True,direct,,FBN17-CA
+First Bank,2018,pat,56952.0,1,True,direct,,FBN18-PAT
+First Bank,2018,assets,3985907.0,1,True,direct,,FBN18-A
+First Bank,2018,liabilities,3543223.0,1,True,direct,,FBN18-L
+First Bank,2018,equity,442684.0,1,True,direct,,FBN18-E
+First Bank,2018,ocf,327497.0,1,True,direct,,FBN18-OCF
+First Bank,2018,opening_assets,3777039.0,1,True,direct,,FBN18-OA
+First Bank,2018,gross_loans,1728964.0,1,True,direct,,FBN18-GL
+First Bank,2018,loan_allowance,277549.0,1,True,direct,,FBN18-ALW
+First Bank,2018,net_loans,1451415.0,1,True,direct,,FBN18-NL
+First Bank,2018,total_impairment,61865.0,1,True,direct,,FBN18-TI
+First Bank,2018,car,10.66,1,True,direct,,FBN18-CAR
+First Bank,2018,car_transitional,17.26,1,True,direct,,FBN18-CART
+First Bank,2018,regulatory_capital,269341.0,1,True,direct,,FBN18-RC
+First Bank,2018,rwa,2527208.0,1,True,direct,,FBN18-RWA
+First Bank,2018,gcu,0.0,1,True,direct,,GC-FirstBank2018
+First Bank,2018,pbt,58194.0,1,True,direct,,FBN18-PBT
+First Bank,2019,pat,43917.0,1,True,direct,,FBN19-PAT
+First Bank,2019,assets,4668279.0,1,True,direct,,FBN19-A
+First Bank,2019,liabilities,4128814.0,1,True,direct,,FBN19-L
+First Bank,2019,equity,539465.0,1,True,direct,,FBN19-E
+First Bank,2019,ocf,-218752.0,1,True,direct,,FBN19-OCF
+First Bank,2019,opening_assets,3985907.0,1,True,direct,,FBN19-OA
+First Bank,2019,gross_loans,1618817.0,1,True,direct,,FBN19-GL
+First Bank,2019,loan_allowance,59314.0,1,True,direct,,FBN19-ALW
+First Bank,2019,net_loans,1559504.0,1,True,direct,,FBN19-NL
+First Bank,2019,total_impairment,46640.0,1,True,direct,,FBN19-TI
+First Bank,2019,car,11.16,1,True,direct,,FBN19-CAR
+First Bank,2019,car_transitional,15.45,1,True,direct,,FBN19-CART
+First Bank,2019,regulatory_capital,332265.0,1,True,direct,,FBN19-RC
+First Bank,2019,rwa,2978121.0,1,True,direct,,FBN19-RWA
+First Bank,2019,gcu,0.0,1,True,direct,,GC-FirstBank2019
+First Bank,2019,pbt,46770.0,1,True,direct,,FBN19-PBT
+First Bank,2022,pat,91415.0,1,True,direct,,FBN22-PAT
+First Bank,2022,assets,8125060.0,1,True,direct,,FBN22-A
+First Bank,2022,liabilities,7372174.0,1,True,direct,,FBN22-L
+First Bank,2022,equity,752886.0,1,True,direct,,FBN22-E
+First Bank,2022,net_loans,3301779.0,1,True,direct,,FBN22-NL
+First Bank,2022,total_impairment,49773.0,1,True,direct,,FBN22-TI
+First Bank,2022,pbt,94592.0,1,True,direct,,FBN22-PBT
 GTBank,2013,pat,85546.0,1,True,direct,,EV0060
 GTBank,2013,assets,1904366.0,1,True,direct,,EV0061
 GTBank,2013,liabilities,1574719.0,1,True,direct,,EV0063

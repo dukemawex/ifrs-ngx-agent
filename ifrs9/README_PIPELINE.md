@@ -105,7 +105,7 @@ with a full set of year fixed effects. No thesis regression is estimated.
 
 ## Thesis analysis (12-bank cohort)
 
-`python -m thesis_analysis --B 9999` reads only the frozen release `releases/IFRS9_release_2026-10-11_v1` (every file
+`python -m thesis_analysis --B 9999` reads only the frozen release named in `thesis_analysis/data.py` (currently `releases/IFRS9_release_2026-10-11_v2`) (every file
 hash-verified against `RELEASE_MANIFEST.json` first; nothing is written there) and writes `thesis_results/`: sample
 profile, descriptives, trends, matched pre/post, exploratory volatility, bank-FE models (conventional, CR1 bank-clustered
 and wild-cluster-bootstrap p-values), robustness, diagnostics, going-concern event description, tables, figures,
@@ -113,3 +113,14 @@ and wild-cluster-bootstrap p-values), robustness, diagnostics, going-concern eve
 excluded from the cohort and not replaced. IFRS9_D is never combined with year fixed effects. Requires numpy, pandas,
 scipy, statsmodels (>= 0.15), matplotlib and openpyxl. `tests/test_thesis_analysis.py` checks the outputs against the
 release and the report against the CSVs.
+
+When `thesis_results_v1/` (results on the 97-row v1 release) is present, the run also writes `comparison_v1_v2.md` and
+`comparison_*.csv` (`thesis_analysis/compare.py`, material-change rule stated in the file).
+
+## HoldCo entity-scope rule
+
+HoldCo or group packages are admissible only where the operating bank is separately identified and audited (Bank
+columns, separate bank statements, a labelled subsidiary statement section, or bank-specific statutory summary
+statements). Every candidate is recorded in `data/review/source_scope_screening.csv` (legal entity, owner, column
+headings, opinion coverage, decision and reason). `python -m ifrs9_recovery.manual_fetch <source_id>` records a public
+PDF fetched with a plain request when the pipeline's user agent receives HTTP 403.

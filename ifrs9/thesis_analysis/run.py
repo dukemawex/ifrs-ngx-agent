@@ -13,6 +13,7 @@ import numpy as np
 import pandas as pd
 
 from . import compute as C
+from . import compare as CMP
 from . import data as D
 from . import econ as E
 from . import figures as F
@@ -322,6 +323,8 @@ def main(argv=None):
             "figures": figs, "tables": sorted(T)}
     (OUT / "analysis_manifest.json").write_text(json.dumps(meta, indent=2))
     (OUT / "analysis_report.md").write_text(report(meta), encoding="utf-8")
+    meta["comparison_v1"] = CMP.run()
+    (OUT / "analysis_manifest.json").write_text(json.dumps(meta, indent=2))
     z = OUT / "thesis_results_handoff.zip"
     with zipfile.ZipFile(z, "w", zipfile.ZIP_DEFLATED) as zf:
         for p in sorted(OUT.rglob("*")):

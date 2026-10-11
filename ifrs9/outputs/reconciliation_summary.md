@@ -1,6 +1,6 @@
 # Reconciliation summary
 
-Generated 2026-10-11T07:52:06+00:00 from the saved outputs (code commit `a38ccfd4b606bbcf6fa4be69568efdcf4416df19`, branch `claude/zen-hamilton-v2s80b`).
+Generated 2026-10-11T07:52:27+00:00 from the saved outputs (code commit `1d69f9db8fa3fe7daf210715a0e08e16276f139c`, branch `claude/zen-hamilton-v2s80b`).
 Every number below is computed by `ifrs9_recovery.summary.release_stats()`; see `outputs/release_stats.json`.
 
 ## Panel

@@ -21,7 +21,7 @@ def rows(name):
 def test_frozen_release_unchanged():
     from thesis_analysis import data as D
     meta = D.verify_release()
-    assert meta["release_id"] == "IFRS9_release_2026-10-11_v1"
+    assert meta["release_id"] == D.RELEASE_ID
     assert meta["files_verified"] == 42
 
 
@@ -92,3 +92,15 @@ def test_cr1_matches_statsmodels():
 
 def info_g(g):
     return len(np.unique(g))
+
+
+def test_comparison_with_v1_matches_exports():
+    if not (RES / "comparison_regression.csv").exists():
+        pytest.skip("no v1 archive")
+    cmp_ = {(r["outcome"], r["model"], r["term"]): r for r in rows("comparison_regression.csv")}
+    for r in rows("regression_results.csv"):
+        c = cmp_[(r["outcome"], r["model"], r["term"])]
+        assert float(c["coef_v2"]) == pytest.approx(float(r["coef"]))
+        assert int(float(c["N_v2"])) == int(r["N"])
+    added = rows("comparison_rows_added.csv")
+    assert [(a["bank"], a["year"], a["change"]) for a in added] == [("Access", "2022", "added")]

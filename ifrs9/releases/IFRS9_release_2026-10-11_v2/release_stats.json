@@ -1,0 +1,649 @@
+{
+  "generated_utc": "2026-10-11T07:52:27+00:00",
+  "git_commit": "1d69f9db8fa3fe7daf210715a0e08e16276f139c",
+  "git_branch": "claude/zen-hamilton-v2s80b",
+  "panel": {
+    "rows": 98,
+    "banks": 12,
+    "pre_adoption": 50,
+    "post_adoption": 48,
+    "baseline_rows": 47,
+    "baseline_rows_retained": 47,
+    "new_rows": 51
+  },
+  "changes": {
+    "new_bank_year": 51,
+    "fill_blank": 9
+  },
+  "fills_by_field": {
+    "gcu": 9
+  },
+  "field_basis": {
+    "baseline_inherited": 615,
+    "recomputed_ratio": 1039,
+    "reported_text_layer": 650,
+    "manual_transcription": 95,
+    "reported_text_layer+restated_comparative": 38,
+    "derived_from_verified+restated_comparative": 4,
+    "derived_from_verified": 18,
+    "manual_transcription+restated_comparative": 4
+  },
+  "admissions": {
+    "rows": 834,
+    "accepted": 834,
+    "rejected": 0
+  },
+  "reconciliation": {
+    "run": 220,
+    "pass": 218,
+    "documented_source_exception": 2
+  },
+  "evidence_lineage": {
+    "checked": 1424,
+    "matched": 1424,
+    "qualified": 6
+  },
+  "going_concern": {
+    "reviews_recorded": 45,
+    "reviews_coded_1": 3,
+    "partial_reviews": 1,
+    "not_reviewed_listed": 16,
+    "panel_coded": 46,
+    "panel_unknown": 52,
+    "panel_coded_1": 3,
+    "baseline_codes_retained": 2,
+    "baseline_codes_confirmed_by_review": 1,
+    "fills_in_baseline_rows": 9,
+    "codes_on_new_rows": 35
+  },
+  "conflicts": {
+    "restated_comparative": 4,
+    "source_internal_inconsistency": 3,
+    "source_unit_label_error": 1,
+    "source_vs_selected": 1,
+    "source_internal_inconsistency_cross_report": 1,
+    "candidate_vs_selected": 201
+  },
+  "version_decisions": {
+    "unexplained difference": 4,
+    "labelled restatement": 3,
+    "fallback: labelled restatement": 3,
+    "fallback: comparative": 4,
+    "labelled reclassification": 1,
+    "confirmed scope difference with 2022 selected basis": 1,
+    "source internal inconsistency": 4,
+    "corroborated by original-year report": 1,
+    "corroborated by original-year summary": 1
+  },
+  "denominators": {
+    "checked": 73,
+    "incompatible": 4,
+    "differing": [
+      "Access 2020 (opening 6307588.216 from 2020 annual report, as originally reported; prior closing 6311041.282 from 2019 annual report, as originally reported)",
+      "Sterling 2017 (opening 830805.0 from 2017 annual report, as originally reported; prior closing 830802.224 from 2016 annual report, as originally reported)",
+      "Sterling 2022 (opening 1606898.0 from 2022 annual report, as originally reported; prior closing 1611749.0 from 2021 annual report, as originally reported)",
+      "Union 2015 (opening 922755.0 from 2016 annual report; 2015 restated comparative; prior closing 920936.0 from Prior source-selection policy retained; original evidence preserved in accompanying pack.)"
+    ]
+  },
+  "remaining": {
+    "bank_years": 32,
+    "field_requests": 345
+  },
+  "endpoints": {
+    "gcu": {
+      "label": "Going-concern uncertainty (auditor material-uncertainty section or GC emphasis = 1)",
+      "panel_rows": 98,
+      "available": 46,
+      "missing": 52,
+      "descriptive": 46,
+      "longitudinal": 46,
+      "change_pairs": 22,
+      "eligible": 46,
+      "excluded_from_inference": 0,
+      "banks": 10,
+      "pre": 18,
+      "post": 28,
+      "tier1": 13,
+      "tier2": 33,
+      "fallback_rows_in_sample": 0,
+      "excluded_rows": []
+    },
+    "car": {
+      "label": "Reported CAR, full-impact basis where both are printed (%)",
+      "panel_rows": 98,
+      "available": 77,
+      "missing": 21,
+      "descriptive": 77,
+      "longitudinal": 77,
+      "change_pairs": 58,
+      "eligible": 75,
+      "excluded_from_inference": 2,
+      "banks": 11,
+      "pre": 37,
+      "post": 38,
+      "tier1": 32,
+      "tier2": 43,
+      "fallback_rows_in_sample": 2,
+      "excluded_rows": [
+        "Fidelity 2016 (AUTO-FLAG;EL-FID16-CAR)",
+        "Wema 2021 (AUTO-FALLBACK;AUTO-FLAG;EL-WEMA21-CAR)"
+      ]
+    },
+    "car_computed": {
+      "label": "Regulatory capital / RWA (%)",
+      "panel_rows": 98,
+      "available": 58,
+      "missing": 40,
+      "descriptive": 58,
+      "longitudinal": 58,
+      "change_pairs": 39,
+      "eligible": 55,
+      "excluded_from_inference": 3,
+      "banks": 11,
+      "pre": 23,
+      "post": 32,
+      "tier1": 26,
+      "tier2": 29,
+      "fallback_rows_in_sample": 2,
+      "excluded_rows": [
+        "Fidelity 2016 (EL-FID16-CAR)",
+        "Stanbic 2020 (AUTO-FLAG;EL-STAN20-CAPITAL)",
+        "Wema 2021 (AUTO-FALLBACK;EL-WEMA21-CAR)"
+      ]
+    },
+    "roa": {
+      "label": "PAT / average assets (%)",
+      "panel_rows": 98,
+      "available": 78,
+      "missing": 20,
+      "descriptive": 78,
+      "longitudinal": 78,
+      "change_pairs": 52,
+      "eligible": 78,
+      "excluded_from_inference": 0,
+      "banks": 12,
+      "pre": 39,
+      "post": 39,
+      "tier1": 33,
+      "tier2": 45,
+      "fallback_rows_in_sample": 3,
+      "excluded_rows": []
+    },
+    "eqta": {
+      "label": "Equity / total assets (%)",
+      "panel_rows": 98,
+      "available": 98,
+      "missing": 0,
+      "descriptive": 98,
+      "longitudinal": 98,
+      "change_pairs": 82,
+      "eligible": 98,
+      "excluded_from_inference": 0,
+      "banks": 12,
+      "pre": 50,
+      "post": 48,
+      "tier1": 41,
+      "tier2": 57,
+      "fallback_rows_in_sample": 7,
+      "excluded_rows": []
+    },
+    "ocf_ratio": {
+      "label": "Operating cash flow / average assets (%)",
+      "panel_rows": 98,
+      "available": 72,
+      "missing": 26,
+      "descriptive": 72,
+      "longitudinal": 72,
+      "change_pairs": 49,
+      "eligible": 72,
+      "excluded_from_inference": 0,
+      "banks": 11,
+      "pre": 36,
+      "post": 36,
+      "tier1": 31,
+      "tier2": 41,
+      "fallback_rows_in_sample": 3,
+      "excluded_rows": []
+    },
+    "allr": {
+      "label": "Customer-loan allowance / gross customer loans (%)",
+      "panel_rows": 98,
+      "available": 83,
+      "missing": 15,
+      "descriptive": 83,
+      "longitudinal": 82,
+      "change_pairs": 63,
+      "eligible": 82,
+      "excluded_from_inference": 1,
+      "banks": 11,
+      "pre": 40,
+      "post": 42,
+      "tier1": 36,
+      "tier2": 46,
+      "fallback_rows_in_sample": 5,
+      "excluded_rows": [
+        "Union 2018 (AUTO-POOL;EL-UNION18-ALLOWANCE)"
+      ]
+    },
+    "impairment_assets": {
+      "label": "Total impairment / average assets (%)",
+      "panel_rows": 98,
+      "available": 75,
+      "missing": 23,
+      "descriptive": 75,
+      "longitudinal": 73,
+      "change_pairs": 50,
+      "eligible": 73,
+      "excluded_from_inference": 2,
+      "banks": 12,
+      "pre": 35,
+      "post": 38,
+      "tier1": 31,
+      "tier2": 42,
+      "fallback_rows_in_sample": 2,
+      "excluded_rows": [
+        "Unity 2017 (EL-UNITY17-IMP)",
+        "Wema 2021 (AUTO-FALLBACK;EL-WEMA21-IMP)"
+      ]
+    },
+    "npl_calc": {
+      "label": "NPL amount / gross loans (%)",
+      "panel_rows": 98,
+      "available": 14,
+      "missing": 84,
+      "descriptive": 14,
+      "longitudinal": 14,
+      "change_pairs": 9,
+      "eligible": 14,
+      "excluded_from_inference": 0,
+      "banks": 3,
+      "pre": 7,
+      "post": 7,
+      "tier1": 6,
+      "tier2": 8,
+      "fallback_rows_in_sample": 1,
+      "excluded_rows": []
+    },
+    "broad_coverage": {
+      "label": "Total loan allowance / NPL amount (%)",
+      "panel_rows": 98,
+      "available": 14,
+      "missing": 84,
+      "descriptive": 14,
+      "longitudinal": 13,
+      "change_pairs": 7,
+      "eligible": 13,
+      "excluded_from_inference": 1,
+      "banks": 3,
+      "pre": 7,
+      "post": 6,
+      "tier1": 6,
+      "tier2": 7,
+      "fallback_rows_in_sample": 1,
+      "excluded_rows": [
+        "Union 2018 (AUTO-POOL;EL-UNION18-ALLOWANCE)"
+      ]
+    },
+    "stage3_coverage": {
+      "label": "Stage 3 allowance / Stage 3 gross (%)",
+      "panel_rows": 98,
+      "available": 6,
+      "missing": 92,
+      "descriptive": 6,
+      "longitudinal": 5,
+      "change_pairs": 3,
+      "eligible": 5,
+      "excluded_from_inference": 1,
+      "banks": 2,
+      "pre": 0,
+      "post": 5,
+      "tier1": 0,
+      "tier2": 5,
+      "fallback_rows_in_sample": 0,
+      "excluded_rows": [
+        "Unity 2021 (EL-UNITY21-S3)"
+      ]
+    },
+    "liquidity": {
+      "label": "Liquidity ratio used (%)",
+      "panel_rows": 98,
+      "available": 10,
+      "missing": 88,
+      "descriptive": 10,
+      "longitudinal": 10,
+      "change_pairs": 7,
+      "eligible": 10,
+      "excluded_from_inference": 0,
+      "banks": 3,
+      "pre": 5,
+      "post": 5,
+      "tier1": 7,
+      "tier2": 3,
+      "fallback_rows_in_sample": 0,
+      "excluded_rows": []
+    },
+    "leverage": {
+      "label": "Liabilities / assets (%)",
+      "panel_rows": 98,
+      "available": 98,
+      "missing": 0,
+      "descriptive": 98,
+      "longitudinal": 98,
+      "change_pairs": 82,
+      "eligible": 98,
+      "excluded_from_inference": 0,
+      "banks": 12,
+      "pre": 50,
+      "post": 48,
+      "tier1": 41,
+      "tier2": 57,
+      "fallback_rows_in_sample": 7,
+      "excluded_rows": []
+    }
+  },
+  "row_versions": {
+    "rows": 98,
+    "treatments": {
+      "primary (baseline selection retained)": 47,
+      "primary (original-year presentation)": 44,
+      "primary; drop in sensitivity (fallback: original-year report unavailable)": 7
+    },
+    "fallback_rows": [
+      "Access 2018 (fallback: comparative; source xs-6951b12082; labelled restated: no)",
+      "Fidelity 2021 (fallback: labelled restatement; source pdf-0960512f5d; labelled restated: yes)",
+      "GTBank 2017 (fallback: labelled restatement; source xs-21e7fbfbf9; labelled restated: yes)",
+      "Union 2015 (fallback: labelled restatement; source xs-15d472ad0d; labelled restated: yes)",
+      "Unity 2013 (fallback: comparative; source xs-901cfd21b1; labelled restated: no)",
+      "Unity 2020 (fallback: comparative; source xs-848eb8a062; labelled restated: no)",
+      "Wema 2021 (fallback: comparative; source pdf-2b23016b97; labelled restated: no)"
+    ],
+    "unreconciled_version_mixes": 0
+  },
+  "unresolved_exceptions": [
+    "Fidelity 2016 reported CAR vs capital/RWA: documented source exception",
+    "Wema 2021 reported CAR vs capital/RWA: documented source exception",
+    "Stanbic 2021 regulatory_capital: unexplained difference",
+    "Wema 2021 total_impairment: confirmed scope difference with 2022 selected basis",
+    "Stanbic 2020 regulatory_capital: source internal inconsistency",
+    "Stanbic 2020 capital_transitional: source internal inconsistency",
+    "Wema 2021 car: source internal inconsistency",
+    "Fidelity 2016 car: source internal inconsistency",
+    "Sterling 2016 assets/equity/pat: unexplained difference",
+    "First Bank 2016 pbt: unexplained difference; OWNER DECISION PENDING",
+    "Stanbic 2020 total_impairment: unexplained difference; OWNER DECISION PENDING",
+    "Unity 2021 stage3_gross: source_internal_inconsistency_cross_report"
+  ],
+  "remaining_by_bank": {
+    "Ecobank Nigeria": [
+      "2013",
+      "2014",
+      "2015",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022"
+    ],
+    "FCMB": [
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022"
+    ],
+    "First Bank": [
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022"
+    ],
+    "GTBank": [
+      "2015",
+      "2016",
+      "2021",
+      "2022"
+    ],
+    "Stanbic": [
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017"
+    ]
+  },
+  "readiness": {
+    "estimators": [
+      {
+        "outcome": "car",
+        "eligible_n": "75",
+        "banks": "11",
+        "status": "testable",
+        "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
+        "tier_did_feasible": "True",
+        "volatility_banks_feasible": "7",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "car_computed",
+        "eligible_n": "55",
+        "banks": "11",
+        "status": "testable",
+        "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
+        "tier_did_feasible": "True",
+        "volatility_banks_feasible": "6",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "roa",
+        "eligible_n": "78",
+        "banks": "12",
+        "status": "testable",
+        "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
+        "tier_did_feasible": "True",
+        "volatility_banks_feasible": "8",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "eqta",
+        "eligible_n": "98",
+        "banks": "12",
+        "status": "testable",
+        "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
+        "tier_did_feasible": "True",
+        "volatility_banks_feasible": "9",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "ocf_ratio",
+        "eligible_n": "72",
+        "banks": "11",
+        "status": "testable",
+        "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
+        "tier_did_feasible": "True",
+        "volatility_banks_feasible": "7",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "allr",
+        "eligible_n": "82",
+        "banks": "11",
+        "status": "testable",
+        "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
+        "tier_did_feasible": "True",
+        "volatility_banks_feasible": "8",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "impairment_assets",
+        "eligible_n": "73",
+        "banks": "12",
+        "status": "testable",
+        "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
+        "tier_did_feasible": "True",
+        "volatility_banks_feasible": "8",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "npl_calc",
+        "eligible_n": "14",
+        "banks": "3",
+        "status": "descriptive",
+        "recommended_estimator": "descriptive only (too few eligible observations / banks observed in both regimes)",
+        "tier_did_feasible": "False",
+        "volatility_banks_feasible": "1",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "broad_coverage",
+        "eligible_n": "13",
+        "banks": "3",
+        "status": "descriptive",
+        "recommended_estimator": "descriptive only (too few eligible observations / banks observed in both regimes)",
+        "tier_did_feasible": "False",
+        "volatility_banks_feasible": "1",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "stage3_coverage",
+        "eligible_n": "5",
+        "banks": "2",
+        "status": "descriptive",
+        "recommended_estimator": "descriptive only (too few eligible observations / banks observed in both regimes)",
+        "tier_did_feasible": "False",
+        "volatility_banks_feasible": "0",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "liquidity",
+        "eligible_n": "10",
+        "banks": "3",
+        "status": "descriptive",
+        "recommended_estimator": "descriptive only (too few eligible observations / banks observed in both regimes)",
+        "tier_did_feasible": "False",
+        "volatility_banks_feasible": "1",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "leverage",
+        "eligible_n": "98",
+        "banks": "12",
+        "status": "testable",
+        "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
+        "tier_did_feasible": "True",
+        "volatility_banks_feasible": "9",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      },
+      {
+        "outcome": "gcu",
+        "eligible_n": "46",
+        "banks": "10",
+        "status": "descriptive",
+        "recommended_estimator": "descriptive only: event counts by regime and tier; exact (Fisher) comparison of event shares; no multivariable model",
+        "tier_did_feasible": "True",
+        "volatility_banks_feasible": "4",
+        "collinearity_warning": "IFRS9_D is perfectly collinear with a full set of year fixed effects"
+      }
+    ],
+    "objectives": [
+      {
+        "objective": "O1",
+        "description": "Effect of IFRS 9 adoption on loan-loss provisioning",
+        "outcomes": "allr;impairment_assets;broad_coverage;npl_calc;stage3_coverage",
+        "statistically_testable_outcomes": "allr;impairment_assets",
+        "descriptive_only_outcomes": "broad_coverage;npl_calc;stage3_coverage",
+        "readiness": "testable",
+        "note": "objective wording inferred from the study title and variables; confirm against the thesis"
+      },
+      {
+        "objective": "O2",
+        "description": "Effect of IFRS 9 adoption on capital adequacy",
+        "outcomes": "car;car_computed",
+        "statistically_testable_outcomes": "car;car_computed",
+        "descriptive_only_outcomes": "",
+        "readiness": "testable",
+        "note": "objective wording inferred from the study title and variables; confirm against the thesis"
+      },
+      {
+        "objective": "O3",
+        "description": "Effect of IFRS 9 adoption on profitability, cash generation and balance-sheet stability",
+        "outcomes": "roa;ocf_ratio;eqta;leverage;liquidity",
+        "statistically_testable_outcomes": "roa;ocf_ratio;eqta;leverage",
+        "descriptive_only_outcomes": "liquidity",
+        "readiness": "testable",
+        "note": "objective wording inferred from the study title and variables; confirm against the thesis"
+      },
+      {
+        "objective": "O4",
+        "description": "Going-concern indicators before and after IFRS 9",
+        "outcomes": "gcu",
+        "statistically_testable_outcomes": "",
+        "descriptive_only_outcomes": "gcu",
+        "readiness": "descriptive only",
+        "note": "objective wording inferred from the study title and variables; confirm against the thesis"
+      },
+      {
+        "objective": "O5",
+        "description": "Tier 1 versus Tier 2 differences in the IFRS 9 effect",
+        "outcomes": "allr;car;roa;eqta",
+        "statistically_testable_outcomes": "allr;car;roa;eqta",
+        "descriptive_only_outcomes": "",
+        "readiness": "testable",
+        "note": "objective wording inferred from the study title and variables; confirm against the thesis"
+      },
+      {
+        "objective": "O6",
+        "description": "Change in volatility of key indicators after IFRS 9",
+        "outcomes": "roa;car;allr;impairment_assets",
+        "statistically_testable_outcomes": "roa;car;allr;impairment_assets",
+        "descriptive_only_outcomes": "",
+        "readiness": "exploratory test only (bank-level SDs from >=3 observations per regime)",
+        "note": "objective wording inferred from the study title and variables; confirm against the thesis"
+      }
+    ]
+  },
+  "nimble": {
+    "rest_client": {
+      "attempted_requests": 0,
+      "cap": 100,
+      "retries": 0,
+      "failed_attempts": 0,
+      "note": "REST client not run in this release (no nimble_budget state); key value never printed"
+    },
+    "mcp_plugin": {
+      "invocations": 60,
+      "attempts": 60,
+      "by_tool": {
+        "nimble_search": 48,
+        "nimble_agents_list": 1,
+        "nimble_agents_run": 1,
+        "nimble_agents_run_status": 9,
+        "nimble_agents_run_result": 1
+      },
+      "failed": 1,
+      "note": "Plugin invocation counts do not establish provider-internal HTTP request counts or billing; billed requests not available"
+    },
+    "shared_cap": 100,
+    "cap_changed": false
+  },
+  "tests": {
+    "run_utc": "2026-10-11T07:51:45+00:00",
+    "exit_status": 0,
+    "suites": {
+      "synthetic/mock unit tests": {
+        "passed": 62
+      },
+      "real-data regression tests": {
+        "passed": 41
+      },
+      "other": {
+        "passed": 8
+      }
+    }
+  }
+}

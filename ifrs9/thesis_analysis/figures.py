@@ -59,7 +59,8 @@ def coverage(sp, out):
     ax.axvline(5 - 0.04, color=INK, lw=1)
     handles = [plt.Rectangle((0, 0), 1, 1, color=T1), plt.Rectangle((0, 0), 1, 1, color=T2), plt.Rectangle((0, 0), 1, 1, color="#f0efec")]
     ax.legend(handles, ["Selected, Tier 1", "Selected, Tier 2", "Not available / excluded"], loc="lower left", bbox_to_anchor=(0, 1.0), ncol=3)
-    ax.set_title("Figure 1. Selected bank-years in the frozen release\n(12-bank cohort; 97 of 120 positions)", pad=26)
+    n_sel = sum(b in grid.index and y in grid.columns and isinstance(grid.loc[b, y], str) for b in D.COHORT for y in D.YEARS)
+    ax.set_title(f"Figure 1. Selected bank-years in the frozen release\n(12-bank cohort; {n_sel} of {len(D.COHORT) * len(D.YEARS)} positions)", pad=26)
     return _save(fig, out, "fig01_sample_coverage", f"Source: releases/{D.RELEASE_ID}/verified_panel.csv. Vertical rule: IFRS 9 adoption (2018).")
 
 

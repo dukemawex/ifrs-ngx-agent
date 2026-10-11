@@ -1,0 +1,11 @@
+bank,year,tier,regime,ifrs9_d,value,available,descriptive_use,longitudinal_use,change_comparable,inferential_use,sensitivity_drop,excluded_uses,rule_ids,reasons,fallback_class,primary_version,liquidity_used,liquidity_admissible,liquidity_average,liquidity_max,liquidity_min
+Sterling,2014,Tier 2,IAS 39,0,34.0,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,34.0,1.0,,,
+UBA,2015,Tier 1,IAS 39,0,52.57,True,True,True,False,True,False,,,,,2016 report 2015 comparative Bank columns; opening assets retained from the prior selected 2014 statement.,52.57,1.0,42.61,52.57,35.7
+UBA,2016,Tier 1,IAS 39,0,38.57,True,True,True,True,True,False,,,,,2016 report current-year Bank columns.,38.57,1.0,41.97,46.72,35.52
+UBA,2017,Tier 1,IAS 39,0,49.69,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,49.69,1.0,,,
+UBA,2018,Tier 1,IFRS 9,1,55.84,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,55.84,1.0,,,
+UBA,2019,Tier 1,IFRS 9,1,43.99,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,43.99,1.0,,,
+UBA,2020,Tier 1,IFRS 9,1,44.3,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,44.3,1.0,,,
+UBA,2021,Tier 1,IFRS 9,1,47.56,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,47.56,1.0,44.86,51.53,37.43
+Wema,2017,Tier 2,IAS 39,0,26.25,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,26.25,1.0,,,
+Wema,2018,Tier 2,IFRS 9,1,34.64,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,34.64,1.0,,,

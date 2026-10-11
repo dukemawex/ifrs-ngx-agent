@@ -1,6 +1,6 @@
 # Reconciliation summary
 
-Generated 2026-10-11T06:01:40+00:00 from the saved outputs (code commit `3e764fd0a9c5b2f3644fcfdf51b1137fd34dd978`, branch `claude/zen-hamilton-v2s80b`).
+Generated 2026-10-11T06:06:17+00:00 from the saved outputs (code commit `8d503d9a124b21e235c9c922fe7425f994cc2e75`, branch `claude/zen-hamilton-v2s80b`).
 Every number below is computed by `ifrs9_recovery.summary.release_stats()`; see `outputs/release_stats.json`.
 
 ## Panel
@@ -118,8 +118,8 @@ Rows excluded from inference (rule ids in `data/outcome_eligibility.csv`, reason
 ## Tests
 
 - synthetic/mock unit tests: 62 passed, 0 failed, 0 skipped.
-- real-data regression tests: 30 passed, 0 failed, 0 skipped.
-- Test run: 2026-10-10T21:47:02+00:00.
+- real-data regression tests: 39 passed, 0 failed, 0 skipped.
+- Test run: 2026-10-11T06:06:11+00:00.
 
 ## Nimble usage
 
@@ -129,7 +129,7 @@ Rows excluded from inference (rule ids in `data/outcome_eligibility.csv`, reason
 ## Workbook and handoff
 
 - Formula audit after LibreOffice recalculation: {'cells_checked': 1649, 'numeric_differences': 0, 'mismatches': 0, 'excel_errors': 0}.
-- Handoff zip: 381 files; rendered evidence page images included: 263; admission image paths without an included image: 0.
+- Handoff zip: 382 files; rendered evidence page images included: 263; admission image paths without an included image: 0.
 - Source PDFs are NOT included (73 files); each is listed with URL and SHA-256 in `reports/index.csv`. Manual and image-only transcriptions cannot be reproduced from a hash alone: re-inspect the cited page.
 
 ## Not done

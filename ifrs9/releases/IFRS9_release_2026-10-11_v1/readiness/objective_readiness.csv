@@ -1,0 +1,7 @@
+objective,description,outcomes,statistically_testable_outcomes,descriptive_only_outcomes,readiness,note
+O1,Effect of IFRS 9 adoption on loan-loss provisioning,allr;impairment_assets;broad_coverage;npl_calc;stage3_coverage,allr;impairment_assets,broad_coverage;npl_calc;stage3_coverage,testable,objective wording inferred from the study title and variables; confirm against the thesis
+O2,Effect of IFRS 9 adoption on capital adequacy,car;car_computed,car;car_computed,,testable,objective wording inferred from the study title and variables; confirm against the thesis
+O3,"Effect of IFRS 9 adoption on profitability, cash generation and balance-sheet stability",roa;ocf_ratio;eqta;leverage;liquidity,roa;ocf_ratio;eqta;leverage,liquidity,testable,objective wording inferred from the study title and variables; confirm against the thesis
+O4,Going-concern indicators before and after IFRS 9,gcu,,gcu,descriptive only,objective wording inferred from the study title and variables; confirm against the thesis
+O5,Tier 1 versus Tier 2 differences in the IFRS 9 effect,allr;car;roa;eqta,allr;car;roa;eqta,,testable,objective wording inferred from the study title and variables; confirm against the thesis
+O6,Change in volatility of key indicators after IFRS 9,roa;car;allr;impairment_assets,roa;car;allr;impairment_assets,,exploratory test only (bank-level SDs from >=3 observations per regime),objective wording inferred from the study title and variables; confirm against the thesis

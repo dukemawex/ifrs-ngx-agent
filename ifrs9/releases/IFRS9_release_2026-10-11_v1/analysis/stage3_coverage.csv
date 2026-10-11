@@ -1,0 +1,7 @@
+bank,year,tier,regime,ifrs9_d,value,available,descriptive_use,longitudinal_use,change_comparable,inferential_use,sensitivity_drop,excluded_uses,rule_ids,reasons,fallback_class,primary_version,stage3_allowance,stage3_gross
+Union,2018,Tier 2,IFRS 9,1,24.446192267773743,True,True,True,False,True,False,,,,,Original 2018 presentation; loan reinstatement alternatives held separately,30149.0,123328.0
+Union,2019,Tier 2,IFRS 9,1,27.562150113154896,True,True,True,True,True,False,,,,,2020 audited-report comparative,16198.0,58769.0
+Union,2020,Tier 2,IFRS 9,1,36.45528717990145,True,True,True,True,True,False,,,,,2020 audited-report current-year,22564.0,61895.0
+Union,2021,Tier 2,IFRS 9,1,21.38759989688064,True,True,True,True,True,False,,,,,2022 audited-report comparative,13274.0,62064.0
+Unity,2021,Tier 2,IFRS 9,1,0.9560337823795039,True,True,False,False,False,False,inferential;longitudinal,EL-UNITY21-S3,"Unity 2021 Stage 3 gross printed 105,854 in the 2021 report but 966,871 (equal to the 2020 figure) as the 2021 comparative in the 2022 report; cross-report inconsistency unresolved.",,"2021 annual report, as originally reported",1.012,105.854
+Unity,2022,Tier 2,IFRS 9,1,25.7256006410785,True,True,True,False,True,False,,,,,"2022 annual report, as originally reported",121.67,472.953

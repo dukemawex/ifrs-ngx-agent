@@ -1,7 +1,7 @@
 {
-  "at": "2026-10-11T11:24:29+00:00",
-  "admissions_reviewed": 1074,
-  "admissions_accepted": 1074,
+  "at": "2026-10-11T11:57:45+00:00",
+  "admissions_reviewed": 1090,
+  "admissions_accepted": 1090,
   "new_bank_years": [
     "Wema 2021",
     "Union 2016",
@@ -67,12 +67,13 @@
     "GTBank 2021",
     "GTBank 2022",
     "Stanbic 2013",
+    "Stanbic 2014",
     "Stanbic 2015",
     "Stanbic 2016",
     "Stanbic 2017"
   ],
   "partial_new": 0,
   "recompute_differences": 0,
-  "changes": 76,
+  "changes": 77,
   "exceptions_violated": []
 }

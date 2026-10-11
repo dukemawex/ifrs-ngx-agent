@@ -626,6 +626,14 @@ Stanbic,2013,opening_assets,650470.0,1,True,direct,,STANH13-OA
 Stanbic,2013,net_loans,289747.0,1,True,direct,,STANH13-NL
 Stanbic,2013,total_impairment,2667.0,1,True,direct,,STANH13-TI
 Stanbic,2013,pbt,9474.0,1,True,direct,,STANH13-PBT
+Stanbic,2014,pat,19456.0,1,True,direct,,STANH14-PAT
+Stanbic,2014,assets,911052.0,1,True,direct,,STANH14-A
+Stanbic,2014,liabilities,829231.0,1,True,direct,,STANH14-L
+Stanbic,2014,equity,81821.0,1,True,direct,,STANH14-E
+Stanbic,2014,opening_assets,725100.0,1,True,direct,,STANH14-OA
+Stanbic,2014,net_loans,398604.0,1,True,direct,,STANH14-NL
+Stanbic,2014,total_impairment,3217.0,1,True,direct,,STANH14-TI
+Stanbic,2014,pbt,21610.0,1,True,direct,,STANH14-PBT
 Stanbic,2015,pat,6232.0,1,True,direct,,STANH15-PAT
 Stanbic,2015,assets,890580.0,1,True,direct,,STANH15-A
 Stanbic,2015,liabilities,795663.0,1,True,direct,,STANH15-L

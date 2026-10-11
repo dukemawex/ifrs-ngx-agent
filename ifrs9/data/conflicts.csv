@@ -14,6 +14,7 @@ restated_comparative,Ecobank Nigeria,2018,car,14.3,11.13,"2018 report CAR 14.3% 
 later_comparative,Ecobank Nigeria,2020,car,21.44,23.21,"2020 report CAR 21.44% (RC 301,364) vs 2021 report 2020 column 23.21% (eligible capital 326,251); not labelled restated."
 later_comparative,Ecobank Nigeria,2021,ocf,-86740,-98241,"2021 report OCF (86,740) vs 2022 report comparative (98,241) marked '*' (comparatives restated to current presentation)."
 source_internal_inconsistency,GTBank,2015,car,18.17,18.11,"GTBank 2015 report: capital table (p201) 18.17% recomputes from 333,426,139 / 1,835,072,113; narrative on p200 states 18.11%. Table value admitted."
+later_comparative,Stanbic,2014,pat,19456,21851,"2014 note 13.4 (original, admitted) vs 2015 note 13.4 comparative; assets 911,052 vs 908,429."
 candidate_vs_selected,Access,2015,gross_loans,1270121.392,1243215.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)
 candidate_vs_selected,Access,2015,gross_loans,1270121.392,1243215.0,selected retained; raw Word tables differs (scope/version/rounding unresolved)
 candidate_vs_selected,Access,2016,gross_loans,1624837.859,1594562.0,selected retained; raw CSV extract differs (scope/version/rounding unresolved)

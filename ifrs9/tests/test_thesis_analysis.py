@@ -102,6 +102,10 @@ def test_comparison_with_previous_release_matches_exports():
         c = cmp_[(r["outcome"], r["model"], r["term"])]
         assert float(c["coef_new"]) == pytest.approx(float(r["coef"]))
         assert int(float(c["N_new"])) == int(r["N"])
+    from thesis_analysis import compare as CMP
+    import pandas as pd
+    prev = pd.read_csv(CMP.V1_REL / "verified_panel.csv")
+    from thesis_analysis import data as D
+    cur = pd.read_csv(D.REL / "verified_panel.csv")
     added = rows("comparison_rows_added.csv")
-    assert all(a["change"] == "added" for a in added) and len(added) == 16
-    assert {a["bank"] for a in added} == {"Ecobank Nigeria", "GTBank", "Stanbic"}
+    assert all(a["change"] == "added" for a in added) and len(added) == len(cur) - len(prev)

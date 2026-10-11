@@ -490,7 +490,7 @@ def test_holdco_disclosure_rows_are_labelled_and_reconcile():
     panel = rows(DATA / "verified_panel.csv")
     held = [r for r in panel if "HoldCo package" in r["scope"]]
     assert sorted((r["bank"], r["year"]) for r in held) == [("GTBank", "2021"), ("GTBank", "2022"), ("Stanbic", "2013"),
-                                                          ("Stanbic", "2015"), ("Stanbic", "2016"), ("Stanbic", "2017")]
+                                                          ("Stanbic", "2014"), ("Stanbic", "2015"), ("Stanbic", "2016"), ("Stanbic", "2017")]
     for r in held:
         assert abs(num(r["assets"]) - num(r["liabilities"]) - num(r["equity"])) < 0.01
         assert r["gcu"] == ""  # no auditor opinion on the operating bank

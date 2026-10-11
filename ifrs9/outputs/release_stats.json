@@ -1,18 +1,18 @@
 {
-  "generated_utc": "2026-10-11T11:25:20+00:00",
-  "git_commit": "9171cc7da3b6ffa69bb7b73d4ac38d0d5452545d",
+  "generated_utc": "2026-10-11T11:56:10+00:00",
+  "git_commit": "8fc4264da34e5ad7ccec16f5322163f580aa7e64",
   "git_branch": "claude/zen-hamilton-v2s80b",
   "panel": {
-    "rows": 114,
+    "rows": 115,
     "banks": 12,
-    "pre_adoption": 59,
+    "pre_adoption": 60,
     "post_adoption": 55,
     "baseline_rows": 47,
     "baseline_rows_retained": 47,
-    "new_rows": 67
+    "new_rows": 68
   },
   "changes": {
-    "new_bank_year": 67,
+    "new_bank_year": 68,
     "fill_blank": 9
   },
   "fills_by_field": {
@@ -20,37 +20,37 @@
   },
   "field_basis": {
     "baseline_inherited": 615,
-    "recomputed_ratio": 1217,
-    "reported_text_layer": 831,
+    "recomputed_ratio": 1225,
+    "reported_text_layer": 838,
     "manual_transcription": 105,
     "reported_text_layer+restated_comparative": 48,
-    "derived_from_verified": 25,
+    "derived_from_verified": 26,
     "derived_from_verified+restated_comparative": 4,
     "manual_transcription+restated_comparative": 4
   },
   "admissions": {
-    "rows": 1074,
-    "accepted": 1074,
+    "rows": 1090,
+    "accepted": 1090,
     "rejected": 0
   },
   "reconciliation": {
-    "run": 256,
-    "pass": 254,
+    "run": 257,
+    "pass": 255,
     "documented_source_exception": 2
   },
   "evidence_lineage": {
-    "checked": 1632,
-    "matched": 1632,
+    "checked": 1640,
+    "matched": 1640,
     "qualified": 6
   },
   "going_concern": {
     "reviews_recorded": 55,
     "reviews_coded_1": 3,
     "partial_reviews": 1,
-    "not_coded_holdco": 6,
-    "not_reviewed_listed": 22,
+    "not_coded_holdco": 7,
+    "not_reviewed_listed": 23,
     "panel_coded": 56,
-    "panel_unknown": 58,
+    "panel_unknown": 59,
     "panel_coded_1": 3,
     "baseline_codes_retained": 2,
     "baseline_codes_confirmed_by_review": 1,
@@ -63,11 +63,11 @@
     "source_unit_label_error": 1,
     "source_vs_selected": 1,
     "source_internal_inconsistency_cross_report": 1,
-    "later_comparative": 2,
+    "later_comparative": 3,
     "candidate_vs_selected": 253
   },
   "version_decisions": {
-    "unexplained difference": 6,
+    "unexplained difference": 7,
     "labelled restatement": 5,
     "fallback: labelled restatement": 3,
     "fallback: comparative": 4,
@@ -78,12 +78,13 @@
     "corroborated by original-year summary": 1
   },
   "denominators": {
-    "checked": 88,
-    "incompatible": 7,
+    "checked": 90,
+    "incompatible": 8,
     "differing": [
       "Access 2020 (opening 6307588.216 from 2020 annual report, as originally reported; prior closing 6311041.282 from 2019 annual report, as originally reported)",
       "Ecobank Nigeria 2019 (opening 1927889.0 from 2019 annual report, as originally reported; prior closing 1956830.0 from 2018 annual report, as originally reported)",
       "Ecobank Nigeria 2021 (opening 2186711.0 from 2021 annual report, as originally reported; prior closing 2186712.0 from 2020 annual report, as originally reported)",
+      "Stanbic 2015 (opening 908429.0 from Stanbic IBTC Holdings 2015 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC); prior closing 911052.0 from Stanbic IBTC Holdings 2014 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC))",
       "Stanbic 2018 (opening 1332723.0 from 2018 audited financial statements, as originally reported (issuer-hosted scanned extract); prior closing 1332669.0 from Stanbic IBTC Holdings 2017 annual report: audited HoldCo package - explicit operating-bank subsidiary disclosure (note 13.4, Stanbic IBTC Bank PLC))",
       "Sterling 2017 (opening 830805.0 from 2017 annual report, as originally reported; prior closing 830802.224 from 2016 annual report, as originally reported)",
       "Sterling 2022 (opening 1606898.0 from 2022 annual report, as originally reported; prior closing 1611749.0 from 2021 annual report, as originally reported)",
@@ -91,15 +92,15 @@
     ]
   },
   "remaining": {
-    "bank_years": 16,
+    "bank_years": 15,
     "field_requests": 345
   },
   "endpoints": {
     "gcu": {
       "label": "Going-concern uncertainty (auditor material-uncertainty section or GC emphasis = 1)",
-      "panel_rows": 114,
+      "panel_rows": 115,
       "available": 56,
-      "missing": 58,
+      "missing": 59,
       "descriptive": 56,
       "longitudinal": 56,
       "change_pairs": 29,
@@ -115,9 +116,9 @@
     },
     "car": {
       "label": "Reported CAR, full-impact basis where both are printed (%)",
-      "panel_rows": 114,
+      "panel_rows": 115,
       "available": 87,
-      "missing": 27,
+      "missing": 28,
       "descriptive": 87,
       "longitudinal": 87,
       "change_pairs": 65,
@@ -137,9 +138,9 @@
     },
     "car_computed": {
       "label": "Regulatory capital / RWA (%)",
-      "panel_rows": 114,
+      "panel_rows": 115,
       "available": 68,
-      "missing": 46,
+      "missing": 47,
       "descriptive": 68,
       "longitudinal": 68,
       "change_pairs": 46,
@@ -159,45 +160,45 @@
     },
     "roa": {
       "label": "PAT / average assets (%)",
-      "panel_rows": 114,
-      "available": 94,
+      "panel_rows": 115,
+      "available": 95,
       "missing": 20,
-      "descriptive": 94,
-      "longitudinal": 94,
-      "change_pairs": 66,
-      "eligible": 94,
+      "descriptive": 95,
+      "longitudinal": 95,
+      "change_pairs": 68,
+      "eligible": 95,
       "excluded_from_inference": 0,
       "banks": 12,
-      "pre": 48,
+      "pre": 49,
       "post": 46,
       "tier1": 37,
-      "tier2": 57,
+      "tier2": 58,
       "fallback_rows_in_sample": 3,
       "excluded_rows": []
     },
     "eqta": {
       "label": "Equity / total assets (%)",
-      "panel_rows": 114,
-      "available": 114,
+      "panel_rows": 115,
+      "available": 115,
       "missing": 0,
-      "descriptive": 114,
-      "longitudinal": 114,
-      "change_pairs": 97,
-      "eligible": 114,
+      "descriptive": 115,
+      "longitudinal": 115,
+      "change_pairs": 99,
+      "eligible": 115,
       "excluded_from_inference": 0,
       "banks": 12,
-      "pre": 59,
+      "pre": 60,
       "post": 55,
       "tier1": 45,
-      "tier2": 69,
+      "tier2": 70,
       "fallback_rows_in_sample": 7,
       "excluded_rows": []
     },
     "ocf_ratio": {
       "label": "Operating cash flow / average assets (%)",
-      "panel_rows": 114,
+      "panel_rows": 115,
       "available": 84,
-      "missing": 30,
+      "missing": 31,
       "descriptive": 84,
       "longitudinal": 84,
       "change_pairs": 58,
@@ -213,9 +214,9 @@
     },
     "allr": {
       "label": "Customer-loan allowance / gross customer loans (%)",
-      "panel_rows": 114,
+      "panel_rows": 115,
       "available": 93,
-      "missing": 21,
+      "missing": 22,
       "descriptive": 93,
       "longitudinal": 92,
       "change_pairs": 70,
@@ -233,19 +234,19 @@
     },
     "impairment_assets": {
       "label": "Total impairment / average assets (%)",
-      "panel_rows": 114,
-      "available": 89,
+      "panel_rows": 115,
+      "available": 90,
       "missing": 25,
-      "descriptive": 89,
-      "longitudinal": 87,
-      "change_pairs": 61,
-      "eligible": 87,
+      "descriptive": 90,
+      "longitudinal": 88,
+      "change_pairs": 63,
+      "eligible": 88,
       "excluded_from_inference": 2,
       "banks": 12,
-      "pre": 44,
+      "pre": 45,
       "post": 43,
       "tier1": 33,
-      "tier2": 54,
+      "tier2": 55,
       "fallback_rows_in_sample": 2,
       "excluded_rows": [
         "Unity 2017 (EL-UNITY17-IMP)",
@@ -254,9 +255,9 @@
     },
     "npl_calc": {
       "label": "NPL amount / gross loans (%)",
-      "panel_rows": 114,
+      "panel_rows": 115,
       "available": 19,
-      "missing": 95,
+      "missing": 96,
       "descriptive": 19,
       "longitudinal": 19,
       "change_pairs": 13,
@@ -272,9 +273,9 @@
     },
     "broad_coverage": {
       "label": "Total loan allowance / NPL amount (%)",
-      "panel_rows": 114,
+      "panel_rows": 115,
       "available": 19,
-      "missing": 95,
+      "missing": 96,
       "descriptive": 19,
       "longitudinal": 18,
       "change_pairs": 11,
@@ -292,9 +293,9 @@
     },
     "stage3_coverage": {
       "label": "Stage 3 allowance / Stage 3 gross (%)",
-      "panel_rows": 114,
+      "panel_rows": 115,
       "available": 6,
-      "missing": 108,
+      "missing": 109,
       "descriptive": 6,
       "longitudinal": 5,
       "change_pairs": 3,
@@ -312,9 +313,9 @@
     },
     "liquidity": {
       "label": "Liquidity ratio used (%)",
-      "panel_rows": 114,
+      "panel_rows": 115,
       "available": 10,
-      "missing": 104,
+      "missing": 105,
       "descriptive": 10,
       "longitudinal": 10,
       "change_pairs": 7,
@@ -330,28 +331,28 @@
     },
     "leverage": {
       "label": "Liabilities / assets (%)",
-      "panel_rows": 114,
-      "available": 114,
+      "panel_rows": 115,
+      "available": 115,
       "missing": 0,
-      "descriptive": 114,
-      "longitudinal": 114,
-      "change_pairs": 97,
-      "eligible": 114,
+      "descriptive": 115,
+      "longitudinal": 115,
+      "change_pairs": 99,
+      "eligible": 115,
       "excluded_from_inference": 0,
       "banks": 12,
-      "pre": 59,
+      "pre": 60,
       "post": 55,
       "tier1": 45,
-      "tier2": 69,
+      "tier2": 70,
       "fallback_rows_in_sample": 7,
       "excluded_rows": []
     }
   },
   "row_versions": {
-    "rows": 114,
+    "rows": 115,
     "treatments": {
       "primary (baseline selection retained)": 47,
-      "primary (original-year presentation)": 60,
+      "primary (original-year presentation)": 61,
       "primary; drop in sensitivity (fallback: original-year report unavailable)": 7
     },
     "fallback_rows": [
@@ -379,6 +380,7 @@
     "Stanbic 2020 total_impairment: unexplained difference; OWNER DECISION PENDING",
     "Ecobank Nigeria 2020 regulatory_capital / rwa / car: unexplained difference",
     "Ecobank Nigeria 2020 ocf: unexplained difference",
+    "Stanbic 2014 pat / assets: unexplained difference",
     "Unity 2021 stage3_gross: source_internal_inconsistency_cross_report"
   ],
   "remaining_by_bank": {
@@ -400,9 +402,6 @@
       "2020",
       "2021",
       "2022"
-    ],
-    "Stanbic": [
-      "2014"
     ]
   },
   "readiness": {
@@ -429,7 +428,7 @@
       },
       {
         "outcome": "roa",
-        "eligible_n": "94",
+        "eligible_n": "95",
         "banks": "12",
         "status": "testable",
         "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
@@ -439,7 +438,7 @@
       },
       {
         "outcome": "eqta",
-        "eligible_n": "114",
+        "eligible_n": "115",
         "banks": "12",
         "status": "testable",
         "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
@@ -469,7 +468,7 @@
       },
       {
         "outcome": "impairment_assets",
-        "eligible_n": "87",
+        "eligible_n": "88",
         "banks": "12",
         "status": "testable",
         "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
@@ -519,7 +518,7 @@
       },
       {
         "outcome": "leverage",
-        "eligible_n": "114",
+        "eligible_n": "115",
         "banks": "12",
         "status": "testable",
         "recommended_estimator": "bank fixed effects with IFRS9_D (no year FE: collinear) and macro controls instead; bank-clustered SEs with wild cluster bootstrap (few clusters); robustness: pooled OLS, drop fallback rows",
@@ -604,10 +603,10 @@
       "note": "REST client not run in this release (no nimble_budget state); key value never printed"
     },
     "mcp_plugin": {
-      "invocations": 60,
-      "attempts": 60,
+      "invocations": 65,
+      "attempts": 65,
       "by_tool": {
-        "nimble_search": 48,
+        "nimble_search": 53,
         "nimble_agents_list": 1,
         "nimble_agents_run": 1,
         "nimble_agents_run_status": 9,

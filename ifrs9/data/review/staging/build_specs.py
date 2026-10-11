@@ -352,6 +352,15 @@ STAN = {
         dict(PAT=(96, r"^Profit for the year", 1, "10,129"), PBT=(96, r"^Profit before tax", 1, "9,474"), TI=(96, r"^Credit impairment charges", 1, "(2,667)"),
              NL=(96, r"^Loans and advances to customers", 1, "289,747"), A=(96, r"^Total assets", 1, "725,100"), OA=(96, r"^At 31 December 2012", 2, "650,470 (31 Dec 2012)"),
              E=(97, r"^Equity and reserves", 1, "70,580"), L=(97, r"^Total liabilities .Nmillion.", 1, "654,520")), []),
+ 2014: ("xs-f35c275cf6", "Stanbic IBTC Holdings PLC Annual report 2014 (HoldCo; The Vault archive)", 104, 105,
+        "Total liabilities not printed: derived as the sum of the Bank's printed liability lines (829,231) = 911,052 - 81,821. "
+        "Prior-year row (2013: PAT 10,129, total assets 725,100) equals the 2013 note.",
+        dict(PAT=(104, r"^Profit for the year", 1, "19,456"), PBT=(104, r"^Profit before tax", 1, "21,610"), TI=(104, r"^Credit impairment charges", 1, "(3,217)"),
+             NL=(104, r"^Loans and advances to customers", 1, "398,604"), A=(104, r"^Total assets", 1, "911,052"), OA=(104, r"^At 31 December 2013", 2, "725,100 (31 Dec 2013)"),
+             E=(105, r"^Equity and reserves", 1, "81,821")),
+        [("DL", r"^Derivative liabilities", "2,677"), ("TL", r"^Trading liabilities", "85,283"), ("DB", r"^Deposits from banks", "59,121"),
+         ("DC", r"^Deposits from customers", "507,734"), ("OB", r"^Other borrowings", "70,151"), ("SD", r"^Subordinated debt", "22,973"),
+         ("CT", r"^Current and deferred tax liabilities", "3,244"), ("PO", r"^Other liabilities", "78,048")]),
  2015: ("xs-40d24d09d3", "Stanbic IBTC Holdings PLC Annual report 2015 (HoldCo; The Vault archive)", 86, 87,
         "Total liabilities not printed: derived as the sum of the Bank's printed liability lines (795,663), which equals total liabilities and equity 890,580 less equity 94,917.",
         dict(PAT=(86, r"^Profit for the year", 1, "6,232"), PBT=(86, r"^Profit before tax", 1, "4,479"), TI=(86, r"^Credit impairment charges", 1, "(14,931)"),
@@ -399,7 +408,7 @@ for yr, (job, title, p1, p2, extra, cells, comps) in STAN.items():
         OUT[-1]["scope"] = SCS
 
 # Stanbic HoldCo PDFs place two printed pages on one PDF page; the Bank column sits on the left-hand printed page.
-STAN_PRINTED = {("xs-c712bb5b6c", 96): 188, ("xs-c712bb5b6c", 97): 190, ("xs-40d24d09d3", 86): 168, ("xs-40d24d09d3", 87): 170,
+STAN_PRINTED = {("xs-f35c275cf6", 104): 204, ("xs-f35c275cf6", 105): 206, ("xs-c712bb5b6c", 96): 188, ("xs-c712bb5b6c", 97): 190, ("xs-40d24d09d3", 86): 168, ("xs-40d24d09d3", 87): 170,
                 ("xs-328f885a48", 84): 164, ("xs-328f885a48", 85): 166, ("xs-2d674ef14c", 94): 186, ("xs-2d674ef14c", 95): 188}
 for o in OUT:
     if o["spec_id"].startswith("STANH"):

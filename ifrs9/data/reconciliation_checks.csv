@@ -104,6 +104,7 @@ GTBank,2020,reported CAR vs capital/RWA,-0.0,0.005,,True,pass,,display precision
 GTBank,2021,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 GTBank,2022,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 Stanbic,2013,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Stanbic,2014,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Stanbic,2015,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Stanbic,2016,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Stanbic,2017,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,

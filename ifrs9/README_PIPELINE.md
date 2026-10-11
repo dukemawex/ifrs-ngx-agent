@@ -102,3 +102,14 @@ exceptions are in `data/review/exception_investigations.md`.
 `readiness.py` writes matched pre/post bank trends, Tier 1/Tier 2 descriptives, volatility feasibility, within-bank
 variation, model sample sizes and estimator recommendations to `outputs/readiness/`. It warns that IFRS9_D is collinear
 with a full set of year fixed effects. No thesis regression is estimated.
+
+## Thesis analysis (12-bank cohort)
+
+`python -m thesis_analysis --B 9999` reads only the frozen release `releases/IFRS9_release_2026-10-11_v1` (every file
+hash-verified against `RELEASE_MANIFEST.json` first; nothing is written there) and writes `thesis_results/`: sample
+profile, descriptives, trends, matched pre/post, exploratory volatility, bank-FE models (conventional, CR1 bank-clustered
+and wild-cluster-bootstrap p-values), robustness, diagnostics, going-concern event description, tables, figures,
+`analysis_master.xlsx`, `analysis_report.md`, `interpretation.md` and `thesis_results_handoff.zip`. FCMB is formally
+excluded from the cohort and not replaced. IFRS9_D is never combined with year fixed effects. Requires numpy, pandas,
+scipy, statsmodels (>= 0.15), matplotlib and openpyxl. `tests/test_thesis_analysis.py` checks the outputs against the
+release and the report against the CSVs.

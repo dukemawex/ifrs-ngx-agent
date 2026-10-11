@@ -1,6 +1,6 @@
 # Reconciliation summary
 
-Generated 2026-10-11T07:50:31+00:00 from the saved outputs (code commit `a4137af30962bdbb3636be4bad51a7114b0a8e9a`, branch `claude/zen-hamilton-v2s80b`).
+Generated 2026-10-11T07:52:06+00:00 from the saved outputs (code commit `a38ccfd4b606bbcf6fa4be69568efdcf4416df19`, branch `claude/zen-hamilton-v2s80b`).
 Every number below is computed by `ifrs9_recovery.summary.release_stats()`; see `outputs/release_stats.json`.
 
 ## Panel
@@ -117,9 +117,9 @@ Rows excluded from inference (rule ids in `data/outcome_eligibility.csv`, reason
 ## Tests
 
 - synthetic/mock unit tests: 62 passed, 0 failed, 0 skipped.
-- real-data regression tests: 38 passed, 1 failed, 0 skipped.
+- real-data regression tests: 41 passed, 0 failed, 0 skipped.
 - other: 8 passed, 0 failed, 0 skipped.
-- Test run: 2026-10-11T07:50:00+00:00.
+- Test run: 2026-10-11T07:51:45+00:00.
 
 ## Nimble usage
 

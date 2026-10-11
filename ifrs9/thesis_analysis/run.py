@@ -108,7 +108,7 @@ def build_tables(res):
             row.update({"jackknife_min": j.jackknife_min, "jackknife_max": j.jackknife_max, "jackknife_sign_changes": int(j.sign_changes)})
             rows.append(row)
     T["table8_robustness"] = _table(pd.DataFrame(rows), "table8_robustness", "Table 8. Robustness of the key coefficients",
-                                    "S0 primary; S1 drop fallback comparative rows; S2 add back documented-exception rows; S3 drop Unity negative-capital observations; S4 drop 2020; S5 drop Unity. "
+                                    "S0 primary; S1 drop fallback comparative rows; S2 add back documented-exception rows; S3 drop Unity negative-capital observations; S4 drop 2020; S5 drop Unity; S6 drop HoldCo-disclosure rows. "
                                     "Jackknife = leave-one-bank-out. M1 key term IFRS9_D; M4 key term Tier1 x IFRS9_D. Sources: robustness_results.csv, jackknife_results.csv.")
     ev = res["gc"]["events"]
     T["table9_going_concern_events"] = _table(ev[["bank", "year", "tier", "auditor", "report_date", "car", "car_other_banks_median_same_year", "eqta", "eqta_other_banks_median_same_year",
@@ -246,7 +246,7 @@ def report(meta) -> str:
         j = jk[(jk.outcome == k) & (jk.model == "M1") & (jk.dropped_bank == "SUMMARY")].iloc[0]
         cells = [f"{s.loc[sid, 'coef']:.2f} (p={s.loc[sid, 'p_wild_cluster_bootstrap']:.3f})" if sid in s.index else "n/a" for sid in C.SENS]
         L.append(f"| {D.OUTCOMES[k][2]} | " + " | ".join(cells) + f" | {j.jackknife_min:.2f} | {j.jackknife_max:.2f} | {int(j.sign_changes)} |")
-    L += ["", "S0 primary; S1 drop fallback rows; S2 add exception rows (n/a where none); S3 drop Unity negative-capital rows; S4 drop 2020; S5 drop Unity. p = WCB.", "",
+    L += ["", "S0 primary; S1 drop fallback rows; S2 add exception rows (n/a where none); S3 drop Unity negative-capital rows; S4 drop 2020; S5 drop Unity; S6 drop HoldCo-disclosure rows. p = WCB.", "",
           "## 5. Matched pre/post (bank means, banks in both regimes) [matched_prepost_summary.csv]", ""]
     for x in mt[mt.group == "All matched banks"].itertuples():
         L.append(f"- {x.variable}: {int(x.banks)} banks; mean difference {x.mean_diff:.3f} pp, median {x.median_diff:.3f}; {int(x.banks_increase)} up / {int(x.banks_decrease)} down; Wilcoxon p = {x.wilcoxon_signed_rank_p:.3f}.")

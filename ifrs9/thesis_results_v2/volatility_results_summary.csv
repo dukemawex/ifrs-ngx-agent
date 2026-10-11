@@ -1,0 +1,8 @@
+outcome,variable,banks_with_3_plus_each_regime,status,median_sd_pre,median_sd_post,median_sd_ratio,banks_sd_increase,banks_sd_decrease,wilcoxon_log_sd_ratio_p
+allr,Allowance / gross loans,8,EXPLORATORY (>=3 observations per regime per bank),0.9127270666588534,0.734688536274176,1.1890230361299072,5,3,0.84375
+impairment_assets,Impairment / average assets,8,EXPLORATORY (>=3 observations per regime per bank),0.48005734049228105,0.17234623474589156,0.34283074614501524,2,6,0.0546875
+car,CAR,7,EXPLORATORY (>=3 observations per regime per bank),2.6262958706132093,1.8500756741279536,0.7743342275367656,2,5,0.296875
+roa,ROA,8,EXPLORATORY (>=3 observations per regime per bank),0.2897214757667971,0.2461818247334427,0.6012410571365039,3,5,0.3828125
+ocf_ratio,OCF / average assets,7,EXPLORATORY (>=3 observations per regime per bank),5.819230206562085,6.390846114122796,1.3985964108620326,4,3,0.6875
+eqta,Equity / assets,9,EXPLORATORY (>=3 observations per regime per bank),1.0060117270825382,1.1624412931746466,1.392100151451484,5,4,0.359375
+leverage,Leverage,9,EXPLORATORY (>=3 observations per regime per bank),1.006011727082536,1.1624412931746406,1.3921001514514912,5,4,0.359375

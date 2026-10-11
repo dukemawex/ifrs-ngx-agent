@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-RELEASE_ID = "IFRS9_release_2026-10-11_v2"  # v1 (97 rows) results are archived in thesis_results_v1/
+RELEASE_ID = "IFRS9_release_2026-10-11_v3"  # v1 (97 rows) and v2 (98 rows) results are archived in thesis_results_v1/ and thesis_results_v2/
 REL = ROOT / "releases" / RELEASE_ID
 OUT = ROOT / "thesis_results"
 ADOPTION = 2018
@@ -78,12 +78,13 @@ def outcome(key: str) -> pd.DataFrame:
     d["value"] = d["value"].astype(float)
     d["ifrs9_d"] = (d["year"] >= ADOPTION).astype(int)
     d["tier1"] = (d["tier"] == "Tier 1").astype(int)
-    p = panel()[["bank", "year", "ln_assets", "equity", "assets", "regulatory_capital", "car", "gcu"]]
+    p = panel()[["bank", "year", "ln_assets", "equity", "assets", "regulatory_capital", "car", "gcu", "scope"]]
     p = p.rename(columns={c: f"p_{c}" for c in p.columns if c not in ("bank", "year")})
     d = d.merge(p, on=["bank", "year"], how="left", validate="one_to_one")
     d["ln_assets"] = d["p_ln_assets"]
     d["unity_negative_capital"] = (d["bank"] == "Unity") & ((d["p_equity"] < 0) | (d["p_car"] < 0) | (d["p_regulatory_capital"] < 0))
     d["documented_exception"] = ~d["inferential_use"]
+    d["holdco_disclosure"] = d["p_scope"].fillna("").str.contains("HoldCo package")
     d["outcome"] = key
     assert set(d["bank"]) <= set(COHORT), set(d["bank"]) - set(COHORT)
     return d.sort_values(["bank", "year"]).reset_index(drop=True)

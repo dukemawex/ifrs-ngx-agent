@@ -2,33 +2,33 @@
 
 | variable | model | term | coef | se_cr1 | p_cr1 | p_conventional | p_wcb | sig_wcb | N | banks |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Allowance / gross loans | M4 | Tier1_x_IFRS9_D | 4.742 | 2.871 | 0.130 | 0.007 | 0.114 |  | 82 | 11 |
-| Allowance / gross loans | M4s | Tier1_x_IFRS9_D | 3.015 | 1.871 | 0.138 | 0.023 | 0.151 |  | 82 | 11 |
-| Allowance / gross loans | M5 | IFRS9_D | -2.907 | 2.855 | 0.332 | 0.010 | 0.471 |  | 82 | 11 |
-| Allowance / gross loans | M5 | Tier1_x_IFRS9_D | 4.770 | 2.874 | 0.128 | 0.006 | 0.123 |  | 82 | 11 |
-| Impairment / average assets | M4 | Tier1_x_IFRS9_D | 1.142 | 0.931 | 0.246 | 0.033 | 0.255 |  | 73 | 12 |
-| Impairment / average assets | M4s | Tier1_x_IFRS9_D | 0.179 | 0.486 | 0.719 | 0.689 | 0.713 |  | 73 | 12 |
-| Impairment / average assets | M5 | IFRS9_D | -1.379 | 0.949 | 0.174 | 0.000 | 0.184 |  | 73 | 12 |
-| Impairment / average assets | M5 | Tier1_x_IFRS9_D | 1.135 | 0.953 | 0.259 | 0.031 | 0.311 |  | 73 | 12 |
-| CAR | M4 | Tier1_x_IFRS9_D | 5.131 | 4.597 | 0.290 | 0.632 | 0.307 |  | 75 | 11 |
-| CAR | M4s | Tier1_x_IFRS9_D | -4.735 | 10.388 | 0.658 | 0.608 | 0.684 |  | 75 | 11 |
-| CAR | M5 | IFRS9_D | -4.618 | 3.533 | 0.220 | 0.492 | 0.173 |  | 75 | 11 |
-| CAR | M5 | Tier1_x_IFRS9_D | 4.713 | 3.650 | 0.226 | 0.661 | 0.267 |  | 75 | 11 |
-| ROA | M4 | Tier1_x_IFRS9_D | -0.437 | 0.273 | 0.138 | 0.278 | 0.160 |  | 78 | 12 |
-| ROA | M4s | Tier1_x_IFRS9_D | -0.756 | 0.616 | 0.245 | 0.050 | 0.255 |  | 78 | 12 |
-| ROA | M5 | IFRS9_D | 0.125 | 0.182 | 0.506 | 0.640 | 0.556 |  | 78 | 12 |
-| ROA | M5 | Tier1_x_IFRS9_D | -0.388 | 0.292 | 0.210 | 0.344 | 0.259 |  | 78 | 12 |
-| OCF / average assets | M4 | Tier1_x_IFRS9_D | 3.887 | 3.440 | 0.285 | 0.304 | 0.285 |  | 72 | 11 |
-| OCF / average assets | M4s | Tier1_x_IFRS9_D | 2.567 | 3.144 | 0.433 | 0.501 | 0.425 |  | 72 | 11 |
-| OCF / average assets | M5 | IFRS9_D | 5.980 | 2.476 | 0.036 | 0.015 | 0.111 |  | 72 | 11 |
-| OCF / average assets | M5 | Tier1_x_IFRS9_D | 3.246 | 3.238 | 0.340 | 0.382 | 0.372 |  | 72 | 11 |
-| Equity / assets | M4 | Tier1_x_IFRS9_D | 12.837 | 10.711 | 0.256 | 0.159 | 0.282 |  | 98 | 12 |
-| Equity / assets | M4s | Tier1_x_IFRS9_D | -1.889 | 10.477 | 0.860 | 0.771 | 0.862 |  | 98 | 12 |
-| Equity / assets | M5 | IFRS9_D | -16.096 | 10.285 | 0.146 | 0.006 | 0.052 | * | 98 | 12 |
-| Equity / assets | M5 | Tier1_x_IFRS9_D | 13.067 | 10.325 | 0.232 | 0.145 | 0.270 |  | 98 | 12 |
-| Leverage | M4 | Tier1_x_IFRS9_D | -12.837 | 10.711 | 0.256 | 0.159 | 0.282 |  | 98 | 12 |
-| Leverage | M4s | Tier1_x_IFRS9_D | 1.889 | 10.477 | 0.860 | 0.771 | 0.862 |  | 98 | 12 |
-| Leverage | M5 | IFRS9_D | 16.096 | 10.285 | 0.146 | 0.006 | 0.052 | * | 98 | 12 |
-| Leverage | M5 | Tier1_x_IFRS9_D | -13.067 | 10.325 | 0.232 | 0.145 | 0.270 |  | 98 | 12 |
+| Allowance / gross loans | M4 | Tier1_x_IFRS9_D | 4.113 | 2.701 | 0.156 | 0.010 | 0.135 |  | 92 | 12 |
+| Allowance / gross loans | M4s | Tier1_x_IFRS9_D | 2.474 | 1.607 | 0.152 | 0.073 | 0.128 |  | 92 | 12 |
+| Allowance / gross loans | M5 | IFRS9_D | -1.941 | 2.570 | 0.466 | 0.055 | 0.732 |  | 92 | 12 |
+| Allowance / gross loans | M5 | Tier1_x_IFRS9_D | 3.841 | 2.586 | 0.166 | 0.017 | 0.167 |  | 92 | 12 |
+| Impairment / average assets | M4 | Tier1_x_IFRS9_D | 1.178 | 0.700 | 0.120 | 0.009 | 0.111 |  | 87 | 12 |
+| Impairment / average assets | M4s | Tier1_x_IFRS9_D | 0.414 | 0.435 | 0.361 | 0.267 | 0.381 |  | 87 | 12 |
+| Impairment / average assets | M5 | IFRS9_D | -1.531 | 0.659 | 0.040 | 0.000 | 0.043 | ** | 87 | 12 |
+| Impairment / average assets | M5 | Tier1_x_IFRS9_D | 1.135 | 0.680 | 0.123 | 0.013 | 0.120 |  | 87 | 12 |
+| CAR | M4 | Tier1_x_IFRS9_D | 6.032 | 5.200 | 0.271 | 0.528 | 0.270 |  | 84 | 12 |
+| CAR | M4s | Tier1_x_IFRS9_D | -4.343 | 8.861 | 0.634 | 0.618 | 0.631 |  | 84 | 12 |
+| CAR | M5 | IFRS9_D | -4.192 | 2.948 | 0.183 | 0.470 | 0.107 |  | 84 | 12 |
+| CAR | M5 | Tier1_x_IFRS9_D | 4.308 | 3.061 | 0.187 | 0.650 | 0.217 |  | 84 | 12 |
+| ROA | M4 | Tier1_x_IFRS9_D | -0.480 | 0.223 | 0.055 | 0.182 | 0.055 | * | 94 | 12 |
+| ROA | M4s | Tier1_x_IFRS9_D | -0.787 | 0.479 | 0.129 | 0.019 | 0.082 | * | 94 | 12 |
+| ROA | M5 | IFRS9_D | 0.121 | 0.204 | 0.565 | 0.595 | 0.581 |  | 94 | 12 |
+| ROA | M5 | Tier1_x_IFRS9_D | -0.487 | 0.260 | 0.088 | 0.191 | 0.096 | * | 94 | 12 |
+| OCF / average assets | M4 | Tier1_x_IFRS9_D | 3.609 | 3.398 | 0.311 | 0.274 | 0.320 |  | 84 | 12 |
+| OCF / average assets | M4s | Tier1_x_IFRS9_D | 2.101 | 2.935 | 0.489 | 0.524 | 0.501 |  | 84 | 12 |
+| OCF / average assets | M5 | IFRS9_D | 5.169 | 2.214 | 0.040 | 0.014 | 0.085 | * | 84 | 12 |
+| OCF / average assets | M5 | Tier1_x_IFRS9_D | 3.435 | 3.210 | 0.308 | 0.289 | 0.341 |  | 84 | 12 |
+| Equity / assets | M4 | Tier1_x_IFRS9_D | 8.914 | 8.411 | 0.312 | 0.243 | 0.362 |  | 114 | 12 |
+| Equity / assets | M4s | Tier1_x_IFRS9_D | -1.650 | 9.513 | 0.865 | 0.781 | 0.866 |  | 114 | 12 |
+| Equity / assets | M5 | IFRS9_D | -11.716 | 7.966 | 0.169 | 0.011 | 0.049 | ** | 114 | 12 |
+| Equity / assets | M5 | Tier1_x_IFRS9_D | 8.808 | 8.016 | 0.295 | 0.243 | 0.360 |  | 114 | 12 |
+| Leverage | M4 | Tier1_x_IFRS9_D | -8.914 | 8.411 | 0.312 | 0.243 | 0.362 |  | 114 | 12 |
+| Leverage | M4s | Tier1_x_IFRS9_D | 1.650 | 9.513 | 0.865 | 0.781 | 0.866 |  | 114 | 12 |
+| Leverage | M5 | IFRS9_D | 11.716 | 7.966 | 0.169 | 0.011 | 0.049 | ** | 114 | 12 |
+| Leverage | M5 | Tier1_x_IFRS9_D | -8.808 | 8.016 | 0.295 | 0.243 | 0.360 |  | 114 | 12 |
 
 *Note.* M4: bank and year FE, Tier1 x IFRS9_D (principal tier model); M4s adds ln(total assets); M5: bank FE, IFRS9_D = Tier 2 change, interaction = Tier 1 minus Tier 2. Source: regression_results.csv.

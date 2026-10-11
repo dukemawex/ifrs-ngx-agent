@@ -174,7 +174,7 @@ def robustness_fig(rob, out, model, num, name, title):
     fig.legend(handles=[plt.Line2D([], [], color=T1, lw=2, label="WCB p < 0.05"), plt.Line2D([], [], color=INK2, lw=2, label="p >= 0.05 (bars: CR1 95% CI)")],
                loc="upper left", bbox_to_anchor=(0.01, 0.975), ncol=2, fontsize=7.5)
     fig.tight_layout(rect=(0, 0.0, 1, 0.955))
-    return _save(fig, out, name, "S0 primary; S1 drop fallback rows; S2 add exception rows; S3 drop Unity negative capital; S4 drop 2020; S5 drop Unity. "
+    return _save(fig, out, name, "S0 primary; S1 drop fallback rows; S2 add exception rows; S3 drop Unity negative capital; S4 drop 2020; S5 drop Unity; S6 drop HoldCo-disclosure rows. "
                  "Source: thesis_results/robustness_results.csv.")
 
 

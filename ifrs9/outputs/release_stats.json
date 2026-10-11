@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-10-11T11:22:21+00:00",
-  "git_commit": "51da1df3c0eb9481089be21acbcf391b5a7d6fcd",
+  "generated_utc": "2026-10-11T11:25:20+00:00",
+  "git_commit": "9171cc7da3b6ffa69bb7b73d4ac38d0d5452545d",
   "git_branch": "claude/zen-hamilton-v2s80b",
   "panel": {
     "rows": 114,
@@ -620,11 +620,17 @@
     "cap_changed": false
   },
   "tests": {
-    "run_utc": "2026-10-11T11:21:54+00:00",
-    "exit_status": 1,
+    "run_utc": "2026-10-11T11:24:54+00:00",
+    "exit_status": 0,
     "suites": {
+      "synthetic/mock unit tests": {
+        "passed": 62
+      },
       "real-data regression tests": {
-        "failed": 2
+        "passed": 43
+      },
+      "other": {
+        "passed": 9
       }
     }
   }

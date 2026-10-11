@@ -245,6 +245,8 @@ SENS = {
     "S3_drop_unity_negative_capital": ("Drop Unity negative-capital observations (2016-2022)", lambda d, full: d[~d.unity_negative_capital]),
     "S4_drop_2020": ("Drop 2020 (COVID-19 year)", lambda d, full: d[d.year != 2020]),
     "S5_drop_unity": ("Drop Unity entirely", lambda d, full: d[d.bank != "Unity"]),
+    "S6_drop_holdco_rows": ("Drop bank-years taken from HoldCo subsidiary disclosures (GTBank 2021-22, Stanbic 2013, 2015-17)",
+                            lambda d, full: d[~d.holdco_disclosure]),
 }
 
 

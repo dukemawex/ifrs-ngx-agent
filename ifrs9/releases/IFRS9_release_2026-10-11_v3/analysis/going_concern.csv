@@ -1,0 +1,57 @@
+bank,year,tier,regime,ifrs9_d,value,available,descriptive_use,longitudinal_use,change_comparable,inferential_use,sensitivity_drop,excluded_uses,rule_ids,reasons,fallback_class,primary_version
+Access,2015,Tier 1,IAS 39,0,0.0,True,True,True,False,True,False,,,,,"2015 annual report, as originally reported"
+Access,2016,Tier 1,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported"
+Access,2017,Tier 1,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2017 annual report, as originally reported"
+Access,2019,Tier 1,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,"2019 annual report, as originally reported"
+Access,2020,Tier 1,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported"
+Access,2021,Tier 1,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2021 annual report, as originally reported"
+Ecobank Nigeria,2013,Tier 2,IAS 39,0,0.0,True,True,True,False,True,False,,,,,"2013 annual report, as originally reported"
+Ecobank Nigeria,2014,Tier 2,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2014 annual report, as originally reported"
+Ecobank Nigeria,2015,Tier 2,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported"
+Ecobank Nigeria,2018,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,"2018 annual report, as originally reported"
+Ecobank Nigeria,2019,Tier 2,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2019 annual report, as originally reported"
+Ecobank Nigeria,2020,Tier 2,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported"
+Ecobank Nigeria,2021,Tier 2,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2021 annual report, as originally reported"
+Ecobank Nigeria,2022,Tier 2,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2022 annual report, as originally reported"
+Fidelity,2014,Tier 2,IAS 39,0,0.0,True,True,True,False,True,False,,,,,"2014 annual report, as originally reported"
+Fidelity,2015,Tier 2,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported"
+Fidelity,2016,Tier 2,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported"
+Fidelity,2017,Tier 2,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2017 annual report, as originally reported"
+Fidelity,2019,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Fidelity,2020,Tier 2,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported"
+Fidelity,2022,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,"2022 annual report, as originally reported"
+First Bank,2016,Tier 1,IAS 39,0,0.0,True,True,True,False,True,False,,,,,"FY2017 financial statements; 2016 comparative, not labelled restated"
+GTBank,2015,Tier 1,IAS 39,0,0.0,True,True,True,False,True,False,,,,,"2015 annual report, as originally reported"
+GTBank,2016,Tier 1,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported (public mirror copy)"
+GTBank,2018,Tier 1,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,"2018 annual report, as originally reported"
+GTBank,2019,Tier 1,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2019 annual report, as originally reported"
+GTBank,2020,Tier 1,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported"
+Stanbic,2018,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,"2018 audited financial statements, as originally reported (issuer-hosted scanned extract)"
+Stanbic,2019,Tier 2,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2019 audited financial statements, as originally reported (issuer-hosted scanned extract)"
+Stanbic,2021,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,"2021 audited financial statements, as originally reported"
+Stanbic,2022,Tier 2,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2022 audited financial statements, as originally reported"
+Sterling,2014,Tier 2,IAS 39,0,0.0,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Sterling,2015,Tier 2,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2015 annual report, as originally reported"
+Sterling,2016,Tier 2,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported"
+Sterling,2017,Tier 2,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2017 annual report, as originally reported"
+Sterling,2019,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Sterling,2020,Tier 2,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported"
+Sterling,2021,Tier 2,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2021 annual report, as originally reported"
+Sterling,2022,Tier 2,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2022 annual report, as originally reported"
+Union,2016,Tier 2,IAS 39,0,0.0,True,True,True,False,True,False,,,,,"2016 annual report, as originally reported"
+Union,2018,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,Original 2018 presentation; loan reinstatement alternatives held separately
+Union,2020,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,2020 audited-report current-year
+Union,2022,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,2022 audited-report current-year
+Unity,2015,Tier 2,IAS 39,0,0.0,True,True,True,False,True,False,,,,,"2015 annual report, as originally reported"
+Unity,2016,Tier 2,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported"
+Unity,2017,Tier 2,IAS 39,0,0.0,True,True,True,True,True,False,,,,,"2017 annual report, as originally reported"
+Unity,2019,Tier 2,IFRS 9,1,1.0,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Unity,2021,Tier 2,IFRS 9,1,1.0,True,True,True,False,True,False,,,,,"2021 annual report, as originally reported"
+Unity,2022,Tier 2,IFRS 9,1,1.0,True,True,True,True,True,False,,,,,"2022 annual report, as originally reported"
+Wema,2016,Tier 2,IAS 39,0,0.0,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Wema,2018,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Wema,2020,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Wema,2022,Tier 2,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Zenith,2013,Tier 1,IAS 39,0,0.0,True,True,True,False,True,False,,,,,"2013 annual report, as originally reported"
+Zenith,2019,Tier 1,IFRS 9,1,0.0,True,True,True,False,True,False,,,,,"2019 annual report, as originally reported (annualreports.com archive of LSE-filed report)"
+Zenith,2020,Tier 1,IFRS 9,1,0.0,True,True,True,True,True,False,,,,,"2020 annual report, as originally reported (annualreports.com archive of LSE-filed report)"

@@ -94,13 +94,14 @@ def info_g(g):
     return len(np.unique(g))
 
 
-def test_comparison_with_v1_matches_exports():
+def test_comparison_with_previous_release_matches_exports():
     if not (RES / "comparison_regression.csv").exists():
         pytest.skip("no v1 archive")
     cmp_ = {(r["outcome"], r["model"], r["term"]): r for r in rows("comparison_regression.csv")}
     for r in rows("regression_results.csv"):
         c = cmp_[(r["outcome"], r["model"], r["term"])]
-        assert float(c["coef_v2"]) == pytest.approx(float(r["coef"]))
-        assert int(float(c["N_v2"])) == int(r["N"])
+        assert float(c["coef_new"]) == pytest.approx(float(r["coef"]))
+        assert int(float(c["N_new"])) == int(r["N"])
     added = rows("comparison_rows_added.csv")
-    assert [(a["bank"], a["year"], a["change"]) for a in added] == [("Access", "2022", "added")]
+    assert all(a["change"] == "added" for a in added) and len(added) == 16
+    assert {a["bank"] for a in added} == {"Ecobank Nigeria", "GTBank", "Stanbic"}

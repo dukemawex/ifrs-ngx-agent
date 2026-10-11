@@ -1,0 +1,13 @@
+outcome,variable,definition,units,available_N,eligible_N,excluded_N,excluded_rows,banks,pre,post,tier1,tier2,fallback_rows_in_eligible,missing_in_selected_rows,missing_in_120_frame,analysis_role,source_file
+allr,Allowance / gross loans,Loan-loss allowance / gross customer loans,%,83,82,1,Union 2018 (AUTO-POOL;EL-UNION18-ALLOWANCE),11,40,42,36,46,5,15,37,inferential models,releases/IFRS9_release_2026-10-11_v2/analysis/allowance_gross_loans.csv
+impairment_assets,Impairment / average assets,Total impairment charge / average total assets,%,75,73,2,Unity 2017 (EL-UNITY17-IMP); Wema 2021 (AUTO-FALLBACK;EL-WEMA21-IMP),12,35,38,31,42,2,23,45,inferential models,releases/IFRS9_release_2026-10-11_v2/analysis/impairment_average_assets.csv
+car,CAR,Reported capital adequacy ratio (full-impact basis where both printed),%,77,75,2,Fidelity 2016 (AUTO-FLAG;EL-FID16-CAR); Wema 2021 (AUTO-FALLBACK;AUTO-FLAG;EL-WEMA21-CAR),11,37,38,32,43,2,21,43,inferential models,releases/IFRS9_release_2026-10-11_v2/analysis/car.csv
+roa,ROA,Profit after tax / average total assets,%,78,78,0,,12,39,39,33,45,3,20,42,inferential models,releases/IFRS9_release_2026-10-11_v2/analysis/roa.csv
+ocf_ratio,OCF / average assets,Operating cash flow / average total assets,%,72,72,0,,11,36,36,31,41,3,26,48,inferential models,releases/IFRS9_release_2026-10-11_v2/analysis/ocf_average_assets.csv
+eqta,Equity / assets,Total equity / total assets,%,98,98,0,,12,50,48,41,57,7,0,22,inferential models,releases/IFRS9_release_2026-10-11_v2/analysis/equity_assets.csv
+leverage,Leverage,Total liabilities / total assets,%,98,98,0,,12,50,48,41,57,7,0,22,inferential models,releases/IFRS9_release_2026-10-11_v2/outcome_eligibility.csv
+npl_calc,NPL ratio,NPL amount / gross loans,%,14,14,0,,3,7,7,6,8,1,84,106,descriptive only (too sparse),releases/IFRS9_release_2026-10-11_v2/analysis/npl_ratio.csv
+broad_coverage,Broad NPL coverage,Total loan allowance / NPL amount,%,14,13,1,Union 2018 (AUTO-POOL;EL-UNION18-ALLOWANCE),3,7,6,6,7,1,84,106,descriptive only (too sparse),releases/IFRS9_release_2026-10-11_v2/analysis/broad_npl_coverage.csv
+stage3_coverage,Stage 3 coverage,Stage 3 allowance / Stage 3 gross exposure,%,6,5,1,Unity 2021 (EL-UNITY21-S3),2,0,5,0,5,0,92,114,descriptive only (too sparse),releases/IFRS9_release_2026-10-11_v2/analysis/stage3_coverage.csv
+liquidity,Liquidity ratio,Liquidity ratio used,%,10,10,0,,3,5,5,7,3,0,88,110,descriptive only (too sparse),releases/IFRS9_release_2026-10-11_v2/analysis/liquidity.csv
+gcu,Going-concern uncertainty,Auditor material-uncertainty section or going-concern emphasis (1/0),indicator,46,46,0,,10,18,28,13,33,0,52,74,event description only,releases/IFRS9_release_2026-10-11_v2/analysis/going_concern.csv

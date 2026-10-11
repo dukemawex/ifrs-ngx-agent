@@ -47,6 +47,9 @@ Fidelity,2022,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
 Fidelity,2022,reported CAR vs capital/RWA,-0.0022,0.005037,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 3.70e-05; printed literal '18.14' from FID22-CAR; basis=; transitional=
 First Bank,2013,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 First Bank,2014,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+First Bank,2015,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+First Bank,2015,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+First Bank,2015,reported CAR vs capital/RWA,0.001,0.005023,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 2.32e-05; printed literal '17.08' from FBN15-CAR; basis=; transitional=
 First Bank,2016,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 First Bank,2016,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
 First Bank,2016,reported CAR vs capital/RWA,0.0033,0.005021,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 2.09e-05; printed literal '17.79' from FBN16-CAR; basis=; transitional=
@@ -62,6 +65,9 @@ GTBank,2018,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,
 GTBank,2019,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 GTBank,2019,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
 GTBank,2019,reported CAR vs capital/RWA,0.0001,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 2.98e-08; printed literal '20.66' from GTB19-CCAR; basis=; transitional=24.74
+GTBank,2020,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
+GTBank,2020,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
+GTBank,2020,reported CAR vs capital/RWA,-0.0,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 2.50e-07; printed literal '19.55' from GTB20-CAR; basis=; transitional=23.05
 Stanbic,2018,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Stanbic,2019,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Stanbic,2020,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
@@ -78,6 +84,12 @@ Sterling,2014,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
 Sterling,2015,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 Sterling,2015,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
 Sterling,2015,reported CAR vs capital/RWA,-0.0002,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 1.21e-07; printed literal '17.49' from STER15-CAR; basis=; transitional=
+Sterling,2016,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
+Sterling,2016,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
+Sterling,2016,reported CAR vs capital/RWA,0.001,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 8.19e-08; printed literal '10.66' from STER16-CAR; basis=; transitional=
+Sterling,2017,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Sterling,2017,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Sterling,2017,reported CAR vs capital/RWA,-0.002,0.005079,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 7.89e-05; printed literal '11.73' from STER17-CAR; basis=; transitional=
 Sterling,2018,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Sterling,2019,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Sterling,2020,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
@@ -86,6 +98,9 @@ Sterling,2020,reported CAR vs capital/RWA,0.0037,0.005076,,True,pass,,display pr
 Sterling,2021,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 Sterling,2021,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
 Sterling,2021,reported CAR vs capital/RWA,0.0045,0.00506,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 6.03e-05; printed literal '14.82' from STER21-CAR; basis=; transitional=
+Sterling,2022,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
+Sterling,2022,gross loans - allowance = net loans,0.0,1.500000001,1,True,pass,,
+Sterling,2022,reported CAR vs capital/RWA,-0.0042,0.005057,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 5.66e-05; printed literal '14.67' from STER22-CAR; basis=; transitional=
 UBA,2013,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 UBA,2014,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
 UBA,2015,assets = liabilities + equity,0.0,1.500000001,1,True,pass,,
@@ -145,6 +160,9 @@ Unity,2015,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
 Unity,2016,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 Unity,2016,gross loans - allowance = net loans,-0.001,0.001500001,0.001,True,pass,,
 Unity,2016,reported CAR vs capital/RWA,-0.0034,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 5.72e-08; printed literal '-46.98' from UNI16-CAR; basis=; transitional=
+Unity,2017,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
+Unity,2017,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
+Unity,2017,reported CAR vs capital/RWA,0.004,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding -3.69e-07; printed literal '-198.07' from UNI17-CAR; basis=; transitional=
 Unity,2018,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
 Unity,2019,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
 Unity,2020,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
@@ -152,6 +170,9 @@ Unity,2020,gross loans - allowance = net loans,-0.001,0.001500001,0.001,True,pas
 Unity,2021,assets = liabilities + equity,0.0,0.001500001,0.001,True,pass,,
 Unity,2021,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
 Unity,2021,reported CAR vs capital/RWA,0.0031,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 2.14e-08; printed literal '-86.18' from UNI21-CAR; basis=; transitional=
+Unity,2022,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
+Unity,2022,gross loans - allowance = net loans,0.0,0.001500001,0.001,True,pass,,
+Unity,2022,reported CAR vs capital/RWA,-0.0039,0.005,,True,pass,,display precision 2 dp (+/-0.005) + input rounding 1.60e-08; printed literal '-89.69' from UNI22-CAR; basis=; transitional=-89.69
 Wema,2013,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 Wema,2014,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,
 Wema,2015,assets = liabilities + equity,-0.0,0.001500001,0.001,True,pass,,

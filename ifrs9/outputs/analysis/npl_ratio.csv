@@ -1,0 +1,15 @@
+bank,year,tier,regime,ifrs9_d,value,available,descriptive_use,longitudinal_use,change_comparable,inferential_use,sensitivity_drop,excluded_uses,rule_ids,reasons,fallback_class,primary_version,npl_amount,gross_loans,npl_reported
+Union,2013,Tier 2,IAS 39,0,5.913661581137309,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,13644.0,230720.0,5.91
+Union,2014,Tier 2,IAS 39,0,5.143853530950305,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,16756.0,325748.0,5.14
+Union,2017,Tier 2,IAS 39,0,20.813001709266707,True,True,True,False,True,False,,,,,2018 report: restated 2017 main statements,110685.0,531807.0,
+Union,2018,Tier 2,IFRS 9,1,8.131881131230513,True,True,True,True,True,False,,,,,Original 2018 presentation; loan reinstatement alternatives held separately,38496.0,473396.0,
+Union,2019,Tier 2,IFRS 9,1,5.839092353745519,True,True,True,True,True,False,,,,,2020 audited-report comparative,34760.0,595298.0,
+Union,2021,Tier 2,IFRS 9,1,4.2998267167608715,True,True,True,False,True,False,,,,,2022 audited-report comparative,38660.0,899106.0,
+Union,2022,Tier 2,IFRS 9,1,4.0239663583783845,True,True,True,True,True,False,,,,,2022 audited-report current-year,40276.0,1000903.0,
+Wema,2021,Tier 2,IFRS 9,1,4.881928544871629,True,True,True,False,True,True,,AUTO-FALLBACK,fallback: comparative (original-year report unavailable; source pdf-2b23016b97),fallback: comparative,"2022 annual report; 2021 comparative, not labelled restated",21263.336,435551.971,
+Zenith,2014,Tier 1,IAS 39,0,1.6447005787935955,True,True,True,False,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,26407.0,1605581.0,
+Zenith,2015,Tier 1,IAS 39,0,1.6377700946607878,True,True,True,True,True,False,,,,,Prior source-selection policy retained; original evidence preserved in accompanying pack.,30871.0,1884941.0,
+Zenith,2016,Tier 1,IAS 39,0,2.6252220475427954,True,True,True,True,True,False,,,,,"2016 annual report, as originally reported (annualreports.com archive of LSE-filed report)",57577.0,2193224.0,
+Zenith,2017,Tier 1,IAS 39,0,4.333255080491,True,True,True,True,True,False,,,,,"2017 annual report, as originally reported (annualreports.com archive of LSE-filed report)",91738.0,2117069.0,
+Zenith,2018,Tier 1,IFRS 9,1,4.8218070819087755,True,True,True,True,True,False,,,,,"2018 annual report, as originally reported (annualreports.com archive of LSE-filed report)",92630.0,1921064.0,
+Zenith,2019,Tier 1,IFRS 9,1,4.160247564366359,True,True,True,True,True,False,,,,,"2019 annual report, as originally reported (annualreports.com archive of LSE-filed report)",99457.0,2390651.0,

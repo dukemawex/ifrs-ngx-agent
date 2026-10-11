@@ -17,13 +17,11 @@ bank_year,Stanbic,2015,*core row*,4,Candidate only,not_admitted,search-7eb1ffec0
 bank_year,Stanbic,2016,*core row*,4,Candidate only,not_admitted,search-17e366c309:blocked,Verify source and reporting version
 bank_year,Stanbic,2017,*core row*,4,Candidate only,not_admitted,search-def2492d52:blocked,Verify source and reporting version
 bank_year,Access,2022,*core row*,5,Candidate only,not_admitted,search-a227cc0523:blocked,Verify source and reporting version
-bank_year,First Bank,2015,*core row*,5,Candidate only,not_admitted,search-4855a6726e:blocked,Verify source and reporting version
 bank_year,First Bank,2020,*core row*,5,Candidate only,not_admitted,search-a4ce79005e:blocked,Verify source and reporting version
 bank_year,First Bank,2021,*core row*,5,Candidate only,not_admitted,search-aecfca25e7:blocked,Verify source and reporting version
 bank_year,First Bank,2022,*core row*,5,Candidate only,not_admitted,search-6c0fda62eb:blocked,Verify source and reporting version
 bank_year,GTBank,2015,*core row*,5,Candidate only,not_admitted,search-690851df63:blocked,Verify source and reporting version
 bank_year,GTBank,2016,*core row*,5,Candidate only,not_admitted,search-5fd2d9200d:blocked,Verify source and reporting version
-bank_year,GTBank,2020,*core row*,5,Candidate only,not_admitted,search-391f2e777a:blocked,Verify source and reporting version
 bank_year,GTBank,2021,*core row*,5,Candidate only,not_admitted,search-f95bf31cce:blocked,Verify source and reporting version
 bank_year,GTBank,2022,*core row*,5,Candidate only,not_admitted,search-2763fcd30c:blocked,Verify source and reporting version
 bank_year,Ecobank Nigeria,2013,*core row*,6,No core data,not_admitted,search-ea606f94a7:blocked,Recover source-backed main statements; check prior archives too
@@ -34,11 +32,6 @@ bank_year,Ecobank Nigeria,2019,*core row*,6,Candidate only,not_admitted,search-a
 bank_year,Ecobank Nigeria,2020,*core row*,6,Candidate only,not_admitted,search-de53d28336:blocked,Verify source and reporting version
 bank_year,Ecobank Nigeria,2021,*core row*,6,Candidate only,not_admitted,search-77369748a4:blocked,Verify source and reporting version
 bank_year,Ecobank Nigeria,2022,*core row*,6,Candidate only,not_admitted,search-b5fcdd4a48:blocked,Verify source and reporting version
-bank_year,Sterling,2016,*core row*,6,Candidate only,not_admitted,search-32306379d1:blocked,Verify source and reporting version
-bank_year,Sterling,2017,*core row*,6,Candidate only,not_admitted,search-186da57375:blocked,Verify source and reporting version
-bank_year,Sterling,2022,*core row*,6,Candidate only,not_admitted,search-6d5cbdf720:blocked,Verify source and reporting version
-bank_year,Unity,2017,*core row*,6,Candidate only,not_admitted,search-3c2f803f99:blocked,Verify source and reporting version
-bank_year,Unity,2022,*core row*,6,Candidate only,not_admitted,search-51507d79ab:blocked,Verify source and reporting version
 missing_selected_field,Access,2013,ocf,6,blank in selected row,unprocessed (source not retrieved),pdf-6b681503d3:http_error,Confirm definition and matched scope; check full audited source; do not infer non-disclosure from blank
 missing_selected_field,Access,2013,opening_assets,6,blank in selected row,unprocessed (source not retrieved),pdf-6b681503d3:http_error,Retrieve prior-year or coherent comparative asset balance; 2012 supports 2013 denominator only
 missing_selected_field,Access,2013,gross_loans,6,blank in selected row,unprocessed (source not retrieved),pdf-6b681503d3:http_error,Confirm definition and matched scope; check full audited source; do not infer non-disclosure from blank

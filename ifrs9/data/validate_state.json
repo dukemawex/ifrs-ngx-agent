@@ -1,7 +1,7 @@
 {
-  "at": "2026-10-10T21:46:54+00:00",
-  "admissions_reviewed": 693,
-  "admissions_accepted": 693,
+  "at": "2026-10-11T06:03:59+00:00",
+  "admissions_reviewed": 820,
+  "admissions_accepted": 820,
   "new_bank_years": [
     "Wema 2021",
     "Union 2016",
@@ -45,10 +45,17 @@
     "Sterling 2021",
     "Access 2018",
     "Unity 2020",
-    "Unity 2013"
+    "Unity 2013",
+    "Unity 2017",
+    "Unity 2022",
+    "Sterling 2016",
+    "Sterling 2017",
+    "First Bank 2015",
+    "Sterling 2022",
+    "GTBank 2020"
   ],
   "partial_new": 0,
   "recompute_differences": 0,
-  "changes": 52,
+  "changes": 59,
   "exceptions_violated": []
 }

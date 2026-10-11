@@ -132,7 +132,7 @@ def test_wema_2021_car_stays_a_documented_source_exception(panel, checks):
     assert num(c["tolerance"]) <= 0.0051  # the UBA precision rule does not relax a 2-dp printed ratio
     assert num(panel[("Wema", 2021)]["car"]) == 11.71
     stats_eligible = json.loads((OUT / "release_stats.json").read_text())["endpoints"]["car"]
-    assert stats_eligible["excluded_by_flag"] >= 1
+    assert stats_eligible["excluded_from_inference"] >= 1
 
 
 def test_stanbic_2020_capital_is_derived_and_printed_subtotal_preserved(panel, admissions):
@@ -143,7 +143,8 @@ def test_stanbic_2020_capital_is_derived_and_printed_subtotal_preserved(panel, a
     alts = {r["evidence_id"]: r for r in rows(REVIEW / "source_alternatives.csv")}
     assert alts["ALT-STAN20-RC-PRINTED"]["raw_value"] == "176,542"
     assert alts["ALT-STAN20-RCT-PRINTED"]["raw_value"] == "182,720"
-    dec = [d for d in rows(REVIEW / "version_decisions.csv") if (d["bank"], d["year"]) == ("Stanbic", "2020")]
+    dec = [d for d in rows(REVIEW / "version_decisions.csv")
+           if (d["bank"], d["year"]) == ("Stanbic", "2020") and d["field"] in ("regulatory_capital", "capital_transitional")]
     assert dec and all("unresolved" in d["decision"] for d in dec)
     fs = {(r["bank"], r["year"], r["field"]): r for r in rows(DATA / "field_status.csv")}
     assert fs[("Stanbic", "2020", "regulatory_capital")]["value_basis"].startswith("derived_from_verified")
@@ -151,13 +152,16 @@ def test_stanbic_2020_capital_is_derived_and_printed_subtotal_preserved(panel, a
 
 # 4. First Bank: numbers supported, audit coverage unverified, gcu unknown.
 
-def test_first_bank_2016_2017_audit_coverage_unverified_and_gcu_unknown(panel):
+def test_first_bank_audit_coverage(panel):
+    # FY2017 extract has no auditor's report: 2017 stays unknown. 2016 coded only from the full original 2016 report.
     doc = next(d for d in rows(REVIEW / "document_status.csv") if d["job_id"] == "xs-809800e65f")
     assert doc["document_type"] == "issuer-hosted financial-statement extract"
     assert doc["audit_report_reviewed_for_gcu"] == "unverified"
-    assert doc["audit_report_in_file"].lower().startswith("no")
+    assert panel[("First Bank", 2017)]["gcu"].strip() == ""
+    r = next(r for r in rows(REVIEW / "going_concern_reviews.csv") if (r["bank"], r["year"]) == ("First Bank", "2016"))
+    assert r["job_id"] == "xs-bbae41452e" and r["gcu_code"] == "0"
+    assert panel[("First Bank", 2016)]["gcu"].strip() in ("0", "0.0")
     for y in (2016, 2017):
-        assert panel[("First Bank", y)]["gcu"].strip() == ""
         assert num(panel[("First Bank", y)]["assets"]) > 0
 
 
@@ -172,7 +176,7 @@ def test_wema_2022_impairment_retained_with_reclassification_decision(panel):
 
 def test_every_version_decision_is_classified():
     allowed = re.compile(r"^(labelled restatement|labelled reclassification|unexplained difference|source internal inconsistency"
-                         r"|possible scope incompatibility.*|fallback: .+)$")
+                         r"|possible scope incompatibility.*|confirmed scope difference.*|corroborated by original-year.*|fallback: .+)$")
     for d in rows(REVIEW / "version_decisions.csv"):
         assert allowed.match(d["classification"]), d
 
@@ -321,3 +325,140 @@ def test_access_2020_full_impact_and_transitional_car_kept_separate(panel):
 def test_unity_2016_capital_kam_flagged_not_coded(panel):
     r = next(r for r in rows(REVIEW / "going_concern_reviews.csv") if (r["bank"], r["year"]) == ("Unity", "2016"))
     assert r["gcu_code"] == "0" and "FLAG for sensitivity" in r["coding_basis"]
+
+
+# ---- Phase 1/5/7: one eligibility ruleset enforced everywhere ----
+
+ANALYSIS = OUT / "analysis"
+
+
+@pytest.fixture(scope="module")
+def elig():
+    return rows(DATA / "outcome_eligibility.csv")
+
+
+def _flag(r, k):
+    return str(r[k]) in ("True", "true", "1")
+
+
+def _excluded(elig_rows, outcome):
+    return {(r["bank"], r["year"]) for r in elig_rows if r["outcome"] == outcome and _flag(r, "available") and not _flag(r, "inferential_use")}
+
+
+def _workbook_sheet(name):
+    from openpyxl import load_workbook
+    ws = load_workbook(OUT / "IFRS9_Verified_Master.xlsx", read_only=True, data_only=True)[name]
+    data = list(ws.iter_rows(values_only=True))
+    hdr_i = next(i for i, row in enumerate(data) if row and row[0] == "bank" or (row and row[0] == "dataset"))
+    hdr = [str(h) for h in data[hdr_i]]
+    return [dict(zip(hdr, [("" if v is None else v) for v in row])) for row in data[hdr_i + 1:] if row and row[0] not in (None, "")]
+
+
+def test_union_2018_excluded_from_pooled_allowance_inference(elig):
+    for o in ("allr", "broad_coverage"):
+        r = next(r for r in elig if (r["bank"], r["year"], r["outcome"]) == ("Union", "2018", o))
+        assert _flag(r, "available") and _flag(r, "descriptive_use")
+        assert not _flag(r, "inferential_use") and not _flag(r, "longitudinal_use")
+    a = next(r for r in rows(ANALYSIS / "allowance_gross_loans.csv") if (r["bank"], r["year"]) == ("Union", "2018"))
+    assert a["inferential_use"] == "False" and "EL-UNION18-ALLOWANCE" in a["rule_ids"]
+
+
+def test_wema_2021_2022_impairment_comparison_excluded(elig):
+    w21 = next(r for r in elig if (r["bank"], r["year"], r["outcome"]) == ("Wema", "2021", "impairment_assets"))
+    w22 = next(r for r in elig if (r["bank"], r["year"], r["outcome"]) == ("Wema", "2022", "impairment_assets"))
+    assert not _flag(w21, "inferential_use") and not _flag(w21, "longitudinal_use")
+    assert not _flag(w22, "change_comparable")
+    d = next(d for d in rows(REVIEW / "version_decisions.csv") if (d["bank"], d["year"], d["field"]) == ("Wema", "2021", "total_impairment"))
+    assert "108,256" in d["evidence"] and "1996.137" in d["sensitivity_alternative"]
+
+
+def test_car_source_exceptions_not_inferential_and_not_reconciled(elig, checks):
+    for b, y in (("Wema", 2021), ("Fidelity", 2016)):
+        assert checks[(b, y, "reported CAR vs capital/RWA")]["status"] == "documented_source_exception"
+        for o in ("car", "car_computed"):
+            r = next(r for r in elig if (r["bank"], r["year"], r["outcome"]) == (b, str(y), o))
+            assert not _flag(r, "inferential_use"), (b, y, o)
+
+
+def test_stanbic_2020_derived_capital_never_labelled_reported_total(admissions):
+    rc = next(a for a in admissions if a["evidence_id"] == "STAN20-RC")
+    assert rc["verification_status"] == "derived_from_verified" and rc["raw_value"] == "derived"
+    ev = [e for e in rows(DATA / "evidence_long.csv") if e["bank_key"] == "Stanbic" and e["financial_year"] == "2020" and e["variable"] == "regulatory_capital"]
+    sel = [e for e in ev if e["evidence_id"] == "STAN20-RC"]
+    assert sel and all(e["verification_status"] == "derived_from_verified" for e in sel)
+    alt = [e for e in ev if e["evidence_id"] == "ALT-STAN20-RC-PRINTED"]
+    assert not alt or all(e["verification_status"] != "verified_reported" or "176,542" in e["raw_value"] for e in alt)
+    fs = next(f for f in rows(DATA / "field_status.csv") if (f["bank"], f["year"], f["field"]) == ("Stanbic", "2020", "regulatory_capital"))
+    assert fs["value_basis"].startswith("derived_from_verified")
+
+
+def test_full_impact_and_transitional_car_never_overwrite(admissions, panel):
+    by = {}
+    for a in admissions:
+        by.setdefault((a["bank_key"], int(a["financial_year"])), {})[a["variable"]] = a
+    n = 0
+    for k, v in by.items():
+        if "car" in v and "car_transitional" in v:
+            n += 1
+            assert v["car"]["evidence_id"] != v["car_transitional"]["evidence_id"]
+            assert not v["car"]["evidence_id"].endswith("CART")
+            assert num(panel[k]["car"]) == round(num(v["car"]["normalised_value_ngnm_or_pct"]), 6)
+            assert num(panel[k]["car_transitional"]) == round(num(v["car_transitional"]["normalised_value_ngnm_or_pct"]), 6)
+    assert n >= 3
+    assert num(panel[("UBA", 2018)]["car"]) == 20 and num(panel[("UBA", 2018)]["car_transitional"]) == 22.08
+
+
+def test_unknown_going_concern_never_zero(panel, elig):
+    reviewed = {(r["bank"], r["year"]) for r in rows(REVIEW / "going_concern_reviews.csv") if r["gcu_code"] != ""}
+    baseline = {(r["bank"], r["year"]) for r in rows(ROOT / "inputs" / "IFRS9_Selected_Data_Updated_20261010.csv") if r["gcu"].strip()}
+    for (b, y), p in panel.items():
+        if (b, str(y)) not in reviewed | baseline:
+            assert p["gcu"].strip() == "", (b, y)
+    gc = [r for r in elig if r["outcome"] == "gcu"]
+    assert all(_flag(r, "available") == (r["value"] != "") for r in gc)
+    assert len(rows(ANALYSIS / "going_concern.csv")) == sum(r["value"] != "" for r in gc)
+
+
+def test_fallback_rows_keep_fallback_flags(elig):
+    expected = {("Access", "2018"), ("Unity", "2013"), ("Unity", "2020"), ("Wema", "2021"), ("Union", "2015"), ("Fidelity", "2021"), ("GTBank", "2017")}
+    rv = {(r["bank"], r["year"]): r for r in rows(DATA / "row_versions.csv")}
+    assert expected <= {k for k, r in rv.items() if r["fallback_class"]}
+    for k in expected:
+        assert rv[k]["original_report_unavailable"] == "yes" and "drop in sensitivity" in rv[k]["treatment"]
+        eq = next(r for r in elig if (r["bank"], r["year"], r["outcome"]) == (*k, "eqta"))
+        assert _flag(eq, "sensitivity_drop") and eq["fallback_class"].startswith("fallback")
+        a = next(r for r in rows(ANALYSIS / "equity_assets.csv") if (r["bank"], r["year"]) == k)
+        assert a["sensitivity_drop"] == "True"
+
+
+def test_outcome_summaries_match_exported_csv_row_counts(elig):
+    import json
+    from ifrs9_recovery.analysis import DATASETS
+    stats = json.loads((OUT / "release_stats.json").read_text())["endpoints"]
+    summ = {r["dataset"]: r for r in rows(ANALYSIS / "outcome_summary.csv")}
+    wb = {r["dataset"]: r for r in _workbook_sheet("Outcome_Summary")}
+    sizes = rows(OUT / "readiness" / "model_sample_sizes.csv")
+    for name, (outcome, _) in DATASETS.items():
+        csv_rows = rows(ANALYSIS / f"{name}.csv")
+        inf = [r for r in csv_rows if r["inferential_use"] == "True"]
+        assert int(summ[name]["descriptive_n"]) == len(csv_rows)
+        assert int(summ[name]["eligible_n"]) == len(inf) == stats[outcome]["eligible"]
+        assert int(wb[name]["eligible_n"]) == len(inf)
+        pooled = next(s for s in sizes if s["outcome"] == outcome and s["model"].startswith("pooled"))
+        assert int(pooled["N"]) == len(inf)
+
+
+def test_same_rows_excluded_everywhere(elig):
+    import json
+    from ifrs9_recovery.analysis import DATASETS
+    stats = json.loads((OUT / "release_stats.json").read_text())["endpoints"]
+    wb = _workbook_sheet("Outcome_Eligibility")
+    text = (OUT / "reconciliation_summary.md").read_text(encoding="utf-8")
+    for name, (outcome, _) in DATASETS.items():
+        e = _excluded(elig, outcome)
+        a = {(r["bank"], r["year"]) for r in rows(ANALYSIS / f"{name}.csv") if r["inferential_use"] == "False"}
+        s = {tuple(x.split(" (")[0].rsplit(" ", 1)) for x in stats[outcome]["excluded_rows"]}
+        w = {(r["bank"], str(r["year"])) for r in wb if r["outcome"] == outcome and str(r["available"]) == "True" and str(r["inferential_use"]) == "False"}
+        assert e == a == s == w, outcome
+        for b, y in e:
+            assert f"{b} {y}" in text

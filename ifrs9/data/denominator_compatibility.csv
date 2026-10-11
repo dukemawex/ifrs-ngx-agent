@@ -15,18 +15,23 @@ Fidelity,2019,1719883.0,1719883.0,0.0,True,baseline/inherited,Prior source-selec
 Fidelity,2020,2114037.0,2114037.0,0.0,True,"2020 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Fidelity,2022,3280454.0,3280454.0,0.0,True,"2022 annual report, as originally reported",2022 annual report; 2021 restated comparative
 First Bank,2014,3246579.0,3246579.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
+First Bank,2015,3490871.0,3490871.0,0.0,True,"2015 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
 First Bank,2017,3557782.0,3557782.0,0.0,True,"FY2017 financial statements, as originally reported","FY2017 financial statements; 2016 comparative, not labelled restated"
 GTBank,2014,1904366.0,1904366.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 GTBank,2018,2824928.985,2824928.985,0.0,True,"2018 annual report, as originally reported",2018 annual report; 2017 restated comparative
 GTBank,2019,2712521.494,2712521.494,0.0,True,"2019 annual report, as originally reported","2018 annual report, as originally reported"
+GTBank,2020,3097248.495,3097248.495,0.0,True,"2020 annual report, as originally reported","2019 annual report, as originally reported"
 Stanbic,2019,1599245.0,1599245.0,0.0,True,"2019 audited financial statements, as originally reported (issuer-hosted scanned extract)","2018 audited financial statements, as originally reported (issuer-hosted scanned extract)"
 Stanbic,2021,2370347.0,2370347.0,0.0,True,"2021 audited financial statements, as originally reported","2021 audited financial statements; 2020 comparative, not labelled restated"
 Stanbic,2022,2614087.0,2614087.0,0.0,True,"2022 audited financial statements, as originally reported","2021 audited financial statements, as originally reported"
 Sterling,2014,707797.181,707797.181,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Sterling,2015,824539.426,824539.426,0.0,True,"2015 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
+Sterling,2016,799451.417,799451.417,0.0,True,"2016 annual report, as originally reported","2015 annual report, as originally reported"
+Sterling,2017,830805.0,830802.224,2.776,False,"2017 annual report, as originally reported","2016 annual report, as originally reported"
 Sterling,2019,1085876.0,1085876.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Sterling,2020,1165509.0,1165509.0,0.0,True,"2020 annual report, as originally reported",Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Sterling,2021,1281830.0,1281830.0,0.0,True,"2021 annual report, as originally reported","2020 annual report, as originally reported"
+Sterling,2022,1606898.0,1611749.0,-4851.0,False,"2022 annual report, as originally reported","2021 annual report, as originally reported"
 UBA,2014,2217417.0,2217417.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 UBA,2015,2338858.0,2338858.0,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 UBA,2016,2216337.0,2216337.0,0.0,True,baseline/inherited,2016 report 2015 comparative Bank columns; opening assets retained from the prior selected 2014 statement.
@@ -48,8 +53,10 @@ Union,2022,2567441.0,2567441.0,0.0,True,baseline/inherited,2022 audited-report c
 Unity,2014,403629.29,403629.29,0.0,True,"2014 annual report, as originally reported",2014 report comparative (not labelled restated)
 Unity,2015,413305.111,413305.111,0.0,True,"2015 annual report, as originally reported","2014 annual report, as originally reported"
 Unity,2016,443321.012,443321.012,0.0,True,"2016 annual report, as originally reported","2015 annual report, as originally reported"
+Unity,2017,492681.647,492681.647,0.0,True,"2017 annual report, as originally reported","2016 annual report, as originally reported"
 Unity,2019,210800.841,210800.841,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Unity,2021,492020.329,492020.329,0.0,True,"2021 annual report, as originally reported",2021 report comparative (not labelled restated)
+Unity,2022,538868.756,538868.755,0.001,True,"2022 annual report, as originally reported","2021 annual report, as originally reported"
 Wema,2015,382562.312,382562.312,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Wema,2016,396743.314,396743.314,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.
 Wema,2017,421221.036,421221.036,0.0,True,baseline/inherited,Prior source-selection policy retained; original evidence preserved in accompanying pack.

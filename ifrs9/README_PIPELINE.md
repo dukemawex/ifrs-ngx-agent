@@ -19,6 +19,8 @@ python -m ifrs9_recovery validate
 python -m ifrs9_recovery export
 python -m pytest -q                      # tests/test_pipeline.py (synthetic) + tests/test_real_data.py (real data)
 python -m ifrs9_recovery export          # rerun so the summary reports the test results
+git commit ...                           # commit code/data, then export once more so the summary records that commit
+python -m ifrs9_recovery freeze --release-id IFRS9_release_<date>   # copy outputs to releases/<id>/ with hashes
 ```
 
 `python -m ifrs9_recovery all` runs every stage in order. `--max-priority N` limits discovery and downloads to the first N priority batches. Every stage checkpoints to `state/` after each job, so a rerun resumes where the last one stopped.
@@ -33,7 +35,7 @@ python -m ifrs9_recovery export          # rerun so the summary reports the test
 | download | `download.py` | `reports/<bank>/*.pdf`, `data/download_log.csv`, `state/download_state.json` |
 | extract | `extract.py` | `data/page_index.csv`, `data/pdf_candidates.csv`, `data/going_concern_review_queue.csv`, rendered pages in `reports/pages/` |
 | validate | `validate.py`, `evidence.py`, `candidates.py`, `ratios.py` | `data/verified_panel.csv`, `evidence_long.csv`, `change_register.csv`, `reconciliation_checks.csv`, `exceptions_register.csv`, `conflicts.csv`, `candidates.csv`, `evidence_backing.csv` |
-| export | `export.py` | `outputs/IFRS9_Verified_Master.xlsx`, `outputs/reconciliation_summary.md`, `outputs/progress_table.csv`, `data/unresolved_gaps.csv`, `data/source_manifest.csv`, `data/missingness_by_outcome.csv`, `reports/index.csv`, `outputs/research_data_handoff.zip` |
+| export | `export.py`, `versions.py`, `eligibility.py`, `analysis.py`, `readiness.py`, `summary.py` | `outputs/IFRS9_Verified_Master.xlsx`, `outputs/reconciliation_summary.md`, `outputs/progress_table.csv`, `data/unresolved_gaps.csv`, `data/source_manifest.csv`, `data/missingness_by_outcome.csv`, `reports/index.csv`, `outputs/research_data_handoff.zip` |
 
 ## How a value is admitted
 
@@ -74,3 +76,29 @@ A new bank-year needs PAT, assets, liabilities and equity from one reporting ver
    - `data/review/going_concern_reviews.csv`: auditor-report reviews behind each going-concern code.
    - `data/review/perimeter_decisions.csv`: entity and column decisions per bank.
    - `data/review/reviewer_conflicts.csv`: restatements and problems found within sources.
+
+## Analytical eligibility (one ruleset)
+
+`ifrs9_recovery/eligibility.py` is the only place that decides whether a value may be used. For every bank-year and
+outcome it writes `data/outcome_eligibility.csv` with separate flags: `available`, `descriptive_use`,
+`longitudinal_use`, `change_comparable` (year-on-year change is valid), `inferential_use` (primary pooled sample) and
+`sensitivity_drop` (fallback presentation: keep in the primary sample, drop in a robustness run). Rules come from
+`data/review/eligibility_rules.csv` (curated, each with a reason and source register) plus machine flags: panel
+`allowance_pool_status`, panel `liquidity_admissible`, field_status `source_internal_inconsistency`, fallback classes and
+unreconciled version mixes in `data/row_versions.csv`. The summary, workbook (Outcome_Eligibility, Outcome_Summary,
+Row_Versions sheets), `outputs/analysis/*.csv` and `outputs/readiness/*` all read it through `eligibility.sample()`;
+any future plotting or model code must do the same. Tests in `tests/test_real_data.py` check that the same rows are
+excluded in every output.
+
+## Reporting versions
+
+`versions.py` writes `data/row_versions.csv`: the primary presentation per bank-year (original-year report; next-year
+comparative only when the original is unavailable, flagged for sensitivity), labelled-restatement status, alternatives,
+and any version mix with its reconciliation (`data/review/version_reconciliations.csv`). Investigations of open
+exceptions are in `data/review/exception_investigations.md`.
+
+## Model readiness
+
+`readiness.py` writes matched pre/post bank trends, Tier 1/Tier 2 descriptives, volatility feasibility, within-bank
+variation, model sample sizes and estimator recommendations to `outputs/readiness/`. It warns that IFRS9_D is collinear
+with a full set of year fixed effects. No thesis regression is estimated.

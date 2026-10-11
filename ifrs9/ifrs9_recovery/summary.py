@@ -11,16 +11,7 @@ from collections import Counter
 from . import config as C
 from .util import number, read_csv, read_json, sha256_file, utcnow, write_json
 
-# Outcome -> input fields; a row is endpoint-eligible only if every input is present and
-# none carries a documented source-exception flag.
-OUTCOME_INPUTS = {
-    "roa": ["pat", "assets", "opening_assets"], "eqta": ["equity", "assets"], "ocf_ratio": ["ocf", "assets", "opening_assets"],
-    "allr": ["loan_allowance", "gross_loans"], "leverage": ["liabilities", "assets"], "car": ["car"],
-    "car_computed": ["regulatory_capital", "rwa"], "npl_calc": ["npl_amount", "gross_loans"],
-    "broad_coverage": ["loan_allowance", "npl_amount"], "stage3_coverage": ["stage3_allowance", "stage3_gross"],
-    "impairment_assets": ["total_impairment", "assets", "opening_assets"], "liquidity_used": ["liquidity"], "gcu": ["gcu"],
-}
-EXCLUDING_FLAGS = {"source_internal_inconsistency"}
+from . import eligibility as E
 
 
 def _git(*args) -> str:
@@ -70,14 +61,7 @@ def release_stats() -> dict:
     base_keys = {(r["bank"], r["year"]) for r in base}
     pre = sum(int(r["year"]) < C.ADOPTION_YEAR for r in panel)
 
-    flagged = {(r["bank"], r["year"], r["field"]) for r in fs if r["exception_flag"] in EXCLUDING_FLAGS}
-    endpoints = {}
-    for out, inputs in OUTCOME_INPUTS.items():
-        avail = [r for r in panel if str(r.get(out, "")).strip()]
-        elig = [r for r in avail if not any((r["bank"], r["year"], f) in flagged for f in inputs)]
-        endpoints[out] = {"available": len(avail), "eligible": len(elig), "excluded_by_flag": len(avail) - len(elig),
-                          "pre": sum(int(r["year"]) < C.ADOPTION_YEAR for r in elig),
-                          "post": sum(int(r["year"]) >= C.ADOPTION_YEAR for r in elig)}
+    endpoints = E.summarise()
 
     gc_panel = [r for r in fs if r["field"] == "gcu"]
     gc_base = [r for r in gc_panel if (r["bank"], r["year"]) in base_keys and r["change_kind"] == ""]
@@ -118,16 +102,48 @@ def release_stats() -> dict:
         "remaining": {"bank_years": sum(g["gap_type"] == "bank_year" for g in gaps),
                       "field_requests": sum(g["gap_type"] != "bank_year" for g in gaps)},
         "endpoints": endpoints,
+        "row_versions": _row_versions(),
+        "unresolved_exceptions": _unresolved(recon, vdec),
+        "remaining_by_bank": _remaining_by_bank(gaps),
+        "readiness": {"estimators": read_csv(C.OUTPUTS / "readiness" / "estimator_recommendations.csv") if (C.OUTPUTS / "readiness" / "estimator_recommendations.csv").is_file() else [],
+                      "objectives": read_csv(C.OUTPUTS / "readiness" / "objective_readiness.csv") if (C.OUTPUTS / "readiness" / "objective_readiness.csv").is_file() else []},
         "nimble": nimble,
         "tests": tests,
     }
+
+
+def _row_versions() -> dict:
+    path = C.DATA / "row_versions.csv"
+    rv = read_csv(path) if path.is_file() else []
+    fb = [r for r in rv if r["fallback_class"]]
+    return {"rows": len(rv), "treatments": dict(Counter(r["treatment"] for r in rv)),
+            "fallback_rows": [f"{r['bank']} {r['year']} ({r['fallback_class']}; source {r['primary_source']}; labelled restated: {r['labelled_restated']})" for r in fb],
+            "unreconciled_version_mixes": sum(r["version_mix_reconciliation"] == "UNRECONCILED" for r in rv)}
+
+
+def _unresolved(recon: list[dict], vdec: list[dict]) -> list[str]:
+    out = [f"{r['bank']} {r['year']} {r['check']}: documented source exception" for r in recon if r["status"] == "documented_source_exception"]
+    keep = ("source internal inconsistency", "unexplained difference", "confirmed scope difference", "possible scope incompatibility")
+    out += [f"{d['bank']} {d['year']} {d['field']}: {d['classification']}" + ("; OWNER DECISION PENDING" if "PENDING" in d["decision"] else "")
+            for d in vdec if d["classification"].startswith(keep)]
+    out += [f"{c['bank']} {c['year']} {c['field']}: {c['type']}" for c in read_csv(C.DATA / "review" / "reviewer_conflicts.csv")
+            if c["type"] == "source_internal_inconsistency_cross_report"]
+    return out
+
+
+def _remaining_by_bank(gaps: list[dict]) -> dict:
+    by: dict[str, list[str]] = {}
+    for g in gaps:
+        if g["gap_type"] == "bank_year":
+            by.setdefault(g["bank"], []).append(str(g["year"]))
+    return {b: sorted(v) for b, v in sorted(by.items())}
 
 
 def render(stats: dict, audit: dict, handoff: dict) -> str:
     p, g, rc, t = stats["panel"], stats["going_concern"], stats["reconciliation"], stats["tests"]
     ch = stats["changes"]
     L = ["# Reconciliation summary", "",
-         f"Generated {stats['generated_utc']} from the saved outputs (commit `{stats['git_commit'][:12]}`).",
+         f"Generated {stats['generated_utc']} from the saved outputs (code commit `{stats['git_commit']}`, branch `{stats['git_branch']}`).",
          "Every number below is computed by `ifrs9_recovery.summary.release_stats()`; see `outputs/release_stats.json`.", "",
          "## Panel", "",
          f"- Selected bank-years: **{p['rows']}** across {p['banks']} banks ({p['pre_adoption']} pre-adoption, {p['post_adoption']} post-adoption).",
@@ -151,8 +167,10 @@ def render(stats: dict, audit: dict, handoff: dict) -> str:
          f"{stats['denominators']['incompatible']} differ (listed in `data/denominator_compatibility.csv`). "
          "Each ratio uses the opening balance from the same report as its closing balance; differing pairs are not smoothed.",
          *[f"  - {x}" for x in stats['denominators'].get('differing', [])], "",
-         "## Endpoint coverage (selected rows)", "", "| Outcome | Available | Eligible | Excluded by flag | Pre | Post |", "|---|---|---|---|---|---|"]
-    L += [f"| {k} | {v['available']} | {v['eligible']} | {v['excluded_by_flag']} | {v['pre']} | {v['post']} |" for k, v in stats["endpoints"].items()]
+         "## Outcome eligibility (one ruleset: `ifrs9_recovery.eligibility`, `data/outcome_eligibility.csv`)", "", "Available = value present; descriptive/longitudinal/inferential uses are distinct; change pairs = year-on-year changes that are comparable; fallback rows stay in the primary sample but are dropped in sensitivity runs.", "", "| Outcome | Available | Descriptive | Longitudinal | Change pairs | Eligible (inferential) | Excluded from inference | Banks | Pre | Post | Tier 1 | Tier 2 | Fallback rows |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    L += [f"| {k} | {v['available']} | {v['descriptive']} | {v['longitudinal']} | {v['change_pairs']} | {v['eligible']} | {v['excluded_from_inference']} | {v['banks']} | {v['pre']} | {v['post']} | {v['tier1']} | {v['tier2']} | {v['fallback_rows_in_sample']} |" for k, v in stats["endpoints"].items()]
+    L += ["", "Rows excluded from inference (rule ids in `data/outcome_eligibility.csv`, reasons in `data/review/eligibility_rules.csv`):", ""]
+    L += [f"- {k}: " + "; ".join(v["excluded_rows"]) for k, v in stats["endpoints"].items() if v["excluded_rows"]]
     L += ["", "## Going concern", "",
           f"- Full original-year auditor reports reviewed and recorded: {g['reviews_recorded']} ({g['reviews_coded_1']} coded 1).",
           f"- Bank-years explicitly listed as not reviewed: {g['not_reviewed_listed']}.",
@@ -164,8 +182,18 @@ def render(stats: dict, audit: dict, handoff: dict) -> str:
           "## Version decisions and conflicts", "",
           "- Version classifications: " + ", ".join(f"{k} {v}" for k, v in sorted(stats["version_decisions"].items())) + " (`data/review/version_decisions.csv`).",
           "- Conflicts recorded: " + ", ".join(f"{k} {v}" for k, v in sorted(stats["conflicts"].items())) + ".", "",
+          "## Reporting versions (`data/row_versions.csv`)", "",
+          *[f"- {k}: {v}" for k, v in stats["row_versions"]["treatments"].items()],
+          "- Fallback rows (primary, dropped in sensitivity): " + "; ".join(stats["row_versions"]["fallback_rows"]) + ".",
+          f"- Unreconciled version mixes: {stats['row_versions']['unreconciled_version_mixes']}.", "",
+          "## Unresolved exceptions", "",
+          *[f"- {x}" for x in stats["unresolved_exceptions"]], "",
+          "## Model readiness (`outputs/readiness/readiness.md`; no thesis regressions run)", "",
+          *[f"- {r['objective']} {r['description']}: {r['readiness']} (testable: {r['statistically_testable_outcomes'] or 'none'})" for r in stats["readiness"]["objectives"]],
+          "- IFRS9_D is perfectly collinear with a full set of year fixed effects.", "",
           "## Remaining", "",
-          f"- Bank-year positions not admitted: {stats['remaining']['bank_years']}; field requests in selected rows outstanding: {stats['remaining']['field_requests']}.", "",
+          f"- Bank-year positions not admitted: {stats['remaining']['bank_years']}; field requests in selected rows outstanding: {stats['remaining']['field_requests']}.",
+          *[f"  - {b}: {', '.join(v)}" for b, v in stats["remaining_by_bank"].items()], "",
           "## Tests", ""]
     if t:
         for suite, r in t.get("suites", {}).items():

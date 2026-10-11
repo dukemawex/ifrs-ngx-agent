@@ -11,7 +11,9 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
+from . import analysis, readiness, versions
 from . import config as C
+from . import eligibility as E
 from .queue import split_urls
 from .ratios import DEFINITIONS
 from .util import number, read_csv, read_json, sha256_file, utcnow, write_csv, write_json
@@ -38,6 +40,7 @@ def _blank(v) -> bool:
 
 
 def missingness(panel: list[dict]) -> list[dict]:
+    elig = E.summarise()
     out = []
     for f, label in OUTCOMES.items():
         avail = [r for r in panel if not _blank(r.get(f))]
@@ -46,7 +49,8 @@ def missingness(panel: list[dict]) -> list[dict]:
                     "n_available": len(avail), "n_missing": len(panel) - len(avail), "n_rows": len(panel),
                     "pct_available": round(100 * len(avail) / len(panel), 1) if panel else 0,
                     "pre_2018_available": pre, "post_2018_available": len(avail) - pre,
-                    "banks_with_any": len({r["bank"] for r in avail})})
+                    "banks_with_any": len({r["bank"] for r in avail}),
+                    "n_eligible_inferential": elig.get("liquidity" if f == "liquidity_used" else f, {}).get("eligible", "not an eligibility outcome")})
     return out
 
 
@@ -281,6 +285,11 @@ def formula_audit(path: Path) -> dict:
 
 def run() -> dict:
     C.ensure_dirs()
+    # One eligibility ruleset feeds every analytical output below (summary, workbook, analysis CSVs, readiness).
+    versions.build()
+    E.build()
+    analysis_out = analysis.build()
+    readiness.build()
     before = read_csv(C.SELECTED_CSV)
     panel = read_csv(C.DATA / "verified_panel.csv")
     changes = read_csv(C.DATA / "change_register.csv")
@@ -371,7 +380,7 @@ def run() -> dict:
     sheets = {
         "Progress": (progress, ["measure", "value"], "Measured progress for this run."),
         "Field_Coverage": (cov, list(cov[0].keys()), "Non-blank input cells before (baseline CSV) and after."),
-        "Missingness": (miss, list(miss[0].keys()), "Available observations by outcome."),
+        "Missingness": (miss, list(miss[0].keys()), "Available observations by outcome; n_eligible_inferential from the eligibility ruleset."),
         "Change_Register": (changes, ["bank", "year", "field", "old", "new", "kind", "basis", "reason"], "Before/after log."),
         "Reconciliation": (recon, ["bank", "year", "check", "residual", "tolerance", "rounding_unit_ngnm", "passed", "status", "exception_detail", "note"],
                            "Status: pass / fail / documented_source_exception. Tolerances from printed precision and input rounding."),
@@ -387,6 +396,12 @@ def run() -> dict:
                             "Document type and audit-report coverage per downloaded file."),
         "Denominators": (read_csv(C.DATA / "denominator_compatibility.csv") or [{"bank": ""}], list((read_csv(C.DATA / "denominator_compatibility.csv") or [{"bank": ""}])[0].keys()),
                          "Opening assets vs prior-year closing assets in the panel."),
+        "Outcome_Eligibility": (read_csv(E.PATH), E.COLUMNS,
+                                "Single eligibility ruleset (ifrs9_recovery.eligibility): descriptive / longitudinal / inferential use per bank-year and outcome, with rule ids."),
+        "Outcome_Summary": (read_csv(C.OUTPUTS / "analysis" / "outcome_summary.csv"), list(read_csv(C.OUTPUTS / "analysis" / "outcome_summary.csv")[0].keys()),
+                            "Eligible N, banks, pre/post, Tier 1/2, exclusions per analysis dataset (outputs/analysis/)."),
+        "Row_Versions": (read_csv(C.DATA / "row_versions.csv"), list(read_csv(C.DATA / "row_versions.csv")[0].keys()),
+                         "Primary reporting version per bank-year; fallback rows are primary but dropped in sensitivity."),
         "Exceptions": (exc, ["id", "bank", "year", "field", "expected", "actual", "status", "rule"], "Known exceptions."),
         "Conflicts": (conflicts, ["type", "bank", "year", "field", "value_a", "value_b", "detail"], "Unresolved conflicts."),
         "Unresolved_Gaps": (gaps, list(gaps[0].keys()) if gaps else ["gap_type"], "Outstanding bank-years and field requests."),
